@@ -1,0 +1,75 @@
+$text-pos: (
+  top: (
+    xs: 15%,
+    sm: 50%,
+  )
+);
+$text-p: (
+  xs: rem(0 12px),
+  sm: rem(0 32px),
+);
+$fs: (
+  title: (
+    xs: ms(3),
+    sm: ms(5),
+    lg: ms(8),
+  ),
+  sub: (
+    xs: ms(0),
+    sm: ms(2),
+    lg: ms(5)
+  ),
+  cta: (
+    xs: ms(-1),
+    sm: ms(1),
+    lg: ms(2),
+  )
+);
+$cta-m: (
+  xs: rem(12px 0 0),
+  sm: rem(48px 0 0),
+);
+
+.hero {
+  position: relative;
+
+  &__text {
+    position: absolute;
+    left: 0;
+    top: map-deep-get($text-pos, top, xs);
+    padding: map-get($text-p, xs);
+
+    @include media('>=sm') {
+      top: map-deep-get($text-pos, top, sm);
+      padding: map-get($text-p, sm);
+      max-width: 40%;
+    }
+  }
+
+  &__title {
+    font-family: $title-font-family;
+    font-size: map-deep-get($fs, title, xs);
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, title, sm);
+    }
+  }
+
+  &__sub {
+    font-family: $title-font-family;
+    font-size: map-deep-get($fs, sub, xs);
+    line-height: 1.3;
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, sub, sm);
+    }
+  }
+
+  &__cta {
+    margin: map-get($cta-m, xs);
+
+    @include media('>=sm') {
+      margin: map-get($cta-m, sm);
+    }
+  }
+}

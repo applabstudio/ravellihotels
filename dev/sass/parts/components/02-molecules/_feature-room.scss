@@ -1,0 +1,16 @@
+.feature-room {
+	h3 {
+		font-family: $alt-font-family;
+		text-transform: uppercase;
+		font-size: ms(8);
+		line-height: 35px;
+		letter-spacing: 6px;
+		color: black;
+		padding-bottom:2rem;
+	}
+	p {
+		font-family: $base-font-family;
+		font-size: 1.7rem;
+		color: #222222;
+	}
+}

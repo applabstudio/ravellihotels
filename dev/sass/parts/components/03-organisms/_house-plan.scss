@@ -1,0 +1,26 @@
+.house-plan {
+	background: #F3F3F2;
+	img {
+		width: 20rem;
+		mix-blend-mode: multiply;
+	}
+	h1, h2 {
+		font-family: $alt-font-family;
+		font-weight: 600;
+		font-size: 32.43px;
+		line-height: 49px;
+		color: #C2BEBA;
+	}
+	h6 {
+		font-family: $alt-font-family;
+		font-size: 1.6rem;
+		line-height: 2.4rem;
+		text-align: center;
+		letter-spacing: 0.696258px;
+		text-transform: uppercase;
+		color: rgba(121, 110, 101, 0.8);
+		align-self: self-end;
+		padding-top: 3.6rem;
+	}
+
+}

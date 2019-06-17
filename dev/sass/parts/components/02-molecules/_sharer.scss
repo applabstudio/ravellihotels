@@ -1,0 +1,75 @@
+$ico-dim: rem(20px);
+
+.sharer {
+  position: relative;
+
+  svg {
+    width: $ico-dim;
+    height: $ico-dim;
+    transform-origin: center;
+    transform: scale(2);
+  }
+
+  &__toggler {
+    cursor: pointer;
+    
+
+    svg {
+      fill: get-color(bg, 0);
+
+      @include when-inside('.section--dark') {
+        fill: white;
+      }
+    }
+  }
+
+  &__btns {
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    top: 105%;
+    right: 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity $tt;
+
+    a {
+      display: block;
+      width: $ico-dim;
+      height: $ico-dim;
+      margin: rem(4px);
+
+      &.fb svg {
+        fill: #3C5A99;
+      }
+      &.tw svg {
+        fill: #1DA1F2;
+      }
+      &.li svg {
+        fill: #006192;
+      }
+      &.wa svg {
+        fill: #4AC959;
+      }
+
+      @include when-inside('.section--dark') {
+        &.fb svg,
+        &.tw svg,
+        &.li svg,
+        &.wa svg {
+          fill: white;
+        }
+      }
+    }
+  }
+
+  @include on-event() {
+    .sharer__btns {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}

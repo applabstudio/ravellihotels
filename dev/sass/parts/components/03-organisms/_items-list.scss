@@ -1,0 +1,32 @@
+$fs: (
+  title: (
+    xs: ms(4),
+    sm: ms(6),
+  )
+);
+
+$header-m: rem(0 0 24px);
+
+.items-list {
+  &__header {
+    margin: $header-m;
+    display: flex;
+    flex-direction: column;
+
+    @include media('>=sm') {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__title {
+    font-family: $title-font-family;
+    line-height: 1.2;
+    font-size: map-deep-get($fs, title, xs);
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, title, sm);
+    }
+  }
+}

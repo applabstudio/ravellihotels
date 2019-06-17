@@ -1,0 +1,52 @@
+.activity {
+	&__cards {
+		.uk-overlay-default {
+			background: rgba(34, 34, 34, 0.56);
+			color: white;
+		}
+	}
+}
+.activity-media {
+	.uk-card-default.uk-grid-collapse.uk-child-width-1-2\@s.uk-margin.uk-grid {
+			margin: 0 !important;
+			min-height: 57rem;
+	}
+	.uk-card-body {
+		h4 {
+			font-family: $alt-font-family;
+			font-size: 20.25px;
+			line-height: 30px;
+			letter-spacing: 0.881201px;
+			text-transform: uppercase;
+			color: #222222;
+		}
+
+		h3 {
+			font-family: $alt-font-family;
+			font-weight: 600;
+			font-size: 32.43px;
+			line-height: 49px;
+			color: #222222;
+			position:relative;
+			bottom:1rem;
+		}
+
+		p {
+			font-family: $base-font-family;
+			font-size: 16px;
+			line-height: 23px;
+			color: #222222;
+		}
+
+		a {
+			font-family: $base-font-family;
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 23px;
+			color: #222222;
+			margin-bottom:4rem;
+			position:relative;
+			top:2.5rem;
+		}
+	}
+}

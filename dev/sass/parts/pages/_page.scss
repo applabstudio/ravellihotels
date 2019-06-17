@@ -1,0 +1,10 @@
+$max-w: rem(1920px);
+$header-h: rem(62px);
+
+.page {
+  background: white;
+  // max-width: $max-w;
+  margin: 0 auto;
+  overflow: hidden;
+  // NOTE Drupal8 Admin-Toolbar padding-top: $header-h;
+}

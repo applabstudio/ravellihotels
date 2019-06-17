@@ -1,0 +1,66 @@
+.price-list {
+	&__heading {
+		h1 {
+			padding: 0;
+		}
+	}
+	&__body {
+		.tab-container {
+			.uk-subnav {
+				margin:0;
+				border-bottom:1.5px solid get-color(primary, 0);
+			}
+			.uk-subnav > * {
+				// FIXME overflow: hidden;
+				padding:0;
+				position: relative;
+				top: 0.1rem;
+			}
+			.uk-subnav-pill > .uk-active > a {
+				color: #fff;
+				font-family: $alt-font-family;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 27.64px;
+				text-align: center;
+				color: #FFFFFF;
+				background: get-color(primary, 0);
+				padding:1.2rem 3.8rem 1.2rem 3.8rem;
+			}
+			.uk-subnav-pill > * > :first-child {
+				font-family: $alt-font-family;
+				font-style: normal;
+				font-weight: 500;
+				font-size: 2.8rem;
+				text-align: center;
+				color: black;
+				padding:1.2rem 3.8rem 1.2rem 3.8rem;
+			}
+			.uk-switcher.uk-margin:hover {
+				a {
+					text-decoration: none;
+				}
+			}
+			p {
+				font-family: $alt-font-family;
+				font-style: normal;
+				font-size: 1.4rem;
+				letter-spacing: 0.52px;
+				color: #4A4A4A;
+			}
+		}
+	}	
+	&__footer {
+		.confirm-info {
+			button:first-child {
+				width: 23rem;
+			}
+			button:last-child {
+				width: 34rem;
+			}
+			button {
+				margin:1rem;
+			}
+		}
+	}
+}

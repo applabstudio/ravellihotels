@@ -1,0 +1,66 @@
+.container {
+  @include container;
+
+  &--fluid {
+    @include container($fluid: true);
+  }
+}
+
+// Generating grid classes for 12 column layouts
+@include im-grid-columns(1,2,3,4,5);
+
+.grid--gutters-half {
+  margin: -15px 0 0 -15px;
+
+  > .grid-cell {
+    padding: 15px 0 0 15px;
+  }
+}
+
+.grid--h-center {
+  justify-content: center;
+}
+.grid--h-right {
+  justify-content: flex-end;
+}
+
+.grid {
+  @include when-inside('.form') {
+    margin-top: 0;
+  };
+}
+
+.grid-cell{
+  @include when-inside('.form .grid--gutters') {
+    padding-top: 0;
+  };
+
+  @include when-inside('.form .grid--gutters-half') {
+    padding-top: 0;
+  };
+}
+
+.grid + .grid {
+  margin-top: 0;
+}
+
+.grid-cell {
+  display: flex;
+  flex-direction: column;
+
+  > * + * {
+    margin-top: rem(30px) !important;
+
+    @include when-inside('.form') {
+      margin-top: 0 !important;
+    };
+  }
+
+  > * + .grid {
+    margin-top: 0 !important;
+  }
+
+  > a[name] + *  {
+    margin-top: 0 !important;
+  }
+}

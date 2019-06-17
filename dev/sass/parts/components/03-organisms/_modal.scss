@@ -1,0 +1,105 @@
+$close-fs: rem(68px);
+$close-pos: rem(16px);
+$content-p: rem(16px);
+$content-max-w: (
+  base: rem(960px),
+  narrow: rem(520px),
+);
+$content-max-h: calc(100vh - 90px);
+$content-top: rem(64px);
+
+$fs: (
+  md: ms(7),
+  xl: ms(9),
+);
+
+// SECTION MODAL PRIMARY-MENU
+.modal-primary-menu {
+  &__container {
+    .modal-dialog {
+      height:100vh;
+      overflow: hidden;
+      background: rgba(65, 56, 41, 0.96);
+      .uk-modal-close-full {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        padding: 3rem 2rem 0rem 1.5rem;
+        background: none;
+        color: white;
+      }
+      span {
+        color: white;
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        font-size: 1.25rem;
+      }
+      .container-menu-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        min-height: 100%;
+        &__body {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-height: 100%;
+          flex-direction:column;
+          text-align: center;
+          menu {
+            list-style: none;
+            text-align: center;
+            padding: 0;
+            li:first-of-type{
+              // line-height: 6rem;
+              // font-weight: 500;
+            }
+            li:nth-child(2), li:nth-child(3), li:nth-child(4) {
+              // font-weight: 300;
+            }
+            li:nth-child(4) {
+              // padding-bottom:2rem;
+            }
+            li {
+              a {
+                color: #ffffff;
+                font-family: $alt-font-family;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: map-get($fs, xl);
+                @include media('<=md') {
+                  font-size: map-get($fs, md);
+                }
+              }
+            }
+          } 
+        }
+        &__footer {
+          .menu-social {
+            display: flex;
+            justify-content: center;
+            padding:4rem 4rem 0 4rem;
+            ul {
+               list-style-type: none;
+               li {
+                 display: inline;
+                 padding:2rem;
+               }
+            }
+          }
+          .site-search {
+            display: flex;
+            justify-content: center;
+            padding:2rem;
+            button {
+              position:relative;
+              left:-2.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

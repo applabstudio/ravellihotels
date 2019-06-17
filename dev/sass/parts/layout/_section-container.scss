@@ -1,0 +1,104 @@
+$fs: (
+	s: ms(6),
+	l: ms(8),
+	xl: ms(13),
+	xxl: ms(17),
+);
+
+// SECTION SECTION-CONTAINER
+.section-container {
+		h4 {
+			font-family: $alt-font-family;
+			font-weight: 200;
+			font-size: 2.25rem;
+			line-height: 3rem;
+			letter-spacing: 0.881201px;
+			text-transform: uppercase;
+		}
+		h1 {
+			font-family: $alt-font-family;
+			font-weight: 600;
+			font-size: 4.2rem;
+			line-height: 6.3rem;
+			color: #796E65;
+			padding: 0 0 2rem 0;
+			@include media('<=sm') {
+				font-size: ms(5);
+			} 
+		}
+		p:last-of-type {
+			font-family: $base-font-family;
+			font-style: normal;
+			font-weight: normal;
+			font-size: ms(7);
+			line-height: 3.4rem;
+			color: #222222;
+			@include media('<=sm') {
+				font-size: ms(4);
+			} 
+		}
+		a {
+			font-family: $base-font-family;
+			font-weight: 800;
+			font-size: 24px;
+			line-height: 23px;
+			display: inline-block;   
+			padding-top: 1.8rem;
+		}
+		&--image {
+			.bg-wrapper-full {
+				background-repeat: no-repeat;
+				background-position: center;
+				background-size: cover;
+				width: 100%;
+				height:100vh;  /* responsive height */
+				&--small {
+					height:80vh;  /* responsive height */
+				}
+			}
+			div {
+				h1 {
+					font-family: $alt-font-family;
+					font-size: map-get($fs, xxl); // REVIEW Modular Scale
+					@include media('<=md') {
+					  font-size: map-get($fs, xl);
+					}
+					font-weight: 500;
+					color:white;
+				}
+				p {
+					font-family: $alt-font-family;
+					font-size: map-get($fs, l); // REVIEW Modular Scale
+					@include media('<=md') {
+					  font-size: map-get($fs, s);
+					}
+					font-weight: 300;
+					color:white;
+				}
+			}
+
+		}
+
+		&--intro {
+			h1 {
+				color: #796E65;
+				font-family: $alt-font-family;
+				font-weight: 600;
+				font-size: 4.2rem;
+			}
+			p {
+				font-family: $base-font-family;
+				font-size: 2.2rem;
+				line-height: 3.4rem;
+				color: #222222;
+			}
+			a {
+				font-family: $base-font-family;
+				font-weight: 800;
+				font-size: 2.4rem;
+				line-height: 2.3rem;
+				display: inline-block;
+				padding-top:1.8rem; 
+			}
+		}
+}

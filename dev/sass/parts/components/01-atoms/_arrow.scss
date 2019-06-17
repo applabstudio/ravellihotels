@@ -1,0 +1,24 @@
+$w: rem(20px);
+
+.arrow {
+  position: relative;
+  display: block;
+  height: 1px;
+  width: $w;
+  margin: rem(4px);
+  background: currentColor;
+
+  &::after {
+    content: '';
+    display: block;
+    height: rem(8px);
+    width: rem(8px);
+    border-width: 1px 1px 0 0;
+    border-style: solid;
+    border-color: currentColor;
+    position: absolute;
+    right: 1px;
+    top: rem(-4px);
+    transform: rotate(45deg);
+  }
+}

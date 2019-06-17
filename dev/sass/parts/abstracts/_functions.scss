@@ -1,0 +1,28 @@
+// lightens a color mixing it with white
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+// darkens a color mixing it with black
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@function get-color($name: 'primary', $variant: $color-key) {
+  $color: null;
+
+  $color-spectrum: map-get($colors, $name);
+
+  @if $color-spectrum {
+    $color: map-get($color-spectrum, $variant);
+  }
+
+  @return $color;
+}
+
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+      $map: map-get($map, $key);
+  }
+  @return $map;
+}

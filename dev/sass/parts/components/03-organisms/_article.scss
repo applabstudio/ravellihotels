@@ -1,0 +1,198 @@
+$fs: (
+  title: (
+    xs: ms(4),
+    sm: ms(6),
+  ),
+  abstract: (
+    xs: ms(2),
+    sm: ms(4),
+  ),
+  imgCredits: (
+    xs: ms(-1)
+  ),
+  cat: (
+    xs: ms(1),
+    sm: ms(3),
+  ),
+  author: (
+    xs: ms(0),
+    sm: ms(2),
+  ),
+  section: (
+    xs: ms(1),
+  ),
+  sectionEditor: (
+    xs: ms(0),
+  ),
+);
+$m: (
+  title: (
+    xs: rem(0 0 12px),
+    sm: rem(0 0 16px),
+  ),
+  meta: (
+    xs: rem(12px 0 0 ),
+    sm: rem(16px 0 0),
+  )
+);
+$utils-ico-dim: rem(48px);
+$utils-btn-dim: rem(52px);
+
+.article {
+  &__header {
+    font-family: $title-font-family;
+    position: relative;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 100%;
+      height: 2px;
+      position: absolute;
+      top: rem(-32px);
+      left: 0;
+
+      @include media('>=sm') {
+        width: 50%;
+      }
+    }
+  }
+
+  &__title {
+    font-size: map-deep-get($fs, title, xs);
+    line-height: 1.2;
+    margin: map-deep-get($m, title, xs);
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, title, sm);
+      margin: map-deep-get($m, title, sm);
+    }
+  }
+
+  &__abstract {
+    font-size: map-deep-get($fs, abstract, xs);
+    line-height: 1.2;
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, abstract, sm);
+    }
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: map-deep-get($m, meta, xs);
+
+    @include media('>=sm') {
+      margin: map-deep-get($m, meta, sm);
+    }
+  }
+
+  &__date {
+    font-family: $base-font-family;
+    font-weight: 700;
+  }
+
+  &__img {
+    position: relative;
+
+    &__credits {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      background: rgba(white, 0.65);
+      font-family: $alt-font-family;
+      font-size: map-deep-get($fs, imgCredits, xs);
+      text-transform: uppercase;
+      padding: rem(4px);
+    }
+  }
+
+  &__footer {
+    border-top: 1px dashed get-color(bg, 0);
+    padding-top: rem(30px);
+    font-family: $alt-font-family;
+  }
+
+  &__aside {
+    padding-bottom: rem(30px);
+    border-bottom: 1px dashed get-color(bg, 0);
+
+    > * + * {
+      margin-top: rem(16px);
+    }
+  }
+
+  &__cat {
+    text-transform: uppercase;
+    font-family: $alt-font-family;
+    font-size: map-deep-get($fs, cat, xs);
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, cat, sm);
+    }
+  }
+
+  &__utils {
+    display: flex;
+    align-items: center;
+
+    > a {
+      display: block;
+      width: $utils-btn-dim;
+      height: $utils-btn-dim;
+      background: get-color(bg, 0);
+      border-radius: 100%;
+
+      svg {
+        fill: white;
+        width: $utils-ico-dim;
+        height: $utils-btn-dim;
+        margin: 0 auto;
+      }
+    }
+
+    > a + a {
+      margin-left: rem(12px);
+    }
+  }
+
+  &__author {
+    font-family: $title-font-family;
+    font-size: map-deep-get($fs, author, xs);
+    line-height: 1.2;
+
+    @include media('>=sm') {
+      font-size: map-deep-get($fs, author, sm);
+    }
+
+    &--small {
+      font-family: $base-font-family;
+
+      @include media('>=sm') {
+        font-size: map-deep-get($fs, author, xs);
+      }
+    }
+  }
+
+  &__section {
+    font-family: $title-font-family;
+    font-size: map-deep-get($fs, section, xs);
+
+    &__editor {
+      font-size: map-deep-get($fs, sectionEditor, xs);
+
+      a {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &--red {
+    .article__header::before {
+      background: #cc0839;
+    }
+  }
+}

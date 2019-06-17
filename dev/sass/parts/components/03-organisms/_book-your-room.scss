@@ -1,0 +1,57 @@
+.book-your-room {
+	margin-top: -1rem;
+	background: #F3F3F2;
+	h1 {
+		font-family: $alt-font-family;
+		font-weight: 600;
+		font-size: 32.43px;
+		line-height: 49px;
+		color: #222222;
+	}
+	p {
+		font-family: $base-font-family;
+		font-size: 22px;
+		line-height: 32px;
+	}
+	.uk-grid-margin {
+		margin-top: unset;
+	}
+
+	span {
+		color: #0073E6;
+	}
+	.uk-inline {
+		width:183px;
+		margin: 2rem;
+		.uk-input,
+		.uk-select,
+		.uk-textarea {
+			border: transparent;
+			border-bottom: 1px solid black;
+			background: transparent;
+			font-weight: 600;
+			font-size: 1.6rem;
+			padding-top:0.6rem;
+			color: #4D4B4A;
+			font-family: $base-font-family;
+		}
+		p {
+			font-family: $base-font-family;
+			font-size: 14px;
+			line-height: 21px;
+			color: #796E65;
+			mix-blend-mode: normal;
+			opacity: 0.9;
+			text-align: left;
+			position: relative;
+			top: 5px;
+		}
+
+		.disponibility {
+			position: absolute;
+		}
+		button {
+			width: 100%;
+		}
+	}
+}

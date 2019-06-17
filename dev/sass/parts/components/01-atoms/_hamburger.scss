@@ -1,0 +1,96 @@
+// variables
+$color: $text-color;
+$width: (
+  'base': rem(36px),
+);
+$height: (
+  'base': rem(21px),
+);
+$line-height: 2px;
+$label-size: rem(14px);
+$label-margin: rem(4px 0 0);
+
+
+// mixins
+@mixin hamburger-line($pos) {
+  content: '';
+  @extend %hamburger-line;
+  #{$pos}: 0;
+  transform-origin: center center;
+  transition: all $tt;
+}
+
+// structure
+%hamburger {
+  display: inline-block;
+  text-align: center;
+  line-height: 1;
+  cursor: pointer;
+}
+
+%hamburger-line {
+  display: block;
+  background: $color;
+  position: absolute;
+  width: 100%;
+  height: $line-height;
+  left: 0;
+  transform: none;
+}
+
+%hamburger-icon {
+  display: inline-block;
+  width: map-get($width, 'base');
+  height: map-get($height, 'base');
+  position: relative;
+}
+
+%hamburger-label {
+  text-transform: uppercase;
+  display: block;
+  font-size: $label-size;
+  margin: $label-margin;
+}
+
+// exported selectors
+.hamburger {
+  @extend %hamburger;
+
+  &__icon {
+    @extend %hamburger-icon;
+
+    &::before {
+      @include hamburger-line('top');
+    }
+
+    &::after {
+      @include hamburger-line('bottom');
+    }
+  }
+
+  &__line{
+    @extend %hamburger-line;
+    top: 50%;
+    margin-top: -1px;
+  }
+
+  &.close {
+    .hamburger__line{
+      opacity: 0;
+    }
+
+    .hamburger__icon {
+      &::before{
+        transform: rotate(45deg);
+        top: 50%;
+        margin-top: -2px;
+      }
+
+      &::after{
+        transform: rotate(-45deg);
+        bottom: 50%;
+        margin-top: 2px;
+      }
+    }
+  }
+}

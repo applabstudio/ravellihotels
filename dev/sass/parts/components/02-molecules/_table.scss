@@ -1,0 +1,28 @@
+table.uk-table {
+	td {
+		padding: 16px 12px;
+		vertical-align: top;
+		font-family: $alt-font-family;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 16px;
+		color: black;
+		&:hover {
+			text-decoration: #796E65;
+			text-decoration-line: underline;
+		}
+		span {
+			color:#A28455;
+		}
+	}
+	th {
+		padding: 16px 12px;
+		vertical-align: bottom;
+		font-family: $alt-font-family;
+		font-style: normal;
+		font-weight: 300;
+		font-size: 19.2px;
+		text-transform: uppercase;
+		color: black;
+	}
+}

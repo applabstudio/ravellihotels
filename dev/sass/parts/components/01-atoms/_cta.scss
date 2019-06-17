@@ -1,0 +1,16 @@
+$fs: (
+  xs: ms(-1),
+  sm: ms(1),
+  xl: ms(8),
+);
+
+.cta {
+  display: flex;
+  align-items: center;
+  font-family: $title-font-family;
+  font-size: map-get($fs, xs);
+
+  @include media('>=sm') {
+    font-size: map-get($fs, sm);
+  }
+}

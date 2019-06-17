@@ -1,0 +1,37 @@
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin container($fluid: false) {
+  padding-left: $container-pad;
+  padding-right: $container-pad;
+  margin: 0 auto;
+  width: 100%;
+
+  @if not $fluid {
+    @each $bp, $width in $container-width {
+      @include media(">=#{$bp}") {
+        width: $width;
+      };
+    }
+  }
+}

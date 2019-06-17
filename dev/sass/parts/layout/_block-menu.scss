@@ -1,0 +1,79 @@
+$block-w: (
+  lg: 320px,
+  sm: 260px,
+);
+$spacing: rem(4px);
+$sub-p: rem(0 8px);
+$title-fs: (
+  lg: ms(6),
+  sm: ms(4)
+);
+$sub-fs: (
+  lg: ms(3),
+  sm: ms(1)
+);
+
+.block-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  &__block {
+    margin: $spacing;
+    flex: 0 0 rem(map-get($block-w, lg));
+
+    @include media('>=md', '<xl') {
+      flex: 0 0 rem(map-get($block-w, sm));
+    }
+
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-size: contain;
+      transition: opacity $tt;
+      flex: 0 0 rem(map-get($block-w, lg));
+      height: rem(map-get($block-w, lg) * 9/16);
+
+      @include media('>=md', '<xl') {
+        flex: 0 0 rem(map-get($block-w, sm));
+        height: rem(map-get($block-w, sm) * 9/16);
+      }
+
+      @include on-event() {
+        opacity: 0.65;
+      }
+    }
+
+    &__title {
+      font-family: $alt-font-family;
+      text-transform: uppercase;
+      font-size: map-get($title-fs, lg);
+      
+      @include media('>=md', '<xl') {
+        font-size: map-get($title-fs, sm);
+      }
+    }
+
+    &__sub {
+      font-family: $title-font-family;
+      line-height: 1.1;
+      text-align: center;
+      padding: $sub-p;
+      font-size: map-get($sub-fs, lg);
+      
+      @include media('>=md', '<xl') {
+        font-size: map-get($sub-fs, sm);
+      }
+    }
+  }
+
+  @include when-inside('.site-nav') {
+    @include media('<sm') {
+      display: none;
+    }
+
+    margin: rem(12px 0);
+  }
+}

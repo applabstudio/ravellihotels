@@ -1,0 +1,55 @@
+.wwea-hotels {
+	.heading-address {
+		.hotel-image {
+			img {
+				margin: 0 auto;
+				mix-blend-mode: multiply;
+			}	
+		}
+
+		.address-wrapper {
+			padding-top:2rem;
+			h5 {
+				font-family: $alt-font-family;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 2rem;
+				line-height: 2.8rem;
+				letter-spacing: 0.5rem;
+				text-transform: uppercase;
+				padding-bottom: 1rem;
+			}
+			a {
+				font-family: $base-font-family;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 1.8rem;
+				line-height: 2.8rem;
+			}
+		}
+	}
+	.how-to-reach-us {
+		padding-top:4rem;
+		h2 {
+			font-family: $alt-font-family;
+			font-style: normal;
+			font-weight: 600;
+			font-size: 3.3rem;
+			line-height: 4.9rem;
+		}
+		p {
+			font-family: $base-font-family;
+			font-style: normal;
+			font-weight: normal;
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+		}
+	}
+}
+
+.hotel-bg-1 {
+	background-color: #F3F3F2;
+}
+.hotel-bg-2 {
+	background-color: white;
+}

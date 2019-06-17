@@ -1,0 +1,44 @@
+.services {
+	background-color: #F2F2F2;
+	text-align: center;
+
+	&__heading {
+		h2 {
+			font-family: $alt-font-family;
+			font-weight: 600;
+			font-size: 3.2rem;
+			color:#796E65;
+			line-height: 49px;
+		}
+		p {
+			font-family: $base-font-family;
+			font-size:2rem;
+			color:#222222;
+			padding-top: 2rem;
+		}
+	}
+
+	&__body {
+		div {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+		}
+		svg {
+			width: 50px;
+		}
+		p {
+			font-family: $alt-font-family;
+			text-transform: uppercase;
+			font-size: 1.8rem;
+			color: #67625E;
+			line-height: 28px;
+			word-break: break-word;
+			display: flex;
+			width: 60%;
+			text-align: left;
+			margin-left: 2rem;
+		}
+	}
+}

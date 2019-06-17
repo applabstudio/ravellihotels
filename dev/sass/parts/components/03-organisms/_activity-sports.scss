@@ -1,0 +1,42 @@
+.activity-sports {
+	background: #F3F3F2;
+	&__heading {
+		h1 {
+			font-family: $alt-font-family;
+			font-weight: 600;
+			font-size: 42px;
+			line-height: 63px;
+			text-align: center;
+			color: #796E65;	
+		}
+		p {
+			font-family: $base-font-family;
+			font-size: 20px;
+			line-height: 32px;
+			letter-spacing: 1px;
+			color: #222222;
+		}
+	}
+	&__body {
+		margin-top:4.1rem;
+		color: #222222;
+		.uk-accordion-title {
+			font-family: $alt-font-family;
+			font-weight: 600;
+			font-size: 22px;
+			line-height: 43px;
+			border-bottom: 1px solid #979797;
+		}
+		.uk-accordion-content p {
+			font-size: 2rem;
+		}
+	}
+	&__footer {
+		margin-top:4rem;
+		p {
+			font-family: $base-font-family;
+			font-size: 2rem;
+			line-height:3.2rem;
+		}
+	}
+}

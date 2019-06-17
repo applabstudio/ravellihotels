@@ -1,0 +1,84 @@
+$input-fs: (
+  base: rem(28px),
+  sm: rem(24px),
+  lg: rem(36px),
+);
+$input-p: rem(8px);
+$input-w: (
+  base: rem(280px),
+  sm: rem(600px),
+  lg: rem(640px),
+);
+$icon-dim: (
+  base: rem(36px),
+  lg: rem(48px),
+);
+
+.search-form {
+  display: flex;
+  align-items: center;
+
+  input {
+    background: none;
+    border-width: 0 0 2px;
+    padding: $input-p;
+    width: map-get($input-w, base);
+    font-size: map-get($input-fs, base);
+    border-radius: 0;
+    height: auto;
+    box-shadow: none;
+    color: white;
+    @include media('>=sm') {
+      width: map-get($input-w, sm);
+      font-size: map-get($input-fs, sm);
+    }
+    @include media('>=lg') {
+      width: map-get($input-w, lg);
+      font-size: map-get($input-fs, lg);
+    }
+
+    &:focus {
+      box-shadow: none;
+      outline: none;
+    }
+  }
+
+  button {
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0;
+    svg {
+      width: map-get($icon-dim, base);
+      height: map-get($icon-dim, base);
+      fill: get-color(bg, 1);
+
+      @include media('>=lg') {
+        width: map-get($icon-dim, lg);
+        height: map-get($icon-dim, lg);
+      }
+    }
+  }
+
+  &--inner {
+    justify-content: flex-start;
+    margin: rem(0 0 24px);
+  }
+
+  @include when-inside('.modal') {
+    justify-content: center;
+
+    input {
+      border-color: get-color(primary, 0);
+      color: black;
+
+      &::placeholder {
+        color: get-color(primary, 0);
+      }
+    }
+
+    button svg {
+      fill: get-color(primary, 0);
+    }
+  }
+}

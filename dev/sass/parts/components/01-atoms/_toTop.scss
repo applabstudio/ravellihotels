@@ -1,0 +1,17 @@
+.toTop {
+    position: fixed;
+    z-index: 99999;
+    right: 2rem;
+    top: 86%;
+    background: #423e37;
+    border-radius: 50%;
+    padding: 0.8rem;
+    opacity: 0.6;
+    .uk-icon.uk-totop {
+        svg {
+            color:white;
+        }
+    }
+        
+    
+}

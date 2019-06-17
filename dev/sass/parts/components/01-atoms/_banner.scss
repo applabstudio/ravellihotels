@@ -1,0 +1,9 @@
+$spacing: rem(30px);
+
+.banner {
+  margin: $spacing 0;
+
+  > * {
+    margin: 0 auto;
+  }
+}

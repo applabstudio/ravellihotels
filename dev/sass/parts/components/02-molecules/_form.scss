@@ -1,0 +1,158 @@
+.contact-form {
+	&__body {
+		margin:0 auto;
+		.uk-first-column {
+			padding:0;
+			h3 {
+				font-family: $alt-font-family;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 2.9rem;
+				line-height: 3.5rem;
+				letter-spacing: 6px;
+				text-transform: uppercase;
+				color: #000000;
+			}
+			p {
+				font-family: $base-font-family;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 2.2rem;
+				line-height: 3.4rem;
+				color: #222222;
+			}
+		}
+		.input-container {
+			width:100%;
+			// NOTE Mixin Material-Design Textfields
+			.mdc-floating-label {
+				font-size:2rem;
+				padding:1rem;
+			}
+			.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+				color: get-color(primary, 0);
+			}
+			.mdc-text-field .mdc-line-ripple {
+				background-color: get-color(bg, 9);
+			}
+			.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading, .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch, .mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing {
+				border-color: get-color(bg, 9);
+			}
+			.mdc-text-field {
+				width: 46%;
+				margin-bottom: 1.4rem;
+				margin-right: 1rem;
+				&__input {
+					caret-color: black;
+					padding:1.8rem 0 0 2.5rem;
+					font-size:2rem;
+				}
+				@include media('<=lg') {
+					width:100%;
+				}
+				&--outlined {
+					width: 94.5%;
+					@include media('<=lg') {
+						width:100%;
+					}
+				}
+			}
+			.message {
+				width: 94.5%;
+				@include media('<=lg') {
+					width:100%;
+				}
+			}
+		}
+		.privacy-area {
+			display: flex;
+			justify-content: flex-start;
+			align-items: self-start;
+			label {
+				padding-left: .4rem;
+			}
+		}
+		button {
+			width: 94.5%;
+			margin-top:1rem;
+			@include media('<=lg') {
+				width: 100%;
+			}
+		}
+	}
+}
+
+form {
+	.grid {
+		padding:0.9rem;
+		.uk-width-1-2\@m {
+			width: 66.6%;
+			@include media('<=lg') {
+				width:100%;
+			}
+		}
+		.uk-inline {
+			width: 100%;
+			input {
+				width: 100%;
+				margin:0;
+				margin-bottom:1rem;
+				padding:1rem;
+				background: none;
+				border: none;
+				border-bottom: 1px solid #4D4B4A;
+				font-weight: 600;
+				font-size: 1.6rem;
+				color:black;
+				font-family: $base-font-family;
+				&:focus {
+					background: none;
+				}
+				&[placeholder] {
+					color: #4D4B4A;
+				}
+			}
+			textarea {
+				border: none;
+				background: none;
+				border-bottom: 1px solid black;
+				width: 100%;
+				outline: none;
+				resize: none;
+				padding-left: 4rem;
+				padding-top: 1rem;
+				font-family: $base-font-family;
+				font-style: normal;
+				font-weight: 600;
+				font-size: 20px;
+				line-height: 28px;
+				color: #4D4B4A;
+			}
+			.uk-form-icon-flip.uk-icon { 
+				position: absolute;
+				left: 0;
+				top: -8rem;
+			}
+			span {
+				color: #0073E6;
+			}
+			.privacy {
+				padding-top: 1rem;
+				display: flex;
+				align-items: center;
+				input[type='checkbox'] {
+					width:1.9rem;
+					height:1.9rem;
+				}
+				label {
+					padding-left:0.5rem;
+					padding-bottom:0.5rem;
+				}
+			}
+	}
+		.uk-width-1-6\@m {
+			display: flex;
+			align-items: center;
+		}
+	}
+}

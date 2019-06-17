@@ -1,0 +1,80 @@
+*, *::before, *::after{
+  box-sizing: border-box;
+}
+
+body {
+  background: get-color(bg, 1);
+}
+
+::selection {
+  background: #796E65;
+}
+
+figure {
+  margin: 0;
+}
+
+img, svg{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: $text-color;
+  &:hover {
+    transition: all $tt;
+    color: rgb(97, 87, 78);
+  }
+}
+
+address {
+  font-style: normal;
+}
+
+hr {
+  display: flex;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6,
+ul, ol,
+p {
+  margin: 0;
+}
+
+.js-allclick, .js-toggle {
+  cursor: pointer;
+}
+
+[class*="webit-credits"]{
+  font-size: 12px !important;
+  line-height: 12px !important;
+  text-align: center !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-family: "Arial", sans-serif !important;
+  margin: rem(16px 0);
+}
+[class*="webit-credits"] img{
+  display: inline-block !important;
+  vertical-align: middle !important;
+  margin: 0 5px 0 0 !important;
+}
+[class*="webit-credits"] a{
+  text-decoration: none !important;
+}
+[class*="webit-credits-pos"],
+[class*="webit-credits-pos"] a,
+[class*="webit-credits-pos"] a:hover,
+[class*="webit-credits-pos"] a:active{
+  color: #474747 !important;
+}
+[class*="webit-credits-neg"],
+[class*="webit-credits-neg"] a,
+[class*="webit-credits-neg"] a:hover,
+[class*="webit-credits-neg"] a:active{
+  color: #ffffff !important;
+}
+

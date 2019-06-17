@@ -1,0 +1,130 @@
+// vars
+$p: rem(16px 40px);
+$fw: 500;
+$b-rad: 6px;
+$fs: ms(5);
+$lh: 1.6;
+$ico-dim: rem(32px);
+
+// mixins
+@mixin button-style($c, $c-hover, $bg, $bg-hover, $border, $border-hover) {
+  color: $c;
+  background: $bg;
+  border-color: $border;
+
+  svg {
+    fill: $c;
+  }
+
+  @include on-event() {
+    color: $c-hover;
+    background: $bg-hover;
+    border-color: $border-hover;
+
+    svg {
+      fill: $c-hover;
+    }
+  };
+}
+
+// structure
+.btn {
+  font-family: $alt-font-family;
+  padding: $p;
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+  transition: all $tt;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  border:none;
+  width: 100%;
+  border-radius: $b-rad;
+  svg {
+    width: $ico-dim;
+    height: $ico-dim;
+    transition: all $tt;
+  }
+
+  @include media('>=sm') {
+    width: rem(280px);
+  };
+
+  &--primary {
+    @include button-style(white, get-color(primary, 0), get-color(primary, 0), white, get-color(primary, 0), get-color(primary, 0));
+    &:active {
+      background: get-color(bg, 4);
+      color: white;
+    }
+  }
+  &--yellow {
+    @include button-style(white, get-color(bg, 5), get-color(bg, 5), white, get-color(bg, 5), get-color(bg, 5));
+    &:active {
+      background: get-color(bg, 6);
+      color:white;
+    }
+  }
+  &--grey {
+    @include button-style(white, get-color(bg, 7), get-color(bg, 7), white, get-color(bg, 7), get-color(bg, 7));
+    &:active {
+      background: get-color(bg, 8);
+      color:white;
+    }
+  }
+
+}
+
+
+.btn-lang {
+  
+  border: none;
+  color:white;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+}
+
+.btn-gold{
+  background: rgba(195, 160,0, 0.5);
+  span{
+    margin-right: 14px;
+    margin-bottom: 10px;
+  }
+} 
+
+.btn-gray {
+  background: rgba(226, 224, 219, 0.5);
+   span{
+    margin-right: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+.btn-primary {
+  background: #796E65;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+  border: none;
+  width: 35.6rem;
+  margin:0 auto;
+  height: 43px;
+  font-size: 1.6rem;
+  cursor: pointer;
+  font-weight: 500;
+  line-height: 3.6rem;
+  text-align: center;
+  color: #FFFFFF;
+  cursor: pointer;
+  &:hover {
+    transition: all $tt;
+    background: #d9b968;
+  }
+  &:active {
+    background: #f0ba32;
+  }
+
+  @include when-inside('.book-your-room') {
+    width:100%;
+  }
+}
