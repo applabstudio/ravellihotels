@@ -1,4 +1,12 @@
 .feature-room {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
+	.uk-container {
+		@include media('<=md') {
+			padding:0
+		}
+	}
 	h3 {
 		font-family: $alt-font-family;
 		text-transform: uppercase;
@@ -7,6 +15,9 @@
 		letter-spacing: 6px;
 		color: black;
 		padding-bottom:2rem;
+		@include media('<=md') {
+			font-size:ms(6);
+		}
 	}
 	p {
 		font-family: $base-font-family;

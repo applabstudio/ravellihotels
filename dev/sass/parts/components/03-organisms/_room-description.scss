@@ -1,4 +1,7 @@
 .room-description {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
 	.room-info {
 		&__wrapper {
 			width: 50%;
@@ -20,5 +23,9 @@
 		font-size: 22px;
 		line-height: 34px;
 		text-align: center;
+		@include media('<=md') {
+			font-size:ms(5);
+			line-height:unset;
+		}
 	}
 }
