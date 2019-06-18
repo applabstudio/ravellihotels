@@ -1,4 +1,7 @@
 .contact-form {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
 	&__body {
 		margin:0 auto;
 		.uk-first-column {
@@ -153,6 +156,11 @@ form {
 		.uk-width-1-6\@m {
 			display: flex;
 			align-items: center;
+		}
+		[class*="uk-width"] {
+			@include media('<=lg') {
+				padding:0;
+			}
 		}
 	}
 }

@@ -7,6 +7,9 @@ $fs: (
 
 // SECTION SECTION-CONTAINER
 .section-container {
+	@include media('<=md') {
+		padding:0;
+	}
 		h4 {
 			font-family: $alt-font-family;
 			font-weight: 200;
@@ -80,17 +83,30 @@ $fs: (
 		}
 
 		&--intro {
+			.uk-container {
+				@include media('<=md') {
+					padding:1.5rem;
+				}
+			}
+
 			h1 {
 				color: #796E65;
 				font-family: $alt-font-family;
 				font-weight: 600;
 				font-size: 4.2rem;
+				@include media('<=md') {
+					font-size: ms(6);
+				}
 			}
 			p {
 				font-family: $base-font-family;
 				font-size: 2.2rem;
 				line-height: 3.4rem;
 				color: #222222;
+				@include media('<=md') {
+					font-size: ms(5);
+					line-height: unset;
+				}
 			}
 			a {
 				font-family: $base-font-family;
@@ -99,6 +115,9 @@ $fs: (
 				line-height: 2.3rem;
 				display: inline-block;
 				padding-top:1.8rem; 
+				@include media('<=md') {
+					font-size: ms(6);
+				}
 			}
 		}
 }

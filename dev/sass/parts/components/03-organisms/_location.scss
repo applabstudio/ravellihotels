@@ -20,6 +20,9 @@
 		position: absolute;
 		background: rgba(34, 34, 34, 0.56);
 		z-index: 1;
+		@include media('<=md') {
+			padding:1.5rem;
+		  }
 			p:first-child {
 				font-family: $base-font-family;
 				font-style: normal;
@@ -36,6 +39,9 @@
 				font-size: 32.43px;
 				line-height: 49px;
 				color: #FCFAF8;
+				@include media('<=md') {
+					font-size: ms(6);
+				}
 			}
 			p:last-child {
 				font-family: $base-font-family;

@@ -1,5 +1,11 @@
 .subheader {
+  @include media('<=md') {
+    padding:1.5rem;
+  }
   .uk-container {
+    @include media('<=md') {
+			padding:0;
+		  }
     h4 {
       font-weight: 200;
       font-size: 2.025rem;
@@ -13,15 +19,22 @@
       font-size: 4.2rem;
       text-align: center;
       color: #796E65;
+      @include media('<=md') {
+        font-size: ms(6);
+			}
     }
     p {
       font-family: $base-font-family;
       font-style: normal;
       font-weight: normal;
-      font-size: 2.2rem;
+      font-size: ms(8);
       line-height: 3.4rem;
       letter-spacing: 1px;
       color: #222222;
+      @include media('<=md') {
+        font-size: ms(5);
+        line-height: unset;
+      }
     }
     a {
       font-weight: 800;

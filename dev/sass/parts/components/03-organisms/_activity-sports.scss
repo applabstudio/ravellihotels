@@ -1,5 +1,13 @@
 .activity-sports {
 	background: #F3F3F2;
+	@include media('<=md') {
+		padding:1.5rem;
+	}
+	.uk-container {
+		@include media('<=md') {
+			padding:0;
+		}
+	}
 	&__heading {
 		h1 {
 			font-family: $alt-font-family;
@@ -8,6 +16,9 @@
 			line-height: 63px;
 			text-align: center;
 			color: #796E65;	
+			@include media('<=md') {
+				font-size: ms(6);
+			}
 		}
 		p {
 			font-family: $base-font-family;
@@ -15,6 +26,9 @@
 			line-height: 32px;
 			letter-spacing: 1px;
 			color: #222222;
+			@include media('<=md') {
+				font-size: ms(5);
+			}
 		}
 	}
 	&__body {
@@ -37,6 +51,9 @@
 			font-family: $base-font-family;
 			font-size: 2rem;
 			line-height:3.2rem;
+			@include media('<=md') {
+				font-size: ms(5);
+			}
 		}
 	}
 }

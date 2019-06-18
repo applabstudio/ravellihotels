@@ -1,4 +1,7 @@
 .activity {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
 	&__cards {
 		.uk-overlay-default {
 			background: rgba(34, 34, 34, 0.56);
@@ -12,37 +15,47 @@
 			min-height: 57rem;
 	}
 	.uk-card-body {
+		@include media('<=md') {
+			padding:1.5rem;
+		}
 		h4 {
 			font-family: $alt-font-family;
-			font-size: 20.25px;
-			line-height: 30px;
+			font-size: 2rem;
+			line-height: 3rem;
 			letter-spacing: 0.881201px;
 			text-transform: uppercase;
 			color: #222222;
+			@include media('<=md') {
+				font-size: ms(5);
+			}
 		}
 
 		h3 {
 			font-family: $alt-font-family;
 			font-weight: 600;
-			font-size: 32.43px;
-			line-height: 49px;
+			font-size: 3.3rem;
+			line-height: 4.9rem;
 			color: #222222;
 			position:relative;
 			bottom:1rem;
+			@include media('<=md') {
+				font-size: ms(7);
+				line-height: unset;
+			}
 		}
 
 		p {
 			font-family: $base-font-family;
-			font-size: 16px;
-			line-height: 23px;
+			font-size: 1.6rem;
+			line-height: 2.3rem;
 			color: #222222;
 		}
 
 		a {
 			font-family: $base-font-family;
 			font-weight: 800;
-			font-size: 24px;
-			line-height: 23px;
+			font-size: 2.4rem;
+			line-height: 2.3rem;
 			color: #222222;
 			margin-bottom:4rem;
 			position:relative;

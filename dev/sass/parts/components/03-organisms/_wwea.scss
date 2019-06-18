@@ -1,4 +1,7 @@
 .wwea-hotels {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
 	.heading-address {
 		.hotel-image {
 			img {
@@ -36,6 +39,9 @@
 			font-weight: 600;
 			font-size: 3.3rem;
 			line-height: 4.9rem;
+			@include media('<=md') {
+				font-size: ms(6);
+			}
 		}
 		p {
 			font-family: $base-font-family;
@@ -43,6 +49,9 @@
 			font-weight: normal;
 			font-size: 1.8rem;
 			line-height: 2.8rem;
+			@include media('<=md') {
+				font-size: ms(5);
+			}
 		}
 	}
 }
