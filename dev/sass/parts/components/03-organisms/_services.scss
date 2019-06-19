@@ -14,6 +14,12 @@
 			font-size: 3.2rem;
 			color:#796E65;
 			line-height: 49px;
+			@include media('<=md') {
+				font-size: ms(9);
+			  }
+			  @include media('<=sm') {
+				font-size: ms(8);
+					}
 		}
 		p {
 			font-family: $base-font-family;
@@ -22,6 +28,9 @@
 			padding-top: 2rem;
 			@include media('<=md') {
 				font-size: ms(5);
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
 			}
 		}
 	}

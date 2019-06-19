@@ -1,6 +1,7 @@
 $fs: (
+	xs: ms(3),
 	s: ms(6),
-	l: ms(8),
+	l: ms(9),
 	xl: ms(13),
 	xxl: ms(17),
 );
@@ -25,9 +26,13 @@ $fs: (
 			line-height: 6.3rem;
 			color: #796E65;
 			padding: 0 0 2rem 0;
+			@include media('<=md') {
+				font-size: ms(8);
+			}
 			@include media('<=sm') {
-				font-size: ms(5);
-			} 
+				font-size: ms(6);
+				padding: 0;
+			}
 		}
 		p:last-of-type {
 			font-family: $base-font-family;
@@ -36,50 +41,70 @@ $fs: (
 			font-size: ms(7);
 			line-height: 3.4rem;
 			color: #222222;
+			@include media('<=md') {
+				font-size: ms(5);
+				line-height: unset;
+			} 
 			@include media('<=sm') {
-				font-size: ms(4);
+				font-size: ms(3);
+				line-height: unset;
 			} 
 		}
 		a {
 			font-family: $base-font-family;
 			font-weight: 800;
-			font-size: 24px;
-			line-height: 23px;
+			font-size: 2.4rem;
+			line-height: 2.3rem;
 			display: inline-block;   
 			padding-top: 1.8rem;
+			@include media('<=md') {
+				font-size: ms(6);
+				line-height: unset;
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
+				padding: 0;
+				line-height: unset;
+			}
 		}
 		&--image {
-			.bg-wrapper-full {
-				background-repeat: no-repeat;
-				background-position: center;
-				background-size: cover;
-				width: 100%;
-				height:100vh;  /* responsive height */
-				&--small {
-					height:80vh;  /* responsive height */
+			> div {
+				width:100%;
+				height: 100vh;
+				position: relative;
+				img {
+					width: 100%;
+					height: 100%;
+					object-fit: cover;
+				}
+				> div {
+					width: 100%;
+					h1 {
+						font-family: $alt-font-family;
+						font-size: map-get($fs, xxl); 
+						@include media('<=md') {
+						  font-size: map-get($fs, xl);
+						}
+						@include media('<=sm') {
+							font-size: map-get($fs, l);
+						  }
+						font-weight: 500;
+						color:white;
+					}
+					p {
+						font-family: $alt-font-family;
+						font-size: map-get($fs, l);
+						@include media('<=md') {
+						  font-size: map-get($fs, s);
+						}
+						@include media('<=sm') {
+							font-size: map-get($fs, xs);
+						  }
+						font-weight: 300;
+						color:white;
+					}
 				}
 			}
-			div {
-				h1 {
-					font-family: $alt-font-family;
-					font-size: map-get($fs, xxl); // REVIEW Modular Scale
-					@include media('<=md') {
-					  font-size: map-get($fs, xl);
-					}
-					font-weight: 500;
-					color:white;
-				}
-				p {
-					font-family: $alt-font-family;
-					font-size: map-get($fs, l); // REVIEW Modular Scale
-					@include media('<=md') {
-					  font-size: map-get($fs, s);
-					}
-					font-weight: 300;
-					color:white;
-				}
-			}
-
 		}
 
 		&--intro {
@@ -95,8 +120,11 @@ $fs: (
 				font-weight: 600;
 				font-size: 4.2rem;
 				@include media('<=md') {
-					font-size: ms(6);
-				}
+					font-size: ms(9);
+				  }
+				  @include media('<=sm') {
+					font-size: ms(8);
+						}
 			}
 			p {
 				font-family: $base-font-family;
@@ -105,6 +133,10 @@ $fs: (
 				color: #222222;
 				@include media('<=md') {
 					font-size: ms(5);
+					line-height: unset;
+				}
+				@include media('<=sm') {
+					font-size: ms(3);
 					line-height: unset;
 				}
 			}

@@ -20,7 +20,10 @@
       text-align: center;
       color: #796E65;
       @include media('<=md') {
-        font-size: ms(6);
+        font-size: ms(9);
+      }
+      @include media('<=sm') {
+        font-size: ms(8);
 			}
     }
     p {
@@ -35,6 +38,9 @@
         font-size: ms(5);
         line-height: unset;
       }
+      @include media('<=sm') {
+        font-size: ms(3);
+			}
     }
     a {
       font-weight: 800;

@@ -15,8 +15,11 @@
 			color: #222222;
 			line-height: 70px;
 			@include media('<=md') {
-				font-size: ms(9);
-				line-height: unset;
+				font-size: ms(8);
+			}
+			@include media('<=sm') {
+				font-size: ms(6);
+				padding: 0;
 			}
 		}
 
@@ -26,6 +29,9 @@
 			line-height: 32px;
 			@include media('<=md') {
 				font-size: ms(5);
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
 			}
 		}
 
@@ -38,6 +44,12 @@
 			padding:2rem;
 			@include media('<=md') {
 				font-size: ms(6);
+				line-height: unset;
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
+				padding: 0;
+				line-height: unset;
 			}
 		}
 	}

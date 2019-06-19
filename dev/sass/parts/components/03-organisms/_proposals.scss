@@ -17,7 +17,10 @@
 			padding-bottom: 4rem;
 			@include media('<=md') {
 				font-size: ms(9);
-			}
+			  }
+			  @include media('<=sm') {
+				font-size: ms(8);
+					}
 		}
 		p {
 			font-family: $base-font-family;
@@ -27,6 +30,11 @@
 			font-weight: normal;
 			@include media('<=md') {
 				font-size: ms(5);
+				line-height: unset;
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
+				line-height:unset;
 			}
 		}
 	}

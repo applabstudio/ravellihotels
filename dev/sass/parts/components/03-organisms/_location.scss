@@ -27,19 +27,29 @@
 				font-family: $base-font-family;
 				font-style: normal;
 				font-weight: 300;
-				font-size: 20.25px;
+				font-size: ms(6);
 				letter-spacing: 0.881201px;
 				text-transform: uppercase;
 				color: #FFFFFF;
+				@include media('<=md') {
+					font-size: ms(8);
+				}
+				@include media('<=sm') {
+					font-size: ms(6);
+					padding: 0;
+				}
 			}
 			h1 {
 				font-family: $alt-font-family;
 				font-style: normal;
 				font-weight: 600;
-				font-size: 32.43px;
-				line-height: 49px;
+				font-size: 3.25rem;
+				line-height: 4.9rem;
 				color: #FCFAF8;
 				@include media('<=md') {
+					font-size: ms(8);
+				}
+				@include media('<=sm') {
 					font-size: ms(6);
 				}
 			}
@@ -48,12 +58,15 @@
 				font-style: normal;
 				font-weight: normal;
 				font-size: 18px;
-				line-height: 26px;
-				text-align: center;
-				letter-spacing: 0.9px;
+				line-height: 2.6rem;
 				color: #FFFFFF;
+				@include media('<=md') {
+					font-size: ms(5);
+					line-height: unset;
+				}
 				@include media('<=sm') {
-					font-size:ms(2)
+					font-size:ms(3);
+					line-height: unset;
 				}
 			}
 		}

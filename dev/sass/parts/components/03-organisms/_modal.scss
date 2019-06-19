@@ -9,8 +9,10 @@ $content-max-h: calc(100vh - 90px);
 $content-top: rem(64px);
 
 $fs: (
+  xs: ms(5),
+  sm: ms(6),
   md: ms(7),
-  xl: ms(9),
+  xl: ms(10),
 );
 
 // SECTION MODAL PRIMARY-MENU
@@ -52,16 +54,6 @@ $fs: (
             list-style: none;
             text-align: center;
             padding: 0;
-            li:first-of-type{
-              // line-height: 6rem;
-              // font-weight: 500;
-            }
-            li:nth-child(2), li:nth-child(3), li:nth-child(4) {
-              // font-weight: 300;
-            }
-            li:nth-child(4) {
-              // padding-bottom:2rem;
-            }
             li {
               a {
                 color: #ffffff;
@@ -72,6 +64,9 @@ $fs: (
                 @include media('<=md') {
                   font-size: map-get($fs, md);
                 }
+                @include media('<=sm') {
+                  font-size: map-get($fs, xs);
+                }
               }
             }
           } 
@@ -80,12 +75,12 @@ $fs: (
           .menu-social {
             display: flex;
             justify-content: center;
-            padding:4rem 4rem 0 4rem;
+            padding-top:2rem;
             ul {
                list-style-type: none;
                li {
                  display: inline;
-                 padding:2rem;
+                 margin-right: 1.6rem;
                }
             }
           }

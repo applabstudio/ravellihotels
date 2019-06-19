@@ -5,9 +5,27 @@
 			font-size: 22px;
 			line-height: 43px;
 			border-bottom: 1px solid #979797;
+			@include media('<=md') {
+				font-size: ms(6);
+				line-height: unset;
+				padding: 0;
+			}
+			@include media('<=sm') {
+				font-size: ms(4);
+				line-height: unset;
+				padding: 0;
+			}
 		}
 		.uk-accordion-content p {
 			font-size: 2rem;
+			@include media('<=md') {
+				font-size: ms(5);
+				line-height: unset;
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
+				line-height: unset;
+			}
 		}
 		img {
 			width:100%;
