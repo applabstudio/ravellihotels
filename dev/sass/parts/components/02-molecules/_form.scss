@@ -15,6 +15,13 @@
 				letter-spacing: 6px;
 				text-transform: uppercase;
 				color: #000000;
+				@include media('<=md') {
+					font-size: ms(9);
+					text-align: center;
+				  }
+				@include media('<=sm') {
+					font-size: ms(8);
+				}
 			}
 			p {
 				font-family: $base-font-family;
@@ -23,6 +30,14 @@
 				font-size: 2.2rem;
 				line-height: 3.4rem;
 				color: #222222;
+				@include media('<=md') {
+					font-size: ms(5);
+					text-align: center;
+					line-height: unset;
+				}
+				@include media('<=sm') {
+					font-size: ms(3);
+				}
 			}
 		}
 		.input-container {

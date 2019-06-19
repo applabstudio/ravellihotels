@@ -34,6 +34,12 @@ function hamburgher() {
     });
 }
 
+//Dynamic set class and attributes UIKit
+if(document.querySelectorAll("#bg-section").length > 0) {
+  document.getElementById('bg-section').getElementsByTagName('img')[0].className += "uk-animation-reverse uk-transform-origin-top-right";
+  document.getElementById('bg-section').getElementsByTagName('img')[0].setAttribute("uk-scrollspy", "cls: uk-animation-kenburns; repeat: true"); 
+}
+
 // dynamic imports - swipers
 if (document.querySelectorAll('[data-swiper]').length > 0) {
   import(/* webpackChunkName: "swipers" */ './modules/swipers').then(swipers => {

@@ -79,6 +79,7 @@ $fs: (
 				}
 				> div {
 					width: 100%;
+					bottom: 1rem;
 					h1 {
 						font-family: $alt-font-family;
 						font-size: map-get($fs, xxl); 
