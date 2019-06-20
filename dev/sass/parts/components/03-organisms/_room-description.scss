@@ -1,6 +1,6 @@
-.room-description-component {
+.room-description {
 	background: get-color(beige-dark,0);
-	.room-description {
+	.room-description-w {
 		@include media('<=md') {
 			padding:1.5rem;
 		}
