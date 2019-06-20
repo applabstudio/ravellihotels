@@ -1,24 +1,39 @@
 .book-your-room {
-	margin-top: -1rem;
 	background: #F3F3F2;
+	@include media('<=md') {
+		padding:1.5rem;
+	}
 	h1 {
 		font-family: $alt-font-family;
 		font-weight: 600;
 		font-size: 32.43px;
-		line-height: 49px;
 		color: #222222;
+		@include media('<=md') {
+			font-size: ms(8);
+		}
+		@include media('<=sm') {
+			font-size: ms(6);
+			padding: 0;
+		}
 	}
 	p {
 		font-family: $base-font-family;
 		font-size: 22px;
 		line-height: 32px;
+		@include media('<=md') {
+			font-size: ms(5);
+			line-height: unset;
+		} 
+		@include media('<=sm') {
+			font-size: ms(3);
+		} 
 	}
 	.uk-grid-margin {
 		margin-top: unset;
 	}
 
 	span {
-		color: #0073E6;
+		color: get-color(primary, 0);
 	}
 	.uk-inline {
 		width:183px;

@@ -73,7 +73,9 @@ $ico-dim: rem(32px);
       color:white;
     }
   }
-
+  &--beige {
+    @include button-style(get-color(beige-dark, 1), get-color(bg, 10), get-color(bg, 10), get-color(beige-dark, 1), get-color(bg, 10), get-color(bg, 10));
+  }
 }
 
 

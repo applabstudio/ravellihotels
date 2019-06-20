@@ -11,7 +11,7 @@ $content-top: rem(64px);
 $fs: (
   xs: ms(5),
   sm: ms(6),
-  md: ms(7),
+  md: ms(8),
   xl: ms(10),
 );
 
@@ -65,7 +65,7 @@ $fs: (
                   font-size: map-get($fs, md);
                 }
                 @include media('<=sm') {
-                  font-size: map-get($fs, xs);
+                  font-size: map-get($fs, sm);
                 }
               }
             }

@@ -1,31 +1,45 @@
-.room-description {
-	@include media('<=md') {
-		padding:1.5rem;
-	}
-	.room-info {
-		&__wrapper {
-			width: 50%;
-			 div {
-				display: inline-flex;
-				display: -webkit-inline-flex;
-				align-items: center;
-				color: #796E65;
-				font-weight: bold;
-				font-size: 14px;
-				span, img {
-					margin-right: 0.6rem;
+.room-description-component {
+	background: get-color(beige-dark,0);
+	.room-description {
+		@include media('<=md') {
+			padding:1.5rem;
+		}
+		.room-info {
+			&__wrapper {
+				width: 100%;
+				display: flex;
+				justify-content: space-evenly;
+				 div {
+					display: inline-flex;
+					display: -webkit-inline-flex; // FIX for old iPad
+					align-items: center;
+					color: get-color(bg, 10);
+					font-weight: bold;
+					font-size: 1.4rem;
+					white-space: nowrap;
 				}
 			}
 		}
-	}
-	p {
-		font-family: $base-font-family;
-		font-size: 22px;
-		line-height: 34px;
-		text-align: center;
-		@include media('<=md') {
-			font-size:ms(5);
-			line-height:unset;
+		h4 {
+			color: white;
+		}
+		h1 {
+			color:get-color(bg, 10);
+		}
+		p {
+			font-family: $base-font-family;
+			font-size: 22px;
+			line-height: 34px;
+			text-align: center;
+			color: white;
+			@include media('<=md') {
+				font-size: ms(5);
+				line-height: unset;
+			} 
+			@include media('<=sm') {
+				font-size: ms(3);
+				line-height: unset;
+			} 
 		}
 	}
 }

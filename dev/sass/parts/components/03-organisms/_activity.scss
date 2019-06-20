@@ -13,6 +13,9 @@
 	.uk-card-default.uk-grid-collapse.uk-child-width-1-2\@s.uk-margin.uk-grid {
 			margin: 0 !important;
 			min-height: 57rem;
+			.col-bg-beige {
+				background: get-color(beige-dark, 0);
+			}
 	}
 	.uk-card-body {
 		@include media('<=md') {
@@ -24,9 +27,14 @@
 			line-height: 3rem;
 			letter-spacing: 0.881201px;
 			text-transform: uppercase;
-			color: #222222;
+			color: white;
 			@include media('<=md') {
 				font-size: ms(5);
+				line-height: unset;
+			}
+			@include media('<=sm') {
+				font-size: ms(3);
+				padding: 0;
 			}
 		}
 
@@ -35,12 +43,16 @@
 			font-weight: 600;
 			font-size: 3.3rem;
 			line-height: 4.9rem;
-			color: #222222;
+			color: white;
 			position:relative;
 			bottom:1rem;
 			@include media('<=md') {
 				font-size: ms(7);
 				line-height: unset;
+			}
+			@include media('<=sm') {
+				font-size: ms(5);
+				padding: 0;
 			}
 		}
 
@@ -48,7 +60,14 @@
 			font-family: $base-font-family;
 			font-size: 1.6rem;
 			line-height: 2.3rem;
-			color: #222222;
+			color: white;
+			@include media('<=md') {
+				font-size: ms(5);
+				line-height: unset;
+			} 
+			@include media('<=sm') {
+				font-size: ms(3);
+			} 
 		}
 
 		a {
@@ -56,7 +75,7 @@
 			font-weight: 800;
 			font-size: 2.4rem;
 			line-height: 2.3rem;
-			color: #222222;
+			color: get-color(bg,10);
 			margin-bottom:4rem;
 			position:relative;
 			top:2.5rem;

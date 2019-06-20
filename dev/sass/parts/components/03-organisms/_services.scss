@@ -1,5 +1,5 @@
 .services {
-	background-color: #F2F2F2;
+	background-color: get-color(beige-dark, 0);
 	text-align: center;
 	@include media('<=md') {
 		padding:1.5rem;
@@ -12,19 +12,19 @@
 			font-family: $alt-font-family;
 			font-weight: 600;
 			font-size: 3.2rem;
-			color:#796E65;
+			color:white;
 			line-height: 49px;
 			@include media('<=md') {
 				font-size: ms(9);
 			  }
-			  @include media('<=sm') {
+			@include media('<=sm') {
 				font-size: ms(8);
-					}
+			}
 		}
 		p {
 			font-family: $base-font-family;
 			font-size:2rem;
-			color:#222222;
+			color:white;
 			padding-top: 2rem;
 			@include media('<=md') {
 				font-size: ms(5);
@@ -45,14 +45,14 @@
 			align-items: center;
 			width: 100%;
 		}
-		svg {
-			width: 50px;
+		object {
+			width: 10rem;
 		}
 		p {
 			font-family: $alt-font-family;
 			text-transform: uppercase;
 			font-size: 1.8rem;
-			color: #67625E;
+			color: get-color(bg, 11);
 			line-height: 28px;
 			word-break: break-word;
 			display: flex;

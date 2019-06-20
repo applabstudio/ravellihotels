@@ -16,12 +16,20 @@
 		color: black;
 		padding-bottom:2rem;
 		@include media('<=md') {
-			font-size:ms(6);
+			font-size: ms(7);
+			line-height: unset;
 		}
 	}
 	p {
 		font-family: $base-font-family;
 		font-size: 1.7rem;
 		color: #222222;
+		@include media('<=md') {
+			font-size: ms(5);
+			line-height: unset;
+		} 
+		@include media('<=sm') {
+			font-size: ms(3);
+		} 
 	}
 }

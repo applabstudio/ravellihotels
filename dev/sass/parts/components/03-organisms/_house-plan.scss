@@ -7,9 +7,16 @@
 	h1, h2 {
 		font-family: $alt-font-family;
 		font-weight: 600;
-		font-size: 32.43px;
-		line-height: 49px;
+		font-size: 3.243rem;
 		color: #C2BEBA;
+		@include media('<=md') {
+			font-size: ms(8);
+			line-height: unset;
+			padding: 0;
+		}
+		@include media('<=sm') {
+			font-size: ms(6);
+		}
 	}
 	h6 {
 		font-family: $alt-font-family;
@@ -20,7 +27,7 @@
 		text-transform: uppercase;
 		color: rgba(121, 110, 101, 0.8);
 		align-self: self-end;
-		padding-top: 3.6rem;
+		padding-top: 2rem;
 	}
 
 }

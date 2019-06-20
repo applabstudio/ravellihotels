@@ -8,3 +8,12 @@
 		object-fit: cover;
 	}
 }
+// SECTION Lightbox Open 
+.uk-lightbox {
+	.uk-lightbox-items {
+		div, img {
+				width: 44%;
+				height: auto;
+		}
+	}	
+}

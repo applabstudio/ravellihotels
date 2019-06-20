@@ -152,7 +152,7 @@ form {
 				top: -8rem;
 			}
 			span {
-				color: #0073E6;
+				color: get-color(primary, 0);
 			}
 			.privacy {
 				padding-top: 1rem;

@@ -5,7 +5,6 @@ import modal from './modules/modal';
 import module from './modules/module';
 import {MDCTextField} from '@material/textfield';
 
-// const textField = new MDCTextField(document.querySelector('.mdc-text-field'));
 const inps = document.querySelectorAll('.mdc-text-field');
 inps.forEach(element => {
   new MDCTextField(element);
@@ -15,6 +14,7 @@ siteHeader.init();
 allclick.init();
 modal.init();
 module.init();
+
 hamburgher();
 
 function hamburgher() {
@@ -28,6 +28,7 @@ function hamburgher() {
       let logo = document.querySelector('#logo-open');
       let logoh4 = document.querySelector('#logoh4');
       logo.classList.toggle('uk-invisible');
+      logoh4.classList.toggle('uk-invisible');
     });
 }
 
