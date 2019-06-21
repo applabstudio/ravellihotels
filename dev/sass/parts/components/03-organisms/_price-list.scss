@@ -1,4 +1,7 @@
 .price-list {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
 	&__heading {
 		h1 {
 			padding: 0;
@@ -6,6 +9,9 @@
 	}
 	&__body {
 		.tab-container {
+			@include media('<=md') {
+				padding:0;
+			}
 			.uk-subnav {
 				margin:0;
 				border-bottom:1.5px solid get-color(primary, 0);

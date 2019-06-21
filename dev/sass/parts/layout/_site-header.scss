@@ -40,6 +40,11 @@
     }
     h4 {
       color:white;
+      opacity:1;
+      @include media('<=md') {
+        transition: $tt;
+        opacity: 0;
+      }
     }
     span {
       margin:1rem

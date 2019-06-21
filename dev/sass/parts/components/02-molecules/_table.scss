@@ -5,7 +5,7 @@ table.uk-table {
 		font-family: $alt-font-family;
 		font-style: normal;
 		font-weight: 300;
-		font-size: 16px;
+		font-size: 1.6rem;
 		color: black;
 		&:hover {
 			text-decoration: #796E65;
@@ -21,7 +21,8 @@ table.uk-table {
 		font-family: $alt-font-family;
 		font-style: normal;
 		font-weight: 300;
-		font-size: 19.2px;
+		font-size: 1.6rem;
+		line-height: 2rem;
 		text-transform: uppercase;
 		color: black;
 	}

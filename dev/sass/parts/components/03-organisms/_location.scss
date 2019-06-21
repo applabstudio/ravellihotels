@@ -22,6 +22,7 @@
 		z-index: 1;
 		@include media('<=md') {
 			padding:1.5rem;
+			background: get-color(beige-dark,0);
 		  }
 			p:first-child {
 				font-family: $base-font-family;
@@ -80,13 +81,16 @@
 	}
 		.location-thumb {
 			margin-top: -0.1rem;
-			li {
+			li, .uk-active {
 				width: 20%;
 				margin: 0;
 				padding: 0;
 				a {
-					height: 22.5rem;
+					min-height: 3rem;
 					width: 100%;
+					@include media('>=md') {
+						height: 22.5rem;
+					}
 				}
 			}
 			div {

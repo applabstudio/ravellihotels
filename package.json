@@ -1,5 +1,5 @@
 {
-  "name": "gulp-webpack-starter",
+  "name": "ravelli-hotels",
   "version": "1.2.0",
   "description": "Gulp Webpack Starter - static site builder with a lot of cool features",
   "engines": {
@@ -14,7 +14,7 @@
     "gulp-starter",
     "gulp-builder"
   ],
-  "author": "Dmytro Chumak <hello@webman.pro> (http://webman.pro/)",
+  "author": "Silver <silverdesignerdevelopoer@gmail.com> (http://silverjuniordeveloper.com/)",
   "license": "MIT",
   "repository": {
     "type": "git",
@@ -74,7 +74,8 @@
     "vinyl-ftp": "^0.6.0",
     "webpack": "^4.15.1",
     "webpack-dev-middleware": "^3.1.3",
-    "webpack-hot-middleware": "^2.22.2"
+    "webpack-hot-middleware": "^2.22.2",
+    "webpack-jarvis": "^0.3.2"
   },
   "dependencies": {
     "@material/floating-label": "^2.3.0",

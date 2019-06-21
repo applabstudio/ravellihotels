@@ -6,6 +6,7 @@
 	<title>Ravelli Hotels</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Silver">
 	<!-- UIkit CSS -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
 	<!-- UIkit JS -->
@@ -170,7 +171,7 @@
 
 			<!-- ?Views activity_media -->
 			<div class="activity-media">
-				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card-media-left, .col-bg-beige; delay: 250; repeat: true">
 					<div class="uk-card-media-left uk-cover-container">
 						<img src="./images/activity-media/activity-esperienze-1.png" alt="" uk-cover>
 						<canvas width="600" height="400"></canvas>
@@ -184,7 +185,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card-media-right, .col-bg-beige; delay: 250; repeat: true">
 					<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
 						<img src="./images/activity-media/activity-esperienze-2.png" alt="" uk-cover>
 						<canvas width="600" height="400"></canvas>
@@ -198,7 +199,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card-media-left, .col-bg-beige; delay: 250; repeat: true">
 					<div class="uk-card-media-left uk-cover-container">
 						<img src="./images/activity-media/activity-esperienze-3.png" alt="" uk-cover>
 						<canvas width="600" height="400"></canvas>
@@ -212,7 +213,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid>
+				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card-media-right, .col-bg-beige; delay: 250; repeat: true">
 						<div class="uk-flex-last@s uk-card-media-right uk-cover-container">
 							<img src="./images/activity-media/activity-esperienze-4.png" alt="" uk-cover>
 							<canvas width="600" height="400"></canvas>
@@ -235,73 +236,74 @@
         <!-- Footer -->
         <!-- ?Block Footer -->
         <footer class="site-footer">
-				<div class="site-footer__heading uk-flex uk-flex-middle uk-padding uk-padding-remove-bottom">
-					<div class="branding uk-light">
-						<a href="index.html"><img class="logo" src="./images/logo_white.png"></a>
-						<div class="footer-social uk-flex uk-flex-between uk-padding uk-padding-remove-bottom">
-							<a href="#"><img src="./images/youtube.png" alt=""></a>
-							<a href="#"><img src="./images/facebook.png" alt=""></a>
-							<a href="#"><img src="./images/tripadvisor.png" alt=""></a>
-						</div>
-					</div>
-				</div>
-				<div class="uk-grid-medium uk-padding uk-padding-remove-right  uk-padding-remove-left uk-flex uk-flex-center uk-flex-top uk-grid-match uk-grid"
-					uk-height-match="target: > div > .uk-light" uk-grid>
-					<div class="uk-column-1-3">
-						<div class="uk-light">
-							<div>
-								<ul>
-									<li><a href="lodge-ravelli.html">Luxury Lodge Ravelli ****</a></li>
-									<li>tel. +39 0463757122</li>
-									<li>fax +39 0463757467 </li>
-									<li>info@luxurylodge.it</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="uk-child-width-1-3">
-						<div class="uk-light">
-							<div>
-								<ul>
-									<li><a href="palace-ravelli.html">Palace Hotel Ravelli ****s</a></li>
-									<li>tel. +39 0463757122</li>
-									<li>fax +39 0463757467</li>
-									<li>info@palacehotelravelli.it</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					<div class="uk-child-width-1-3">
-						<div class="uk-light">
-							<div>
-								<ul>
-									<li><a href="sporting-ravelli.html">Sporting Hotel Ravelli ***</a></li>
-									<li>tel. +39 0463757159</li>
-									<li>fax +39 0463757473</li>
-									<li>info@sportinghotelravelli.it</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="footer-partners">
-					<div class="uk-flex uk-flex-around">
-						<img src="./images/partners/trentino-fishing.png" alt="">
-						<img src="./images/partners/valdisole.png" alt="">
-						<img src="./images/partners/card.png" alt="">
-						<img src="./images/partners/trentino.png" alt="">
-					</div>
-				</div>
-				<div class="footer-credits">
-					<hr class="uk-divider-icon">
-					<div class="webit-credits-neg-bn">
-						Credits <a href="https://www.webit.it" title="Web Agency webit.it" target="_blank"><img
-								src="https://www.webit.it/credits/logo-neg-bn.svg"
-								onerror="this.onerror=null; this.src='https://www.webit.it/credits/logo-neg-bn.png'"
-								width="64" alt="webit.it" /></a>
-					</div>
-				</div>
-			</footer> <!-- /footer.site-footer -->
+            <div class="site-footer__heading uk-flex uk-flex-middle uk-padding uk-padding-remove-bottom">
+                <div class="branding uk-light">
+                   <a href="index.html"><img class="logo" src="./images/logo_white.png"></a>
+                    <div class="footer-social uk-flex uk-flex-between uk-padding uk-padding-remove-bottom">
+                        <a href="https://www.youtube.com/user/sportingmarilleva"><img src="./images/youtube.png" alt=""></a>
+                        <a href="https://www.facebook.com/hotel.palace.ravelli/"><img src="./images/facebook.png" alt=""></a>
+                        <a href="https://www.tripadvisor.it/Hotel_Review-g652030-d1553767-Reviews-Sporting_Hotel_Ravelli-Mezzana_Province_of_Trento_Trentino_Alto_Adige.html"><img src="./images/tripadvisor.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <div class="uk-grid-medium uk-padding uk-padding-remove-right  uk-padding-remove-left uk-flex uk-flex-center uk-flex-top uk-grid-match uk-grid"
+                uk-height-match="target: > div > .uk-light" uk-grid>
+                <div class="uk-column-1-3">
+                    <div class="uk-light">
+                        <div>
+                            <ul>
+                                <li><a href="lodge-ravelli.html">Luxury Lodge Ravelli ****</a></li>
+                                <li>tel. +39 0463757122</li>
+                                <li>fax +39 0463757467 </li>
+                                <li>info@luxurylodge.it</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-child-width-1-3">
+                    <div class="uk-light">
+                        <div>
+                            <ul>
+                                <li><a href="palace-ravelli.html">Palace Hotel Ravelli ****s</a></li>
+                                <li>tel. +39 0463757122</li>
+                                <li>fax +39 0463757467</li>
+                                <li>info@palacehotelravelli.it</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="uk-child-width-1-3">
+                    <div class="uk-light">
+                        <div>
+                            <ul>
+                                <li><a href="sporting-ravelli.html">Sporting Hotel Ravelli ***</a></li>
+                                <li>tel. +39 0463757159</li>
+                                <li>fax +39 0463757473</li>
+                                <li>info@sportinghotelravelli.it</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-partners">
+                <div class="uk-flex uk-flex-around">
+                    <img src="./images/partners/trentino-fishing.png" alt="">
+                    <img src="./images/partners/valdisole.png" alt="">
+                    <img src="./images/partners/card.png" alt="">
+                    <img src="./images/partners/trentino.png" alt="">
+                </div>
+            </div>
+            <div class="footer-credits">
+                <hr class="uk-margin-large">
+                <div class="webit-credits-neg-bn">
+                    Credits <a href="https://www.webit.it" title="Web Agency webit.it" target="_blank"><img
+                            src="https://www.webit.it/credits/logo-neg-bn.svg"
+                            onerror="this.onerror=null; this.src='https://www.webit.it/credits/logo-neg-bn.png'"
+                            width="64" alt="webit.it" /></a>
+                </div>
+            </div>
+        </footer> <!-- /footer.site-footer -->
+
 		</div>
 
 	<script src="js/app.bundle.js"></script>

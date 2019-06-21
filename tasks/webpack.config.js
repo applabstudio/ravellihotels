@@ -3,6 +3,7 @@ const path = require('path');
 
 const config = require('./config');
 const mode = require('./lib/mode');
+const Jarvis = require("webpack-jarvis");
 
 const JS_DEV = path.resolve(config.root.dev, config.js.dev);
 const JS_DIST = path.resolve(config.root.dist, config.js.dist);
@@ -50,7 +51,10 @@ const webpackConfig = {
     ],
     extensions: config.js.extensions,
   },
-  plugins: [],
+  plugins: [  
+    new Jarvis({
+      port: 1337 // optional: set a port
+  })],
   mode: mode.mode,
   target: 'web',
 };
