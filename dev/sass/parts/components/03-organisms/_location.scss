@@ -10,6 +10,7 @@
 				position:unset;
 				flex-flow: column-reverse;
 				max-height: unset;
+				background: get-color(primary, 0);
 				h1,p {
 					font-size:ms(4);
 				}
@@ -22,8 +23,7 @@
 		z-index: 1;
 		@include media('<=md') {
 			padding:1.5rem;
-			background: get-color(beige-dark,0);
-		  }
+		}
 			p:first-child {
 				font-family: $base-font-family;
 				font-style: normal;
@@ -47,6 +47,7 @@
 				font-size: 3.25rem;
 				line-height: 4.9rem;
 				color: #FCFAF8;
+				text-transform: capitalize;
 				@include media('<=md') {
 					font-size: ms(8);
 				}
