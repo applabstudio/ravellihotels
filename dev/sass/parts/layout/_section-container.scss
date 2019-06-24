@@ -57,6 +57,7 @@ $fs: (
 			line-height: 2.3rem;
 			display: inline-block;   
 			padding-top: 1.8rem;
+			text-decoration:none;
 			@include media('<=md') {
 				font-size: ms(6);
 				line-height: unset;
@@ -148,6 +149,7 @@ $fs: (
 				line-height: 2.3rem;
 				display: inline-block;
 				padding-top:1.8rem; 
+				text-decoration: none;
 				@include media('<=md') {
 					font-size: ms(6);
 				}

@@ -23,15 +23,18 @@
 				top: 0.1rem;
 			}
 			.uk-subnav-pill > .uk-active > a {
-				color: #fff;
 				font-family: $alt-font-family;
 				font-style: normal;
 				font-weight: 500;
 				font-size: 27.64px;
 				text-align: center;
-				color: #FFFFFF;
+				color: white;
 				background: get-color(primary, 0);
 				padding:1.2rem 3.8rem 1.2rem 3.8rem;
+			}
+			.uk-subnav-pill>*>a:hover {
+				background:none;
+				color: get-color(primary, 0);
 			}
 			.uk-subnav-pill > * > :first-child {
 				font-family: $alt-font-family;

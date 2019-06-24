@@ -16,12 +16,12 @@ function hamburgher() {
   let logo = document.querySelector('#logo-open');
   let logoh4 = document.querySelector('#logoh4');
     document.querySelector('#logo-open').addEventListener('click', function() {
-      logo.classList.add('uk-invisible');
-      logoh4.classList.add('uk-invisible');
+      logo.style.visibility = 'hidden';
+      logoh4.style.visibility = 'hidden';
     });
     document.querySelector('.uk-close').addEventListener('click', function() {
-      logo.classList.toggle('uk-invisible');
-      logoh4.classList.toggle('uk-invisible');
+      logo.style.visibility = 'visible';
+      logoh4.style.visibility = 'visible';
     });
 }
 

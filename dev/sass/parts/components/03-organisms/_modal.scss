@@ -56,11 +56,12 @@ $fs: (
             padding: 0;
             li {
               a {
-                color: #ffffff;
+                color: white;
                 font-family: $alt-font-family;
                 text-align: center;
                 text-transform: uppercase;
                 font-size: map-get($fs, xl);
+                text-decoration: none;
                 @include media('<=md') {
                   font-size: map-get($fs, md);
                 }
@@ -68,6 +69,9 @@ $fs: (
                   font-size: map-get($fs, sm);
                 }
               }
+            }
+            .uk-button-text::before {
+              border-bottom: 1px solid white;
             }
           } 
         }

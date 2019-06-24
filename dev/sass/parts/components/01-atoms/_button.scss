@@ -74,18 +74,21 @@ $ico-dim: rem(32px);
     }
   }
   &--beige {
-    @include button-style(get-color(beige-dark, 1), get-color(bg, 10), get-color(bg, 10), get-color(beige-dark, 1), get-color(bg, 10), get-color(bg, 10));
+    @include button-style(get-color(beige-dark, 1), get-color(bg, 10), get-color(bg, 10), get-color(primary, 0), get-color(bg, 10), get-color(bg, 10));
   }
 }
 
 
 .btn-lang {
-  
   border: none;
   color:white;
   padding: 0;
   display: inline-flex;
   align-items: center;
+  &:hover {
+    transition: $tt;
+    color: #c3c3c3;
+  }
 }
 
 .btn-gold{
@@ -116,7 +119,7 @@ $ico-dim: rem(32px);
   font-weight: 500;
   line-height: 3.6rem;
   text-align: center;
-  color: #FFFFFF;
+  color: white;
   cursor: pointer;
   &:hover {
     transition: all $tt;

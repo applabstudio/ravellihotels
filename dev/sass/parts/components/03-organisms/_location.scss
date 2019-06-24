@@ -31,7 +31,7 @@
 				font-size: ms(6);
 				letter-spacing: 0.881201px;
 				text-transform: uppercase;
-				color: #FFFFFF;
+				color: white;
 				@include media('<=md') {
 					font-size: ms(8);
 				}
@@ -58,9 +58,10 @@
 				font-family: $base-font-family;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 18px;
+				font-size: 1.8rem;
+				text-transform: capitalize;
 				line-height: 2.6rem;
-				color: #FFFFFF;
+				color: white;
 				@include media('<=md') {
 					font-size: ms(5);
 					line-height: unset;
