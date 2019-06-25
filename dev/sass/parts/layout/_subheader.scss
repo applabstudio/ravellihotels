@@ -19,8 +19,10 @@
       font-size: 4.2rem;
       text-align: center;
       color: #796E65;
+      line-height: 6.3rem;
       @include media('<=md') {
         font-size: ms(9);
+        line-height: unset;
       }
       @include media('<=sm') {
         font-size: ms(8);

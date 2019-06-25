@@ -23,4 +23,7 @@ table.uk-table {
 		text-transform: uppercase;
 		color: black;
 	}
+	tbody tr:hover, .uk-table-hover > tr:hover {
+		background: get-color(bg, 11);
+	}
 }

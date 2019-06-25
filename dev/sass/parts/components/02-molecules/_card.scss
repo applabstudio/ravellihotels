@@ -1,5 +1,8 @@
 // SECTION Card Room
-.cards-proposals {
+.cards-room {
+  @include media('<=md') {
+    padding:0;
+    }
   .uk-card.uk-card-default {
     height: 100%;
     height: 100%; box-shadow: 0 5px 12px rgba(71, 62, 62, 0.7);
@@ -46,7 +49,7 @@
     } 
   }
   .uk-card-body {
-    background: #504D47;
+    background: get-color(beige-dark, 0);
    
     .info-room {
       display: flex;

@@ -38,9 +38,4 @@
 			}
 		}
 	}
-	&__body {
-		@include media('<=md') {
-			padding:0;
-		  }
-	}
 }

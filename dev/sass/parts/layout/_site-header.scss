@@ -35,15 +35,17 @@
         margin-top: 1.8rem;
       }
     }
-    a {
+    .uk-navbar-toggle  {
       color:white;
-    }
-    h4 {
-      color:white;
-      opacity:1;
-      @include media('<=md') {
-        transition: $tt;
-        opacity: 0;
+      padding:1rem 0rem 1rem 1.6rem;
+      h4 {
+        color:white;
+        opacity:1;
+        padding:0;
+        @include media('<=md') {
+          transition: $tt;
+          opacity: 0;
+        }
       }
     }
     span {
