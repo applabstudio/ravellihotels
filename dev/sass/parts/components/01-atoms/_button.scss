@@ -2,7 +2,7 @@
 $p: rem(16px 40px);
 $fw: 500;
 $b-rad: 6px;
-$fs: ms(5);
+$fs: ms(4);
 $lh: 1.6;
 $ico-dim: rem(32px);
 
@@ -108,7 +108,7 @@ $ico-dim: rem(32px);
 }
 
 .btn-primary {
-  background: #796E65;
+  background: get-color(primary, 0);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   border: none;
   width: 35.6rem;
@@ -126,7 +126,7 @@ $ico-dim: rem(32px);
     background: #d9b968;
   }
   &:active {
-    background: #f0ba32;
+    background: get-color(bg,6);
   }
 
   @include when-inside('.book-your-room') {

@@ -27,7 +27,7 @@
 				font-family: $base-font-family;
 				font-style: normal;
 				font-weight: normal;
-				font-size: 2.2rem;
+				font-size: $fsPrimary;
 				line-height: 3.4rem;
 				color: #222222;
 				@include media('<=md') {
@@ -44,7 +44,7 @@
 			width:100%;
 			// NOTE Mixin Material-Design Textfields
 			.mdc-floating-label {
-				font-size:2rem;
+				font-size:$fsPrimary;
 				padding:1rem;
 			}
 			.mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {

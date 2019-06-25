@@ -25,7 +25,7 @@
 
 		p {
 			font-family: $base-font-family;
-			font-size: 2.2rem;
+			font-size: $fsPrimary;
 			line-height: 3.2rem;
 			@include media('<=md') {
 				font-size: ms(5);

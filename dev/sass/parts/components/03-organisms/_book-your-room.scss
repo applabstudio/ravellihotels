@@ -6,7 +6,7 @@
 	h1 {
 		font-family: $alt-font-family;
 		font-weight: 600;
-		font-size: 32.43px;
+		font-size: 3.25rem;
 		color: #222222;
 		@include media('<=md') {
 			font-size: ms(8);
@@ -18,8 +18,8 @@
 	}
 	p {
 		font-family: $base-font-family;
-		font-size: 22px;
-		line-height: 32px;
+		font-size: $fsPrimary;
+		line-height: 3.2rem;
 		@include media('<=md') {
 			font-size: ms(5);
 			line-height: unset;

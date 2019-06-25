@@ -23,7 +23,7 @@
 		}
 		p {
 			font-family: $base-font-family;
-			font-size:2rem;
+			font-size:$fsPrimary;
 			color:white;
 			padding-top: 2rem;
 			@include media('<=md') {
@@ -47,7 +47,6 @@
 		}
 		object, svg {
 			width: 8rem;
-
 		}
 		p {
 			font-family: $alt-font-family;

@@ -122,13 +122,13 @@ $fs: (
 				@include media('<=md') {
 					font-size: ms(9);
 				  }
-				  @include media('<=sm') {
+				@include media('<=sm') {
 					font-size: ms(8);
-						}
+				}
 			}
 			p {
 				font-family: $base-font-family;
-				font-size: 2.2rem;
+				font-size: $fsPrimary;
 				line-height: 3.4rem;
 				color: #222222;
 				@include media('<=md') {
