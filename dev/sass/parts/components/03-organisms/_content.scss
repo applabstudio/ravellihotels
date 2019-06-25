@@ -1,0 +1,5 @@
+.content {
+	@include media('<=md') {
+		padding:1.5rem;
+	}
+}

@@ -31,7 +31,7 @@
             <nav class=" uk-navbar uk-navbar-container">
                 <div class="uk-navbar-left">
                     <a class="uk-navbar-toggle" id="logo-open" href="#modal-full" uk-toggle uk-navbar-toggle-icon></a>
-                    <a class="uk-navbar-toggle" id="logoh4" href="#modal-full" uk-toggle><h4>MENU</h4></a>
+                    <a class="uk-navbar-toggle" id="logoh4" href="#modal-full" uk-toggle><span>MENU</span></a>
                 </div>
                 <div class="uk-navbar-center">
                     <div class="uk-navbar-center-left">
@@ -53,8 +53,7 @@
                     <ul class="site-nav uk-navbar-nav uk-text-uppercase">
                         <li class="uk-active"><a href="#">
                                 <div class="uk-inline">
-                                    <button class="uk-button uk-button-default btn-lang" type="button">IT<span
-                                            uk-icon="icon: triangle-down; ratio: 1"></span></button>
+                                    <button class="uk-button uk-button-default btn-lang" type="button">IT<span suk-icon="icon: triangle-down; ratio: 1"></span></button>
                                     <div uk-dropdown="mode: click">
                                         <ul class="dropdown-language">
                                             <li><span uk-icon="icon: world; ratio: 1"></span>Italian</li>
@@ -105,11 +104,13 @@
                                 <li><a href="famiglia.html" class="uk-button-text">Famiglia</a></li>
                                 <li><a href="esperienze.html" class="uk-button-text">Esperienze</a></li>
                                 <li><a href="welness&spa.html" class="uk-button-text">Wellness&spa</a></li>
-                                <li><a href="attività.html" class="uk-button-text">Outdoor&attività</a></li>
+                                <li><a href="outdoor&attività.html" class="uk-button-text">Outdoor&attività</a></li>
+                                <li><a href="attività.html" class="uk-button-text">Attività</a></li>
                                 <li><a href="cibo&vino.html" class="uk-button-text">Cibo&vino</a></li>
                                 <li><a href="famiglia-ravelli.html" class="uk-button-text">Famiglia Ravelli</a></li>
                                 <li><a href="contatti.html" class="uk-button-text">Contatti</a> </li>
                             </menu>
+                        </div> <!-- /div.container-menu-wrapper__body -->
                             <div class="container-menu-wrapper__footer">
                                 <div class="site-search">
                                     <form action="" class="search-form">
@@ -139,14 +140,14 @@
                                             <a href="https://www.tripadvisor.it/Hotel_Review-g652030-d1096855-Reviews-Palace_Ravelli-Mezzana_Province_of_Trento_Trentino_Alto_Adige.html" class="uk-icon-link" uk-icon="tripadvisor"></a>
                                         </li>
                                     </ul>
-                                </div>
-                            </div>
-                        </div>
+                                </div> <!-- /div.menu-social -->
+                            </div> <!-- /div.container-menu-wrapper__footer -->
                     </div>
                 </div>
             </div>
         </div> <!-- End Modal Primary-Menu -->
 
+        <!-- Main -->
         <main>
             <!-- Slider -->
             <div class="slider">
@@ -261,7 +262,7 @@
             <!-- toTop -->
 				<a href="#" class="toTop" uk-totop uk-scroll></a>
 		    <!-- /.toTop-->
-        </main>
+        </main> <!-- /main -->
 
         <!-- Footer -->
         <!-- ?Block Footer -->

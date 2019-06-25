@@ -1,14 +1,3 @@
-.activity {
-	@include media('<=md') {
-		padding:1.5rem;
-	}
-	&__cards {
-		.uk-overlay-default {
-			background: rgba(34, 34, 34, 0.56);
-			color: white;
-		}
-	}
-}
 .activity-media {
 	.uk-card-default.uk-grid-collapse.uk-child-width-1-2\@s.uk-margin.uk-grid {
 			margin: 0 !important;

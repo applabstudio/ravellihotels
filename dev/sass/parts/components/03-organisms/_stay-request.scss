@@ -50,6 +50,9 @@
 		}
 	}
 	&__body {
+		@include media('<=md') {
+			padding: 0;
+		}
 		button {
 			width:100%;
 		}

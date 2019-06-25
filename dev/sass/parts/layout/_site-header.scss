@@ -38,10 +38,12 @@
     .uk-navbar-toggle  {
       color:white;
       padding:1rem 0rem 1rem 1.6rem;
-      h4 {
+      span {
         color:white;
+        font-size: ms(2);
         opacity:1;
         padding:0;
+        margin:0;
         @include media('<=md') {
           transition: $tt;
           opacity: 0;

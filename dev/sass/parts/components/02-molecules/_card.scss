@@ -1,7 +1,7 @@
 // SECTION Card Room
 .cards-room {
   @include media('<=md') {
-    padding:0;
+    padding: 1rem 0;
     }
   .uk-card.uk-card-default {
     height: 100%;
@@ -48,9 +48,9 @@
       height: 9.03px; 
     } 
   }
+  
   .uk-card-body {
     background: get-color(beige-dark, 0);
-   
     .info-room {
       display: flex;
       color: white;
@@ -95,6 +95,7 @@
       transition: color .2s ease-out;
       overflow: hidden;
       display: block;
+      height:100%;
     }
     img {
       height: 100%;

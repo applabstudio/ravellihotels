@@ -16,7 +16,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
 	<!-- Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Merienda|Sarabun&display=swap" rel="stylesheet"> 
-	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 	
+	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="/css/main.css">
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -67,8 +67,7 @@
 									</div>
 								</a></li>
 							<li>
-								<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>
-									Richiedi Informazioni</a>
+								<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
 							</li>
 							<li>
 								<a href="#" class="btn-gray"><span uk-icon="file-text"></span>Calcola Preventivo</a>
@@ -80,8 +79,7 @@
 				<nav class="mobile-nav uk-navbar uk-navbar-container">
 					<ul class="uk-navbar-nav uk-text-uppercase">
 						<li>
-							<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>
-								Richiedi Informazioni</a>
+							<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
 						</li>
 						<li>
 							<a href="#" class="btn-gray"><span uk-icon="file-text"></span>Calcola Preventivo</a>
@@ -148,214 +146,183 @@
 					</div>
 				</div>
 			</div> <!-- End Modal Primary-Menu -->
-			
 		<main>
+
 			<!-- SECTION--IMAGE -->
 			<!-- ?Paragraph fullscreen_intro_image -->
 			<section class="section-container--image">
 					<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
-						<img src="./images/background-attività.png"
-						data-srcset="./images/background-attività.png 650w,
-						./images/background-attività.png 1300w"
+						<img src="./images/bg-outdoor.png"
+						data-srcset="./images/bg-outdoor&cibo.png 650w,
+						./images/bg-outdoor&cibo.png 1300w"
 						data-sizes="(min-width: 650px) 650px, 100vw">
 					<div class="uk-position-small uk-position-bottom-right uk-overlay uk-text-uppercase uk-text-center uk-margin-bottom">				   
-							<h1>Contatti</h1>
-							<p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
+							<h1>Outdoor & Attività</h1>
+							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
 					</div>
 			   </div>
 			</section> <!-- /div.section--image -->
 
-			<!-- Section Container Intro-->
-			<section class="section-container--intro">
-				<div class="uk-container uk-text-center uk-padding">
-					<h1>Circumstances occur</h1>
-					<hr class="uk-divider-small uk-margin-top">
-					<div class="simple-text">
-						<div class="tinytext">
-							<p>Avoids pleasure itself, because it is pleasure, but because those who do not know how to
-								pursue pleasure rationally encounter consequences that are extremely painful. </p>
-						</div>
+			<!-- SubHeader -->
+			<!-- ?Paragraph sub_header -->
+			<div class="subheader uk-padding">
+				<div class="uk-container uk-text-center">
+					<h1>Scopri il Trentino: ogni giorno una nuova attività!</h1>
+					<hr class="uk-divider-small">
+					<div class="tinytext">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
-			</section> <!-- /section.section-container--intro -->
+			</div> <!-- /.div.subeader -->
+			<!-- Switcher -->
+			<div class="switcher uk-padding uk-padding-remove-top">
+				<ul class="uk-subnav uk-subnav-pill uk-flex-center" uk-switcher="connect: .switcher-container">
+					<li><a href="#">estate</a></li>
+					<li><a href="#">inverno</a></li>
+				</ul>
+			</div> <!-- /div.switcher -->
+            <!-- Container Location + switcher -->
+            <div class="container-location uk-switcher switcher-container" uk-scrollspy="target: .location; cls: uk-animation-fade; delay: 100">
+                <div class="location js-allclick">
+                    <div class="uk-padding uk-text-center container-location__location-heading">
+                        <p>Luxury Lovely Lodge</p>
+                        <hr class="uk-divider-small">
+                        <h1>Nuovo. Emozionante. Unico</h1>
+                        <p>Nuovissimi, dal design moderno e dallo stile montano: la soluzione perfetta per chi vuole concedersi una vacanza rilassante e riservata in montagna, per una romantica fuga d’amore o insieme a tutta la famiglia. All’interno del lodge da 65 metri quadri, potrai goderti la tua personale area wellness con sauna finlandese al cirmolo, ideale per rilassare corpo e mente, e idromassaggio riscaldato all’aperto nella speciale terrazza privata.</p>
+                    </div>
+                    <div class="container-location__location-body">
+                        <img src="./images/passorolle.png" alt="" uk-img>
+                    </div>
+                </div>
+            </div>  <!-- /div.container-location -->
+			<!-- CARDS + SWITCHER -->
+			<!-- ?Views cards_activity -->
+			<section class="cards switcher-container">
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-1.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Parco Nazionale dello Stelvio</h2>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
 
-			<!-- Contact Form -->
-			<div class="contact-form uk-padding">
-				<div class="contact-form__body uk-container uk-child-width-expand@s" uk-grid>
-					<div>
-						<div class="contact">
-							<div class="tinytext uk-text-left">
-								<h3>Ravelli Hotels</h3>
-								<p>Avoids pleasure itself, because it is pleasure, but because those who do not know how
-									to pursue pleasure rationally encounter consequences that are extremely painful.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div>
-						<div class="contact" id="contact">
-							<form>
-								<div class="input-container uk-width-1-2@m">
-									<div class="mdc-text-field">
-										<input class="mdc-text-field__input" type="text">
-										<div class="mdc-line-ripple"></div>
-										<label class="mdc-floating-label">Nome*</label>
-									</div>
-									<div class="mdc-text-field">
-										<input class="mdc-text-field__input" type="text">
-										<div class="mdc-line-ripple"></div>
-										<label class="mdc-floating-label">Cognome*</label>
-									</div>
-								</div>
-								<div class="input-container uk-width-1-2@m">
-									<div class="mdc-text-field">
-										<input class="mdc-text-field__input" type="email">
-										<div class="mdc-line-ripple"></div>
-										<label class="mdc-floating-label">E-mail*</label>
-									</div>
-									<div class="mdc-text-field">
-										<input class="mdc-text-field__input" type="tel">
-										<div class="mdc-line-ripple"></div>
-										<label class="mdc-floating-label">Telefono*</label>
-									</div>
-								</div>
-								<div class="input-container uk-width-1-2@m">
-									<div class="mdc-text-field">
-										<input class="mdc-text-field__input" type="text">
-										<div class="mdc-line-ripple"></div>
-										<label class="mdc-floating-label">Città*</label>
-									</div>
-									<div class="mdc-text-field">
-										<input class="mdc-text-field__input" type="text">
-										<div class="mdc-line-ripple"></div>
-										<label class="mdc-floating-label">Province*</label>
-									</div>
-								</div>
-								<div class="input-container uk-width-1-2@m">
-										<div class="mdc-text-field message">
-												<input class="mdc-text-field__input" type="text">
-												<div class="mdc-line-ripple"></div>
-												<label class="mdc-floating-label">Messaggio*</label>
-											</div>
-								</div>
-								<div class="uk-width-1-2@m">
-									<div class="privacy-area">
-										<input type="checkbox" name="" id="">
-										<label for="">Acconsento al trattamento dei dati Privacy Policy</label>
-									</div>
-								</div>
-								<button type="submit" class="btn btn--primary">Invia richiesta</button>
-							</form>
-						</div>
-					</div>
-				</div>
-			</div><!-- /.contact-form -->
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-2.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Parco Nazionale Adamello Brenta</h2>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
 
-			<!-- Where We Are Lovely Lodge Hotel -->
-			<div class="wwea-hotels hotel-bg-1 uk-padding">
-				<div class="uk-container">
-					<div class="uk-child-width-expand@s" uk-grid>
-						<div class="uk-flex uk-flex-middle uk-flex-column">
-							<div class="heading-address">
-								<div class="hotel-image">
-									<img src="./images/ravelli-lodge.png" alt="">
-								</div>
-								<div class="address-wrapper uk-flex uk-flex-column uk-flex-middle">
-									<h5>LOVELY LODGE</h5>
-									
-										<a href="tel:+390463757122" class="uk-button-text">Tel. +39 0463757122</a>
-										<a href="tel:+390463757122" class="uk-button-text">Fax. +39 0463757467</a>
-										<a href="mailto:info@luxurylodge.it" class="uk-button-text">info@luxurylodge.it</a>		
-								
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="gmap">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45879.11938959575!2d12.539667628015726!3d44.05351968843702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132cc3a48fa6592b%3A0xc1f284db17f1449d!2sRimini+RN!5e0!3m2!1sit!2sit!4v1560349649950!5m2!1sit!2sit" width="553" height="220" frameborder="0" style="border:0" allowfullscreen style="width:100% !important"></iframe>								
-							</div>
-							<div class="how-to-reach-us">
-									<div class="tinytext">
-										<h2>Come raggiungerci</h2>
-										<p>Avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
-										<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
-									</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> <!-- /div.wwea-hotels (lovely-lodge) -->
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-3.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Le Dolomiti</h2>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
 
-			<!-- Where We Are Palace Hotel -->
-			<div class="wwea-hotels hotel-bg-2 uk-padding">
-				<div class="uk-container">
-					<div class="uk-child-width-expand@s" uk-grid>
-						<div class="uk-flex uk-flex-middle uk-flex-column">
-							<div class="gmap">
-								<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45879.11938959575!2d12.539667628015726!3d44.05351968843702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132cc3a48fa6592b%3A0xc1f284db17f1449d!2sRimini+RN!5e0!3m2!1sit!2sit!4v1560349649950!5m2!1sit!2sit" width="553" height="220" frameborder="0" style="border:0" allowfullscreen style="width:100% !important"></iframe>								
-						</div>
-						<div class="how-to-reach-us">
-								<div class="tinytext">
-									<h2>Come raggiungerci</h2>
-									<p>Avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
-									<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
-								</div>
-						</div>
-						</div>
-						<div>
-							<div class="heading-address">
-								<div class="hotel-image">
-									<img src="./images/logo-palace-ravelli.png" alt="">
-								</div>
-								<div class="address-wrapper uk-flex uk-flex-column uk-flex-middle">
-									<h5>Palace Hotel</h5>
-									<a href="tel:+390463757122" class="uk-button-text">Tel. +39 0463757122</a>
-									<a href="tel:+390463757122" class="uk-button-text">Fax. +39 0463757467</a>
-									<a href="mailto:info@palacehotelravelli.it" class="uk-button-text">info@palacehotelravelli.it</a>
-								</div>
-							</div>
-						</div>
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-4.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Lorem ipsum</h2>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
+			</section><!-- /.cards -->
+						<!-- Activity -->
+	
+			<div class="content uk-padding">
+				<div class="section-container uk-container uk-text-center">
+					<div class="tinytext">
+							<h1>Cultura</h1>
+							<p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
 					</div>
 				</div>
-			</div> <!-- /div.wwea-hotels (palace-hotel) -->
+			</div> <!-- End Content -->
+						<!-- CARDS -->
+			<!-- ?Views cards_activity -->
+			<section class="cards switcher-container">
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-itinerari.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Itinerari turistici</h2>
+							<p>Luoghi e tradizioni</p>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
 
-			<!-- Where We Are Sporting Hotel -->
-			<div class="wwea-hotels hotel-bg-1 uk-padding">
-				<div class="uk-container">
-					<div class="uk-child-width-expand@s" uk-grid>
-						<div class="uk-flex uk-flex-middle uk-flex-column">
-							<div class="heading-address">
-								<div class="hotel-image">
-									<img src="./images/hotel-sporting-ravelli.png" alt="">
-								</div>
-								<div class="address-wrapper  uk-flex uk-flex-column uk-flex-middle">
-									<h5>Sporting Hotel</h5>
-									<a href="tel:+390463757122" class="uk-button-text">Tel. +39 0463757122</a>
-									<a href="tel:+390463757122" class="uk-button-text">Fax. +39 0463757467</a>
-									<a href="mailto:info@sportinghotelravelli.it" class="uk-button-text">info@sportinghotelravelli.it</a>
-								</div>
-							</div>
-						</div>
-						<div>
-							<div class="gmap">
-									<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d45879.11938959575!2d12.539667628015726!3d44.05351968843702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x132cc3a48fa6592b%3A0xc1f284db17f1449d!2sRimini+RN!5e0!3m2!1sit!2sit!4v1560349649950!5m2!1sit!2sit" width="553" height="220" frameborder="0" style="border:0" allowfullscreen style="width:100% !important"></iframe>								
-							</div>
-							<div class="how-to-reach-us">
-									<div class="tinytext">
-										<h2>Come raggiungerci</h2>
-										<p>Avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences.</p>
-										<p>Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur</p>
-									</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> <!-- /div.wwea-hotels (lovely-lodge) -->
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-musei.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Musei e castelli</h2>
+							<p>Ricordi del passato</p>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
+
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-artigianato.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>Arte e artigianato</h2>
+							<p>Lwgno, ceramica e ferro</p>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
+
+				<article class="card zoom-container">
+					<a href="#">
+						<picture>
+							<img src="./images/cards/activity-grandeguerra.png" alt="">
+						</picture>
+						<div class="card-content uk-text-center uk-padding-small">
+							<h4>Val di sole</h4>
+							<hr class="uk-divider-small">
+							<h2>La grande guerra</h2>
+							<p>Luoghi e tradizioni</p>
+						</div><!-- /.card-content -->
+					</a>
+				</article><!-- /.card -->
+			</section><!-- /.cards -->
             <!-- toTop -->
 			<a href="#" class="toTop" uk-totop uk-scroll></a>
-		    <!-- /a.toTop-->
-		</main>	<!-- /main -->
-
+		    <!-- /.toTop-->
+		</main>
         <!-- Footer -->
         <!-- ?Block Footer -->
         <footer class="site-footer">
@@ -429,8 +396,9 @@
                 </div>
             </div>
         </footer> <!-- /footer.site-footer -->
+
 	
-	</div> <!-- /div.page -->
+	</div>
 
 	<script src="js/app.bundle.js"></script>
 </body>

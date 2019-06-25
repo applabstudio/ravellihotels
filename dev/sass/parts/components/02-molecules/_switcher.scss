@@ -1,0 +1,26 @@
+.switcher {
+	.uk-subnav {
+		li {
+			padding:0;
+			a {
+				text-transform: uppercase;
+				font-family: $alt-font-family;
+				font-style: normal;
+				font-weight: normal;
+				font-size: 3rem;
+				letter-spacing: .6rem;
+				text-transform: uppercase;
+				color: #C2BEBA;
+			}
+		}
+		.uk-active {
+			a {
+				background:none;
+				color: #4D4B4A;
+			}
+		}
+	}
+	.uk-switcher {
+		margin:0;
+	}
+}

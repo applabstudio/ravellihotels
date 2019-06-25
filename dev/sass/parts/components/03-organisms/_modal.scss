@@ -1,18 +1,8 @@
-$close-fs: rem(68px);
-$close-pos: rem(16px);
-$content-p: rem(16px);
-$content-max-w: (
-  base: rem(960px),
-  narrow: rem(520px),
-);
-$content-max-h: calc(100vh - 90px);
-$content-top: rem(64px);
-
 $fs: (
   xs: ms(5),
   sm: ms(6),
   md: ms(8),
-  xl: ms(10),
+  xl: ms(9),
 );
 
 // SECTION MODAL PRIMARY-MENU
@@ -26,16 +16,17 @@ $fs: (
         width: 100%;
         display: flex;
         justify-content: flex-start;
-        padding: 2.6rem 2rem 0rem 1.5rem;
+        padding: 2.8rem 2.6rem 0rem 1.6rem;
         background: none;
         color: white;
       }
       span {
         color: white;
         position: absolute;
-        top: 2.4rem;
-        left: 5rem;
+        top: 2.7rem;
+        left: 5.29rem;
         font-size: 1.25rem;
+        text-transform: uppercase;
       }
       .container-menu-wrapper {
         display: flex;
@@ -50,6 +41,7 @@ $fs: (
           min-height: 100%;
           flex-direction:column;
           text-align: center;
+          // STUB overflow: auto; // NOTE for console
           menu {
             list-style: none;
             text-align: center;
