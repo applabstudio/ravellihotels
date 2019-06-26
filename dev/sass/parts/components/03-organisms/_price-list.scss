@@ -61,11 +61,16 @@
 			.confirm-info {
 				button {
 					width: 29rem;
-					margin: 1rem;
+					margin: auto 1rem;
 					@include media('<=md') {
-						font-size:ms(3);
-						padding:0.8rem;
-						width: 22rem;
+						font-size: 1.125rem;
+						padding: 1rem 0.7rem;
+						width: 16rem;
+					}
+					@include media('<=sm') {
+						font-size: 0.9rem;
+						padding: 1rem 0.7rem;
+						width: 14rem;
 					}
 				}
 			}

@@ -104,26 +104,6 @@ body {
     }
   }
 
-  blockquote {
-    position: relative;
-    padding-left: rem(12px);
-    font-family: $title-font-family;
-    font-size: ms(2);
-    line-height: 1.2;
-    margin-left: 0;
-    margin-right: 0;
-    border-left: 2px solid get-color(primary, 0);
-
-    @include when-inside('.article--red') {
-      border-color: #cc0839;
-    }
-
-    @include media('>=sm') {
-      padding-left: rem(20px);
-      font-size: ms(4);
-    }
-  }
-
   .embedded-entity {
     @include media('>=sm') {
       max-width: 40%;
