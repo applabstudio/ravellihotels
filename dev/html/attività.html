@@ -67,11 +67,10 @@
 									</div>
 								</a></li>
 							<li>
-								<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>
-									Richiedi Informazioni</a>
+								<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
 							</li>
 							<li>
-								<a href="#" class="btn-gray"><span uk-icon="file-text"></span>Calcola Preventivo</a>
+								<a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a>
 							</li>
 						</ul>
 					</div>
@@ -80,11 +79,10 @@
 				<nav class="mobile-nav uk-navbar uk-navbar-container">
 					<ul class="uk-navbar-nav uk-text-uppercase">
 						<li>
-							<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>
-								Richiedi Informazioni</a>
+							<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
 						</li>
 						<li>
-							<a href="#" class="btn-gray"><span uk-icon="file-text"></span>Calcola Preventivo</a>
+							<a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a>
 						</li>
 					</ul>
 				</nav> <!-- End Mobile Nav -->
@@ -148,6 +146,59 @@
 					</div>
 				</div>
 			</div> <!-- End Modal Primary-Menu -->
+			        <!-- Quote -->    
+					<div id="quote" class="quote" uk-modal>
+						<div class="uk-modal-dialog uk-modal-body">
+							<h2>Richiedi Preventivo</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<hr class="uk-divider-small">
+							<div class="contact-form__body uk-container uk-child-width-expand@s" uk-grid>
+							<form>
+								<div class="input-container uk-width-1-2@m">
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="text">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">Nome*</label>
+									</div>
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="text">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">Cognome*</label>
+									</div>
+								</div>
+								<div class="input-container uk-width-1-2@m">
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="email">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">E-mail*</label>
+									</div>
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="tel">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">Telefono*</label>
+									</div>
+								</div>
+								<div class="input-container uk-width-1-2@m">
+										<div class="mdc-text-field message">
+												<input class="mdc-text-field__input" type="text">
+												<div class="mdc-line-ripple"></div>
+												<label class="mdc-floating-label">Messaggio*</label>
+											</div>
+								</div>
+								<div class="uk-width-1-2@m">
+									<div class="privacy-area">
+										<input type="checkbox" name="" id="">
+										<label for="">Acconsento al trattamento dei dati Privacy Policy</label>
+									</div>
+								</div>
+							</form>
+							</div>
+							<div class="uk-flex uk-flex-right">
+								<button class="uk-button uk-button-text uk-modal-close" type="button">Indietro</button>
+								<button class="uk-button uk-button-text" type="button">Conferma</button>
+							</div>
+						</div>
+					</div> <!-- /div.quote -->
 		<main>
 			<!-- SECTION--IMAGE -->
 			<!-- ?Paragraph fullscreen_intro_image -->

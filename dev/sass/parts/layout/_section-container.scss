@@ -22,7 +22,7 @@ $fs: (
 			font-family: $alt-font-family;
 			font-weight: 600;
 			font-size: 4.2rem;
-			color: #796E65;
+			color: get-color(primary,0);
 			padding: 0 0 2rem 0;
 			@include media('<=md') {
 				font-size: ms(9);
@@ -115,7 +115,7 @@ $fs: (
 			}
 
 			h1 {
-				color: #796E65;
+				color: get-color(primary,0);
 				font-family: $alt-font-family;
 				font-weight: 600;
 				font-size: 4.2rem;

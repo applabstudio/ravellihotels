@@ -1,7 +1,7 @@
 {
   "name": "ravelli-hotels",
   "version": "1.2.0",
-  "description": "Gulp Webpack Starter - static site builder with a lot of cool features",
+  "description": "Gulp Webpack Starter - static site builder with a lot of cool features for Drupal 8",
   "engines": {
     "node": ">=8.9.1",
     "npm": ">=5.5.0"

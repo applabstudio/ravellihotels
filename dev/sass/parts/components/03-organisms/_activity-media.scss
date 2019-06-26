@@ -7,6 +7,7 @@
 			}
 	}
 	.uk-card-body {
+		// ANCHOR Optimize for mobile
 		@include media('<=md') {
 			padding:1.5rem;
 		}

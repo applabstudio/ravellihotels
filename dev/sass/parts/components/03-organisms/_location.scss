@@ -21,6 +21,7 @@
 		position: absolute;
 		background: rgba(34, 34, 34, 0.56);
 		z-index: 1;
+		// ANCHOR Optimize for mobile
 		@include media('<=md') {
 			padding:1.5rem;
 		}

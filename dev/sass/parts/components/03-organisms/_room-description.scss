@@ -1,6 +1,7 @@
 .room-description {
 	background: get-color(beige-dark,0);
 	.room-description-w {
+		// ANCHOR Optimize for mobile
 		@include media('<=md') {
 			padding:1.5rem;
 		}

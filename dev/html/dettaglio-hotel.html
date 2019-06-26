@@ -14,7 +14,7 @@
 	<!-- UIkit JS -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
-	<!-- Fonts -->
+	<!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Merienda|Sarabun&display=swap" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
 	<link rel="stylesheet" href="/css/main.css">
@@ -80,16 +80,14 @@
 				<nav class="mobile-nav uk-navbar uk-navbar-container">
 					<ul class="uk-navbar-nav uk-text-uppercase">
 						<li>
-							<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>
-								Richiedi Informazioni</a>
+							<a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
 						</li>
 						<li>
-							<a href="#" class="btn-gray"><span uk-icon="file-text"></span>Calcola Preventivo</a>
+							<a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a>
 						</li>
 					</ul>
 				</nav> <!-- End Mobile Nav -->
 			</header> <!-- /header.site-header -->
-	
 			<!-- Modal Primary-Menu -->
 			<div class="modal-primary-menu">
 				<div id="modal-full" class="uk-modal-full modal-primary-menu__container" uk-modal>
@@ -148,6 +146,59 @@
 					</div>
 				</div>
 			</div> <!-- End Modal Primary-Menu -->
+			        <!-- Quote -->    
+					<div id="quote" class="quote" uk-modal>
+						<div class="uk-modal-dialog uk-modal-body">
+							<h2>Richiedi Preventivo</h2>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+							<hr class="uk-divider-small">
+							<div class="contact-form__body uk-container uk-child-width-expand@s" uk-grid>
+							<form>
+								<div class="input-container uk-width-1-2@m">
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="text">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">Nome*</label>
+									</div>
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="text">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">Cognome*</label>
+									</div>
+								</div>
+								<div class="input-container uk-width-1-2@m">
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="email">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">E-mail*</label>
+									</div>
+									<div class="mdc-text-field">
+										<input class="mdc-text-field__input" type="tel">
+										<div class="mdc-line-ripple"></div>
+										<label class="mdc-floating-label">Telefono*</label>
+									</div>
+								</div>
+								<div class="input-container uk-width-1-2@m">
+										<div class="mdc-text-field message">
+												<input class="mdc-text-field__input" type="text">
+												<div class="mdc-line-ripple"></div>
+												<label class="mdc-floating-label">Messaggio*</label>
+											</div>
+								</div>
+								<div class="uk-width-1-2@m">
+									<div class="privacy-area">
+										<input type="checkbox" name="" id="">
+										<label for="">Acconsento al trattamento dei dati Privacy Policy</label>
+									</div>
+								</div>
+							</form>
+							</div>
+							<div class="uk-flex uk-flex-right">
+								<button class="uk-button uk-button-text uk-modal-close" type="button">Indietro</button>
+								<button class="uk-button uk-button-text" type="button">Conferma</button>
+							</div>
+						</div>
+					</div> <!-- /div.quote -->
 		<main>
 			<!-- Slider -->
         <div class="slider">
@@ -286,7 +337,7 @@
 			</div> <!-- /div.house-plan -->
 
 			<!-- Feature -->
-				<div class="feature-room uk-padding">
+				<div class="feature-room uk-padding-large">
 					<div class="uk-container uk-text-uppercase">
 						<div class="uk-child-width-expand@m uk-text-left" uk-grid>
 							<div>
@@ -412,7 +463,7 @@
                     <img src="./images/partners/card.png" alt="">
                     <img src="./images/partners/trentino.png" alt="">
                 </div>
-            </div>
+			</div> <!-- /div.footer-partners -->
             <div class="footer-credits">
                 <hr class="uk-margin-large">
                 <div class="webit-credits-neg-bn">
@@ -421,11 +472,9 @@
                             onerror="this.onerror=null; this.src='https://www.webit.it/credits/logo-neg-bn.png'"
                             width="64" alt="webit.it" /></a>
                 </div>
-            </div>
+			</div> 	<!-- /div.footer-credits -->
         </footer> <!-- /footer.site-footer -->
-
-	
-	</div>
+	</div> <!-- /div.page -->
 	<script src="js/app.bundle.js"></script>
 </body>
 </html>

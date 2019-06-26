@@ -1,5 +1,6 @@
 .stay-request {
 	background-color: #F3F3F2;
+	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		padding: 1.5rem;
 	}

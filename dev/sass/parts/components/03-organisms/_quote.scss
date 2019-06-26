@@ -1,0 +1,18 @@
+.quote {
+	h2 {
+		font-size: ms(8);
+	}	
+	p {
+		font-size: ms(4);
+	}
+	div {
+		button {
+			margin: 2rem 1rem 0 0;
+			font-size: 1.6rem;
+			color:get-color(bg,0);
+		}
+		button:last-child {
+			color: get-color(beige-dark,1);
+		}
+	}
+}

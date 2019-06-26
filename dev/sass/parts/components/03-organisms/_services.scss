@@ -1,9 +1,10 @@
 .services {
 	background-color: get-color(beige-dark, 0);
 	text-align: center;
+	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		padding:1.5rem;
-	  }
+	}
 	&__heading {
 		@include media('<=md') {
 			padding:0;

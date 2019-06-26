@@ -10,13 +10,13 @@
 				font-size: 3rem;
 				letter-spacing: .6rem;
 				text-transform: uppercase;
-				color: #C2BEBA;
+				color: get-color(bg,11);
 			}
 		}
 		.uk-active {
 			a {
 				background:none;
-				color: #4D4B4A;
+				color: get-color(bg, 8);
 			}
 		}
 	}

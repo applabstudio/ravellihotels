@@ -1,5 +1,6 @@
 .book-your-room {
 	background: #F3F3F2;
+	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		padding:1.5rem;
 	}
@@ -54,14 +55,13 @@
 			font-family: $base-font-family;
 			font-size: 14px;
 			line-height: 21px;
-			color: #796E65;
+			color: get-color(primary, 0);
 			mix-blend-mode: normal;
 			opacity: 0.9;
 			text-align: left;
 			position: relative;
 			top: 5px;
 		}
-
 		.disponibility {
 			position: absolute;
 		}

@@ -1,5 +1,6 @@
 // SECTION Card Room
 .cards-room {
+  // ANCHOR Optimize for mobile
   @include media('<=md') {
     padding: 1rem 0;
     }
