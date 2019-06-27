@@ -29,10 +29,9 @@ $ico-dim: rem(32px);
 
 // structure
 .btn {
-  font-family: $alt-font-family;
+  @include set-font($alt-font-family, $fw);
+  @include rem(font-size, $fs);
   padding: $p;
-  font-weight: $fw;
-  font-size: $fs;
   line-height: $lh;
   text-decoration: none;
   outline: none;
@@ -108,15 +107,14 @@ $ico-dim: rem(32px);
 }
 
 .btn-primary {
+  @include rem(font-size, 1.6rem);
+  @include set-font($alt-font-family, 500);
   background: get-color(primary, 0);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   border: none;
   width: 35.6rem;
+  height: 4.3rem;
   margin:0 auto;
-  height: 43px;
-  font-size: 1.6rem;
-  cursor: pointer;
-  font-weight: 500;
   line-height: 3.6rem;
   text-align: center;
   color: white;
@@ -126,7 +124,7 @@ $ico-dim: rem(32px);
     background: #d9b968;
   }
   &:active {
-    background: get-color(bg,6);
+    background: get-color(bg, 6);
   }
 
   @include when-inside('.book-your-room') {

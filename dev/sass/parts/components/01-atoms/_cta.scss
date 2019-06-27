@@ -7,10 +7,9 @@ $fs: (
 .cta {
   display: flex;
   align-items: center;
-  font-family: $title-font-family;
-  font-size: map-get($fs, xs);
-
+  @include set-font($title-font-family, normal);
+  @include rem(font-size, map-get($fs, xs));
   @include media('>=sm') {
-    font-size: map-get($fs, sm);
+    @include rem(font-size, map-get($fs, sm));
   }
 }
