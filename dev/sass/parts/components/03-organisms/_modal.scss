@@ -11,7 +11,7 @@ $fs: (
     .modal-dialog {
       height:100vh;
       overflow: hidden;
-      background: rgba(65, 56, 41, 0.96);
+      background: rgba(80, 77, 71, 0.95);
       .uk-modal-close-full {
         width: 100%;
         display: flex;
@@ -22,9 +22,9 @@ $fs: (
       }
       span {
         color: white;
+        text-transform: uppercase;
         @include absolute(top 2.7rem left 5.59rem);
         @include rem(font-size, 1.25rem);
-        text-transform: uppercase;
       }
       .container-menu-wrapper {
         display: flex;
@@ -50,8 +50,8 @@ $fs: (
                 font-family: $alt-font-family;
                 text-align: center;
                 text-transform: uppercase;
-                @include rem(font-size, map-get($fs, xl));
                 text-decoration: none;
+                @include rem(font-size, map-get($fs, xl));
                 @include media('<=md') {
                   @include rem(font-size, map-get($fs, md));
                 }
@@ -72,10 +72,25 @@ $fs: (
             padding-top:2rem;
             ul {
                list-style-type: none;
+               display: inline-flex;
+               justify-content: center;
                li {
-                 display: inline;
-                 margin-right: 1.6rem;
-               }
+                display: inline-block;
+                margin-right: 1.6rem;
+                width: 4rem;
+                height: 4rem;
+                padding:1rem;
+                border: 1px solid white;
+                background: #504D47;
+                border-radius: 50%;
+                opacity: 0.8;
+                &:hover {
+                  transition:$tt;
+                  box-shadow: 0 0 4px 2px #f2f2f2;
+                  opacity:1;
+                  transform: translateY(-1rem);
+                 }
+                }
             }
           }
           .site-search {
