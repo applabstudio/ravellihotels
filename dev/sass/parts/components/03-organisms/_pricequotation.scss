@@ -19,8 +19,17 @@ $ico-dim: rem(32px);
 			svg, object, img {
 				width: $ico-dim;
 			}
-		}
-
+		}	
+		 .mdc-floating-label {
+			@include rem(font-size, 1.6rem);
+		 }
+			.mdc-text-field__input {
+				@include rem(font-size, 1.6rem);
+				padding: 1.8rem 0 0 5.8rem;
+			}
+			input[type='date'] {
+				padding:1rem 5.8rem;
+			}
 			button {
 				margin: 2rem 1rem 0 0;
 				@include rem(font-size, 1.6rem);

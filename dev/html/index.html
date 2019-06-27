@@ -18,6 +18,8 @@
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Merienda|Sarabun&display=swap" rel="stylesheet"> 
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet"> 
+    <!-- MDC Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="/css/main.css">
     <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
 	<link rel="icon" href="/favicon.ico" type="image/x-icon">
@@ -146,48 +148,61 @@
                 </div>
             </div>
         </div> <!-- End Modal Primary-Menu -->
-        <!-- Quote -->    
+		<!-- Quote -->    
         <div id="quote" class="quote" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
                 <h2>Richiedi Preventivo</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 <div class="seperator-pricequotation uk-flex uk-flex-center uk-flex-middle uk-padding-small">
                     <hr class="uk-divider-small">
-                    <object data="./images/svg/pricequotation.svg" type="image/svg+xml"></object>
-                    <hr class="uk-divider-small">
                 </div>
                 <div class="contact-form__body uk-container uk-child-width-expand@s" uk-grid>
                 <form>
                     <div class="input-container uk-width-1-2@m">
-                        <div class="mdc-text-field">
-                            <input class="mdc-text-field__input" type="text">
-                            <div class="mdc-line-ripple"></div>
-                            <label class="mdc-floating-label">Nome*</label>
+              					<div class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+							<i class="material-icons mdc-text-field__icon">account_box</i>
+							<input type="text" id="my-input" class="mdc-text-field__input">
+							<label for="my-input" class="mdc-floating-label">Nome*</label>
+							<div class="mdc-line-ripple"></div>
+						</div>
+						<div class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+							<i class="material-icons mdc-text-field__icon">account_box</i>
+							<input type="text" id="my-input" class="mdc-text-field__input">
+							<label for="my-input" class="mdc-floating-label">Cognome*</label>
+							<div class="mdc-line-ripple"></div>
+						</div>
+                        <div class="mdc-text-field mdc-text-field--with-leading-icon">
+                          <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">event</i>
+                          <input type="date" id="my-input" class="mdc-text-field__input">
+                          <div class="mdc-line-ripple"></div>
                         </div>
-                        <div class="mdc-text-field">
-                            <input class="mdc-text-field__input" type="text">
-                            <div class="mdc-line-ripple"></div>
-                            <label class="mdc-floating-label">Cognome*</label>
+                        <div class="mdc-text-field mdc-text-field--with-leading-icon">
+                          <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">event</i>
+                          <input type="date" id="my-input" class="mdc-text-field__input">
+                          <div class="mdc-line-ripple"></div>
                         </div>
                     </div>
                     <div class="input-container uk-width-1-2@m">
-                        <div class="mdc-text-field">
-                            <input class="mdc-text-field__input" type="email">
-                            <div class="mdc-line-ripple"></div>
-                            <label class="mdc-floating-label">E-mail*</label>
-                        </div>
-                        <div class="mdc-text-field">
-                            <input class="mdc-text-field__input" type="tel">
-                            <div class="mdc-line-ripple"></div>
-                            <label class="mdc-floating-label">Telefono*</label>
-                        </div>
+					<div class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+							<i class="material-icons mdc-text-field__icon">email</i>
+							<input type="email" id="my-input" class="mdc-text-field__input">
+							<label for="my-input" class="mdc-floating-label">E-mail*</label>
+							<div class="mdc-line-ripple"></div>
+						</div>
+						<div class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+							<i class="material-icons mdc-text-field__icon">phone</i>
+							<input type="tel" id="my-input" class="mdc-text-field__input">
+							<label for="my-input" class="mdc-floating-label">Phone Number*</label>
+							<div class="mdc-line-ripple"></div>
+						</div>
                     </div>
                     <div class="input-container uk-width-1-2@m">
-                            <div class="mdc-text-field message">
-                                    <input class="mdc-text-field__input" type="text">
-                                    <div class="mdc-line-ripple"></div>
-                                    <label class="mdc-floating-label">Messaggio*</label>
-                            </div>
+               					<div class="mdc-text-field mdc-text-field--with-leading-icon mdc-text-field--with-trailing-icon">
+							<i class="material-icons mdc-text-field__icon">inbox</i>
+							<input type="text" id="my-input" class="mdc-text-field__input">
+							<label for="my-input" class="mdc-floating-label">Messaggio*</label>
+							<div class="mdc-line-ripple"></div>
+						</div>
                     </div>
                     <div class="uk-width-1-2@m">
                         <div class="privacy-area">

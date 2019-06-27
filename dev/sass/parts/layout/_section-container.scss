@@ -128,7 +128,6 @@ $fs: (
 				}
 				@include media('<=sm') {
 					@include rem(font-size, ms(3));
-					line-height: unset;
 				}
 			}
 			a {
