@@ -13,62 +13,59 @@
 		}
 		h4 {
 			font-family: $alt-font-family;
-			font-size: 2rem;
+			@include rem(font-size, 2rem);
 			line-height: 3rem;
 			letter-spacing: 0.881201px;
 			text-transform: uppercase;
 			color: white;
 			@include media('<=md') {
-				font-size: ms(5);
+				@include rem(font-size, ms(5));
 				line-height: unset;
 			}
 			@include media('<=sm') {
-				font-size: ms(3);
+				@include rem(font-size, ms(3));
 				padding: 0;
 			}
 		}
 
 		h3 {
-			font-family: $alt-font-family;
-			font-weight: 600;
-			font-size: 3.3rem;
+			@include set-font($alt-font-family, 600);
+			@include rem(font-size, 3.3rem);
 			line-height: 4.9rem;
 			color: white;
 			position:relative;
 			bottom:1rem;
 			@include media('<=md') {
-				font-size: ms(7);
+				@include rem(font-size, ms(7));
 				line-height: unset;
 			}
 			@include media('<=sm') {
-				font-size: ms(5);
+				@include rem(font-size, ms(5));
 				padding: 0;
 			}
 		}
 
 		p {
-			font-family: $base-font-family;
-			font-size: 1.6rem;
+			@include set-font;
+			@include rem(font-size, 1.6rem);
 			line-height: 2.3rem;
 			color: white;
 			@include media('<=md') {
-				font-size: ms(5);
+				@include rem(font-size, ms(5));
 				line-height: unset;
 			} 
 			@include media('<=sm') {
-				font-size: ms(3);
+				@include rem(font-size, ms(3));
 			} 
 		}
 
 		a {
-			font-family: $base-font-family;
-			font-weight: 800;
-			font-size: 2.4rem;
+			@include set-font($base-font-family, 800);
+			@include rem(font-size, 2.4rem);
 			line-height: 2.3rem;
 			color: get-color(bg,10);
 			margin-bottom:4rem;
-			position:relative;
-			top:2.5rem;
+			@include relative(top 2.5rem);
 		}
 	}
 }

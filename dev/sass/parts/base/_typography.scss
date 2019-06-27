@@ -81,7 +81,7 @@ body {
 
     &[href^="mailto"] {
       font-weight: 500;
-      position: relative;
+      @include relative;
       padding-left: rem(28px);
       background: url('../images/svg/envelope.svg') center left no-repeat;
     }

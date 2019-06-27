@@ -4,10 +4,8 @@
 			padding:0;
 			a {
 				text-transform: uppercase;
-				font-family: $alt-font-family;
-				font-style: normal;
-				font-weight: normal;
-				font-size: 3rem;
+				@include set-font($alt-font-family, normal);
+				@include rem(font-size, 3rem);
 				letter-spacing: .6rem;
 				text-transform: uppercase;
 				color: get-color(bg,11);

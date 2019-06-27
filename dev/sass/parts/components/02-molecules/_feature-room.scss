@@ -11,26 +11,26 @@
 	h3 {
 		font-family: $alt-font-family;
 		text-transform: uppercase;
-		font-size: ms(8);
+		@include rem(font-size, ms(8));
 		line-height: 3.5rem;
 		letter-spacing: 6px;
 		color: black;
 		padding-bottom:2rem;
 		@include media('<=md') {
-			font-size: ms(7);
+			@include rem(font-size, ms(7));
 			line-height: unset;
 		}
 	}
 	p {
-		font-family: $base-font-family;
-		font-size: 1.7rem;
+		@include set-font;
+		@include rem(font-size, 1.7rem);
 		color: #222222;
 		@include media('<=md') {
-			font-size: ms(5);
+			@include rem(font-size, ms(5));
 			line-height: unset;
 		} 
 		@include media('<=sm') {
-			font-size: ms(3);
+			@include rem(font-size, ms(3));
 		} 
 	}
 }

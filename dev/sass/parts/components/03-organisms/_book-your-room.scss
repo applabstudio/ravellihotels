@@ -5,28 +5,27 @@
 		padding:1.5rem;
 	}
 	h1 {
-		font-family: $alt-font-family;
-		font-weight: 600;
-		font-size: 3.25rem;
+		@include set-font($alt-font-family, 600);
+		@include rem(font-size, 3.25rem);
 		color: #222222;
 		@include media('<=md') {
-			font-size: ms(8);
+			@include rem(font-size, ms(8));
 		}
 		@include media('<=sm') {
-			font-size: ms(6);
+			@include rem(font-size, ms(6));
 			padding: 0;
 		}
 	}
 	p {
-		font-family: $base-font-family;
-		font-size: $fsPrimary;
+		@include set-font;
+		@include rem(font-size, $fsPrimary);
 		line-height: 3.2rem;
 		@include media('<=md') {
-			font-size: ms(5);
+			@include rem(font-size, ms(5));
 			line-height: unset;
 		} 
 		@include media('<=sm') {
-			font-size: ms(3);
+			@include rem(font-size, ms(3));
 		} 
 	}
 	.uk-grid-margin {
@@ -45,25 +44,23 @@
 			border: transparent;
 			border-bottom: 1px solid black;
 			background: transparent;
-			font-weight: 600;
-			font-size: 1.6rem;
+			@include set-font($base-font-family, 600);
+			@include rem(font-size, 1.6rem);
 			padding-top:0.6rem;
 			color: #4D4B4A;
-			font-family: $base-font-family;
 		}
 		p {
-			font-family: $base-font-family;
-			font-size: 14px;
+			@include set-font;
+			@include rem(font-size, 1.4rem);
 			line-height: 21px;
 			color: get-color(primary, 0);
 			mix-blend-mode: normal;
 			opacity: 0.9;
 			text-align: left;
-			position: relative;
-			top: 5px;
+			@include relative(top 5px);
 		}
 		.disponibility {
-			position: absolute;
+			@include absolute;
 		}
 		button {
 			width: 100%;

@@ -20,16 +20,13 @@
 			}
 			.uk-subnav > * {
 				padding:0;
-				position: relative;
-				top: 0.1rem;
+				@include relative(top 0.1rem);
 			}
 			.uk-subnav-pill > .uk-active > a {
-				font-family: $alt-font-family;
-				font-style: normal;
-				font-weight: 500;
-				font-size: 27.64px;
 				text-align: center;
 				color: white;
+				@include set-font($alt-font-family, 500);
+				@include rem(font-size, 2.764rem);
 				background: get-color(primary, 0);
 				padding:1.2rem 3.8rem 1.2rem 3.8rem;
 			}
@@ -38,10 +35,8 @@
 				color: get-color(primary, 0);
 			}
 			.uk-subnav-pill > * > :first-child {
-				font-family: $alt-font-family;
-				font-style: normal;
-				font-weight: 500;
-				font-size: 2.8rem;
+				@include set-font($alt-font-family, 500);
+				@include rem(font-size, 2.8rem);
 				text-align: center;
 				color: black;
 				padding:1.2rem 3.8rem 1.2rem 3.8rem;
@@ -52,9 +47,8 @@
 				}
 			}
 			p {
-				font-family: $alt-font-family;
-				font-style: normal;
-				font-size: 1.4rem;
+				@include set-font($alt-font-family, normal);
+				@include rem(font-size, 1.4rem);
 				letter-spacing: 0.52px;
 				color: #4A4A4A;
 			}
@@ -63,13 +57,12 @@
 					width: 29rem;
 					margin: auto 1rem;
 					@include media('<=md') {
-						font-size: 1.125rem;
+						@include rem(font-size, 1.125rem);
 						padding: 1rem 0.7rem;
 						width: 16rem;
 					}
 					@include media('<=sm') {
-						font-size: 0.9rem;
-						padding: 1rem 0.7rem;
+						@include rem(font-size, 0.9rem);
 						width: 14rem;
 					}
 				}

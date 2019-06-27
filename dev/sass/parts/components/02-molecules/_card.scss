@@ -11,34 +11,32 @@
 }
   .uk-card-default .uk-card-title {
     color: white;
-    font-weight: 800;
-    font-size: 3.2rem;
     padding-bottom: 2rem;
-    font-family: $alt-font-family;
+    @include set-font($alt-font-family, 800);
+    @include rem(font-size, 3.2rem);
   }
   
   p {
-    font-family: $base-font-family;
-    font-size: ms(6);
+    @include set-font;
+    @include rem(font-size, ms(6));
     color: white;
     margin-bottom: 2rem;
     @include media('<=md') {
-      font-size: ms(5);
+      @include rem(font-size, ms(5));
     }
     @include media('<=sm') {
-      font-size: ms(3);
+      @include rem(font-size, ms(3));
     }
   }
   img {
     width:100%;
   }
   .uk-card-media-top {
-     position: relative;
+    @include relative;
   }
   .room-rating {
-    position: absolute;
+    @include absolute(bottom 0);
     background: rgba(121, 110, 101, 0.5);
-    bottom: 0;
     width: 100%;
     height: 3.3rem;
     display: flex;
@@ -55,8 +53,8 @@
     .info-room {
       display: flex;
       color: white;
-      font-size:1.4rem;
-      font-family: $base-font-family;
+      @include rem(font-size, 1.4rem);
+      @include set-font;
       &__guests {
         display: flex;
         align-items: center;
@@ -89,7 +87,7 @@
     transition: opacity .2s ease-out .1s;
   }
   .card {
-    position: relative;
+    @include relative;
     a {
       -webkit-transition: color .2s ease-out;
       -moz-transition: color .2s ease-out;
@@ -115,30 +113,27 @@
       }
     }
     .card-content {
-      position: absolute;
-      top: 0;
+      @include absolute(top 0);
       width: 100%;
       background: rgba(34, 34, 34, 0.56);
       h4 {
-        font-family: $base-font-family;
         letter-spacing: 0.881201px;
         text-transform: uppercase;
-        font-weight: 300;
-        font-size: 20.25px;
+        @include set-font($base-font-family, 300);
+        @include rem(font-size, 2.025rem);
         line-height: 28px;
         color: white;
       }
       h2 {
-        font-family: $base-font-family;
         white-space: nowrap;
-        font-weight: 600;
-        font-size: 22.43px;
+        @include set-font($base-font-family, 600);
+        @include rem(font-size, 2.243rem);
         line-height: 49px;
         color: #FCFAF8;
       }
       p {
-        font-family: $base-font-family;
-        font-size: 16px;
+        @include set-font;
+        @include rem(font-size, 1.6rem);
         line-height: 26px;
         text-align: center;
         letter-spacing: 0.8px;

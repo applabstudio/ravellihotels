@@ -10,28 +10,27 @@
 			padding:0;
 		  }
 		h2 {
-			font-family: $alt-font-family;
-			font-weight: 600;
-			font-size: 3.2rem;
+			@include set-font($alt-font-family, 600);
+			@include rem(font-size, 3.2rem);
 			color:white;
 			line-height: 49px;
 			@include media('<=md') {
-				font-size: ms(9);
+				@include rem(font-size, ms(9));
 			  }
 			@include media('<=sm') {
-				font-size: ms(8);
+				@include rem(font-size, ms(8));
 			}
 		}
 		p {
-			font-family: $base-font-family;
 			font-size:$fsPrimary;
 			color:white;
 			padding-top: 2rem;
+			@include set-font;
 			@include media('<=md') {
-				font-size: ms(5);
+				@include rem(font-size, ms(5));
 			}
 			@include media('<=sm') {
-				font-size: ms(3);
+				@include rem(font-size, ms(3));
 			}
 		}
 	}
@@ -52,7 +51,7 @@
 		p {
 			font-family: $alt-font-family;
 			text-transform: uppercase;
-			font-size: 1.8rem;
+			@include rem(font-size, 1.8rem);
 			color: get-color(bg, 11);
 			line-height: 28px;
 			word-break: break-word;

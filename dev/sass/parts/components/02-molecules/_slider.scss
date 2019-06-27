@@ -1,7 +1,7 @@
 .slider {
 	height: 100vh;
 	.uk-dotnav {
-		position: relative;
+		@include relative;
 		bottom: 50px;
 		display: flex;
 		justify-content: center;
@@ -19,10 +19,9 @@
 				padding:1.5rem;
 			}
 			h2 {
-				font-family: $alt-font-family;
 				text-transform: uppercase;
-				font-weight: 500;
-				font-size:ms(13);
+				@include set-font($alt-font-family, 500);
+				@include rem(font-size, ms(13));
 				line-height: 7.2rem;
 				text-align: center;
 				color: white;
@@ -33,19 +32,17 @@
 				}
 			}
 			p {
-				font-family: $alt-font-family;
-				font-weight: 300;
-				font-size: 3.8rem;
+				@include set-font($alt-font-family, 300);
+				@include rem(font-size, 3.8rem);
 				line-height: 4.8rem;
 				text-align: center;
 				color: white;
 				@include media('<=md') {
-					font-size: ms(9);
+					@include rem(font-size, ms(9));
 					line-height: unset;
 				} 
 				@include media('<=sm') {
-					font-size: ms(7);
-					line-height: unset;
+					@include rem(font-size, ms(7));
 				} 
 			}
 		}

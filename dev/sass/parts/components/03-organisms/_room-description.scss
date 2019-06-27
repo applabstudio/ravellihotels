@@ -15,8 +15,7 @@
 					display: -webkit-inline-flex; // FIX for old iPad
 					align-items: center;
 					color: get-color(bg, 10);
-					font-weight: bold;
-					font-size: 1.4rem;
+					@include rem(font-size, 1.4rem);
 					white-space: nowrap;
 				}
 			}
@@ -28,18 +27,17 @@
 			color:get-color(bg, 10);
 		}
 		p {
-			font-family: $base-font-family;
-			font-size: $fsPrimary;
+			@include set-font;
+			@include rem(font-size, $fsPrimary);
 			line-height: 34px;
 			text-align: center;
 			color: white;
 			@include media('<=md') {
-				font-size: ms(5);
+				@include rem(font-size, ms(5));
 				line-height: unset;
 			} 
 			@include media('<=sm') {
-				font-size: ms(3);
-				line-height: unset;
+				@include rem(font-size, ms(3));
 			} 
 		}
 	}

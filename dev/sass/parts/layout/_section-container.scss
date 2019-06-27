@@ -12,65 +12,58 @@ $fs: (
 		padding:0;
 	}
 		h4 {
-			font-family: $alt-font-family;
-			font-weight: 200;
-			font-size: 2.25rem;
+			@include set-font($alt-font-family, 200);
+			@include rem(font-size, 2.25rem);
 			letter-spacing: 0.09rem;
 			text-transform: uppercase;
 		}
 		h1 {
-			font-family: $alt-font-family;
-			font-weight: 600;
-			font-size: 4.2rem;
+			@include set-font($alt-font-family, 600);
+			@include rem(font-size, 4.2rem);
 			color: get-color(primary,0);
 			padding: 0 0 2rem 0;
 			@include media('<=md') {
-				font-size: ms(9);
+				@include rem(font-size, ms(9));
 				line-height: unset;
 				padding:unset;
 			  }
 			@include media('<=sm') {
-				font-size: ms(8);
+				@include rem(font-size, ms(8));
 			}
 		}
 		p:last-of-type {
-			font-family: $base-font-family;
-			font-style: normal;
-			font-weight: normal;
-			font-size: ms(7);
+			@include set-font;
+			@include rem(font-size, ms(7));
 			line-height: 3.4rem;
 			color: #222222;
 			@include media('<=md') {
-				font-size: ms(5);
+				@include rem(font-size, ms(5));
 				line-height: unset;
 			} 
 			@include media('<=sm') {
-				font-size: ms(3);
-				line-height: unset;
+				@include rem(font-size, ms(3));
 			} 
 		}
 		a {
-			font-family: $base-font-family;
-			font-weight: 800;
-			font-size: 2.4rem;
+			@include set-font($base-font-family, 800);
+			@include rem(font-size, 2.4rem);
 			display: inline-block;   
 			padding-top: 1.8rem;
 			text-decoration:none;
 			@include media('<=md') {
-				font-size: ms(6);
+				@include rem(font-size, ms(6));
 				line-height: unset;
 			}
 			@include media('<=sm') {
-				font-size: ms(3);
+				@include rem(font-size, ms(3));
 				padding: 0;
-				line-height: unset;
 			}
 		}
 		&--image {
 			> div {
 				width:100%;
 				height: 100vh;
-				position: relative;
+				@include relative;
 				img {
 					width: 100%;
 					height: 100%;
@@ -81,27 +74,26 @@ $fs: (
 					bottom: 1rem;
 					h1 {
 						font-family: $alt-font-family;
-						font-size: map-get($fs, xxl); 
+						@include rem(font-size, map-get($fs, xxl)); 
 						@include media('<=md') {
-						  font-size: map-get($fs, xl);
+							@include rem(font-size, map-get($fs, xl));
 						}
 						@include media('<=sm') {
-							font-size: map-get($fs, l);
+							@include rem(font-size, map-get($fs, l));
 						  }
 						font-weight: 500;
 						color:white;
 					}
 					p {
-						font-family: $alt-font-family;
-						font-size: map-get($fs, l);
+						color:white;
+						@include set-font($alt-font-family, 300);
+						@include rem(font-size, map-get($fs, l));
 						@include media('<=md') {
-						  font-size: map-get($fs, s);
+							@include rem(font-size, map-get($fs, s));
 						}
 						@include media('<=sm') {
-							font-size: map-get($fs, xs);
-						  }
-						font-weight: 300;
-						color:white;
+							@include rem(font-size, map-get($fs, xs));
+						}
 					}
 				}
 			}
@@ -116,39 +108,37 @@ $fs: (
 
 			h1 {
 				color: get-color(primary,0);
-				font-family: $alt-font-family;
-				font-weight: 600;
-				font-size: 4.2rem;
+				@include set-font($alt-font-family, 600);
+				@include rem(font-size, 4.2rem);
 				@include media('<=md') {
-					font-size: ms(9);
+					@include rem(font-size, ms(9));
 				  }
 				@include media('<=sm') {
-					font-size: ms(8);
+					@include rem(font-size, ms(8));
 				}
 			}
 			p {
-				font-family: $base-font-family;
-				font-size: $fsPrimary;
+				@include set-font;
+				@include rem(font-size, $fsPrimary);
 				line-height: 3.4rem;
 				color: #222222;
 				@include media('<=md') {
-					font-size: ms(5);
+					@include rem(font-size, ms(5));
 					line-height: unset;
 				}
 				@include media('<=sm') {
-					font-size: ms(3);
+					@include rem(font-size, ms(3));
 					line-height: unset;
 				}
 			}
 			a {
-				font-family: $base-font-family;
-				font-weight: 800;
-				font-size: 2.4rem;
+				@include set-font($base-font-family, 800);
+				@include rem(font-size, 2.4rem);
 				display: inline-block;
 				padding-top:1.8rem; 
 				text-decoration: none;
 				@include media('<=md') {
-					font-size: ms(6);
+					@include rem(font-size, ms(6));
 				}
 			}
 		}

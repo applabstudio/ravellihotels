@@ -1,10 +1,8 @@
 table.uk-table {
 	td {
 		vertical-align: top;
-		font-family: $alt-font-family;
-		font-style: normal;
-		font-weight: 300;
-		font-size: 1.6rem;
+		@include set-font($alt-font-family, 300);
+		@include rem(font-size, 1.6rem);
 		color: black;
 		&:hover {
 			text-decoration: #796E65;
@@ -15,10 +13,8 @@ table.uk-table {
 		}
 	}
 	th {
-		font-family: $alt-font-family;
-		font-style: normal;
-		font-weight: 300;
-		font-size: 1.6rem;
+		@include set-font($alt-font-family, 300);
+		@include rem(font-size, 1.6rem);
 		text-transform: uppercase;
 		color: black;
 	}

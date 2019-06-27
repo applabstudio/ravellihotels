@@ -42,7 +42,7 @@ $label-margin: rem(4px 0 0);
   display: inline-block;
   width: map-get($width, 'base');
   height: map-get($height, 'base');
-  position: relative;
+ @include relative;
 }
 
 %hamburger-label {

@@ -1,5 +1,5 @@
 .container-location {
-	position: relative;
+	@include relative;
 	.location {
 		height:88rem;
 	}
@@ -12,13 +12,13 @@
 				max-height: unset;
 				background: get-color(primary, 0);
 				h1,p {
-					font-size:ms(4);
+					@include rem(font-size, ms(4));
 				}
 			}
 		}
 	}
 	&__location-heading{
-		position: absolute;
+		@include absolute;
 		background: rgba(34, 34, 34, 0.56);
 		z-index: 1;
 		// ANCHOR Optimize for mobile
@@ -26,51 +26,44 @@
 			padding:1.5rem;
 		}
 			p:first-child {
-				font-family: $base-font-family;
-				font-style: normal;
-				font-weight: 300;
-				font-size: ms(6);
+				@include set-font($base-font-family, 300);
+				@include rem(font-size, ms(6));
 				letter-spacing: 0.881201px;
 				text-transform: uppercase;
 				color: white;
 				@include media('<=md') {
-					font-size: ms(8);
+					@include rem(font-size, ms(8));
 				}
 				@include media('<=sm') {
-					font-size: ms(6);
+					@include rem(font-size, ms(6));
 					padding: 0;
 				}
 			}
 			h1 {
-				font-family: $alt-font-family;
-				font-style: normal;
-				font-weight: 600;
-				font-size: 3.25rem;
+				@include set-font($alt-font-family, 600);
+				@include rem(font-size, 3.25rem);
 				line-height: 4.9rem;
 				color: #FCFAF8;
 				text-transform: capitalize;
 				@include media('<=md') {
-					font-size: ms(8);
+					@include rem(font-size, ms(8));
 				}
 				@include media('<=sm') {
-					font-size: ms(6);
+					@include rem(font-size, ms(6));
 				}
 			}
 			p:last-child {
-				font-family: $base-font-family;
-				font-style: normal;
-				font-weight: normal;
-				font-size: 1.8rem;
+				@include set-font;
+				@include rem(font-size, 1.8rem);
 				text-transform: capitalize;
 				line-height: 2.6rem;
 				color: white;
 				@include media('<=md') {
-					font-size: ms(5);
+					@include rem(font-size, ms(5));
 					line-height: unset;
 				}
 				@include media('<=sm') {
-					font-size:ms(3);
-					line-height: unset;
+					@include rem(font-size, ms(3));
 				}
 			}
 		}

@@ -13,12 +13,12 @@ form {
 				width: 100%;
 				margin:0;
 				margin-bottom:1rem;
-				padding:1rem;
+				@include rem(padding, 1rem);
 				background: none;
 				border: none;
 				border-bottom: 1px solid #4D4B4A;
 				font-weight: 600;
-				font-size: 1.6rem;
+				@include rem(font-size, 1.6rem);
 				font-family: $title-font-family;
 				&:focus {
 					background: none;
@@ -39,7 +39,7 @@ form {
 				font-family: $base-font-family;
 				font-style: normal;
 				font-weight: 600;
-				font-size: 20px;
+				@include rem(font-size, 2rem);
 				line-height: 28px;
 				color: #4D4B4A;
 			}
@@ -57,6 +57,9 @@ form {
 				input[type='checkbox'] {
 					width:1.9rem;
 					height:1.9rem;
+				}
+				label {
+					@include rem(font-size, 1rem);
 				}
 			}
 	}

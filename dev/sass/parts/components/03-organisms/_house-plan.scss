@@ -5,22 +5,21 @@
 		mix-blend-mode: multiply;
 	}
 	h1, h2 {
-		font-family: $alt-font-family;
-		font-weight: 600;
-		font-size: 3.243rem;
+		@include set-font($alt-font-family, 600);
+		@include rem(font-size, 3.243rem);
 		color: #C2BEBA;
 		@include media('<=md') {
-			font-size: ms(8);
+			@include rem(font-size, ms(8));
 			line-height: unset;
 			padding: 0;
 		}
 		@include media('<=sm') {
-			font-size: ms(6);
+			@include rem(font-size, ms(6));
 		}
 	}
 	h6 {
+		@include rem(font-size, 1.6rem);
 		font-family: $alt-font-family;
-		font-size: 1.6rem;
 		line-height: 2.4rem;
 		text-align: center;
 		letter-spacing: 0.696258px;
@@ -29,5 +28,4 @@
 		align-self: self-end;
 		padding-top: 2rem;
 	}
-
 }

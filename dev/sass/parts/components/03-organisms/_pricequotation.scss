@@ -3,12 +3,12 @@ $ico-dim: rem(32px);
 	.uk-modal-dialog {
 		background: get-color(modal, 0);
 		h2 {
-			font-size: ms(8);
+			@include rem(font-size, ms(8));
 			font-weight: 600;
 			text-transform: capitalize;
 		}	
 		p {
-			font-size: ms(4);
+			@include rem(font-size, ms(4));
 			color: #222222;
 		}
 
@@ -23,7 +23,7 @@ $ico-dim: rem(32px);
 
 			button {
 				margin: 2rem 1rem 0 0;
-				font-size: 1.6rem;
+				@include rem(font-size, 1.6rem);
 				color:get-color(bg,0);
 			}
 			button:last-child {

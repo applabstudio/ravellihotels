@@ -22,10 +22,8 @@ $fs: (
       }
       span {
         color: white;
-        position: absolute;
-        top: 2.7rem;
-        left: 5.29rem;
-        font-size: 1.25rem;
+        @include absolute(top 2.7rem left 5.59rem);
+        @include rem(font-size, 1.25rem);
         text-transform: uppercase;
       }
       .container-menu-wrapper {
@@ -42,7 +40,7 @@ $fs: (
           flex-direction:column;
           text-align: center;
           // STUB overflow: auto; // NOTE for console
-          menu {
+          menu, ul {
             list-style: none;
             text-align: center;
             padding: 0;
@@ -52,13 +50,13 @@ $fs: (
                 font-family: $alt-font-family;
                 text-align: center;
                 text-transform: uppercase;
-                font-size: map-get($fs, xl);
+                @include rem(font-size, map-get($fs, xl));
                 text-decoration: none;
                 @include media('<=md') {
-                  font-size: map-get($fs, md);
+                  @include rem(font-size, map-get($fs, md));
                 }
                 @include media('<=sm') {
-                  font-size: map-get($fs, sm);
+                  @include rem(font-size, map-get($fs, sm));
                 }
               }
             }
