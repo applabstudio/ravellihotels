@@ -78,11 +78,10 @@
     }
     li a {
       color:white;
-      font-style: normal;
-      font-weight: 600;
       line-height: 2rem;  
       text-align: center;
       color:#413829;
+      @include set-font($base-font-family, 600);
       &:hover {
         transition:$tt;
         color:white;

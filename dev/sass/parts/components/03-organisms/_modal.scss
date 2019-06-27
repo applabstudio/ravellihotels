@@ -83,8 +83,7 @@ $fs: (
             justify-content: center;
             padding:2rem;
             button {
-              position:relative;
-              left:-2.5rem;
+              @include relative(left -2.5rem);
             }
           }
         }
