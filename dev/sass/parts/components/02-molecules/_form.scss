@@ -4,7 +4,7 @@
 
 form {
 	.grid {
-		padding:0.9rem;
+		padding:0.9rem 0;
 		.uk-width-1-2\@m {
 			@include size(66.6%, auto);
 			@include media('<=lg') {
