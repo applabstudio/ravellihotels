@@ -5,7 +5,7 @@
 .price-list {
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		@include padding-component($sm);
+		@include padding-component();
 	}
 	&__heading {
 		h1 {
@@ -33,6 +33,9 @@
 				@include set-font($alt-font-family, 500);
 				@include rem(font-size, 2.764rem);
 				@include padding(1.2rem, 3.8rem, 1.2rem, 3.8rem);
+				@include media('<=md') {
+					@include rem(font-size, $textExtra);
+				}
 			}
 			.uk-subnav-pill>*>a:hover {
 				background:none;
@@ -44,6 +47,9 @@
 				@include padding(1.2rem, 3.8rem, 1.2rem, 3.8rem);
 				text-align: center;
 				color: black;
+				@include media('<=md') {
+					@include rem(font-size, $textExtra);
+				}
 			}
 			.uk-switcher.uk-margin:hover {
 				a {
