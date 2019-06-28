@@ -13,9 +13,8 @@
 		}
 	}
 	h3 {
-		font-family: $alt-font-family;
+		@include set-font($alt-font-family, normal, normal, ms(8));
 		text-transform: uppercase;
-		@include rem(font-size, ms(8));
 		line-height: 3.5rem;
 		letter-spacing: $ls-md;
 		color: black;
@@ -26,8 +25,7 @@
 		}
 	}
 	p {
-		@include set-font;
-		@include rem(font-size, 1.7rem);
+		@include set-font($base-font-family, normal, normal, 1.7rem);
 		color: get-color(primary, 1);
 		@include media('<=md') {
 			@include rem(font-size, ms(5));

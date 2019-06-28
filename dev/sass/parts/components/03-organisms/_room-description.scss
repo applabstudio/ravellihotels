@@ -32,7 +32,6 @@
 		}
 		p {
 			@include set-font;
-			@include rem(font-size, $fsPrimary);
 			line-height: $lh-xl;
 			text-align: center;
 			color: white;

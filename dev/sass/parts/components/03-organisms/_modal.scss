@@ -48,11 +48,10 @@ $fs: (
             li {
               a {
                 color: white;
-                font-family: $alt-font-family;
                 text-align: center;
                 text-transform: uppercase;
                 text-decoration: none;
-                @include rem(font-size, map-get($fs, xl));
+                @include set-font($alt-font-family, normal, normal, map-get($fs, xl));
                 @include media('<=md') {
                   @include rem(font-size, map-get($fs, md));
                 }

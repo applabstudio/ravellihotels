@@ -29,8 +29,7 @@
 			@include padding-component();
 		}
 			p:first-child {
-				@include set-font($base-font-family, 300);
-				@include rem(font-size, ms(6));
+				@include set-font($base-font-family, 300, normal, ms(6));
 				letter-spacing: $ls-xs;
 				text-transform: uppercase;
 				color: white;
@@ -43,8 +42,7 @@
 				}
 			}
 			h1 {
-				@include set-font($alt-font-family, 600);
-				@include rem(font-size, 3.25rem);
+				@include set-font($alt-font-family, 600, normal, 3.25rem);
 				line-height: 4.9rem;
 				color: #FCFAF8;
 				text-transform: capitalize;
@@ -56,8 +54,7 @@
 				}
 			}
 			p:last-child {
-				@include set-font();
-				@include rem(font-size, $textExtra);
+				@include set-font($base-font-family, normal, normal, $textExtra);
 				text-transform: capitalize;
 				line-height: $lh-sl;
 				color: white;

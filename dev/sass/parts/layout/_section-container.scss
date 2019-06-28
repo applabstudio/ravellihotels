@@ -15,14 +15,12 @@ $fs: (
 		padding:0;
 	}
 		h4 {
-			@include set-font($alt-font-family, 200);
-			@include rem(font-size, 2.25rem);
+			@include set-font($alt-font-family, 200, normal, 2.25rem);
 			letter-spacing: 0.09rem;
 			text-transform: uppercase;
 		}
 		h1 {
-			@include set-font($alt-font-family, 600);
-			@include rem(font-size, 4.2rem);
+			@include set-font($alt-font-family, 600, normal, 4.2rem);
 			color: get-color(primary,0);
 			padding: 0 0 $pb 0;
 			@include media('<=md') {
@@ -35,8 +33,7 @@ $fs: (
 			}
 		}
 		p:last-of-type {
-			@include set-font;
-			@include rem(font-size, ms(7));
+			@include set-font($base-font-family, normal, normal, ms(7));
 			line-height: $lh-xl;
 			color: get-color(primary, 1);
 			@include media('<=md') {
@@ -48,8 +45,7 @@ $fs: (
 			} 
 		}
 		a {
-			@include set-font($base-font-family, 800);
-			@include rem(font-size, $textExtraLarge);
+			@include set-font($base-font-family, 800, normal, $textExtraLarge);
 			display: inline-block;   
 			padding-top: 1.8rem;
 			text-decoration:none;
@@ -74,8 +70,7 @@ $fs: (
 				> div {
 					@include size(100%, auto);
 					h1 {
-						font-family: $alt-font-family;
-						@include rem(font-size, map-get($fs, xxl)); 
+						@include set-font($alt-font-family, normal, normal, map-get($fs, xxl));
 						@include media('<=md') {
 							@include rem(font-size, map-get($fs, xl));
 						}
@@ -87,8 +82,7 @@ $fs: (
 					}
 					p {
 						color:white;
-						@include set-font($alt-font-family, 300);
-						@include rem(font-size, map-get($fs, l));
+						@include set-font($alt-font-family, 300, normal, map-get($fs, l));
 						@include media('<=md') {
 							@include rem(font-size, map-get($fs, s));
 						}
@@ -103,14 +97,13 @@ $fs: (
 		&--intro {
 			.uk-container {
 				@include media('<=md') {
-					@include padding-component($sm);
+					@include padding-component();
 				}
 			}
 
 			h1 {
 				color: get-color(primary,0);
-				@include set-font($alt-font-family, 600);
-				@include rem(font-size, 4.2rem);
+				@include set-font($alt-font-family, 600, normal, 4.2rem);
 				@include media('<=md') {
 					@include rem(font-size, ms(9));
 				  }
@@ -120,7 +113,6 @@ $fs: (
 			}
 			p {
 				@include set-font;
-				@include rem(font-size, $fsPrimary);
 				line-height: $lh-xl;
 				color: get-color(primary, 1);
 				@include media('<=md') {
@@ -132,8 +124,7 @@ $fs: (
 				}
 			}
 			a {
-				@include set-font($base-font-family, 800);
-				@include rem(font-size, $textExtraLarge);
+				@include set-font($base-font-family, 800, normal, $textExtraLarge);
 				display: inline-block;
 				padding-top:1.8rem; 
 				text-decoration: none;

@@ -7,13 +7,11 @@ $ico-dim: rem(32px);
 	.uk-modal-dialog {
 		background: get-color(modal, 0);
 		h2 {
-			@include rem(font-size, ms(8));
-			@include set-font($alt-font-family, 600);
+			@include set-font($alt-font-family, 600, normal, ms(8));
 			text-transform: capitalize;
 		}	
 		p {
-			@include set-font;
-			@include rem(font-size, ms(4));
+			@include set-font($base-font-family, normal, normal, ms(4));
 			color: get-color(primary, 1);
 		}
 

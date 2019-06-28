@@ -15,8 +15,7 @@
 				letter-spacing: $ls-md;
 				text-transform: uppercase;
 				color: black;
-				@include rem(font-size, 2.9rem);
-				@include set-font($alt-font-family, normal);
+				@include set-font($alt-font-family, normal, normal, 2.9rem);
 				@include media('<=md') {
 					@include rem(font-size, ms(9));
 					text-align: center;
@@ -28,8 +27,7 @@
 			p {
 				line-height: $lh-xl;
 				color: get-color(primary, 1);
-				@include set-font($base-font-family, normal);
-				@include rem(font-size,  $fsPrimary);
+				@include set-font();
 				@include media('<=md') {
 					@include rem(font-size, ms(5));
 					text-align: center;

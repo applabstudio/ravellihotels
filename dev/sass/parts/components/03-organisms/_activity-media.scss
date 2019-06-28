@@ -15,8 +15,7 @@
 			@include padding-component;
 		}
 		h4 {
-			@include set-font($alt-font-family, normal);
-			@include rem(font-size, $textLarge);
+			@include set-font($alt-font-family, normal, normal, $textLarge);
 			line-height: $lh-lg;
 			letter-spacing: $ls-xs;
 			text-transform: uppercase;
@@ -32,8 +31,7 @@
 		}
 
 		h3 {
-			@include set-font($alt-font-family, 600);
-			@include rem(font-size, 3.3rem);
+			@include set-font($alt-font-family, 600, normal, 3.3rem);
 			@include relative(bottom 1rem);
 			line-height: 4.9rem;
 			color: white;
@@ -48,8 +46,7 @@
 		}
 
 		p {
-			@include set-font;
-			@include rem(font-size, $textBase);
+			@include set-font($base-font-family, normal, normal, $textBase);
 			line-height: 2.3rem;
 			color: white;
 			@include media('<=md') {
@@ -62,12 +59,12 @@
 		}
 
 		a {
-			@include relative(top 2.5rem);
-			@include set-font($base-font-family, 800);
-			@include rem(font-size, $textExtraLarge);
+			@include set-font($base-font-family, 800, normal, $textExtraLarge);
 			line-height: 2.3rem;
+			display: inline-block;
 			color: get-color(bg,10);
 			margin-bottom:4rem;
+			padding-top:$pt;
 		}
 	}
 }

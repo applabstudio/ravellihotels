@@ -14,8 +14,7 @@
 			padding:0;
 		  }
 		h2 {
-			@include set-font($alt-font-family, 600);
-			@include rem(font-size, 3.2rem);
+			@include set-font($alt-font-family, 600, normal, 3.2rem);
 			color:white;
 			line-height: $lh-xxl;
 			@include media('<=md') {
@@ -26,7 +25,6 @@
 			}
 		}
 		p {
-			@include rem(font-size, $fsPrimary);
 			color:white;
 			padding-top: $pt;
 			@include set-font;
@@ -55,8 +53,7 @@
 		p {
 			@include flexbox();
 			@include size(60%, auto);
-			@include rem(font-size, $textExtra);
-			@include set-font($alt-font-family, normal);
+			@include set-font($alt-font-family, normal, normal, $textExtra);
 			text-transform: uppercase;
 			text-align: left;
 			color: get-color(bg, 11);

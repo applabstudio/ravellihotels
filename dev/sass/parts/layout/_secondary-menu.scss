@@ -1,11 +1,10 @@
 $spacing: rem(6px);
 
 .secondary-menu {
-  font-family: $alt-font-family;
   text-transform: uppercase;
   text-align: center;
   @extend %listreset;
-  @include rem(font-size, ms(-1));
+  @include set-font($alt-font-family, normal, normal, ms(-1));
   @include flexbox();
   @include justify-content(center);
   @include flex-wrap(wrap);

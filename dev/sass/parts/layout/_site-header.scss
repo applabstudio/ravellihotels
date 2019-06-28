@@ -81,7 +81,7 @@
       line-height: $lh-s;  
       text-align: center;
       color:#413829;
-      @include set-font($base-font-family, 600);
+      @include set-font($base-font-family, 600, normal, $textSmall);
       &:hover {
         transition:$tt;
         color:white;

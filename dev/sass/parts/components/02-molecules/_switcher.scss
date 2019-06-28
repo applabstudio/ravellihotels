@@ -4,16 +4,14 @@
 
 .switcher {
 	@include media('<=md') {
-		@include padding-component;
+		@include padding-component();
 	}
 	.uk-subnav {
 		li {
 			a {
-				@include set-font($alt-font-family, normal);
-				@include rem(font-size, 3rem);
+				@include set-font($alt-font-family, normal, normal, 3rem);
 				text-transform: uppercase;
 				letter-spacing: $ls-md;
-				text-transform: uppercase;
 				color: get-color(bg,11);
 			}
 		}

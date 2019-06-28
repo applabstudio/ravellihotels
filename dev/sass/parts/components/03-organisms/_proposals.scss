@@ -15,8 +15,7 @@
 			margin: 0 auto;
 		}
 		h2 {
-			@include set-font($alt-font-family, 600);
-			@include rem(font-size, 3.25rem);
+			@include set-font($alt-font-family, 600, normal, 3.25rem);
 			color: get-color(primary, 0);
 			padding-bottom: $pb;
 			@include media('<=md') {
@@ -29,7 +28,6 @@
 		p {
 			color: get-color(primary, 1);
 			@include set-font;
-			@include rem(font-size, $fsPrimary);
 			line-height: $lh-xl;
 			font-weight: normal;
 			@include media('<=md') {

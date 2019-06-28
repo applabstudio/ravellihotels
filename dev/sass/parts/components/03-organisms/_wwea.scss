@@ -18,15 +18,13 @@
 		.address-wrapper {
 			padding-top:$pt;
 			h5 {
-				@include set-font($alt-font-family, 600);
-				@include rem(font-size, $textLarge);
+				@include set-font($alt-font-family, 600, normal, $textLarge);
 				line-height: $lh-xs;
 				letter-spacing: 0.5rem;
 				text-transform: uppercase;
 			}
 			a {
-				@include set-font;
-				@include rem(font-size, $textExtra);
+				@include set-font($base-font-family, normal, normal, $textExtra);
 				line-height: $lh-md;
 				text-decoration: none;
 			}
@@ -35,16 +33,14 @@
 	.how-to-reach-us {
 		padding-top:4rem;
 		h2 {
-			@include set-font($alt-font-family, 600);
-			@include rem(font-size, 3.3rem);
+			@include set-font($alt-font-family, 600, normal, 3.3rem);
 			line-height: $lh-xxl;
 			@include media('<=md') {
 				font-size: ms(6);
 			}
 		}
 		p {
-			@include set-font;
-			@include rem(font-size, $textExtra);
+			@include set-font($base-font-family, normal, normal, $textExtra);
 			line-height: $lh-md;
 			@include media('<=md') {
 				@include rem(font-size, ms(5));

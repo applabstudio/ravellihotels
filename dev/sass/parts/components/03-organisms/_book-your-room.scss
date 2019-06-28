@@ -9,8 +9,7 @@
 		@include padding-component;
 	}
 	h1 {
-		@include set-font($alt-font-family, 600);
-		@include rem(font-size, 3.25rem);
+		@include set-font($alt-font-family, 600, normal, 3.25rem);
 		color: get-color(primary, 1);
 		@include media('<=md') {
 			@include rem(font-size, ms(8));
@@ -22,7 +21,6 @@
 	}
 	p {
 		@include set-font;
-		@include rem(font-size, $fsPrimary);
 		line-height: 3.2rem;
 		@include media('<=md') {
 			@include rem(font-size, ms(5));
@@ -48,16 +46,14 @@
 			background: transparent;
 			border: transparent;
 			@include border('bottom', 1px, solid, black);
-			@include set-font($base-font-family, 600);
-			@include rem(font-size, $textBase);
+			@include set-font($base-font-family, 600, normal, $textBase);
 			@include padding(1rem, 0, 0,0);
 			color: get-color(bg, 8);
 		}
 		label {
-			@include relative(top 5px);
-			@include set-font;
-			@include rem(font-size, $textMedium);
-			line-height: 21px;
+			@include relative(top $su);
+			@include set-font($base-font-family, normal, normal, $textMedium);
+			line-height: $lh-s;
 			color: get-color(primary, 0);
 			mix-blend-mode: normal;
 			opacity: 0.9;

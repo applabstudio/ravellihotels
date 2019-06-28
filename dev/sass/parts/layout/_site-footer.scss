@@ -49,13 +49,11 @@
       list-style-type: none;
       padding-left: 0;
       li {
-        @include set-font;
-        @include rem(font-size, 1.6rem);
+        @include set-font($base-font-family, normal, normal, 1.6rem);
         color: #DBD7D4;
         text-align: center;
         a {
-          @include set-font($base-font-family, 600);
-          @include rem(font-size, $textExtra);
+          @include set-font($base-font-family, 600, normal, $textExtra);
           color: #DBD7D4;
           text-decoration: none;
           opacity: 0.7;

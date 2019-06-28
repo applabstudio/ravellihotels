@@ -20,8 +20,7 @@ form {
 				border: none;
 				@include size(100%, 3.7rem);
 				@include border('bottom', 1px, solid, get-color(bg,8));
-				@include rem(font-size, $textBase);
-				@include set-font($title-font-family, 600);
+				@include set-font($title-font-family, 600, normal, $textBase);
 				&:focus {
 					background: none;
 				}
@@ -39,8 +38,7 @@ form {
 				line-height: $lh-md;
 				@include size(100%, auto);
 				@include border('bottom', 1px, solid, black);
-				@include set-font($base-font-family, 600);
-				@include rem(font-size, $textLarge);
+				@include set-font($base-font-family, 600, normal, $textLarge);
 				color: get-color(bg,8);
 			}
 			.uk-form-icon-flip.uk-icon { 

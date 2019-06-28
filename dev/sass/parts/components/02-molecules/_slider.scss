@@ -21,8 +21,7 @@
 				@include padding-component;
 			}
 			h2 {
-				@include set-font($alt-font-family, 500);
-				@include rem(font-size, ms(13));
+				@include set-font($alt-font-family, 500, normal, ms(13));
 				text-transform: uppercase;
 				line-height: 7.2rem;
 				text-align: center;
@@ -34,8 +33,7 @@
 				}
 			}
 			p {
-				@include set-font($alt-font-family, 300);
-				@include rem(font-size, 3.8rem);
+				@include set-font($alt-font-family, 300, normal, 3.8rem);
 				line-height: 4.8rem;
 				text-align: center;
 				color: white;

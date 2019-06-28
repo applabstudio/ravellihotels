@@ -12,8 +12,7 @@
 		mix-blend-mode: multiply;
 	}
 	h1, h2 {
-		@include set-font($alt-font-family, 600);
-		@include rem(font-size, 3.243rem);
+		@include set-font($alt-font-family, 600, normal, 3.25rem);
 		color: get-color(bg, 11);
 		@include media('<=md') {
 			@include rem(font-size, ms(8));
@@ -25,14 +24,13 @@
 		}
 	}
 	h6 {
-		@include rem(font-size, $textBase);
-		font-family: $alt-font-family;
+		@include set-font($alt-font-family, normal, normal, $textBase);
+		@include align-self(self-end);
 		line-height: $lh-sm;
 		text-align: center;
 		letter-spacing: $ls-xxs;
 		text-transform: uppercase;
 		color: rgba(121, 110, 101, 0.8);
-		align-self: self-end;
 		padding-top: $pt;
 	}
 }

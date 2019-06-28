@@ -2,6 +2,9 @@
 /*                            REUSABLE SASS MIXINS                            */
 /* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
+/*                                  ON-EVENT                                  */
+/* -------------------------------------------------------------------------- */
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -84,11 +87,11 @@
 /* -------------------------------------------------------------------------- */
 /*                               MIXIN SET-FONT                               */
 /* -------------------------------------------------------------------------- */
-// Set Font
-@mixin set-font( $family: $base-font-family , $weight: normal , $style: normal ) {
+@mixin set-font( $family: $base-font-family , $weight: normal , $style: normal, $fontsize: $fsPrimary ) {
   font-family: $family , 'Arial', 'Helvetica', sans-serif;
   font-style: $style;
   font-weight: $weight;
+  font-size: $fontsize;
 }
 
 /* -------------------------------------------------------------------------- */

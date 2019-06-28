@@ -4,8 +4,7 @@
 
 table.uk-table {
 	td {
-		@include set-font($alt-font-family, 300);
-		@include rem(font-size, $textBase);
+		@include set-font($alt-font-family, 300, normal, $textBase);
 		vertical-align: top;
 		color: black;
 		&:hover {
@@ -17,8 +16,7 @@ table.uk-table {
 		}
 	}
 	th {
-		@include set-font($alt-font-family, 300);
-		@include rem(font-size, $textBase);
+		@include set-font($alt-font-family, 300, normal, $textBase);
 		text-transform: uppercase;
 		color: black;
 	}

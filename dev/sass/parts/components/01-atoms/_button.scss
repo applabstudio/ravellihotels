@@ -29,8 +29,7 @@ $ico-dim: rem(32px);
 
 // structure
 .btn {
-  @include set-font($alt-font-family, $fw);
-  @include rem(font-size, $fs);
+  @include set-font($alt-font-family, $fw, normal, $fs);
   @include size(100%, auto);
   padding: $p;
   line-height: $lh;
@@ -105,8 +104,7 @@ $ico-dim: rem(32px);
 }
 
 .btn-primary {
-  @include rem(font-size, 1.6rem);
-  @include set-font($alt-font-family, 500);
+  @include set-font($alt-font-family, 500, normal, $textBase);
   background: get-color(primary, 0);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   border: none;

@@ -1,8 +1,14 @@
 /* -------------------------------------------------------------------------- */
-/*                            COMPONENT ABOUT-STORY                           */
+/*                            COMPONENT ACCORDION                             */
 /* -------------------------------------------------------------------------- */
 
-.about-story {
+.accordion {
+	@include media('<=md') {
+		@include padding-component();
+	}
+	.uk-container {
+		padding:0;
+	}
 		color: get-color(primary, 1);
 		.uk-accordion-title {
 			@include rem(font-size, $fsPrimary);
@@ -30,5 +36,15 @@
 		}
 		img {
 			@include size(100%, auto);
+		}
+		&__footer {
+			padding-top:4rem;
+			p {
+				@include set-font($base-font-family, normal, normal, $textLarge);
+				line-height:$lh-lg;
+				@include media('<=md') {
+					@include rem(font-size, ms(5));
+				}
+			}
 		}
 }
