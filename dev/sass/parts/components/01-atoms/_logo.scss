@@ -17,10 +17,8 @@ $sm-h: rem(44px);
 
   @include when-inside('.site-header') {
     @include media('>=lg') {
-      position: absolute;
-      left: 50%;
+      @include absolute(left 50% top rem(8px));
       transform: translateX(-50%);
-      top: rem(8px);
       visibility: hidden;
       opacity: 0;
       transition: opacity $tt;

@@ -1,20 +1,20 @@
 table.uk-table {
 	td {
-		vertical-align: top;
 		@include set-font($alt-font-family, 300);
-		@include rem(font-size, 1.6rem);
+		@include rem(font-size, $textBase);
+		vertical-align: top;
 		color: black;
 		&:hover {
 			text-decoration: #796E65;
 			text-decoration-line: underline;
 		}
 		span {
-			color:#A28455;
+			color:get-color(bg,12);
 		}
 	}
 	th {
 		@include set-font($alt-font-family, 300);
-		@include rem(font-size, 1.6rem);
+		@include rem(font-size, $textBase);
 		text-transform: uppercase;
 		color: black;
 	}

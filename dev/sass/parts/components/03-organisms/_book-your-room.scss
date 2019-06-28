@@ -1,13 +1,13 @@
 .book-your-room {
-	background: #F3F3F2;
+	background: get-color(bg,13);
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		padding:1.5rem;
+		@include padding-component;
 	}
 	h1 {
 		@include set-font($alt-font-family, 600);
 		@include rem(font-size, 3.25rem);
-		color: #222222;
+		color: get-color(primary, 1);
 		@include media('<=md') {
 			@include rem(font-size, ms(8));
 		}
@@ -36,34 +36,34 @@
 		color: get-color(primary, 0);
 	}
 	.uk-inline {
-		width:183px;
+		@include size(18.3rem, auto);
 		margin: 2rem;
 		.uk-input,
 		.uk-select,
 		.uk-textarea {
-			border: transparent;
-			border-bottom: 1px solid black;
 			background: transparent;
+			border: transparent;
+			@include border('bottom', 1px, solid, black);
 			@include set-font($base-font-family, 600);
-			@include rem(font-size, 1.6rem);
-			padding-top:0.6rem;
-			color: #4D4B4A;
+			@include rem(font-size, $textBase);
+			@include padding(1rem, 0, 0,0);
+			color: get-color(bg, 8);
 		}
-		p {
+		label {
+			@include relative(top 5px);
 			@include set-font;
-			@include rem(font-size, 1.4rem);
+			@include rem(font-size, $textMedium);
 			line-height: 21px;
 			color: get-color(primary, 0);
 			mix-blend-mode: normal;
 			opacity: 0.9;
 			text-align: left;
-			@include relative(top 5px);
 		}
 		.disponibility {
 			@include absolute;
 		}
 		button {
-			width: 100%;
+			@include size(100%, auto);
 		}
 	}
 }

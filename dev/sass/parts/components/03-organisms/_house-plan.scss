@@ -1,13 +1,16 @@
 .house-plan {
-	background: #F3F3F2;
+	background: get-color(bg,13);
+	@include media('<=md') {
+		@include padding-component;
+	}
 	img {
-		width: 20rem;
+		@include size(20rem, auto);
 		mix-blend-mode: multiply;
 	}
 	h1, h2 {
 		@include set-font($alt-font-family, 600);
 		@include rem(font-size, 3.243rem);
-		color: #C2BEBA;
+		color: get-color(bg, 11);
 		@include media('<=md') {
 			@include rem(font-size, ms(8));
 			line-height: unset;
@@ -18,14 +21,14 @@
 		}
 	}
 	h6 {
-		@include rem(font-size, 1.6rem);
+		@include rem(font-size, $textBase);
 		font-family: $alt-font-family;
-		line-height: 2.4rem;
+		line-height: $lh-sm;
 		text-align: center;
 		letter-spacing: 0.696258px;
 		text-transform: uppercase;
 		color: rgba(121, 110, 101, 0.8);
 		align-self: self-end;
-		padding-top: 2rem;
+		padding-top: $pt;
 	}
 }

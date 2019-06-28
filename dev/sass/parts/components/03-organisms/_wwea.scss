@@ -1,7 +1,7 @@
 .wwea-hotels {
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		padding:1.5rem;
+		@include padding-component;
 	}
 	.heading-address {
 		.hotel-image {
@@ -15,15 +15,15 @@
 			padding-top:2rem;
 			h5 {
 				@include set-font($alt-font-family, 600);
-				@include rem(font-size, 2rem);
-				line-height: 1.8rem;
+				@include rem(font-size, $textLarge);
+				line-height: $lh-xs;
 				letter-spacing: 0.5rem;
 				text-transform: uppercase;
 			}
 			a {
 				@include set-font;
-				@include rem(font-size, 1.8rem);
-				line-height: 2.8rem;
+				@include rem(font-size, $textExtra);
+				line-height: $lh-md;
 				text-decoration: none;
 			}
 		}
@@ -33,15 +33,15 @@
 		h2 {
 			@include set-font($alt-font-family, 600);
 			@include rem(font-size, 3.3rem);
-			line-height: 4.9rem;
+			line-height: $lh-xxl;
 			@include media('<=md') {
 				font-size: ms(6);
 			}
 		}
 		p {
 			@include set-font;
-			@include rem(font-size, 1.8rem);
-			line-height: 2.8rem;
+			@include rem(font-size, $textExtra);
+			line-height: $lh-md;
 			@include media('<=md') {
 				@include rem(font-size, ms(5));
 			}
@@ -50,7 +50,7 @@
 }
 
 .hotel-bg-1 {
-	background-color: #F3F3F2;
+	background-color: get-color(bg, 13);
 }
 .hotel-bg-2 {
 	background-color: white;

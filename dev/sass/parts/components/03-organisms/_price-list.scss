@@ -1,7 +1,7 @@
 .price-list {
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		padding:1.5rem;
+		@include padding-component($sm);
 	}
 	&__heading {
 		h1 {
@@ -23,12 +23,12 @@
 				@include relative(top 0.1rem);
 			}
 			.uk-subnav-pill > .uk-active > a {
+				background: get-color(primary, 0);
 				text-align: center;
 				color: white;
 				@include set-font($alt-font-family, 500);
 				@include rem(font-size, 2.764rem);
-				background: get-color(primary, 0);
-				padding:1.2rem 3.8rem 1.2rem 3.8rem;
+				@include padding(1.2rem, 3.8rem, 1.2rem, 3.8rem);
 			}
 			.uk-subnav-pill>*>a:hover {
 				background:none;
@@ -36,10 +36,10 @@
 			}
 			.uk-subnav-pill > * > :first-child {
 				@include set-font($alt-font-family, 500);
-				@include rem(font-size, 2.8rem);
+				@include rem(font-size, $textGiant);
+				@include padding(1.2rem, 3.8rem, 1.2rem, 3.8rem);
 				text-align: center;
 				color: black;
-				padding:1.2rem 3.8rem 1.2rem 3.8rem;
 			}
 			.uk-switcher.uk-margin:hover {
 				a {
@@ -48,22 +48,22 @@
 			}
 			p {
 				@include set-font($alt-font-family, normal);
-				@include rem(font-size, 1.4rem);
+				@include rem(font-size, $textMedium);
 				letter-spacing: 0.52px;
-				color: #4A4A4A;
+				color: get-color(bg, 8);
 			}
 			.confirm-info {
 				button {
-					width: 29rem;
+					@include size(29rem, auto);
 					margin: auto 1rem;
 					@include media('<=md') {
-						@include rem(font-size, 1.125rem);
 						padding: 1rem 0.7rem;
-						width: 16rem;
+						@include rem(font-size, 1.125rem);
+						@include size(16rem, auto);
 					}
 					@include media('<=sm') {
 						@include rem(font-size, 0.9rem);
-						width: 14rem;
+						@include size(14rem, auto);
 					}
 				}
 			}

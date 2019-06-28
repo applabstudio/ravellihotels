@@ -4,35 +4,44 @@ $ico-dim: rem(32px);
 		background: get-color(modal, 0);
 		h2 {
 			@include rem(font-size, ms(8));
-			font-weight: 600;
+			@include set-font($alt-font-family, 600);
 			text-transform: capitalize;
 		}	
 		p {
+			@include set-font;
 			@include rem(font-size, ms(4));
-			color: #222222;
+			color: get-color(primary, 1);
 		}
 
 		.seperator-pricequotation {
 			.uk-divider-small {
 				margin: 0 1rem;
 			}
-			svg, object, img {
-				width: $ico-dim;
-			}
 		}	
-		 .mdc-floating-label {
-			@include rem(font-size, 1.6rem);
-		 }
+
+		.input-container {
+			@include size(100%, auto);
+			.mdc-text-field {
+				@include size(47.8%, auto);
+				@include media('<=md') {
+					@include size(100%, auto);
+				}
+			}
+			.mdc-floating-label {
+				@include rem(font-size, $textBase);
+			}
 			.mdc-text-field__input {
-				@include rem(font-size, 1.6rem);
-				padding: 1.8rem 0 0 5.8rem;
+				@include rem(font-size, $textBase);
+				padding:$pt 5.8rem;
 			}
 			input[type='date'] {
-				padding:1rem 5.8rem;
+				padding:1.6rem 5.8rem;
 			}
+		}
+
 			button {
-				margin: 2rem 1rem 0 0;
-				@include rem(font-size, 1.6rem);
+				margin: $mt 1rem 0 0;
+				@include rem(font-size, $textBase);
 				color:get-color(bg,0);
 			}
 			button:last-child {

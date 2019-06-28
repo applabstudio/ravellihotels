@@ -1,23 +1,23 @@
 .subheader {
-  @include media('<=md') {
-    padding:1.5rem;
-  }
+	@include media('<=md') {
+		@include padding-component;
+	}
   .uk-container {
     @include media('<=md') {
 			padding:0;
 		  }
     h4 {
+      @include rem(font-size, $textLarge);
       font-weight: 200;
-      @include rem(font-size, 2.025rem);
-      line-height: 3rem;
-      letter-spacing: 0.881201px;
+      line-height: $lh-lg;
+      letter-spacing: $ls-xs;
       text-transform: uppercase;
     }
     h1 {
       @include set-font($alt-font-family, 600);
       @include rem(font-size, 4.2rem);
       text-align: center;
-      color: #796E65;
+      color: get-color(primary, 0);
       @include media('<=md') {
         @include rem(font-size, ms(9));
         line-height: unset;
@@ -29,9 +29,9 @@
     p {
       @include set-font;
       @include rem(font-size, ms(8));
-      line-height: 3.4rem;
-      letter-spacing: 1px;
-      color: #222222;
+      line-height: $lh-xl;
+      letter-spacing: $ls;
+      color: get-color(primary, 1);
       @include media('<=md') {
         @include rem(font-size, ms(5));
         line-height: unset;
@@ -41,11 +41,11 @@
 			}
     }
     a {
+      @include rem(font-size, $textExtraLarge);
       font-weight: 800;
-      @include rem(font-size, 2.4rem);
       line-height: 2.3rem;
       display: block;   
-      margin-top:2rem;
+      margin-top:$mt;
       &:hover {
         color: rgb(97, 87, 78);
       }

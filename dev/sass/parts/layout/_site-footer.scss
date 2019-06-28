@@ -12,10 +12,10 @@
     }
   }
   .uk-light {
-    width: 25rem;
     display: flex;  
-    flex-flow: column;
-    justify-content: space-between;
+    @include flex-flow(column);
+    @include justify-content(space-between);
+    @include size(25rem, auto);
     @include media('<=sm') {
       margin: 0 auto;
     }
@@ -27,10 +27,10 @@
       margin: 0;
     }
     .footer-social {
-      width: 24rem;
       margin: 0 auto;
       display: flex;
-      align-items: center;
+      @include size(24rem, auto);
+      @include align-items(center);
       a {
         display: inline-block;
         opacity: 0.6;
@@ -51,7 +51,7 @@
         text-align: center;
         a {
           @include set-font($base-font-family, 600);
-          @include rem(font-size, 1.8rem);
+          @include rem(font-size, $textExtra);
           color: #DBD7D4;
           text-decoration: none;
           opacity: 0.7;
@@ -63,18 +63,18 @@
       }
     }
     .footer-partners {
-      width:100%;
+     	@include size(100%, auto);
       img {
         display: inline;
         object-fit: scale-down;
         @include media('<=md') {
-          width: 20%;
+          	@include size(20%, auto);
         }
       }
     }
   .footer-credits {
     padding: 1.6rem;
-    width:100%;
+    	@include size(100%, auto);
     hr {
       margin-bottom: 2rem;
     }
@@ -84,8 +84,8 @@
     }
     .webit-credits-neg-bn {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      @include justify-content(center);
+      @include align-items(center);
       margin: 0;
       img {
         padding: 0;

@@ -1,10 +1,10 @@
 .about-story {
-		color: #222222;
+		color: get-color(primary, 1);
 		.uk-accordion-title {
-			font-weight: 600;
 			@include rem(font-size, $fsPrimary);
+			@include border('bottom', 1px, solid, get-color(bg,14));
+			font-weight: 600;
 			line-height: 43px;
-			border-bottom: 1px solid #979797;
 			@include media('<=md') {
 				@include rem(font-size, ms(6));
 				line-height: unset;
@@ -15,7 +15,7 @@
 			}
 		}
 		.uk-accordion-content p {
-			font-size: 2rem;
+			@include rem(font-size, $textLarge);
 			@include media('<=md') {
 				@include rem(font-size, ms(5));
 				line-height: unset;
@@ -25,6 +25,6 @@
 			}
 		}
 		img {
-			width:100%;
+			@include size(100%, auto);
 		}
 }

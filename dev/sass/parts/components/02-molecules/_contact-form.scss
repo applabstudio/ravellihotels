@@ -1,6 +1,6 @@
 .contact-form {
 	@include media('<=md') {
-		padding:1.5rem;
+		@include padding-component;
 	}
 	&__body {
 		margin:0 auto;
@@ -8,7 +8,7 @@
 			padding:0;
 			h3 {
 				line-height: 3.5rem;
-				letter-spacing: 6px;
+				letter-spacing: $ls-md;
 				text-transform: uppercase;
 				color: black;
 				@include rem(font-size, 2.9rem);
@@ -22,8 +22,8 @@
 				}
 			}
 			p {
-				line-height: 3.4rem;
-				color: #222222;
+				line-height: $lh-xl;
+				color: get-color(primary, 1);
 				@include set-font($base-font-family, normal);
 				@include rem(font-size,  $fsPrimary);
 				@include media('<=md') {
@@ -37,7 +37,7 @@
 			}
 		}
 		.input-container {
-			width:100%;
+			@include size(96.55%, auto);
 			// NOTE Mixin Material-Design Textfields
 			.mdc-floating-label {
 				@include rem(font-size, $fsPrimary);
@@ -53,45 +53,45 @@
 				border-color: get-color(bg, 9);
 			}
 			.mdc-text-field {
-				width: 46%;
+				@include size(48%, auto);
 				margin-bottom: 1.4rem;
 				margin-right: 1rem;
 				&__input {
 					caret-color: black;
-					padding:1.8rem 0 0 2.5rem;
-					@include rem(font-size, 2rem);
+					@include padding(3rem, 0, 0, 2.5rem);
+					@include rem(font-size, $textLarge);
 				}
 				@include media('<=lg') {
-					width:100%;
+					@include size(100%, auto);
 				}
 				&--outlined {
-					width: 94.5%;
+					@include size(94.5%, auto);
 					@include media('<=lg') {
-						width:100%;
+						@include size(100%, auto);
 					}
 				}
 			}
 			.message {
-				width: 94.5%;
+				@include size(98.8%, auto);
 				@include media('<=lg') {
-					width:100%;
+					@include size(100%, auto);
 				}
 			}
 		}
 		.privacy-area {
 			display: flex;
-			justify-content: flex-start;
-			align-items: self-start;
-			line-height: 1rem;
+			@include justify-content(flex-start);
+			@include align-items(self-start);
+			line-height: $lh-base;
 			label {
-				padding-left: .4rem;
+				padding-left: $su;
 			}
 		}
 		button {
-			width: 94.5%;
+			@include size(94.5%, auto);
 			margin-top:1rem;
 			@include media('<=lg') {
-				width: 100%;
+				@include size(100%, auto);
 			}
 		}
 	}

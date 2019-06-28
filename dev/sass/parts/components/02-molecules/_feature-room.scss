@@ -1,7 +1,7 @@
 .feature-room {
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		padding:1.5rem;
+		@include padding-component;
 	}
 	.uk-container {
 		@include media('<=md') {
@@ -13,7 +13,7 @@
 		text-transform: uppercase;
 		@include rem(font-size, ms(8));
 		line-height: 3.5rem;
-		letter-spacing: 6px;
+		letter-spacing: $ls-md;
 		color: black;
 		padding-bottom:2rem;
 		@include media('<=md') {
@@ -24,7 +24,7 @@
 	p {
 		@include set-font;
 		@include rem(font-size, 1.7rem);
-		color: #222222;
+		color: get-color(primary, 1);
 		@include media('<=md') {
 			@include rem(font-size, ms(5));
 			line-height: unset;

@@ -9,9 +9,8 @@ $spacing: rem(6px);
   text-align: center;
   @include rem(font-size, ms(-1));
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-
+  @include justify-content(center);
+  @include flex-wrap(wrap);
   > li {
     margin: 0 $spacing;
 

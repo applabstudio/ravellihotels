@@ -2,16 +2,16 @@
 .cards-room {
   // ANCHOR Optimize for mobile
   @include media('<=md') {
-    padding: 1rem 0;
+     padding: 1rem 0;
     }
   .uk-card.uk-card-default {
     height: 100%;
-    height: 100%; box-shadow: 0 5px 12px rgba(71, 62, 62, 0.7);
+    box-shadow: 0 5px 12px rgba(71, 62, 62, 0.7);
     cursor:pointer;
 }
   .uk-card-default .uk-card-title {
     color: white;
-    padding-bottom: 2rem;
+    padding-bottom: $md;
     @include set-font($alt-font-family, 800);
     @include rem(font-size, 3.2rem);
   }
@@ -20,7 +20,7 @@
     @include set-font;
     @include rem(font-size, ms(6));
     color: white;
-    margin-bottom: 2rem;
+    margin-bottom: $mt;
     @include media('<=md') {
       @include rem(font-size, ms(5));
     }
@@ -29,22 +29,20 @@
     }
   }
   img {
-    width:100%;
+    @include size(100%, auto);
   }
   .uk-card-media-top {
     @include relative;
   }
   .room-rating {
+    @include size(100%, 3.3rem);
     @include absolute(bottom 0);
     background: rgba(121, 110, 101, 0.5);
-    width: 100%;
-    height: 3.3rem;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    @include align-items(center);
+    @include justify-content(center);
     img {
-      width: 9.01px; 
-      height: 9.03px; 
+      @include size(9.01px, 9.03px);
     } 
   }
   
@@ -53,11 +51,11 @@
     .info-room {
       display: flex;
       color: white;
-      @include rem(font-size, 1.4rem);
+      @include rem(font-size, $textMedium);
       @include set-font;
       &__guests {
         display: flex;
-        align-items: center;
+        @include align-items(center);
         padding-right: 1rem;
         span {
           margin-right: 1rem;
@@ -65,15 +63,15 @@
       }
       &__m2 {
         display: flex;
-        align-items: center;
+        @include align-items(center);
         img {
+          @include size(2rem, 2rem);
           margin-right:1rem;
-          width: 20px;height:20px;
         }
       }
     }
     button {
-      width:100%;
+      @include size(100%, auto);
     }
   }
 }
@@ -97,8 +95,7 @@
       height:100%;
     }
     img {
-      height: 100%;
-      width: 100%;
+      @include size(100%, 100%);
       object-fit: cover;    
       -webkit-transition: -webkit-transform 1s cubic-bezier(.25,.04,0,.93);
       -moz-transition: -moz-transform 1s cubic-bezier(.25,.04,0,.93);
@@ -114,29 +111,29 @@
     }
     .card-content {
       @include absolute(top 0);
-      width: 100%;
+      @include size(100%, auto);
       background: rgba(34, 34, 34, 0.56);
       h4 {
-        letter-spacing: 0.881201px;
+        letter-spacing: $ls-xs;
         text-transform: uppercase;
         @include set-font($base-font-family, 300);
         @include rem(font-size, 2.025rem);
-        line-height: 28px;
+        line-height: $lh-md;
         color: white;
       }
       h2 {
         white-space: nowrap;
         @include set-font($base-font-family, 600);
         @include rem(font-size, 2.243rem);
-        line-height: 49px;
+        line-height: $lh-xxl;
         color: #FCFAF8;
       }
       p {
         @include set-font;
-        @include rem(font-size, 1.6rem);
-        line-height: 26px;
+        @include rem(font-size, $textBase);
+        line-height: $lh-sl;
         text-align: center;
-        letter-spacing: 0.8px;
+        letter-spacing: $ls-sm;
         color: white;
       }
     }
@@ -144,9 +141,9 @@
 }
 @media screen and (min-width: 40rem) {
   .cards {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+    display: flex;
+    @include justify-content(space-between);
+    @include flex-wrap(wrap);
   }
   .card {
       flex: 0 1 calc(50% - 0rem);

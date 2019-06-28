@@ -3,19 +3,19 @@
 	.room-description-w {
 		// ANCHOR Optimize for mobile
 		@include media('<=md') {
-			padding:1.5rem;
+			@include padding-component($sm);
 		}
 		.room-info {
 			&__wrapper {
-				width: 100%;
+				@include size(100%, auto);
 				display: flex;
-				justify-content: space-evenly;
+				@include justify-content(space-evenly) // UIKit does not have this property
 				 div {
 					display: inline-flex;
 					display: -webkit-inline-flex; // FIX for old iPad
-					align-items: center;
+					@include align-items(center);
 					color: get-color(bg, 10);
-					@include rem(font-size, 1.4rem);
+					@include rem(font-size, $textMedium);
 					white-space: nowrap;
 				}
 			}
@@ -29,7 +29,7 @@
 		p {
 			@include set-font;
 			@include rem(font-size, $fsPrimary);
-			line-height: 34px;
+			line-height: $lh-xl;
 			text-align: center;
 			color: white;
 			@include media('<=md') {

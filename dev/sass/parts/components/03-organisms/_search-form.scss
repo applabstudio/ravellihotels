@@ -16,8 +16,7 @@ $icon-dim: (
 
 .search-form {
   display: flex;
-  align-items: center;
-
+  @include align-items(center);
   input {
     background: none;
     border-width: 0 0 2px;
@@ -61,12 +60,12 @@ $icon-dim: (
   }
 
   &--inner {
-    justify-content: flex-start;
+    @include justify-content(flex-start);
     margin: rem(0 0 24px);
   }
 
   @include when-inside('.modal') {
-    justify-content: center;
+    @include justify-content(center);
 
     input {
       border-color: get-color(primary, 0);

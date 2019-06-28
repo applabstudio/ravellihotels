@@ -7,15 +7,14 @@
 			}
 	}
 	.uk-card-body {
-		// ANCHOR Optimize for mobile
 		@include media('<=md') {
-			padding:1.5rem;
+			@include padding-component;
 		}
 		h4 {
 			font-family: $alt-font-family;
-			@include rem(font-size, 2rem);
-			line-height: 3rem;
-			letter-spacing: 0.881201px;
+			@include rem(font-size, $textLarge);
+			line-height: $lh-lg;
+			letter-spacing: $ls-xs;
 			text-transform: uppercase;
 			color: white;
 			@include media('<=md') {
@@ -47,7 +46,7 @@
 
 		p {
 			@include set-font;
-			@include rem(font-size, 1.6rem);
+			@include rem(font-size, $textBase);
 			line-height: 2.3rem;
 			color: white;
 			@include media('<=md') {
@@ -61,7 +60,7 @@
 
 		a {
 			@include set-font($base-font-family, 800);
-			@include rem(font-size, 2.4rem);
+			@include rem(font-size, $textExtraLarge);
 			line-height: 2.3rem;
 			color: get-color(bg,10);
 			margin-bottom:4rem;

@@ -34,8 +34,8 @@ $fs: (
 		p:last-of-type {
 			@include set-font;
 			@include rem(font-size, ms(7));
-			line-height: 3.4rem;
-			color: #222222;
+			line-height: $lh-xl;
+			color: get-color(primary, 1);
 			@include media('<=md') {
 				@include rem(font-size, ms(5));
 				line-height: unset;
@@ -46,7 +46,7 @@ $fs: (
 		}
 		a {
 			@include set-font($base-font-family, 800);
-			@include rem(font-size, 2.4rem);
+			@include rem(font-size, $textExtraLarge);
 			display: inline-block;   
 			padding-top: 1.8rem;
 			text-decoration:none;
@@ -62,16 +62,14 @@ $fs: (
 		&--image {
 			> div {
 				width:100%;
-				height: 100vh;
+				height:100vh;
 				@include relative;
 				img {
-					width: 100%;
-					height: 100%;
+					@include size(100%, 100%);
 					object-fit: cover;
 				}
 				> div {
-					width: 100%;
-					bottom: 1rem;
+					@include size(100%, auto);
 					h1 {
 						font-family: $alt-font-family;
 						@include rem(font-size, map-get($fs, xxl)); 
@@ -102,7 +100,7 @@ $fs: (
 		&--intro {
 			.uk-container {
 				@include media('<=md') {
-					padding:1.5rem;
+					@include padding-component($sm);
 				}
 			}
 
@@ -120,8 +118,8 @@ $fs: (
 			p {
 				@include set-font;
 				@include rem(font-size, $fsPrimary);
-				line-height: 3.4rem;
-				color: #222222;
+				line-height: $lh-xl;
+				color: get-color(primary, 1);
 				@include media('<=md') {
 					@include rem(font-size, ms(5));
 					line-height: unset;
@@ -132,7 +130,7 @@ $fs: (
 			}
 			a {
 				@include set-font($base-font-family, 800);
-				@include rem(font-size, 2.4rem);
+				@include rem(font-size, $textExtraLarge);
 				display: inline-block;
 				padding-top:1.8rem; 
 				text-decoration: none;

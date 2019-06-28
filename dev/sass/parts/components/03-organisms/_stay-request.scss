@@ -1,18 +1,18 @@
 .stay-request {
-	background-color: #F3F3F2;
+	background: get-color(bg, 13);
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		padding: 1.5rem;
+		@include padding-component;
 	}
 	&__heading {
 		@include media('<=md') {
 			padding:0;
 		}
 		h2 {
+			color: get-color(primary, 1);
+			line-height: 7rem;
 			@include set-font($alt-font-family, 600);
 			@include rem(font-size, 3.3rem);
-			color: #222222;
-			line-height: 7rem;
 			@include media('<=md') {
 				@include rem(font-size, ms(8));
 				line-height:unset;
@@ -37,7 +37,7 @@
 
 		a {
 			@include set-font($base-font-family, 800);
-			@include rem(font-size, 2.4rem);
+			@include rem(font-size, $textExtraLarge);
 			display: inline-block;
 			text-decoration: none;
 			@include media('<=md') {
@@ -53,7 +53,7 @@
 			padding: 0;
 		}
 		button {
-			width:100%;
+			@include size(100%, auto);
 		}
 	}
 }

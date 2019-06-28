@@ -1,12 +1,12 @@
 .site-header {
-  width: 100%;
+  @include size(100%, auto);
   z-index: 99;
   .uk-navbar{
     height: 8rem;
     transition: all 0.4s ease;
   }
   .uk-navbar-container:not(.uk-navbar-transparent) {
-    background: rgba(65, 56, 41, 0.9);
+    background: rgba(54, 53, 51, 0.9);
     transition:all 0.2s ease;
     @include media('<=md') {
       background: rgba(65, 56, 41, 1);
@@ -14,13 +14,13 @@
     z-index: 1;
     box-shadow: 0px 2px 6px #67625E;
    .uk-logo {
-      width: 36rem;
+      @include size(36rem, auto);
       transition: all 0.4s ease;
       @include media('<=lg') {
-        width: 25rem;
+        	@include size(25rem, auto);
       }
       @include media('<=md') {
-        width: 18rem;
+        @include size(18rem, auto);
       }
       margin-top: 0;
       img {
@@ -37,7 +37,7 @@
     }
     .uk-navbar-toggle  {
       color:white;
-      padding:1rem 0rem 1rem 1.6rem;
+      @include padding($xs, 0, $xs, $sm);
       span {
         color:white;
         @include rem(font-size, ms(2));
@@ -64,7 +64,7 @@
       list-style: none;
       li {
         display:flex;
-        align-items: center;
+        @include align-items(center);
         padding: 0.2rem;
       }
     }
@@ -89,7 +89,7 @@
     }
   }
   .uk-navbar-nav {
-    justify-content: flex-end;
+    @include justify-content(flex-end);
   }
   .uk-navbar-right li:nth-child(2),li:nth-child(3) {
     display: none;
@@ -108,8 +108,7 @@
     .uk-navbar-nav {
       height: 5rem;
       li {
-        width:50%;
-        height:100%;
+        @include size(50%, 100%);
         a {
           min-height:100%;
         }

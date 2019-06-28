@@ -1,9 +1,9 @@
 .services {
-	background-color: get-color(beige-dark, 0);
+	background: get-color(beige-dark, 0);
 	text-align: center;
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
-		padding:1.5rem;
+		@include padding-component();
 	}
 	&__heading {
 		@include media('<=md') {
@@ -13,7 +13,7 @@
 			@include set-font($alt-font-family, 600);
 			@include rem(font-size, 3.2rem);
 			color:white;
-			line-height: 49px;
+			line-height: $lh-xxl;
 			@include media('<=md') {
 				@include rem(font-size, ms(9));
 			  }
@@ -22,9 +22,9 @@
 			}
 		}
 		p {
-			font-size:$fsPrimary;
+			@include rem(font-size, $fsPrimary);
 			color:white;
-			padding-top: 2rem;
+			padding-top: $pt;
 			@include set-font;
 			@include media('<=md') {
 				@include rem(font-size, ms(5));
@@ -41,24 +41,23 @@
 		  }
 		div {
 			display: flex;
-			justify-content: center;
-			align-items: center;
-			width: 100%;
+			@include justify-content(center);
+			@include align-items(center);
+			@include size(100%, auto);
 		}
 		object, svg {
-			width: 8rem;
+			@include size(8rem, auto);
 		}
 		p {
-			font-family: $alt-font-family;
+			@include size(60%, auto);
+			@include rem(font-size, $textExtra);
+			@include set-font($alt-font-family, normal);
 			text-transform: uppercase;
-			@include rem(font-size, 1.8rem);
+			text-align: left;
 			color: get-color(bg, 11);
-			line-height: 28px;
+			line-height: $lh-md;
 			word-break: break-word;
 			display: flex;
-			width: 60%;
-			text-align: left;
-			margin-left: 2rem;
 		}
 	}
 }

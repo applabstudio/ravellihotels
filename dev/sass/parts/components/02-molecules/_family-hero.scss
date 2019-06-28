@@ -1,11 +1,11 @@
 .family-hero {
 	a {
-		width: 100%;
+		@include size(100%, auto);
 		> div {
-			width: 100%;
+			@include size(100%, auto);
 			picture {
 				img {
-					width: 100%;
+					@include size(100%, auto);
 				}
 			}
 		}

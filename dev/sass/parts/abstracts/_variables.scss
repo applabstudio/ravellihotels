@@ -20,6 +20,53 @@ $media-expressions: (
 // Spacing unit
 $su: 4px !default;
 
+// Global Unit
+$xs: 1rem;
+$sm: 1.5rem;
+$md: 2rem;
+$lg: 3rem;
+$xl: 4rem;
+
+// Font Size Unit
+$fsPrimary: 2.2rem;
+
+$textSmall: 1.2rem;
+$textBase: 1.6rem;
+$textMedium: 1.4rem;
+$textExtra: 1.8rem;
+$textLarge: 2rem;
+$textExtraLarge: 2.4rem;
+$textBig: 2.6rem;
+$textGiant: 2.8rem;
+
+// Line Height
+$lh-base: 1rem;
+$lh-xs: 1.8rem;
+$lh-s: 2rem;
+$lh-sm: 2.4rem;
+$lh-sl: 2.6rem;
+$lh-md : 2.8rem;
+$lh-lg: 3rem;
+$lh-xl: 3.4rem;
+$lh-xxl: 4.9rem;
+
+// Padding Unit
+$pt: 2rem;
+$pr: 2rem;
+$pb: 2rem;
+$pl: 2rem;
+// Margin Unit
+$mt: 2rem;
+$mr: 2rem;
+$mb: 2rem;
+$ml: 2rem;
+
+// Letter Spacing
+$ls-xs: 0.881201px;
+$ls-sm: 0.8px;
+$ls: 1px;
+$ls-md: 6px;
+
 // container's settings
 $container-width: (
   sm: 750px,
@@ -44,6 +91,7 @@ $text-color: black;
 $colors: (
   primary: (
     0: #796E65,
+    1: #222222,
   ),
   beige-dark: (
     0: #504D47,
@@ -62,6 +110,9 @@ $colors: (
     9: #80714b,
     10:#EEECE1, //Beige
     11:#C2BEBA, //Beige-light
+    12:#A28455,
+    13:#F3F3F2,
+    14:#979797,
   ),
   modal: (
     0: #fffffff0
@@ -72,9 +123,6 @@ $colors: (
 $base-font-family: 'Sarabun', sans-serif;
 $alt-font-family: 'Poppins', sans-serif;
 $title-font-family: 'Open Sans', serif;
-
-// Font-size
-$fsPrimary: 2.2rem;
 
 // Transitions
 $tt: 0.5s;

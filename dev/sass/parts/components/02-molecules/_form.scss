@@ -2,51 +2,45 @@ form {
 	.grid {
 		padding:0.9rem;
 		.uk-width-1-2\@m {
-			width: 66.6%;
+			@include size(66.6%, auto);
 			@include media('<=lg') {
-				width:100%;
+				@include size(100%, auto);
 			}
 		}
 		.uk-inline {
-			width: 100%;
+			@include size(100%, auto);
 			input {
-				width: 100%;
 				margin:0;
 				margin-bottom:1rem;
-				@include rem(padding, 1rem);
 				background: none;
 				border: none;
-				border-bottom: 1px solid #4D4B4A;
-				font-weight: 600;
-				@include rem(font-size, 1.6rem);
-				font-family: $title-font-family;
+				@include size(100%, 3.7rem);
+				@include border('bottom', 1px, solid, get-color(bg,8));
+				@include rem(font-size, $textBase);
+				@include set-font($title-font-family, 600);
 				&:focus {
 					background: none;
 				}
 				&[placeholder] {
-					color: #4D4B4A;
+					color: get-color(bg,8);
 				}
 			}
 			textarea {
 				border: none;
 				background: none;
-				border-bottom: 1px solid black;
-				width: 100%;
 				outline: none;
 				resize: none;
-				padding-left: 4rem;
+				padding-left: $pl;
 				padding-top: 3.5rem;
-				font-family: $base-font-family;
-				font-style: normal;
-				font-weight: 600;
-				@include rem(font-size, 2rem);
-				line-height: 28px;
-				color: #4D4B4A;
+				line-height: $lh-md;
+				@include size(100%, auto);
+				@include border('bottom', 1px, solid, black);
+				@include set-font($base-font-family, 600);
+				@include rem(font-size, $textLarge);
+				color: get-color(bg,8);
 			}
 			.uk-form-icon-flip.uk-icon { 
-				position: absolute;
-				left: 0;
-				top: -8rem;
+				@include absolute(top -8rem left 0);
 			}
 			span {
 				color: get-color(primary, 0);
@@ -55,17 +49,16 @@ form {
 				padding-top: 1rem;
 				display: flex;
 				input[type='checkbox'] {
-					width:1.9rem;
-					height:1.9rem;
+					@include size(1.9rem, 1.9rem);
 				}
 				label {
-					@include rem(font-size, 1rem);
+					@include rem(font-size, $textSmall);
 				}
 			}
 	}
 		.uk-width-1-6\@m {
 			display: flex;
-			align-items: center;
+			@include align-items(center);
 		}
 		[class*="uk-width"] {
 			@include media('<=lg') {

@@ -1,10 +1,9 @@
 .slider {
 	height: 100vh;
 	.uk-dotnav {
-		@include relative;
-		bottom: 50px;
 		display: flex;
-		justify-content: center;
+		@include relative(bottom 50px);
+		@include justify-content(center);
 	}
 	.wrapper-image {
 		img {
@@ -14,14 +13,13 @@
 		}
 		&__title {
 			padding: 4rem;
-			// ANCHOR Optimize for mobile
 			@include media('<=md') {
-				padding:1.5rem;
+				@include padding-component;
 			}
 			h2 {
-				text-transform: uppercase;
 				@include set-font($alt-font-family, 500);
 				@include rem(font-size, ms(13));
+				text-transform: uppercase;
 				line-height: 7.2rem;
 				text-align: center;
 				color: white;
