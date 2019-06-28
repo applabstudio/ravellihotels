@@ -43,9 +43,8 @@ $fs: (
           text-align: center;
           // STUB overflow: auto; // NOTE for console developer
           menu, ul {
-            list-style: none;
+            @extend %listreset;
             text-align: center;
-            padding: 0;
             li {
               a {
                 color: white;

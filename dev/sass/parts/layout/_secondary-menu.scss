@@ -3,10 +3,8 @@ $spacing: rem(6px);
 .secondary-menu {
   font-family: $alt-font-family;
   text-transform: uppercase;
-  list-style: none;
-  margin: 0;
-  padding: 0;
   text-align: center;
+  @extend %listreset;
   @include rem(font-size, ms(-1));
   @include flexbox();
   @include justify-content(center);

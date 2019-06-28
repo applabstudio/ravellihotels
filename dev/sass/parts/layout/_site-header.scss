@@ -40,7 +40,7 @@
     }
     .uk-navbar-toggle  {
       color:white;
-      @include padding($xs, 0, $xs, $sm);
+      @include padding(1rem, 0, 1rem, $sm);
       span {
         color:white;
         padding:0;
@@ -61,9 +61,8 @@
       color: #413829;
     }
     .dropdown-language {
-      padding: 0;
+      @extend %listreset;
       text-align: left;
-      list-style: none;
       li {
         display:flex;
         @include align-items(center);
