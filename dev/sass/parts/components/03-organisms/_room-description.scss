@@ -7,7 +7,7 @@
 	.room-description-w {
 		// ANCHOR Optimize for mobile
 		@include media('<=md') {
-			@include padding-component($sm);
+			@include padding-component();
 		}
 		.room-info {
 			&__wrapper {
