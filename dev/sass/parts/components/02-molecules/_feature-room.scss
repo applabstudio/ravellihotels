@@ -19,7 +19,7 @@
 		line-height: 3.5rem;
 		letter-spacing: $ls-md;
 		color: black;
-		padding-bottom:2rem;
+		padding-bottom:$pb;
 		@include media('<=md') {
 			@include rem(font-size, ms(7));
 			line-height: unset;

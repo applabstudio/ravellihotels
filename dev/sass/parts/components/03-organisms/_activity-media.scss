@@ -15,7 +15,7 @@
 			@include padding-component;
 		}
 		h4 {
-			font-family: $alt-font-family;
+			@include set-font($alt-font-family, normal);
 			@include rem(font-size, $textLarge);
 			line-height: $lh-lg;
 			letter-spacing: $ls-xs;
@@ -34,10 +34,9 @@
 		h3 {
 			@include set-font($alt-font-family, 600);
 			@include rem(font-size, 3.3rem);
+			@include relative(bottom 1rem);
 			line-height: 4.9rem;
 			color: white;
-			position:relative;
-			bottom:1rem;
 			@include media('<=md') {
 				@include rem(font-size, ms(7));
 				line-height: unset;
@@ -63,12 +62,12 @@
 		}
 
 		a {
+			@include relative(top 2.5rem);
 			@include set-font($base-font-family, 800);
 			@include rem(font-size, $textExtraLarge);
 			line-height: 2.3rem;
 			color: get-color(bg,10);
 			margin-bottom:4rem;
-			@include relative(top 2.5rem);
 		}
 	}
 }

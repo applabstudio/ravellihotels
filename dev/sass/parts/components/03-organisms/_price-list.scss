@@ -14,13 +14,12 @@
 	}
 	&__body {
 		.tab-container {
-			// ANCHOR Optimize for mobile
 			@include media('<=md') {
 				padding:0;
 			}
 			.uk-subnav {
 				margin:0;
-				border-bottom:1.5px solid get-color(primary, 0);
+				@include border('bottom', 1.5px, solid, get-color(primary, 0));
 			}
 			.uk-subnav > * {
 				padding:0;

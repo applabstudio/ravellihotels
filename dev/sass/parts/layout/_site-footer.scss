@@ -80,7 +80,7 @@
     padding: 1.6rem;
     	@include size(100%, auto);
     hr {
-      margin-bottom: 2rem;
+      margin-bottom: $mb;
     }
     img {
       display: inline;

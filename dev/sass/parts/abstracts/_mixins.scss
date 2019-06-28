@@ -36,17 +36,9 @@
   }
 }
 
-// Positioning
-@mixin position($position, $args) {
-  @each $o in top right bottom left {
-    $i: index($args, $o);
-    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
-      #{$o}: nth($args, $i + 1);
-    }
-  }
-  position: $position;
-}
-
+/* -------------------------------------------------------------------------- */
+/*                               MIXINS POSITION                              */
+/* -------------------------------------------------------------------------- */
 // Positioning helpers
 @mixin absolute($args: '') {
   @include position(absolute, $args);
@@ -60,12 +52,29 @@
   @include position(relative, $args);
 }
 
-// Size
+// Positioning
+@mixin position($position, $args) {
+  @each $o in top right bottom left {
+    $i: index($args, $o);
+    @if $i and $i + 1 <= length($args) and type-of(nth($args, $i + 1)) == number {
+      #{$o}: nth($args, $i + 1);
+    }
+  }
+  position: $position;
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                 MIXIN SIZE                                 */
+/* -------------------------------------------------------------------------- */
 @mixin size($width, $height: $width) {
   width: $width;
   height: $height;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                               MIXIN SET-FONT                               */
+/* -------------------------------------------------------------------------- */
 // Set Font
 @mixin set-font( $family: $base-font-family , $weight: normal , $style: normal ) {
   font-family: $family , 'Arial', 'Helvetica', sans-serif;
@@ -73,6 +82,9 @@
   font-weight: $weight;
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 MIXINS REM UNITS                                */
+/* -------------------------------------------------------------------------- */
 // Ultimate Rem Units
 @function parseInt($n) {
   /* 2 */
@@ -81,10 +93,8 @@
 @mixin rem($property, $values) {
   $px: (); /* 3 */
   $rem: (); /* 3 */
-
   @each $value in $values {
     /* 4 */
-
     @if $value == 0 or $value == auto {
       /* 5 */
       $px: append($px, $value);
@@ -92,13 +102,11 @@
     } @else {
       $unit: unit($value); /* 6 */
       $val: parseInt($value); /* 6 */
-
       @if $unit == 'px' {
         /* 7 */
         $px: append($px, $value);
         $rem: append($rem, ($val / 10 + rem));
       }
-
       @if $unit == 'rem' {
         /* 7 */
         $px: append($px, ($val * 10 + px));
@@ -115,12 +123,16 @@
   }
 }
 
-// Border
+/* -------------------------------------------------------------------------- */
+/*                                MIXIN BORDER                                */
+/* -------------------------------------------------------------------------- */
 @mixin border($direction, $width, $style, $color) {
   border-#{$direction}: $width $style $color;
 }
 
-// Padding all direction
+/* -------------------------------------------------------------------------- */
+/*                               MIXINS PADDING                               */
+/* -------------------------------------------------------------------------- */
 @mixin padding($top, $right, $bottom, $left) { 
   padding: $top $right $bottom $left;
 }
@@ -129,7 +141,9 @@
   padding: $space;
 }
 
-// Flexbox
+/* -------------------------------------------------------------------------- */
+/*                         MIXINS FLEXBOX CROSSBROWSER                        */
+/* -------------------------------------------------------------------------- */
 // Flexbox display
 @mixin flexbox() {
   display: -webkit-box;

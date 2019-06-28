@@ -8,7 +8,6 @@
 	}
 	.uk-subnav {
 		li {
-			padding:0;
 			a {
 				@include set-font($alt-font-family, normal);
 				@include rem(font-size, 3rem);
@@ -24,8 +23,5 @@
 				color: get-color(bg, 8);
 			}
 		}
-	}
-	.uk-switcher {
-		margin:0;
 	}
 }

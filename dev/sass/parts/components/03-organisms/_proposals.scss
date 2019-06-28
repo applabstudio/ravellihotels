@@ -18,7 +18,7 @@
 			@include set-font($alt-font-family, 600);
 			@include rem(font-size, 3.25rem);
 			color: get-color(primary, 0);
-			padding-bottom: 2rem;
+			padding-bottom: $pb;
 			@include media('<=md') {
 				@include rem(font-size, ms(9));
 			}

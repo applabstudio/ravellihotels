@@ -24,7 +24,7 @@ $fs: (
 			@include set-font($alt-font-family, 600);
 			@include rem(font-size, 4.2rem);
 			color: get-color(primary,0);
-			padding: 0 0 2rem 0;
+			padding: 0 0 $pb 0;
 			@include media('<=md') {
 				@include rem(font-size, ms(9));
 				line-height: unset;

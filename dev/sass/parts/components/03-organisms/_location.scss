@@ -92,7 +92,7 @@
 				}
 			}
 			div {
-				border-top:10px solid get-color(primary, 1);
+				@include border('top', 1rem, solid, get-color(primary, 1));
 			}
 		}	
 }

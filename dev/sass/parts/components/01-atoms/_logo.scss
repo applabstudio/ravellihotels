@@ -44,7 +44,7 @@ $sm-h: rem(44px);
       margin: 0 auto;
       filter:unset;
       -webkit-filter: unset;
-      padding-right:2rem;
+      padding-right:$pr;
       max-width: 24rem;
   }
 }

@@ -5,7 +5,7 @@
 .house-plan {
 	background: get-color(bg,13);
 	@include media('<=md') {
-		@include padding-component;
+		@include padding-component();
 	}
 	img {
 		@include size(20rem, auto);
@@ -29,7 +29,7 @@
 		font-family: $alt-font-family;
 		line-height: $lh-sm;
 		text-align: center;
-		letter-spacing: 0.696258px;
+		letter-spacing: $ls-xxs;
 		text-transform: uppercase;
 		color: rgba(121, 110, 101, 0.8);
 		align-self: self-end;
