@@ -28,8 +28,7 @@
       }
       margin-top: 0;
       img {
-        filter: drop-shadow(2px 2px 2px #020202);
-        -webkit-filter: drop-shadow(2px 2px 2px #020202);
+        @include shadow-logo();
         @include media('<=lg') { 
           margin-top: unset;
         }
@@ -44,13 +43,12 @@
       @include padding($xs, 0, $xs, $sm);
       span {
         color:white;
-        @include rem(font-size, ms(2));
-        opacity:1;
         padding:0;
         margin:0;
+        @include rem(font-size, ms(2));
+        @include fade(show);
         @include media('<=md') {
-          transition: $tt;
-          opacity: 0;
+          @include fade(hide);
         }
       }
     }

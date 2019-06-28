@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                            REUSABLE SASS MIXINS                            */
+/* -------------------------------------------------------------------------- */
+
 @mixin on-event($self: false) {
   @if $self {
     &,
@@ -15,18 +19,23 @@
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                 WHEN-INSIDE                                */
+/* -------------------------------------------------------------------------- */
 @mixin when-inside($context) {
   #{$context} & {
     @content;
   }
 }
 
+/* -------------------------------------------------------------------------- */
+/*                                  CONTAINER                                 */
+/* -------------------------------------------------------------------------- */
 @mixin container($fluid: false) {
   padding-left: $container-pad;
   padding-right: $container-pad;
   margin: 0 auto;
   width: 100%;
-
   @if not $fluid {
     @each $bp, $width in $container-width {
       @include media(">=#{$bp}") {
@@ -139,6 +148,14 @@
 
 @mixin padding-component($space: $sm) {
   padding: $space;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                              MIXINS BOX-SHADOW                             */
+/* -------------------------------------------------------------------------- */
+@mixin shadow-logo($x-axis: 2px, $y-axis: 2px, $blur: 2px, $color: #020202) {
+  filter:drop-shadow( $x-axis $y-axis $blur $color );
+  -webkit-filter: drop-shadow(2px 2px 2px #020202);
 }
 
 /* -------------------------------------------------------------------------- */
@@ -275,4 +292,20 @@
      -moz-align-self: $align;
       -ms-align-self: $align;
           align-self: $align;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                            HIDING/SHOWING FADE TRANSITION                             */
+/* -------------------------------------------------------------------------- */
+@mixin fade($type) {
+  @if $type == 'hide' {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility $tt, opacity $tt;
+  }
+  @else if $type == 'show' {
+    visibility: visible;
+    opacity: 1;
+    transition: visibility $tt, opacity $tt;
+  }
 }

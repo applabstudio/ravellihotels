@@ -2,8 +2,7 @@ $sm-h: rem(44px);
 
 .logo {
   display: block;
-  filter: drop-shadow(2px 2px 2px #020202);
-  -webkit-filter: drop-shadow(2px 2px 2px #020202);
+  @include shadow-logo();
   &__info {
     color: #878787;
     line-height: 1.3;
