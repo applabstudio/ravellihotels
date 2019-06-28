@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                         COMPONENT SECTION-CONTAINER                        */
+/* -------------------------------------------------------------------------- */
+
 $fs: (
 	xs: ms(3),
 	s: ms(6),
@@ -6,7 +10,6 @@ $fs: (
 	xxl: ms(17),
 );
 
-// SECTION SECTION-CONTAINER
 .section-container {
 	@include media('<=md') {
 		padding:0;

@@ -1,3 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                        COMPONENT WHERE-WE-ARE-HOTELS                       */
+/* -------------------------------------------------------------------------- */
+
 .wwea-hotels {
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
@@ -12,7 +16,7 @@
 		}
 
 		.address-wrapper {
-			padding-top:2rem;
+			padding-top:$pt;
 			h5 {
 				@include set-font($alt-font-family, 600);
 				@include rem(font-size, $textLarge);

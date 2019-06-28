@@ -1,4 +1,7 @@
-// SECTION Card Room
+/* -------------------------------------------------------------------------- */
+/*                            COMPONENT CARDS ROOM                            */
+/* -------------------------------------------------------------------------- */
+
 .cards-room {
   // ANCHOR Optimize for mobile
   @include media('<=md') {
@@ -35,9 +38,9 @@
     @include relative;
   }
   .room-rating {
+    background: rgba(121, 110, 101, 0.5);
     @include size(100%, 3.3rem);
     @include absolute(bottom 0);
-    background: rgba(121, 110, 101, 0.5);
     @include flexbox();
     @include align-items(center);
     @include justify-content(center);
@@ -49,8 +52,8 @@
   .uk-card-body {
     background: get-color(beige-dark, 0);
     .info-room {
-      @include flexbox();
       color: white;
+      @include flexbox();
       @include rem(font-size, $textMedium);
       @include set-font;
       &__guests {
@@ -77,7 +80,9 @@
 }
 
 
-// SECTION CARD Activity
+/* -------------------------------------------------------------------------- */
+/*                          COMPONENT CARDS ACTIVITY                          */
+/* -------------------------------------------------------------------------- */
 .cards {
   .zoom-container {
     -webkit-transition: opacity .2s ease-out .1s;
