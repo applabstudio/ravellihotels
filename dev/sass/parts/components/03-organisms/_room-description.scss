@@ -14,8 +14,8 @@
 					display: inline-flex;
 					display: -webkit-inline-flex; // FIX for old iPad
 					@include align-items(center);
-					color: get-color(bg, 10);
 					@include rem(font-size, $textMedium);
+					color: get-color(bg, 10);
 					white-space: nowrap;
 				}
 			}
