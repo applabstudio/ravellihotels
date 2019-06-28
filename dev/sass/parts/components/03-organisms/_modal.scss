@@ -12,9 +12,9 @@ $fs: (
       overflow: hidden;
       background: rgba(80, 77, 71, 0.95);
       .uk-modal-close-full {
-        @include size(100%, auto);
-        display: flex;
+        @include flexbox();
         @include justify-content(flex-start);
+        @include size(100%, auto);
         padding: 2.8rem 2.6rem 0rem 1.6rem;
         background: none;
         color: white;
@@ -26,13 +26,13 @@ $fs: (
         @include rem(font-size, 1.25rem);
       }
       .container-menu-wrapper {
-        display: flex;
+        @include flexbox();
         @include justify-content(center);
         @include align-items(center);
         @include flex-direction(column);
         min-height: 100%;
         &__body {
-          display: flex;
+          @include flexbox();
           @include justify-content(center);
           @include align-items(center);
           @include flex-direction(column);
@@ -66,7 +66,7 @@ $fs: (
         }
         &__footer {
           .menu-social {
-            display: flex;
+            @include flexbox();
             @include justify-content(center);
             padding-top:$pt;
             ul {
@@ -92,7 +92,7 @@ $fs: (
             }
           }
           .site-search {
-            display: flex;
+            @include flexbox();
             @include justify-content(center);
             padding:$pt;
             button {

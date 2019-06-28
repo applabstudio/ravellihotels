@@ -8,7 +8,7 @@ $spacing: rem(6px);
   padding: 0;
   text-align: center;
   @include rem(font-size, ms(-1));
-  display: flex;
+  @include flexbox();
   @include justify-content(center);
   @include flex-wrap(wrap);
   > li {

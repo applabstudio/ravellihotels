@@ -12,7 +12,7 @@
     }
   }
   .uk-light {
-    display: flex;  
+    @include flexbox();
     @include flex-flow(column);
     @include justify-content(space-between);
     @include size(25rem, auto);
@@ -28,7 +28,7 @@
     }
     .footer-social {
       margin: 0 auto;
-      display: flex;
+      @include flexbox();
       @include size(24rem, auto);
       @include align-items(center);
       a {
@@ -83,7 +83,7 @@
       object-fit: scale-down;
     }
     .webit-credits-neg-bn {
-      display: flex;
+      @include flexbox();
       @include justify-content(center);
       @include align-items(center);
       margin: 0;

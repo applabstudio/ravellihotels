@@ -1,7 +1,7 @@
 .slider {
 	height: 100vh;
 	.uk-dotnav {
-		display: flex;
+		@include flexbox();
 		@include relative(bottom 50px);
 		@include justify-content(center);
 	}

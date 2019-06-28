@@ -38,7 +38,7 @@
     @include size(100%, 3.3rem);
     @include absolute(bottom 0);
     background: rgba(121, 110, 101, 0.5);
-    display: flex;
+    @include flexbox();
     @include align-items(center);
     @include justify-content(center);
     img {
@@ -49,12 +49,12 @@
   .uk-card-body {
     background: get-color(beige-dark, 0);
     .info-room {
-      display: flex;
+      @include flexbox();
       color: white;
       @include rem(font-size, $textMedium);
       @include set-font;
       &__guests {
-        display: flex;
+        @include flexbox();
         @include align-items(center);
         padding-right: 1rem;
         span {
@@ -62,7 +62,7 @@
         }
       }
       &__m2 {
-        display: flex;
+        @include flexbox();
         @include align-items(center);
         img {
           @include size(2rem, 2rem);
@@ -141,7 +141,7 @@
 }
 @media screen and (min-width: 40rem) {
   .cards {
-    display: flex;
+    @include flexbox();
     @include justify-content(space-between);
     @include flex-wrap(wrap);
   }

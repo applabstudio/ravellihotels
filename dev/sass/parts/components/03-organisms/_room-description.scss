@@ -8,8 +8,8 @@
 		.room-info {
 			&__wrapper {
 				@include size(100%, auto);
-				display: flex;
-				@include justify-content(space-evenly) // UIKit does not have this property
+				@include flexbox();
+				@include justify-content(space-evenly); // UIKit does not have this property
 				 div {
 					display: inline-flex;
 					display: -webkit-inline-flex; // FIX for old iPad

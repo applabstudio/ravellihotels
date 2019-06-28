@@ -79,7 +79,7 @@
 			}
 		}
 		.privacy-area {
-			display: flex;
+			@include flexbox();
 			@include justify-content(flex-start);
 			@include align-items(self-start);
 			line-height: $lh-base;

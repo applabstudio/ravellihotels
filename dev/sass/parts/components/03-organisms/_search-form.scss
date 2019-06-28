@@ -15,7 +15,7 @@ $icon-dim: (
 );
 
 .search-form {
-  display: flex;
+  @include flexbox();
   @include align-items(center);
   input {
     background: none;

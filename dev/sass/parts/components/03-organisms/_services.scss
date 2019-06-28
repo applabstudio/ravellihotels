@@ -40,7 +40,7 @@
 			padding:0;
 		  }
 		div {
-			display: flex;
+			@include flexbox();
 			@include justify-content(center);
 			@include align-items(center);
 			@include size(100%, auto);
@@ -49,6 +49,7 @@
 			@include size(8rem, auto);
 		}
 		p {
+			@include flexbox();
 			@include size(60%, auto);
 			@include rem(font-size, $textExtra);
 			@include set-font($alt-font-family, normal);
@@ -57,7 +58,6 @@
 			color: get-color(bg, 11);
 			line-height: $lh-md;
 			word-break: break-word;
-			display: flex;
 		}
 	}
 }

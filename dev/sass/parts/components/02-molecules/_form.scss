@@ -47,7 +47,7 @@ form {
 			}
 			.privacy {
 				padding-top: 1rem;
-				display: flex;
+				@include flexbox();
 				input[type='checkbox'] {
 					@include size(1.9rem, 1.9rem);
 				}
@@ -57,7 +57,7 @@ form {
 			}
 	}
 		.uk-width-1-6\@m {
-			display: flex;
+			@include flexbox();
 			@include align-items(center);
 		}
 		[class*="uk-width"] {
