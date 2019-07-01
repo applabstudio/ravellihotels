@@ -5,6 +5,12 @@ const UIKit = function() {
 	const table = document.querySelectorAll('table');
 	table.forEach((t, i=0) => t.className = `uk-table uk-table-divider uk-table-striped uk-table-hover uk-table-responsive`);
 	
+	// Do you have problems with inputs? Add the classes from this if block
+	// if(document.querySelectorAll("#contact").length > 0) {
+	// 	const inputs = document.querySelectorAll('input');
+	// 	inputs.forEach((e, i=0) => e.className = `mdc-text-field__input`);
+	// }
+
 	// Uk Animation kenburns background image animation
 	if(document.querySelectorAll("#bg-section").length > 0) {
 		document.getElementById('bg-section').getElementsByTagName('img')[0].className += "uk-animation-reverse uk-transform-origin-top-right";

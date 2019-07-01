@@ -16,9 +16,6 @@
     }
   }
   .uk-light {
-    @include flexbox();
-    @include flex-flow(column);
-    @include justify-content(space-between);
     @include size(25rem, auto);
     @include media('<=sm') {
       margin: 0 auto;
@@ -33,8 +30,8 @@
     .footer-social {
       margin: 0 auto;
       @include flexbox();
-      @include size(24rem, auto);
       @include align-items(center);
+      @include size(24rem, auto);
       a {
         display: inline-block;
         opacity: 0.6;
