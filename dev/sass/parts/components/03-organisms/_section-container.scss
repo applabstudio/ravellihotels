@@ -43,10 +43,8 @@ $fs: (
 		}
 		a {
 			@include set-font($base-font-family, 800, normal, $textExtraLarge);
-			@include media-a();
-			line-height: 2.3rem;
+			@include media-font-size-medium();
 			display: inline-block;   
-			margin-top:$mt;
 			text-decoration:none;
 			&:hover {
 				transition: $tt;

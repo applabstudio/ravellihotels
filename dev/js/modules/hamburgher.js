@@ -9,6 +9,7 @@ const hamburgher = function() {
       logo.style.visibility = 'visible';
       logoh4.style.visibility = 'visible';
     });
+    
 }
 
 export default { init:hamburgher };

@@ -27,68 +27,53 @@
 
 <body>
     <div class="page">
-        <!-- Header -->
+
+		<!-- Header -->
         <!-- ?Block Header -->
-        <header class="site-header" >
-            <nav class=" uk-navbar uk-navbar-container">
-                <div class="uk-navbar-left">
-                    <a class="uk-navbar-toggle" id="logo-open" href="#modal-full" uk-toggle uk-navbar-toggle-icon></a>
-                    <a class="uk-navbar-toggle" id="logoh4" href="#modal-full" uk-toggle><span>MENU</span></a>
-                </div>
-                <div class="uk-navbar-center">
-                    <div class="uk-navbar-center-left">
-                        <div>
-                            <ul class="site-nav uk-navbar-nav">
-                                <li>
-                                    <div class="uk-navbar-dropdown">
-                                        <ul class="uk-nav uk-navbar-dropdown-nav">
-                                            <li class="uk-active"><a href="#">Active</a></li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <a class="uk-navbar-item uk-logo" href="index.html"><img src="./images/logo_white.png" alt="Ravelli Hotels" srcset=""></a>
-                </div>
-                <div class="uk-navbar-right">
-                    <ul class="site-nav uk-navbar-nav uk-text-uppercase">
-                        <li class="uk-active"><a href="#">
-                                <div class="uk-inline">
-                                    <button class="uk-button uk-button-default btn-lang" type="button">IT<span uk-icon="icon: triangle-down; ratio: 1"></span></button>
-                                    <div uk-dropdown="mode: click">
-                                        <ul class="dropdown-language">
-                                            <li><span uk-icon="icon: world; ratio: 1"></span>Italian</li>
-                                            <li><span uk-icon="icon: world; ratio: 1"></span>English</li>
-                                            <li><span uk-icon="icon: world; ratio: 1"></span>German</li>
-                                            <li><span uk-icon="icon: world; ratio: 1"></span>Russian</li>
-                                            <li><span uk-icon="icon: world; ratio: 1"></span>Polish</li>
-                                            <li><span uk-icon="icon: world; ratio: 1"></span>Arabic</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </a></li>
-                        <li>
-                            <a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
-                        </li>
-                        <li>
-                            <a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-            <!-- Mobile Nav -->
-            <nav class="mobile-nav uk-navbar uk-navbar-container">
-                <ul class="uk-navbar-nav uk-text-uppercase">
-                    <li>
-                        <a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a>
-                    </li>
-                    <li>
-                        <a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a>
-                    </li>
-                </ul>
-            </nav> <!-- End Mobile Nav -->
-        </header> <!-- /header.site-header -->
+        <header class="site-header">
+				<nav class=" uk-navbar uk-navbar-container">
+					<div class="uk-navbar-left">
+						<!-- Hamburgher -->
+						<a class="uk-navbar-toggle" id="logo-open" href="#modal-full" uk-toggle uk-navbar-toggle-icon></a>
+						<a class="uk-navbar-toggle" id="logoh4" href="#modal-full" uk-toggle><span>MENU</span></a>
+						<!-- /hamburgher -->
+					</div> <!-- /div.uk-navbar-left -->
+					<div class="uk-navbar-center">
+						<a class="uk-navbar-item uk-logo" href="index.html"><img src="./images/logo_white.png" alt="Ravelli Hotels" srcset=""></a>
+					</div> <!-- /div.uk-navbar-center -->
+					<div class="uk-navbar-right">
+						<ul class="site-nav uk-navbar-nav uk-text-uppercase">
+							<li class="uk-active">
+								<a href="#">
+									<div class="uk-inline">
+										<button class="uk-button uk-button-default btn-lang" type="button">IT<span uk-icon="icon: triangle-down; ratio: 1"></span></button>
+										<!-- Dropdown Language -->
+										<div uk-dropdown="mode: click">
+											<ul class="dropdown-language">
+												<li><span uk-icon="icon: world; ratio: 1"></span>Italian</li>
+												<li><span uk-icon="icon: world; ratio: 1"></span>English</li>
+												<li><span uk-icon="icon: world; ratio: 1"></span>German</li>
+												<li><span uk-icon="icon: world; ratio: 1"></span>Russian</li>
+												<li><span uk-icon="icon: world; ratio: 1"></span>Polish</li>
+												<li><span uk-icon="icon: world; ratio: 1"></span>Arabic</li>
+											</ul> <!-- /ul.dropdown-language -->
+										</div> <!-- /uk-dropdown -->
+									</div> <!-- /div.uk-inline -->
+								</a>
+							</li> <!-- /li.uk-active -->
+							<li><a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a></li>
+							<li><a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a></li>
+						</ul> <!-- /ul.site-nav -->
+					</div> <!-- /div.uk-navbar-right -->
+				</nav> <!-- /nav -->
+				<!-- Mobile Nav -->
+				<nav class="mobile-nav uk-navbar uk-navbar-container">
+					<ul class="uk-navbar-nav uk-text-uppercase">
+						<li><a href="contatti.html#contact" class="btn-gold"><span uk-icon="info"></span>Richiedi Informazioni</a></li>
+						<li><a href="#" class="btn-gray" uk-toggle="target: #quote"><span uk-icon="file-text"></span>Calcola Preventivo</a></li>
+					</ul> <!-- /ul.uk-navbar-nav -->
+				</nav> <!-- End Mobile Nav -->
+		</header> <!-- /header.site-header -->
 
         <!-- Modal Primary-Menu -->
         <div class="modal-primary-menu">
@@ -222,6 +207,7 @@
         
         <!-- Main -->
         <main>
+
             <!-- Slider -->
             <!-- ?Paragraph slider -->
             <div class="slider">
@@ -334,6 +320,7 @@
                     </div>
                 </div>
             </div>  <!-- /div.container-location -->
+
             <!-- toTop -->
 			<a href="#" class="toTop" uk-totop uk-scroll></a>
 		    <!-- /.toTop-->
@@ -412,6 +399,7 @@
                 </div>
             </div>
         </footer> <!-- /footer.site-footer -->
+        
     </div> <!-- /div.page -->
     <script src="js/app.bundle.js"></script>
 </body>

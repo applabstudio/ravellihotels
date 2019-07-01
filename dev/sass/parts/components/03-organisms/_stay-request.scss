@@ -27,7 +27,7 @@
 
 		a {
 			@include set-font($base-font-family, 800, normal, $textExtraLarge);
-			@include media-a();
+			@include media-font-size-medium();
 			display: inline-block;
 			text-decoration: none;
 		}

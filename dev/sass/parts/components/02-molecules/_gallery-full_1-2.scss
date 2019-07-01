@@ -7,8 +7,9 @@
 		img {
 			width: 100%;
 		}
-		h4 {
-			@include rem(font-size, ms(11));
+
+		@include headings-all() {
+			@include set-font2($alt-font-family, normal);
 			color: get-color(bg, 10);
 			text-shadow: 0px 0px 6px rgba(114,103,103,1);
 		}

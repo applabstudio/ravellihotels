@@ -29,7 +29,7 @@
 			}
 			p {
 				@include set-font($alt-font-family, 300, normal, 3.8rem);
-				@include media-font-size-medium();
+				@include media-font-size-large();
 				text-align: center;
 				color: white;
 				line-height: 4.8rem;
