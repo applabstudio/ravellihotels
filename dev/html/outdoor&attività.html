@@ -148,7 +148,7 @@
 					</div>
 				</div>
 			</div> <!-- End Modal Primary-Menu -->
-				<!-- Quote -->    
+		<!-- Quote -->    
         <div id="quote" class="quote" uk-modal>
             <div class="uk-modal-dialog uk-modal-body">
                 <h2>Richiedi Preventivo</h2>
@@ -219,28 +219,26 @@
             </div>
         </div> <!-- /div.quote -->
 		<main>
-			<!-- SECTION--IMAGE -->
-			<!-- ?Paragraph fullscreen_intro_image -->
-			<div class="section-container--image">
-					<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
-						<img src="./images/bg-outdoor.png"
-						data-srcset="./images/bg-outdoor&cibo.png 650w,
-						./images/bg-outdoor&cibo.png 1300w"
-						data-sizes="(min-width: 650px) 650px, 100vw">
+			
+			<!-- ?Paragraph jumbotron -->
+			<!-- JUMBOTRON -->
+			<div class="jumbotron">
+			   <div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
+					<img src="./images/bg-outdoor.png">
 					<div class="uk-position-small uk-position-bottom-right uk-overlay uk-text-uppercase uk-text-center uk-margin-bottom">				   
-							<h1>Outdoor & Attività</h1>
-							<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
+						<h1>Outdoor & Attività</h1>
+						<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem</p>
 					</div>
 			   </div>
-			</div> <!-- /div.section--image -->
+			</div> <!-- /div.jumbotron -->
 
 			<!-- SubHeader -->
 			<!-- ?Paragraph sub_header -->
 			<div class="subheader uk-padding">
 				<div class="uk-container uk-text-center">
-					<h1>Scopri il Trentino: ogni giorno una nuova attività!</h1>
-					<hr class="uk-divider-small">
 					<div class="tinytext">
+						<h1>Scopri il Trentino: ogni giorno una nuova attività!</h1>
+						<hr class="uk-divider-small">
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
 				</div>
@@ -321,17 +319,18 @@
 					</a>
 				</article><!-- /.card -->
 			</section><!-- /.cards -->
-						<!-- Activity -->
-	
-			<div class="content uk-padding">
-				<div class="section-container uk-container uk-text-center">
-					<div class="tinytext">
-							<h1>Cultura</h1>
-							<p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+			<!-- Section Container -->
+			<div class="section-container">
+				<div class="uk-container uk-text-center uk-padding">
+					<div class="simple-text">
+						<div class="tinytext">
+								<h1>Cultura</h1>
+								<p>Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+						</div>
 					</div>
 				</div>
-			</div> <!-- End Content -->
-						<!-- CARDS -->
+			</div> <!-- /div.section-container -->
+			<!-- CARDS -->
 			<!-- ?Views cards_activity -->
 			<section class="cards switcher-container">
 				<article class="card zoom-container">
@@ -473,5 +472,19 @@
 
 	<script src="js/app.bundle.js"></script>
 </body>
+
+<!--
+  Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  During assembly on drupal delete this -->
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script> -->
 
 </html>

@@ -293,7 +293,7 @@
 			</div> <!-- /div.book-your-room -->
 			<div class="room-description">
 				<div class="room-description-w uk-container uk-padding">
-					<div class="section-container uk-text-center">
+					<div class="uk-text-center">
 								<h4>Luxury Lovely lodge</h4>
 								<hr class="uk-divider-small uk-margin-top">
 								<h1>Room 1</h1>
@@ -493,4 +493,19 @@
 	</div> <!-- /div.page -->
 	<script src="js/app.bundle.js"></script>
 </body>
+
+<!--
+  Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  During assembly on drupal delete this -->
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script> -->
+
 </html>

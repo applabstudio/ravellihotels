@@ -220,35 +220,33 @@
             </div>
         </div> <!-- /div.quote -->
 		<main>
-			<!-- SECTION--IMAGE -->
-			<!-- ?Paragraph fullscreen_intro_image -->
-			<div class="section-container--image">
-					<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
-						<img src="./images/background_pull.png"
-						data-srcset="./images/background_pull.png 650w,
-						./images/background_pull.png 1300w"
-						data-sizes="(min-width: 650px) 650px, 100vw">
+			
+			<!-- ?Paragraph jumbotron -->
+			<!-- JUMBOTRON -->
+			<div class="jumbotron">
+				<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
+					<img src="./images/background_pull.png">
 					<div class="uk-position-small uk-position-bottom-right uk-overlay uk-text-uppercase uk-text-center uk-margin-bottom">				   
-							<h1>WELLNESS & SPA</h1>
-							<p>Beauty Wellness Center tra le montagne in Trentino</p>
-						</div>
+						<h1>WELLNESS & SPA</h1>
+						<p>Beauty Wellness Center tra le montagne in Trentino</p>
+					</div>
 			   </div>
-			</div> <!-- /div.section--image -->
+			</div> <!-- /div.jumbotron -->
 
-			<!-- ?Paragraph section_intro_intro -->
-			<div class="section-container--intro">
+			<!-- ?Paragraph section_container -->
+			<div class="section-container">
 					<div class="uk-container uk-text-center uk-padding">
-						<h1>Scopri il Trentino: ogni giorno una nuova attività!</h1>
-						<hr class="uk-divider-small uk-margin-top">
 						<div class="simple-text uk-text-center">
 							<div class="tinytext">
+									<h1>Scopri il Trentino: ogni giorno una nuova attività!</h1>
+									<hr class="uk-divider-small uk-margin-top">
 									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>			
 									<p>Nella zona beauty & wellness il nostro personale esperto vi offrirà preziosi consigli elaborando con voi un programma individuale di trattamenti wellness ed estetici.</p>
 									<a href="#" class="uk-button-text">Trattamenti e massaggi <span uk-icon="icon: chevron-right"></span></a>
 								</div>
 						</div>
 					</div>
-			</div> <!-- /div.section-container--intro -->
+			</div> <!-- /div.section-container -->
 
 			<!-- ?Views activity_media -->
 			<div class="activity-media">
@@ -388,4 +386,16 @@
 
 	<script src="js/app.bundle.js"></script>
 </body>
+  <!-- Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  During assembly on drupal delete this -->
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>  -->
 </html>

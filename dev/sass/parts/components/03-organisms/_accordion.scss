@@ -26,13 +26,7 @@
 		}
 		.uk-accordion-content p {
 			@include rem(font-size, $textLarge);
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-				line-height: unset;
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(3));
-			}
+			@include media-font-size-small();
 		}
 		img {
 			@include size(100%, auto);
@@ -41,10 +35,8 @@
 			padding-top:4rem;
 			p {
 				@include set-font($base-font-family, normal, normal, $textLarge);
+				@include media-font-size-small();
 				line-height:$lh-lg;
-				@include media('<=md') {
-					@include rem(font-size, ms(5));
-				}
 			}
 		}
 }

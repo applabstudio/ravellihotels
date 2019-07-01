@@ -7,11 +7,6 @@
 	@include media('<=md') {
 		@include padding-component();
 	}
-	&__heading {
-		h1 {
-			padding: 0;
-		}
-	}
 	&__body {
 		.tab-container {
 			@include media('<=md') {
@@ -64,11 +59,11 @@
 					margin: auto 1rem;
 					@include media('<=md') {
 						padding: 1rem 0.7rem;
-						@include rem(font-size, 1.125rem);
+						@include x-rem(font-size, 1.125);
 						@include size(16rem, auto);
 					}
 					@include media('<=sm') {
-						@include rem(font-size, 0.9rem);
+						@include x-rem(font-size, 0.9);
 						@include size(14rem, auto);
 					}
 				}

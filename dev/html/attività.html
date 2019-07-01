@@ -219,22 +219,21 @@
             </div>
         </div> <!-- /div.quote -->
 		<main>
-			<!-- SECTION--IMAGE -->
-			<!-- ?Paragraph fullscreen_intro_image -->
-			<div class="section-container--image">
-					<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
-						<img src="./images/background-attività.png"
-						data-srcset="./images/background-attività.png 650w,
-						./images/background-attività.png 1300w"
-						data-sizes="(min-width: 650px) 650px, 100vw">
+			
+			<!-- ?Paragraph jumbotron -->
+			<!-- JUMBOTRON -->
+			<div class="jumbotron">
+				<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
+					<img src="./images/background-attività.png">
 					<div class="uk-position-small uk-position-bottom-right uk-overlay uk-text-uppercase uk-text-center uk-margin-bottom">				   
-							<h1>Attività</h1>
-							<p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
+						<h1>Attività</h1>
+						<p>Ut enim ad minima veniam, quis nostrum exercitationem</p>
 					</div>
 			   </div>
 			</div> <!-- /div.section--image -->
-						<!-- Section Contrainer Intro -->
-						<div class="section-container--intro">
+						<!-- ?Paragraph section_container -->
+						<!-- Section Container -->
+						<div class="section-container">
 							<div class="uk-container uk-text-center uk-padding uk-text-center">
 								<div class="simple-text">
 									<div class="tinytext">
@@ -245,7 +244,7 @@
 									</div>
 								</div>
 							</div>
-						</div> 	<!-- /div.section-container--intro -->
+						</div> 	<!-- /div.section-container -->
 			
 			<!-- Accordion -->
 			<div class="accordion uk-padding uk-background-muted">
@@ -473,5 +472,19 @@
 	</div>
 	<script src="js/app.bundle.js"></script>
 </body>
+
+<!--
+  Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  During assembly on drupal delete this -->
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script> -->
 
 </html>

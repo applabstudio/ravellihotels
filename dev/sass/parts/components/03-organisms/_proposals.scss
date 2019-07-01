@@ -14,29 +14,17 @@
 		img {
 			margin: 0 auto;
 		}
-		h2 {
-			@include set-font($alt-font-family, 600, normal, 3.25rem);
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
 			color: get-color(primary, 0);
 			padding-bottom: $pb;
-			@include media('<=md') {
-				@include rem(font-size, ms(9));
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(8));
-			}
 		}
 		p {
-			color: get-color(primary, 1);
 			@include set-font;
+			@include media-font-size-small();
+			color: get-color(primary, 1);
 			line-height: $lh-xl;
 			font-weight: normal;
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-				line-height: unset;
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(3));
-			}
 		}
 	}
 }

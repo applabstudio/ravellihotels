@@ -4,45 +4,26 @@
 
 .subheader {
 	@include media('<=md') {
-		@include padding-component;
+		@include padding-component();
 	}
   .uk-container {
     @include media('<=md') {
 			padding:0;
-		  }
-    h1 {
-      @include set-font($alt-font-family, 600, normal, 4.2rem);
+    }
+    @include headings-all() {
+      @include set-font2($alt-font-family, 600);
       text-align: center;
       color: get-color(primary, 0);
       @include media('<=md') {
-        @include rem(font-size, ms(9));
         line-height: unset;
       }
-      @include media('<=sm') {
-        @include rem(font-size, ms(8));
-			}
     }
     p {
       @include set-font($base-font-family, normal, normal, ms(8));
+      @include media-font-size-small();
       line-height: $lh-xl;
       letter-spacing: $ls;
       color: get-color(primary, 1);
-      @include media('<=md') {
-        @include rem(font-size, ms(5));
-        line-height: unset;
-      }
-      @include media('<=sm') {
-        @include rem(font-size, ms(3));
-			}
-    }
-    a {
-      @include set-font($base-font-family, 800, normal, $textExtraLarge);
-      line-height: 2.3rem;
-      display: block;   
-      margin-top:$mt;
-      &:hover {
-        color: rgb(97, 87, 78);
-      }
     }
   }
 }

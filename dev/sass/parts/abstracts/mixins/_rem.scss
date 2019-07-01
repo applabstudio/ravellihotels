@@ -1,0 +1,77 @@
+/* -------------------------------------------------------------------------- */
+/*                                 REUSABLE SASS MIXINS REM UNITS                                */
+/* -------------------------------------------------------------------------- */
+// Ultimate Rem Units
+@function parseInt($n) {
+	/* 2 */
+	@return $n / ($n * 0 + 1);
+  }
+  @mixin rem($property, $values) {
+	$px: (); /* 3 */
+	$rem: (); /* 3 */
+	@each $value in $values {
+	  /* 4 */
+	  @if $value == 0 or $value == auto {
+		/* 5 */
+		$px: append($px, $value);
+		$rem: append($rem, $value);
+	  } @else {
+		$unit: unit($value); /* 6 */
+		$val: parseInt($value); /* 6 */
+		@if $unit == 'px' {
+		  /* 7 */
+		  $px: append($px, $value);
+		  $rem: append($rem, ($val / 10 + rem));
+		}
+		@if $unit == 'rem' {
+		  /* 7 */
+		  $px: append($px, ($val * 10 + px));
+		  $rem: append($rem, $value);
+		}
+	  }
+	}
+	@if $px == $rem {
+	  /* 8 */
+	  #{$property}: $px; /* 9 */
+	} @else {
+	  #{$property}: $px; /* 9 */
+	  #{$property}: $rem; /* 9 */
+	}
+  }
+
+
+
+
+  @mixin x-rem ($property, $values, $main-font-size: 10px) {
+
+	// Empty list for all values in px
+	$px-values: ();
+	$rem-values: ();
+
+	// Iterate over entries
+	@each $value in $values {
+
+		// If the value is zero or of a type that doesn’t need conversion, return the value untouched
+		@if index(auto inherit initial none 0, $value) or type-of($value) != "number" {
+			$px-values: append($px-values, $value);
+			$rem-values: append($rem-values, $value);
+
+		// Otherwise convert it properly
+		} @else {
+			$unit: unit($value);
+
+			@if $unit == 'px' {
+				$px-values: append($px-values, #{strip-unit($value)} * 1px );
+				$rem-values: append($rem-values, (strip-unit($value) / strip-unit($main-font-size) * 1rem));
+			} @else {
+				$px-values: append($px-values, ($value * $main-font-size) );
+				$rem-values: append($rem-values, #{$value} * 1rem);
+			}
+
+		}
+	}
+
+	// Return the property and its list of converted values
+	#{$property}: #{$px-values};
+	#{$property}: #{$rem-values};
+}

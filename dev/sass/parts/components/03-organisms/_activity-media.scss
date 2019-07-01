@@ -14,23 +14,18 @@
 		@include media('<=md') {
 			@include padding-component;
 		}
-		h4 {
+		@include headings(4, 6) {
 			@include set-font($alt-font-family, normal, normal, $textLarge);
+			@include media-font-size-small();
 			line-height: $lh-lg;
 			letter-spacing: $ls-xs;
 			text-transform: uppercase;
 			color: white;
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-				line-height: unset;
-			}
 			@include media('<=sm') {
-				@include rem(font-size, ms(3));
 				padding: 0;
 			}
 		}
-
-		h3 {
+		@include headings(1, 3) { 
 			@include set-font($alt-font-family, 600, normal, 3.3rem);
 			@include relative(bottom 1rem);
 			line-height: 4.9rem;

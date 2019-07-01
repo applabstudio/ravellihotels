@@ -8,7 +8,8 @@
 	@include media('<=md') {
 		@include padding-component;
 	}
-	h1 {
+	
+	@include headings() {
 		@include set-font($alt-font-family, 600, normal, 3.25rem);
 		color: get-color(primary, 1);
 		@include media('<=md') {
@@ -19,16 +20,11 @@
 			padding: 0;
 		}
 	}
+
 	p {
 		@include set-font;
+		@include media-font-size-small();
 		line-height: 3.2rem;
-		@include media('<=md') {
-			@include rem(font-size, ms(5));
-			line-height: unset;
-		} 
-		@include media('<=sm') {
-			@include rem(font-size, ms(3));
-		} 
 	}
 	.uk-grid-margin {
 		margin-top: unset;

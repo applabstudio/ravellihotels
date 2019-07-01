@@ -7,26 +7,17 @@
 	.location {
 		@include size(auto, 88rem);
 	}
-	.location-large {
-		@include size(auto, 100%);
-		@include media('<=md') {
-			.container-location__location-heading {
-				@include flex-flow(column-reverse);
-				background: get-color(primary, 0);
-				position:unset;
-				max-height: unset;
-				h1,p {
-					@include rem(font-size, ms(4));
-				}
-			}
-		}
-	}
 	&__location-heading{
 		@include absolute;
 		background: rgba(34, 34, 34, 0.56);
 		z-index: 1;
 		@include media('<=md') {
 			@include padding-component();
+		}
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
+			text-transform: capitalize;
+			color: #FCFAF8;
 		}
 			p:first-child {
 				@include set-font($base-font-family, 300, normal, ms(6));
@@ -41,30 +32,12 @@
 					padding: 0;
 				}
 			}
-			h1 {
-				@include set-font($alt-font-family, 600, normal, 3.25rem);
-				line-height: 4.9rem;
-				color: #FCFAF8;
-				text-transform: capitalize;
-				@include media('<=md') {
-					@include rem(font-size, ms(8));
-				}
-				@include media('<=sm') {
-					@include rem(font-size, ms(6));
-				}
-			}
 			p:last-child {
 				@include set-font($base-font-family, normal, normal, $textExtra);
+				@include media-font-size-small();
 				text-transform: capitalize;
 				line-height: $lh-sl;
 				color: white;
-				@include media('<=md') {
-					@include rem(font-size, ms(5));
-					line-height: unset;
-				}
-				@include media('<=sm') {
-					@include rem(font-size, ms(3));
-				}
 			}
 		}
 		&__location-body {

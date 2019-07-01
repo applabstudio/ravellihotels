@@ -20,14 +20,9 @@
   
   p {
     @include set-font($base-font-family, normal, normal, ms(6));
+    @include media-font-size-small();
     color: white;
     margin-bottom: $mt;
-    @include media('<=md') {
-      @include rem(font-size, ms(5));
-    }
-    @include media('<=sm') {
-      @include rem(font-size, ms(3));
-    }
   }
   img {
     @include size(100%, auto);

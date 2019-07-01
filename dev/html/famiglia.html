@@ -219,35 +219,31 @@
             </div>
         </div> <!-- /div.quote -->
 		<main>
-			<!-- SECTION--IMAGE -->
-			<!-- ?Paragraph fullscreen_intro_image -->
-			<div class="section-container--image">
-					<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
-						<img src="./images/background-famiglia.png"
-						data-srcset="./images/background-famiglia.png 650w,
-						./images/background-famiglia.png 1300w"
-						data-sizes="(min-width: 650px) 650px, 100vw">
+			<!-- ?Paragraph jumbotron-->
+			<!-- JUMBOTRON -->
+			<div class="jumbotron">
+				<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
+					<img src="./images/background-famiglia.png">
 					<div class="uk-position-small uk-position-bottom-right uk-overlay uk-text-uppercase uk-text-center uk-margin-bottom">				   
-							<h1>Famiglia</h1>
-							<p>Passeggiate, percorsi ed escursioni: ogni giorno un evento per vivere a pieno la bellezza della Val di Sole.</p>
+						<h1>Famiglia</h1>
+						<p>Passeggiate, percorsi ed escursioni: ogni giorno un evento per vivere a pieno la bellezza della Val di Sole.</p>
 					</div>
 			   </div>
-			</div> <!-- /div.section--image -->
+			</div> <!-- /div.jumbotron -->
 			
-			<!-- Section Container intro -->
-			<div class="section-container--intro">
+			<!-- Section Container -->
+			<div class="section-container">
 					<div class="uk-container uk-text-center uk-padding">
-						<h1 class="uk-heading-medium">Scopri il Trentino: ogni giorno una nuova attività!</h1>
-						<hr class="uk-divider-small uk-margin-top">
 						<div class="simple-text">
 							<div class="tinytext">
+									<h1 class="uk-heading-medium">Scopri il Trentino: ogni giorno una nuova attività!</h1>
+									<hr class="uk-divider-small uk-margin-top">			
 									<p>Durante le tue vacanze nelle strutture Ravelli Hotels, tu e la tua famiglia potrete visitare le bellissime cascate del Saent, oppure toccare la neve anche in piena estate utilizzando la nuova funivia Pejo 3000.
-											<br><br>
 									Vi proponiamo passeggiate rilassanti alla scoperta dei percorsi più belli della valle: ideali anche per famiglie con bambini piccoli. Il nostro staff vi accompagnerà durante tutte le attività, offrendovi informazioni, aneddoti e curiosità sui luoghi delle escursioni.</p>			
 							</div>
 						</div>
 					</div>
-				</div> <!-- /div.section-container--intro -->
+				</div> <!-- /div.section-container -->
 
 			<div class="activity-media">
 				<div class="uk-card uk-card-default uk-grid-collapse uk-child-width-1-2@s uk-margin" uk-grid uk-scrollspy="cls: uk-animation-fade; target: .uk-card-media-left, .col-bg-beige; delay: 250; repeat: true">
@@ -383,4 +379,17 @@
 
 	<script src="js/app.bundle.js"></script>
 </body>
+<!--
+  Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  During assembly on drupal delete this -->
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script> -->
 </html>

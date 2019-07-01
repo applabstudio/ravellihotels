@@ -1,0 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                                REUSABLE SASS MIXIN BORDER                                */
+/* -------------------------------------------------------------------------- */
+@mixin border($direction, $width, $style, $color) {
+	border-#{$direction}: $width $style $color;
+  }
+  

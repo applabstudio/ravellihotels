@@ -1,0 +1,15 @@
+/* -------------------------------------------------------------------------- */
+/*                               MIXIN SET-FONT                               */
+/* -------------------------------------------------------------------------- */
+@mixin set-font( $family: $base-font-family , $weight: normal , $style: normal, $fontsize: $fsPrimary ) {
+	font-family: $family , 'Arial', 'Helvetica', sans-serif;
+	font-style: $style;
+	font-weight: $weight;
+	font-size: $fontsize;
+	
+  }
+  @mixin set-font2( $family: $base-font-family , $weight: normal) {
+	font-family: $family , 'Arial', 'Helvetica', sans-serif;
+	font-weight: $weight;
+  }
+  

@@ -24,24 +24,16 @@
 				}
 			}
 		}
-		h4 {
-			color: white;
-		}
-		h1 {
+		@include headings-all() {
+			@include set-font2($alt-font-family, normal);
 			color:get-color(bg, 10);
 		}
 		p {
 			@include set-font;
+			@include media-font-size-small();
 			line-height: $lh-xl;
 			text-align: center;
 			color: white;
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-				line-height: unset;
-			} 
-			@include media('<=sm') {
-				@include rem(font-size, ms(3));
-			} 
 		}
 	}
 }

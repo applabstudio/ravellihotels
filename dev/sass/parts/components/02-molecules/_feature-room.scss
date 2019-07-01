@@ -12,27 +12,20 @@
 			padding:0
 		}
 	}
-	h3 {
-		@include set-font($alt-font-family, normal, normal, ms(8));
+	@include headings-all() {
+		@include set-font2($alt-font-family, normal);
 		text-transform: uppercase;
 		line-height: 3.5rem;
 		letter-spacing: $ls-md;
 		color: black;
 		padding-bottom:$pb;
 		@include media('<=md') {
-			@include rem(font-size, ms(7));
-			line-height: unset;
+		  padding:unset;
 		}
-	}
+	  }
 	p {
 		@include set-font($base-font-family, normal, normal, 1.7rem);
+		@include media-font-size-small();
 		color: get-color(primary, 1);
-		@include media('<=md') {
-			@include rem(font-size, ms(5));
-			line-height: unset;
-		} 
-		@include media('<=sm') {
-			@include rem(font-size, ms(3));
-		} 
 	}
 }

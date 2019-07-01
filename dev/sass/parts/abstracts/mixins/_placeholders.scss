@@ -1,0 +1,11 @@
+@mixin placeholders() {
+	&::-webkit-input-placeholder {
+		@content // Chrome, Safari, Opera
+	}
+	&::-moz-placeholder {
+		@content // Firefox 19+
+	}
+	&:-ms-input-placeholder {
+		@content // IE 10+
+	}
+}

@@ -1,0 +1,7 @@
+/* -------------------------------------------------------------------------- */
+/*                              REUSABLE SASS MIXINS BOX-SHADOW                             */
+/* -------------------------------------------------------------------------- */
+@mixin shadow-logo($x-axis: 2px, $y-axis: 2px, $blur: 2px, $color: #020202) {
+	filter:drop-shadow( $x-axis $y-axis $blur $color );
+	-webkit-filter: drop-shadow(2px 2px 2px #020202);
+  }

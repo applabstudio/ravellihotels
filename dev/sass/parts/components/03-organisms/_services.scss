@@ -13,27 +13,18 @@
 		@include media('<=md') {
 			padding:0;
 		  }
-		h2 {
-			@include set-font($alt-font-family, 600, normal, 3.2rem);
+
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
 			color:white;
 			line-height: $lh-xxl;
-			@include media('<=md') {
-				@include rem(font-size, ms(9));
-			  }
-			@include media('<=sm') {
-				@include rem(font-size, ms(8));
-			}
 		}
+	
 		p {
 			color:white;
 			padding-top: $pt;
 			@include set-font;
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(3));
-			}
+			@include media-font-size-small();
 		}
 	}
 

@@ -1,0 +1,26 @@
+@mixin media-font-size-small() {
+	@include media('<=md') {
+	  @include rem(font-size, ms(5));
+	  line-height: unset;
+	} 
+	@include media('<=sm') {
+	  @include rem(font-size, ms(3));
+	} 
+  }
+
+  @mixin media-font-size-medium() {
+	@include media('<=md') {
+		@include rem(font-size, ms(9));
+		line-height: unset;
+	} 
+	@include media('<=sm') {
+		@include rem(font-size, ms(7));
+	}	
+  }
+  
+  @mixin media-a() {
+	@include media('<=md') {
+	  @include rem(font-size, ms(6));
+	}
+  }
+  

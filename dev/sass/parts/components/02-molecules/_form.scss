@@ -24,7 +24,7 @@ form {
 				&:focus {
 					background: none;
 				}
-				&[placeholder] {
+				@include placeholders() {
 					color: get-color(bg,8);
 				}
 			}

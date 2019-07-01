@@ -46,7 +46,7 @@
     }
   }
     ul {
-      list-style-type: none;
+      @extend %listreset;
       padding-left: 0;
       li {
         @include set-font($base-font-family, normal, normal, 1.6rem);

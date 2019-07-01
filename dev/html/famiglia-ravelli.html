@@ -219,23 +219,20 @@
             </div>
         </div> <!-- /div.quote -->
 			<main>
-			<!-- SECTION--IMAGE -->
-			<!-- ?Paragraph fullscreen_intro_image -->
-			<div class="section-container--image">
-					<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
-						<img src="./images/background-famiglia-ravelli.png"
-						data-srcset="./images/background-famiglia-ravelli.png 650w,
-						./images/background-famiglia-ravelli.png 1300w"
-						data-sizes="(min-width: 650px) 650px, 100vw">
+			<!-- ?Paragraph jumbotron -->
+			<!-- JUMBOTRON -->
+			<div class="jumbotron">
+				<div class="uk-flex uk-flex-center uk-flex-bottom  uk-light bg-wrapper-full uk-overflow-hidden"  id="bg-section">
+					<img src="./images/background-famiglia-ravelli.png">
 					<div class="uk-position-small uk-position-bottom-right uk-overlay uk-text-uppercase uk-text-center uk-margin-bottom">				   
-							<h1>Famiglia Ravelli</h1>
-							<p>Passeggiate, percorsi ed escursioni: ogni giorno un evento per vivere a pieno la bellezza della Val di Sole.</p>
+						<h1>Famiglia Ravelli</h1>
+						<p>Passeggiate, percorsi ed escursioni: ogni giorno un evento per vivere a pieno la bellezza della Val di Sole.</p>
 					</div>
 			   </div>
-			</div> <!-- /div.section--image -->
+			</div> <!-- /div.jumbotron -->
 			
-			<!-- Section Contrainer Intro -->
-			<div class="section-container--intro">
+			<!-- Section Contrainer -->
+			<div class="section-container">
 				<div class="uk-container uk-text-center uk-padding uk-text-center">
 					<div class="simple-text">
 						<div class="tinytext">
@@ -253,7 +250,7 @@
 						</div>
 					</div>
 				</div>
-			</div> 	<!-- /div.section-container--intro -->
+			</div> 	<!-- /div.section-container -->
 
 			<!-- Signature -->
 			<div class="signature uk-container uk-animation-toggle uk-padding uk-padding-remove-top uk-flex uk-flex-center">
@@ -392,5 +389,19 @@
 
 	<script src="js/app.bundle.js"></script>
 </body>
+
+<!--
+  Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  During assembly on drupal delete this -->
+  <!-- <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script> -->
 
 </html>

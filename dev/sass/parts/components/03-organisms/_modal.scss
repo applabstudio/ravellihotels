@@ -26,7 +26,7 @@ $fs: (
         color: white;
         text-transform: uppercase;
         @include absolute(top 2.7rem left 5.59rem);
-        @include rem(font-size, 1.25rem);
+        @include x-rem(font-size, 1.25);
       }
       .container-menu-wrapper {
         @include flexbox();

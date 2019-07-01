@@ -10,37 +10,29 @@
 		margin:0 auto;
 		.uk-first-column {
 			padding:0;
-			h3 {
+			@include headings-all() {
+				@include set-font2($alt-font-family, normal);
 				line-height: 3.5rem;
 				letter-spacing: $ls-md;
 				text-transform: uppercase;
 				color: black;
-				@include set-font($alt-font-family, normal, normal, 2.9rem);
 				@include media('<=md') {
-					@include rem(font-size, ms(9));
 					text-align: center;
-				  }
-				@include media('<=sm') {
-					@include rem(font-size, ms(8));
 				}
 			}
 			p {
 				line-height: $lh-xl;
 				color: get-color(primary, 1);
 				@include set-font();
+				@include media-font-size-small();
 				@include media('<=md') {
-					@include rem(font-size, ms(5));
 					text-align: center;
-					line-height: unset;
-				}
-				@include media('<=sm') {
-					@include rem(font-size, ms(3));
 				}
 			}
 		}
 		.input-container {
 			@include size(96.55%, auto);
-			// NOTE Mixin Material-Design Textfields
+			// NOTE Override Material-Design Textfields
 			.mdc-floating-label {
 				@include rem(font-size, $fsPrimary);
 				padding:1rem;

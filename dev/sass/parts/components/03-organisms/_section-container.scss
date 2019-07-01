@@ -1,0 +1,57 @@
+/* -------------------------------------------------------------------------- */
+/*                         COMPONENT SECTION-CONTAINER                        */
+/* -------------------------------------------------------------------------- */
+
+$fs: (
+	xs: ms(3),
+	s: ms(6),
+	l: ms(9),
+	xl: ms(13),
+	xxl: ms(17),
+);
+
+.section-container {
+	@include media('<=md') {
+		padding:0;
+	}
+	.uk-container {
+		@include media('<=md') {
+			@include padding-component();
+		}
+		
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
+			color: get-color(primary,0);
+			padding: 0 0 $pb 0;
+			@include media('<=md') {
+				line-height: unset;
+				padding:unset;
+			}
+		}
+
+		@include headings(4, 6) {
+				@include set-font($alt-font-family, 200, normal, 2.25rem);
+				letter-spacing: 0.09rem;
+				text-transform: uppercase;
+				color:black;
+		}
+		p {
+			@include set-font();
+			@include media-font-size-small();
+			line-height: $lh-xl;
+			color: get-color(primary, 1);
+		}
+		a {
+			@include set-font($base-font-family, 800, normal, $textExtraLarge);
+			@include media-a();
+			line-height: 2.3rem;
+			display: inline-block;   
+			margin-top:$mt;
+			text-decoration:none;
+			&:hover {
+				transition: $tt;
+				color: rgb(97, 87, 78);
+			}
+		}
+	}
+}

@@ -31,6 +31,7 @@ $icon-dim: (
     height: auto;
     box-shadow: none;
     color: white;
+    @include appearance(searchfield);
     @include media('>=sm') {
       width: map-get($input-w, sm);
       font-size: map-get($input-fs, sm);
@@ -74,8 +75,7 @@ $icon-dim: (
     input {
       border-color: get-color(primary, 0);
       color: black;
-
-      &::placeholder {
+      @include placeholders() {
         color: get-color(primary, 0);
       }
     }

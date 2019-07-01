@@ -12,41 +12,24 @@
 		@include media('<=md') {
 			padding:0;
 		}
-		h2 {
+
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
 			color: get-color(primary, 1);
 			line-height: 7rem;
-			@include set-font($alt-font-family, 600, normal, 3.25rem);
-			@include media('<=md') {
-				@include rem(font-size, ms(8));
-				line-height:unset;
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(6));
-				padding: 0;
-			}
 		}
 
 		p {
 			@include set-font;
+			@include media-font-size-small();
 			line-height: 3.2rem;
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(3));
-			}
 		}
 
 		a {
 			@include set-font($base-font-family, 800, normal, $textExtraLarge);
+			@include media-a();
 			display: inline-block;
 			text-decoration: none;
-			@include media('<=md') {
-				@include rem(font-size, ms(6));
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(3));
-			}
 		}
 	}
 	&__body {

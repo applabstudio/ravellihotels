@@ -32,19 +32,14 @@
 	}
 	.how-to-reach-us {
 		padding-top:4rem;
-		h2 {
-			@include set-font($alt-font-family, 600, normal, 3.3rem);
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
 			line-height: $lh-xxl;
-			@include media('<=md') {
-				font-size: ms(6);
-			}
 		}
 		p {
 			@include set-font($base-font-family, normal, normal, $textExtra);
+			@include media-font-size-small();
 			line-height: $lh-md;
-			@include media('<=md') {
-				@include rem(font-size, ms(5));
-			}
 		}
 	}
 }

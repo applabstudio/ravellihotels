@@ -6,8 +6,8 @@
 	height: 100vh;
 	.uk-dotnav {
 		@include flexbox();
-		@include relative(bottom 50px);
 		@include justify-content(center);
+		@include relative(bottom 50px);
 	}
 	.wrapper-image {
 		img {
@@ -16,34 +16,23 @@
 			width: 100%;
 		}
 		&__title {
-			padding: 4rem;
+			padding: 2rem;
 			@include media('<=md') {
 				@include padding-component;
 			}
-			h2 {
-				@include set-font($alt-font-family, 500, normal, ms(13));
+			@include headings-jumbotron() {
+				@include set-font2($alt-font-family, 500);
 				text-transform: uppercase;
 				line-height: 7.2rem;
 				text-align: center;
 				color: white;
-				@include media('<=md') {
-					font-size: ms(10);
-					line-height: unset;
-					padding: 0;
-				}
 			}
 			p {
 				@include set-font($alt-font-family, 300, normal, 3.8rem);
-				line-height: 4.8rem;
+				@include media-font-size-medium();
 				text-align: center;
 				color: white;
-				@include media('<=md') {
-					@include rem(font-size, ms(9));
-					line-height: unset;
-				} 
-				@include media('<=sm') {
-					@include rem(font-size, ms(7));
-				} 
+				line-height: 4.8rem;
 			}
 		}
 	}

@@ -1,0 +1,166 @@
+/* -------------------------------------------------------------------------- */
+/*                            REUSABLE SASS MIXINS HEADINGS                           */
+/* -------------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------------- */
+/*                            Problem solved for CKEditor in Drupal8          */
+/* -------------------------------------------------------------------------- */
+/*
+  Important notes for Drupal 8 (by Silver).
+  To test CKEditor and see how it will be visible on drupal8, you need to implement the cdn and instantiate ckeditor by entering the tinytext class
+  After the </body>
+  <script src="https://cdn.ckeditor.com/ckeditor5/12.2.0/classic/ckeditor.js"></script>
+  <script>
+      ClassicEditor
+          .create( document.querySelector( '.tinytext' ) )
+          .catch( error => {
+              console.error( error );
+          } );
+  </script>
+  */
+  @mixin headings($from: 1, $to: 6){
+	@for $i from $from through $to{
+	  h#{$i}{
+		@content;
+	  }
+	}
+  }
+  
+  @mixin headings-all(){
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5, 
+	h6 {
+		@content;
+	}
+	@include headings-sizes-ms();
+  }
+  
+  @mixin headings-jumbotron() {
+	h1, 
+	h2, 
+	h3, 
+	h4, 
+	h5, 
+	h6 {
+		@content;
+	}
+	@include headings-sizes-md();
+  }
+  
+  // Customize Modular Scale 
+  @mixin headings-sizes-ms() {
+	h1 {
+	  @include rem(font-size, ms(12));
+	  @include media('<=md') {
+		@include rem(font-size, ms(9));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(8));
+	  }
+	}
+	h2 {
+	  @include rem(font-size, ms(10));
+	  @include media('<=md') {
+		@include rem(font-size, ms(8));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(7));
+	  }
+	}
+	h3 {
+	  @include rem(font-size, ms(8));
+	  @include media('<=md') {
+		@include rem(font-size, ms(6));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(5));
+	  }
+	}
+	h4 {
+	  @include rem(font-size, ms(6));
+	  @include media('<=md') {
+		@include rem(font-size, ms(4));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(3));
+	  }
+	}
+	h5 {
+	  @include rem(font-size, ms(5));
+	  @include media('<=md') {
+		@include rem(font-size, ms(3));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(2));
+	  }
+	}
+	h6 {
+	  @include rem(font-size, ms(4));
+	  @include media('<=md') {
+		@include rem(font-size, ms(2));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(1));
+	  }
+	}
+  }
+  
+  @mixin headings-sizes-md() {
+	h1 {
+	  @include rem(font-size, ms(18));
+	  @include media('<=md') {
+		@include rem(font-size, ms(16));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(15));
+	  }
+	}
+	h2 {
+	  @include rem(font-size, ms(16));
+	  @include media('<=md') {
+		@include rem(font-size, ms(14));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(13));
+	  }
+	}
+	h3 {
+	  @include rem(font-size, ms(14));
+	  @include media('<=md') {
+		@include rem(font-size, ms(12));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(11));
+	  }
+	}
+	h4 {
+	  @include rem(font-size, ms(12));
+	  @include media('<=md') {
+		@include rem(font-size, ms(10));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(9));
+	  }
+	}
+	h5 {
+	  @include rem(font-size, ms(10));
+	  @include media('<=md') {
+		@include rem(font-size, ms(8));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(7));
+	  }
+	}
+	h6 {
+	  @include rem(font-size, ms(8));
+	  @include media('<=md') {
+		@include rem(font-size, ms(6));
+	  }
+	  @include media('<=sm') {
+		@include rem(font-size, ms(5));
+	  }
+	}
+  }

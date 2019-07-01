@@ -1,0 +1,10 @@
+/* -------------------------------------------------------------------------- */
+/*                               MIXINS PADDING                               */
+/* -------------------------------------------------------------------------- */
+@mixin padding($top, $right, $bottom, $left) { 
+	padding: $top $right $bottom $left;
+  }
+  
+  @mixin padding-component($space: $sm) {
+	padding: $space;
+  }
