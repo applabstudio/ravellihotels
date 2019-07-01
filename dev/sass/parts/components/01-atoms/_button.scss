@@ -74,6 +74,17 @@ $ico-dim: rem(32px);
   }
 }
 
+.btn-simple {
+  margin: $mt 1rem 0 0;
+  @include rem(font-size, $textBase);
+  &--muted {
+    color:get-color(bg,0);
+  }
+  &--primary {
+    color: get-color(beige-dark,1);
+    font-weight: $fw;
+  }
+}
 
 .btn-lang {
   border: none;

@@ -19,7 +19,7 @@ $ico-dim: rem(32px);
 			.uk-divider-small {
 				margin: 0 1rem;
 			}
-		}	
+		}		
 
 		.input-container {
 			@include size(100%, auto);
@@ -29,6 +29,7 @@ $ico-dim: rem(32px);
 					@include size(100%, auto);
 				}
 			}
+	
 			.mdc-floating-label {
 				@include rem(font-size, $textBase);
 			}
@@ -40,15 +41,5 @@ $ico-dim: rem(32px);
 				padding:1.6rem 5.8rem;
 			}
 		}
-
-			button {
-				margin: $mt 1rem 0 0;
-				@include rem(font-size, $textBase);
-				color:get-color(bg,0);
-			}
-			button:last-child {
-				color: get-color(beige-dark,1);
-				font-weight: 800;
-			}
 	}
 }
