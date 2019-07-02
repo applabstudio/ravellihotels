@@ -3,18 +3,21 @@
 /* -------------------------------------------------------------------------- */
 
 .book-your-room {
-	background: get-color(bg,13);
+	background: get-color(bg, 13);
+
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		@include padding-component;
 	}
-	
+
 	@include headings() {
 		@include set-font($alt-font-family, 600, normal, 3.25rem);
 		color: get-color(primary, 1);
+
 		@include media('<=md') {
 			@include rem(font-size, ms(8));
 		}
+
 		@include media('<=sm') {
 			@include rem(font-size, ms(6));
 			padding: 0;
@@ -26,6 +29,7 @@
 		@include media-font-size-small();
 		line-height: 3.2rem;
 	}
+
 	.uk-grid-margin {
 		margin-top: unset;
 	}
@@ -33,9 +37,11 @@
 	span {
 		color: get-color(primary, 0);
 	}
+
 	.uk-inline {
 		@include size(18.3rem, auto);
 		margin: 2rem;
+
 		.uk-input,
 		.uk-select,
 		.uk-textarea {
@@ -43,9 +49,10 @@
 			border: transparent;
 			@include border('bottom', 1px, solid, black);
 			@include set-font($base-font-family, 600, normal, $textBase);
-			@include padding(1rem, 0, 0,0);
+			@include padding(1rem, 0, 0, 0);
 			color: get-color(bg, 8);
 		}
+
 		label {
 			@include relative(top $su);
 			@include set-font($base-font-family, normal, normal, $textMedium);
@@ -55,9 +62,11 @@
 			opacity: 0.9;
 			text-align: left;
 		}
+
 		.disponibility {
 			@include absolute;
 		}
+
 		button {
 			@include size(100%, auto);
 		}

@@ -1,8 +1,7 @@
 /* -------------------------------------------------------------------------- */
 /*                         COMPONENT JUMBOTRON                                */
 /* -------------------------------------------------------------------------- */
-$fs: (
-	xs: ms(3),
+$fs: (xs: ms(3),
 	s: ms(6),
 	l: ms(9),
 	xl: ms(13),
@@ -11,26 +10,29 @@ $fs: (
 
 .jumbotron {
 	@include media('<=md') {
-		padding:0;
+		padding: 0;
 	}
 
 	> div {
-		width:100%;
-		height:100vh;
+		width: 100%;
+		height: 100vh;
 		@include relative;
+
 		img {
 			@include size(100%, 100%);
 			object-fit: cover;
 		}
+
 		> div {
 			@include size(100%, auto);
+
 			@include headings-jumbotron() {
 				@include set-font2($alt-font-family, 500);
-				color:white;
+				color: white;
 			}
 
 			p {
-				color:white;
+				color: white;
 				@include set-font($alt-font-family, 300, normal, map-get($fs, l));
 				@include media-font-size-small();
 			}

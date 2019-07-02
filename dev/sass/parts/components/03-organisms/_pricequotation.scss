@@ -3,13 +3,17 @@
 /* -------------------------------------------------------------------------- */
 
 $ico-dim: rem(32px);
+
 .quote {
+
 	.uk-modal-dialog {
 		background: get-color(modal, 0);
-		h2 {
-			@include set-font($alt-font-family, 600, normal, ms(8));
+
+		@include headings-all() {
+			@include set-font2($alt-font-family, 600);
 			text-transform: capitalize;
-		}	
+		}
+
 		p {
 			@include set-font($base-font-family, normal, normal, ms(4));
 			color: get-color(primary, 1);
@@ -19,26 +23,30 @@ $ico-dim: rem(32px);
 			.uk-divider-small {
 				margin: 0 1rem;
 			}
-		}		
+		}
 
 		.input-container {
 			@include size(100%, auto);
+
 			.mdc-text-field {
 				@include size(47.8%, auto);
+
 				@include media('<=md') {
 					@include size(100%, auto);
 				}
 			}
-	
+
 			.mdc-floating-label {
 				@include rem(font-size, $textBase);
 			}
+
 			.mdc-text-field__input {
 				@include rem(font-size, $textBase);
-				padding:$pt 5.8rem;
+				padding: $pt 5.8rem;
 			}
+
 			input[type='date'] {
-				padding:1.6rem 5.8rem;
+				padding: 1.6rem 5.8rem;
 			}
 		}
 	}

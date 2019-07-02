@@ -3,26 +3,31 @@
 /* -------------------------------------------------------------------------- */
 
 .feature-room {
+
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		@include padding-component;
 	}
+
 	.uk-container {
 		@include media('<=md') {
-			padding:0
+			padding: 0
 		}
 	}
+
 	@include headings-all() {
 		@include set-font2($alt-font-family, normal);
 		text-transform: uppercase;
 		line-height: 3.5rem;
 		letter-spacing: $ls-md;
 		color: black;
-		padding-bottom:$pb;
+		padding-bottom: $pb;
+
 		@include media('<=md') {
-		  padding:unset;
+			padding: unset;
 		}
-	  }
+	}
+
 	p {
 		@include set-font($base-font-family, normal, normal, 1.7rem);
 		@include media-font-size-small();

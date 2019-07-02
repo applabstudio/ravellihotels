@@ -4,22 +4,27 @@
 
 .slider {
 	height: 100vh;
+
 	.uk-dotnav {
 		@include flexbox();
 		@include justify-content(center);
 		@include relative(bottom 50px);
 	}
+
 	.wrapper-image {
 		img {
 			object-fit: cover;
 			height: 100vh;
 			width: 100%;
 		}
+
 		&__title {
 			padding: 2rem;
+
 			@include media('<=md') {
 				@include padding-component;
 			}
+
 			@include headings-jumbotron() {
 				@include set-font2($alt-font-family, 500);
 				text-transform: uppercase;
@@ -27,6 +32,7 @@
 				text-align: center;
 				color: white;
 			}
+
 			p {
 				@include set-font($alt-font-family, 300, normal, 3.8rem);
 				@include media-font-size-large();

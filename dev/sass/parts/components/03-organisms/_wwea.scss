@@ -3,6 +3,7 @@
 /* -------------------------------------------------------------------------- */
 
 .wwea-hotels {
+
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		@include padding-component;
@@ -17,17 +18,19 @@
 			img {
 				margin: 0 auto;
 				mix-blend-mode: multiply;
-			}	
+			}
 		}
 
 		.address-wrapper {
-			padding-top:$pt;
+			padding-top: $pt;
+
 			h5 {
 				@include set-font($alt-font-family, 600, normal, $textLarge);
 				line-height: $lh-xs;
 				letter-spacing: 0.5rem;
 				text-transform: uppercase;
 			}
+
 			a {
 				@include set-font($base-font-family, normal, normal, $textExtra);
 				line-height: $lh-md;
@@ -37,12 +40,13 @@
 	}
 
 	.how-to-reach-us {
-		padding-top:4rem;
+		padding-top: 4rem;
+
 		@include headings-all() {
 			@include set-font2($alt-font-family, 600);
 			line-height: $lh-xxl;
 		}
-		
+
 		p {
 			@include set-font($base-font-family, normal, normal, $textExtra);
 			@include media-font-size-small();
@@ -54,6 +58,7 @@
 .hotel-bg-1 {
 	background-color: get-color(bg, 13);
 }
+
 .hotel-bg-2 {
 	background-color: white;
 }

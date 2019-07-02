@@ -3,18 +3,22 @@
 /* -------------------------------------------------------------------------- */
 
 .room-description {
-	background: get-color(beige-dark,0);
+	background: get-color(beige-dark, 0);
+
 	.room-description-w {
+
 		// ANCHOR Optimize for mobile
 		@include media('<=md') {
 			@include padding-component();
 		}
+
 		.room-info {
 			&__wrapper {
 				@include size(100%, auto);
 				@include flexbox();
 				@include justify-content(space-evenly); // UIKit does not have this property
-				 div {
+
+				div {
 					display: inline-flex;
 					display: -webkit-inline-flex; // FIX for old iPad
 					@include align-items(center);
@@ -24,10 +28,12 @@
 				}
 			}
 		}
+
 		@include headings-all() {
 			@include set-font2($alt-font-family, normal);
-			color:get-color(bg, 10);
+			color: get-color(bg, 10);
 		}
+
 		p {
 			@include set-font;
 			@include media-font-size-small();

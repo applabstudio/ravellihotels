@@ -6,37 +6,46 @@
 	@include media('<=md') {
 		@include padding-component();
 	}
+
 	.uk-container {
-		padding:0;
+		padding: 0;
 	}
-		color: get-color(primary, 1);
-		.uk-accordion-title {
-			@include rem(font-size, $fsPrimary);
-			@include border('bottom', 1px, solid, get-color(bg,14));
-			font-weight: 600;
-			line-height: 43px;
-			@include media('<=md') {
-				@include rem(font-size, ms(6));
-				line-height: unset;
-				padding: 0;
-			}
-			@include media('<=sm') {
-				@include rem(font-size, ms(4));
-			}
+
+	color: get-color(primary, 1);
+
+	.uk-accordion-title {
+		@include rem(font-size, $fsPrimary);
+		@include border('bottom', 1px, solid, get-color(bg, 14));
+		font-weight: 600;
+		line-height: 43px;
+
+		@include media('<=md') {
+			@include rem(font-size, ms(6));
+			line-height: unset;
+			padding: 0;
 		}
-		.uk-accordion-content p {
-			@include rem(font-size, $textLarge);
+
+		@include media('<=sm') {
+			@include rem(font-size, ms(4));
+		}
+	}
+
+	.uk-accordion-content p {
+		@include rem(font-size, $textLarge);
+		@include media-font-size-small();
+	}
+
+	img {
+		@include size(100%, auto);
+	}
+
+	&__footer {
+		padding-top: 4rem;
+
+		p {
+			@include set-font($base-font-family, normal, normal, $textLarge);
 			@include media-font-size-small();
+			line-height: $lh-lg;
 		}
-		img {
-			@include size(100%, auto);
-		}
-		&__footer {
-			padding-top:4rem;
-			p {
-				@include set-font($base-font-family, normal, normal, $textLarge);
-				@include media-font-size-small();
-				line-height:$lh-lg;
-			}
-		}
+	}
 }

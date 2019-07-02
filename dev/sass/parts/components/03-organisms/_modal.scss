@@ -2,18 +2,19 @@
 /*                               COMPONENT MODAL                              */
 /* -------------------------------------------------------------------------- */
 
-$fs: (
-  xs: ms(5),
+$fs: (xs: ms(5),
   sm: ms(6),
   md: ms(8),
   xl: ms(9),
 );
+
 .modal-primary-menu {
   &__container {
     .modal-dialog {
-      height:100vh;
+      height: 100vh;
       overflow: hidden;
       background: rgba(80, 77, 71, 0.95);
+
       .uk-modal-close-full {
         @include flexbox();
         @include justify-content(flex-start);
@@ -22,18 +23,21 @@ $fs: (
         background: none;
         color: white;
       }
+
       span {
         color: white;
         text-transform: uppercase;
         @include absolute(top 2.7rem left 5.59rem);
         @include x-rem(font-size, 1.25);
       }
+
       .container-menu-wrapper {
         @include flexbox();
         @include justify-content(center);
         @include align-items(center);
         @include flex-direction(column);
         min-height: 100%;
+
         &__body {
           @include flexbox();
           @include justify-content(center);
@@ -41,10 +45,13 @@ $fs: (
           @include flex-direction(column);
           min-height: 100%;
           text-align: center;
+
           // STUB overflow: auto; // NOTE for console developer
-          menu, ul {
+          menu,
+          ul {
             @extend %listreset;
             text-align: center;
+
             li {
               a {
                 color: white;
@@ -52,48 +59,57 @@ $fs: (
                 text-transform: uppercase;
                 text-decoration: none;
                 @include set-font($alt-font-family, normal, normal, map-get($fs, xl));
+
                 @include media('<=md') {
                   @include rem(font-size, map-get($fs, md));
                 }
+
                 @include media('<=sm') {
                   @include rem(font-size, map-get($fs, sm));
                 }
               }
             }
+
             .uk-button-text::before {
               @include border('bottom', 1px, solid, white);
             }
-          } 
+          }
         }
+
         &__footer {
           .menu-social {
             @include flexbox();
             @include justify-content(center);
-            padding-top:$pt;
+            padding-top: $pt;
+
             ul {
-               list-style-type: none;
-               display: inline-flex;
-               @include justify-content(center);
-               li {
+              list-style-type: none;
+              display: inline-flex;
+              @include justify-content(center);
+
+              li {
                 @include size(4rem, 4rem);
                 display: inline-block;
                 margin-right: 1.6rem;
-                padding:1rem;
+                padding: 1rem;
                 border: 1px solid white;
                 background: get-color(beige-dark, 0);
                 border-radius: 50%;
+
                 &:hover {
-                  transition:$tt;
+                  transition: $tt;
                   box-shadow: 0 0 6px 2px #ddd9d9;
                   transform: translateY(-1rem);
-                 }
                 }
+              }
             }
           }
+
           .site-search {
             @include flexbox();
             @include justify-content(center);
-            padding:$pt;
+            padding: $pt;
+
             button {
               @include relative(left -2.5rem);
             }

@@ -107,31 +107,21 @@
                                                 <use xlink:href="./images/svg/sprite.svg#lens"></use>
                                             </svg>
                                         </button>
-                                    </form>
-                                </div>
+                                    </form><!-- /form -->
+                                </div> <!-- /div.site-search -->
                                 <div class="menu-social">
 										<ul>
-											<li>
-												<a href="#" class="uk-icon-link" uk-icon="facebook"></a>
-											</li>
-											<li>
-												<a href="#" class="uk-icon-link" uk-icon="twitter"></a>
-											</li>
-											<li>
-												<a href="#" class="uk-icon-link" uk-icon="instagram"></a>
-											</li>
-											<li>
-												<a href="#" class="uk-icon-link" uk-icon="linkedin"></a>
-											</li>
-											<li>
-												<a href="#" class="uk-icon-link" uk-icon="tripadvisor"></a>
-											</li>
+											<li><a href="#" class="uk-icon-link" uk-icon="facebook"></a></li>
+											<li><a href="#" class="uk-icon-link" uk-icon="twitter"></a></li>
+											<li><a href="#" class="uk-icon-link" uk-icon="instagram"></a></li>
+											<li><a href="#" class="uk-icon-link" uk-icon="linkedin"></a></li>
+											<li><a href="#" class="uk-icon-link" uk-icon="tripadvisor"></a></li>
 										</ul>
                                 </div> <!-- /div.menu-social -->
                             </div> <!-- /div.container-menu-wrapper__footer -->
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- /uk-grid -->
+                </div> <!-- /div.uk-modal-dialog -->
+            </div> <!-- /div.modal-full -->
         </div> <!-- End Modal Primary-Menu -->
 
 		<!-- Quote -->    
@@ -196,13 +186,13 @@
                             <label for="">Acconsento al trattamento dei dati Privacy Policy</label>
                         </div>
                     </div>
-                </form>
-                </div>
+                </form> <!-- /form -->
+                </div> <!-- /div.contact-form__body -->
                 <div class="uk-flex uk-flex-right">
                     <button class="uk-button uk-button-text uk-modal-close btn-simple btn-simple--muted" type="button">Indietro</button>
                     <button class="uk-button uk-button-text btn-simple btn-simple--primary" type="button">Conferma</button>
                 </div>
-            </div>
+            </div> <!-- /div.uk-modal-body-->
         </div> <!-- /div.quote -->
         
         <!-- Main -->
@@ -216,23 +206,21 @@
                         <li class="uk-width-3">
                             <div class="wrapper-image uk-panel">
                                 <img src="./images/background_home.png" alt="">
-                                <div
-                                    class="uk-position-bottom-center uk-text-center uk-margin-large-bottom wrapper-image__title">
+                                <div class="uk-position-bottom-center uk-text-center uk-margin-large-bottom wrapper-image__title">
                                     <h2>Ravelli Hotels</h2>
                                     <p>Lorem ipsum dolor sit amet</p>
                                 </div>
                             </div>
-                        </li>
+                        </li> <!-- /li.uk-width-3 -->
                         <li class="uk-width-3">
                             <div class="wrapper-image uk-panel">
                                 <img src="./images/background_home2.png" alt="">
-                                <div
-                                    class="uk-position-bottom-center uk-text-center uk-margin-large-bottom wrapper-image__title">
+                                <div class="uk-position-bottom-center uk-text-center uk-margin-large-bottom wrapper-image__title">
                                     <h2>Heading</h2>
                                     <p>Lorem ipsum dolor sit amet.</p>
                                 </div>
                             </div>
-                        </li>
+                        </li> <!-- /li.uk-width-3 -->
                         <li class="uk-width-3">
                             <div class="wrapper-image uk-panel">
                                 <img src="./images/background_home3.png" alt="">
@@ -242,15 +230,15 @@
                                     <p>Lorem ipsum dolor sit amet.</p>
                                 </div>
                             </div>
-                        </li>
-                    </ul>
-                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous
-                        uk-slider-item="previous"></a>
-                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next
-                        uk-slider-item="next"></a>
+                        </li> <!-- /li.uk-width-3 -->
+                    </ul> <!-- /uk-slider-items -->
+                    <!-- SLIDER DOTS -->
+                    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slider-item="previous"></a>
+                    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slider-item="next"></a>
                     <ul class="uk-slider-nav uk-dotnav"></ul>
-                </div>
-            </div><!-- /div.slider -->
+                    <!-- /SLIDER DOTS -->
+                </div> <!-- /uk-slider -->
+            </div> <!-- /div.slider -->
 
             <!-- Subheader -->
             <!-- ?Paragraph sub_header -->
@@ -264,13 +252,15 @@
                         dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut
                         fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque
                         porro quisquam est, qui dolorem ipsum.</p>
-                    </div>
-                </div>
-            </div> <!-- div.subheader -->
+                    </div> <!-- /div.tinytext --> 
+                </div> <!-- /div.uk-container -->
+            </div> <!-- /div.subheader -->
 
             <!-- Container Location -->
             <!-- ?Views locations -->
             <div class="container-location" uk-scrollspy="target: .location; cls: uk-animation-fade; delay: 100">
+              
+                <!-- Location -->
                 <div class="location js-allclick">
                     <div class="uk-padding uk-text-center container-location__location-heading">
                         <p>Luxury Lovely Lodge</p>
@@ -285,7 +275,9 @@
                     <div class="container-location__location-body">
                         <a href="lodge-ravelli.html"><img src="./images/location1.png" alt="" uk-img></a>
                     </div>
-                </div>
+                </div> <!-- /div.location -->
+
+                <!-- Location -->
                 <div class="location js-allclick">
                     <div class="uk-padding uk-text-center container-location__location-heading">
                         <p>PALACE HOTEL</p>
@@ -301,7 +293,9 @@
                     <div class="container-location__location-body">
                         <a href="palace-ravelli.html"><img src="./images/location2.png" alt="" uk-img></a>
                     </div>
-                </div>
+                </div> <!-- /div.location -->
+
+                <!-- Location -->
                 <div class="location js-allclick">
                     <div class="uk-padding uk-text-center container-location__location-heading">
                         <p>SPORTING</p>
@@ -318,7 +312,8 @@
                     <div class="container-location__location-body">
                         <a href="sporting-ravelli.html"><img src="./images/location3.png" alt="" uk-img></a>
                     </div>
-                </div>
+                </div> <!-- /div.location -->
+                
             </div>  <!-- /div.container-location -->
 
             <!-- toTop -->
@@ -337,9 +332,9 @@
                         <a href="https://www.youtube.com/user/sportingmarilleva"><img src="./images/youtube.png" alt=""></a>
                         <a href="https://www.facebook.com/hotel.palace.ravelli/"><img src="./images/facebook.png" alt=""></a>
                         <a href="https://www.tripadvisor.it/Hotel_Review-g652030-d1553767-Reviews-Sporting_Hotel_Ravelli-Mezzana_Province_of_Trento_Trentino_Alto_Adige.html"><img src="./images/tripadvisor.png" alt=""></a>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- /div.footer-social -->
+                </div> <!-- /div.branding -->
+            </div> <!-- /div.site-footer__heading -->
             <div class="uk-grid-medium uk-padding uk-padding-remove-right  uk-padding-remove-left uk-flex uk-flex-center uk-flex-top uk-grid-match uk-grid"
                 uk-height-match="target: > div > .uk-light" uk-grid>
                 <div class="uk-column-1-3">
@@ -353,8 +348,8 @@
                                 <li><address>Via IV Novembre, 20, 38020 Mezzana TN</address></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- /div.uk-light -->
+                </div> <!-- /div.uk-column-1-3 -->
                 <div class="uk-child-width-1-3">
                     <div class="uk-light uk-light uk-flex uk-flex-column uk-flex-between">
                         <div>
@@ -366,8 +361,8 @@
                                 <li><address>Via IV Novembre, 20, 38020 Mezzana TN</address></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
+                    </div> <!-- /div.uk-light -->
+                </div> <!-- /div.uk-column-1-3 -->
                 <div class="uk-child-width-1-3">
                     <div class="uk-light uk-light uk-flex uk-flex-column uk-flex-between">
                         <div>
@@ -379,9 +374,9 @@
                                 <li><address>Via per Marilleva, 1, 38020 Mezzana-Marilleva TN</address></li>
                             </ul>
                         </div>
-                    </div>
-                </div>
-            </div>
+                    </div> <!-- /div.uk-light -->
+                </div> <!-- /div.uk-column-1-3 -->
+            </div> <!-- /uk-grid -->
             <div class="footer-partners">
                 <div class="uk-flex uk-flex-around">
                     <img src="./images/partners/trentino-fishing.png" alt="">
@@ -389,7 +384,7 @@
                     <img src="./images/partners/card.png" alt="">
                     <img src="./images/partners/trentino.png" alt="">
                 </div>
-            </div>
+            </div> <!-- /div.footer-partners -->
             <div class="footer-credits">
                 <hr class="uk-margin-large">
                 <div class="webit-credits-neg-bn">
@@ -397,8 +392,8 @@
                             src="https://www.webit.it/credits/logo-neg-bn.svg"
                             onerror="this.onerror=null; this.src='https://www.webit.it/credits/logo-neg-bn.png'"
                             width="64" alt="webit.it" /></a>
-                </div>
-            </div>
+                </div> <!-- /div.webit-credits-neg-bn -->
+            </div> <!-- /div.footer-credits -->
         </footer> <!-- /footer.site-footer -->
         
     </div> <!-- /div.page -->

@@ -4,65 +4,81 @@
 
 .container-location {
 	@include relative;
+
 	.location {
 		@include size(auto, 88rem);
 	}
-	&__location-heading{
+
+	&__location-heading {
 		@include absolute;
 		background: rgba(34, 34, 34, 0.56);
 		z-index: 1;
+
 		@include media('<=md') {
 			@include padding-component();
 		}
+
 		@include headings-all() {
 			@include set-font2($alt-font-family, 600);
 			text-transform: capitalize;
 			color: #FCFAF8;
 		}
-			p:first-child {
-				@include set-font($base-font-family, 300, normal, ms(6));
-				letter-spacing: $ls-xs;
-				text-transform: uppercase;
-				color: white;
-				@include media('<=md') {
-					@include rem(font-size, ms(8));
-				}
-				@include media('<=sm') {
-					@include rem(font-size, ms(6));
-					padding: 0;
-				}
+
+		p:first-child {
+			@include set-font($base-font-family, 300, normal, ms(6));
+			letter-spacing: $ls-xs;
+			text-transform: uppercase;
+			color: white;
+			
+			@include media('<=md') {
+				@include rem(font-size, ms(8));
 			}
-			p:last-child {
-				@include set-font($base-font-family, normal, normal, $textExtra);
-				@include media-font-size-small();
-				text-transform: capitalize;
-				line-height: $lh-sl;
-				color: white;
+
+			@include media('<=sm') {
+				@include rem(font-size, ms(6));
+				padding: 0;
 			}
 		}
-		&__location-body {
-				@include size(auto, 100%);
-			img {
-				object-fit: cover;
-				@include size(100%, 100%);
-			}
+
+		p:last-child {
+			@include set-font($base-font-family, normal, normal, $textExtra);
+			@include media-font-size-small();
+			text-transform: capitalize;
+			line-height: $lh-sl;
+			color: white;
+		}
 	}
-		.location-thumb {
-			margin-top: -0.1rem;
-			li, .uk-active {
-					@include size(20%, auto);
-					margin: 0;
-					padding: 0;
-				a {
-					min-height: 3rem;
-					@include size(100%, auto);
-					@include media('>=md') {
-						@include size(auto, 22.25rem);
-					}
+
+	&__location-body {
+		@include size(auto, 100%);
+
+		img {
+			object-fit: cover;
+			@include size(100%, 100%);
+		}
+	}
+
+	.location-thumb {
+		margin-top: -0.1rem;
+
+		li,
+		.uk-active {
+			@include size(20%, auto);
+			margin: 0;
+			padding: 0;
+
+			a {
+				min-height: 3rem;
+				@include size(100%, auto);
+
+				@include media('>=md') {
+					@include size(auto, 22.25rem);
 				}
 			}
-			div {
-				@include border('top', 1rem, solid, get-color(primary, 1));
-			}
-		}	
+		}
+
+		div {
+			@include border('top', 1rem, solid, get-color(primary, 1));
+		}
+	}
 }

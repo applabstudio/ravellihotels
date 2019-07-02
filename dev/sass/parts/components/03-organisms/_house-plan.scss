@@ -3,27 +3,23 @@
 /* -------------------------------------------------------------------------- */
 
 .house-plan {
-	background: get-color(bg,13);
+	background: get-color(bg, 13);
+
 	@include media('<=md') {
 		@include padding-component();
 	}
+
 	img {
 		@include size(20rem, auto);
 		mix-blend-mode: multiply;
 	}
-	h1, h2 {
+	@include headings(1, 2) {
 		@include set-font($alt-font-family, 600, normal, 3.25rem);
+		@include media-font-size-large();
 		color: get-color(bg, 11);
-		@include media('<=md') {
-			@include rem(font-size, ms(8));
-			line-height: unset;
-			padding: 0;
-		}
-		@include media('<=sm') {
-			@include rem(font-size, ms(6));
-		}
 	}
-	h6 {
+
+	@include headings(3, 6) {
 		@include set-font($alt-font-family, normal, normal, $textBase);
 		@include align-self(self-end);
 		line-height: $lh-sm;

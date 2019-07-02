@@ -2,25 +2,23 @@
 /*                            COMPONENT SEARCH-FORM                           */
 /* -------------------------------------------------------------------------- */
 
-$input-fs: (
-  base: rem(28px),
+$input-fs: (base: rem(28px),
   sm: rem(24px),
   lg: rem(36px),
 );
 $input-p: rem(8px);
-$input-w: (
-  base: rem(280px),
+$input-w: (base: rem(280px),
   sm: rem(600px),
   lg: rem(640px),
 );
-$icon-dim: (
-  base: rem(36px),
+$icon-dim: (base: rem(36px),
   lg: rem(48px),
 );
 
 .search-form {
   @include flexbox();
   @include align-items(center);
+
   input {
     background: none;
     border-width: 0 0 2px;
@@ -32,10 +30,12 @@ $icon-dim: (
     box-shadow: none;
     color: white;
     @include appearance(searchfield);
+
     @include media('>=sm') {
       width: map-get($input-w, sm);
       font-size: map-get($input-fs, sm);
     }
+
     @include media('>=lg') {
       width: map-get($input-w, lg);
       font-size: map-get($input-fs, lg);
@@ -52,6 +52,7 @@ $icon-dim: (
     outline: none;
     border: none;
     padding: 0;
+
     svg {
       width: map-get($icon-dim, base);
       height: map-get($icon-dim, base);
@@ -75,6 +76,7 @@ $icon-dim: (
     input {
       border-color: get-color(primary, 0);
       color: black;
+
       @include placeholders() {
         color: get-color(primary, 0);
       }

@@ -4,13 +4,15 @@
 
 .stay-request {
 	background: get-color(bg, 13);
+
 	// ANCHOR Optimize for mobile
 	@include media('<=md') {
 		@include padding-component;
 	}
+
 	&__heading {
 		@include media('<=md') {
-			padding:0;
+			padding: 0;
 		}
 
 		@include headings-all() {
@@ -32,10 +34,12 @@
 			text-decoration: none;
 		}
 	}
+
 	&__body {
 		@include media('<=md') {
 			padding: 0;
 		}
+
 		button {
 			@include size(100%, auto);
 		}

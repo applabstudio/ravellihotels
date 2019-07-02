@@ -1,0 +1,94 @@
+/* -------------------------------------------------------------------------- */
+/*                          COMPONENT CARD PORTRAIT                          */
+/* -------------------------------------------------------------------------- */
+
+.cards-portrait {
+	.zoom-container {
+	  -webkit-transition: opacity .2s ease-out .1s;
+	  -moz-transition: opacity .2s ease-out .1s;
+	  transition: opacity .2s ease-out .1s;
+	}
+  
+	.card {
+	  @include relative;
+  
+	  a {
+		-webkit-transition: color .2s ease-out;
+		-moz-transition: color .2s ease-out;
+		transition: color .2s ease-out;
+		overflow: hidden;
+		display: block;
+		height: 100%;
+	  }
+  
+	  img {
+		@include size(100%, 100%);
+		object-fit: cover;
+		-webkit-transition: -webkit-transform 1s cubic-bezier(.25, .04, 0, .93);
+		-moz-transition: -moz-transform 1s cubic-bezier(.25, .04, 0, .93);
+		transition: transform 1s cubic-bezier(.25, .04, 0, .93);
+		-webkit-transform: translate3d(0, 0, 0) scale(1.06);
+		-moz-transform: translate3d(0, 0, 0) scale(1.06);
+		transform: translate3d(0, 0, 0) scale(1.06);
+  
+		&:hover {
+		  -webkit-transform: translate3d(3%, 0, 0) scale(1.06);
+		  -moz-transform: translate3d(3%, 0, 0) scale(1.06);
+		  transform: translate3d(3%, 0, 0) scale(1.06);
+		}
+	  }
+  
+	  .card-content {
+		@include absolute(top 0);
+		@include size(100%, auto);
+		background: rgba(34, 34, 34, 0.56);
+  
+		@include headings(3, 6) {
+		  letter-spacing: $ls-xs;
+		  text-transform: uppercase;
+		  @include set-font($base-font-family, 300, normal, 2.025rem);
+		  line-height: $lh-md;
+		  color: white;
+		}
+  
+		@include headings(1, 2) {
+		  @include set-font($base-font-family, 600, normal, 2.243rem);
+		  white-space: nowrap;
+		  line-height: $lh-xxl;
+		  color: #FCFAF8;
+		}
+  
+		p {
+		  @include set-font($base-font-family, normal, normal, $textBase);
+		  line-height: $lh-sl;
+		  text-align: center;
+		  letter-spacing: $ls-sm;
+		  color: white;
+		}
+	  }
+	}
+  }
+  
+  @media screen and (min-width: 40rem) {
+	.cards-portrait {
+	  @include flexbox();
+	  @include justify-content(space-between);
+	  @include flex-wrap(wrap);
+	}
+  
+	.card {
+	  flex: 0 1 calc(50% - 0rem);
+	}
+  }
+  
+  @media screen and (min-width: 60rem) {
+	.card {
+	  flex: 0 1 calc(25% - 0rem);
+	}
+  }
+  
+  @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+	.card {
+	  flex: 0 1 calc(50% - 0rem);
+	}
+  }

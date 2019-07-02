@@ -3,21 +3,25 @@
 /* -------------------------------------------------------------------------- */
 
 .subheader {
-	@include media('<=md') {
-		@include padding-component();
-	}
+  @include media('<=md') {
+    @include padding-component();
+  }
+
   .uk-container {
     @include media('<=md') {
-			padding:0;
+      padding: 0;
     }
+
     @include headings-all() {
       @include set-font2($alt-font-family, 600);
       text-align: center;
       color: get-color(primary, 0);
+
       @include media('<=md') {
         line-height: unset;
       }
     }
+
     p {
       @include set-font($base-font-family, normal, normal, ms(8));
       @include media-font-size-small();

@@ -4,16 +4,19 @@
 
 .activity-media {
 	.uk-card-default.uk-grid-collapse.uk-child-width-1-2\@s.uk-margin.uk-grid {
-			margin: 0 !important;
-			min-height: 57rem;
-			.col-bg-beige {
-				background: get-color(beige-dark, 0);
-			}
+		margin: 0 !important;
+		min-height: 57rem;
+
+		.col-bg-beige {
+			background: get-color(beige-dark, 0);
+		}
 	}
+
 	.uk-card-body {
 		@include media('<=md') {
 			@include padding-component;
 		}
+
 		@include headings(4, 6) {
 			@include set-font($alt-font-family, normal, normal, $textLarge);
 			@include media-font-size-small();
@@ -21,19 +24,23 @@
 			letter-spacing: $ls-xs;
 			text-transform: uppercase;
 			color: white;
+
 			@include media('<=sm') {
 				padding: 0;
 			}
 		}
-		@include headings(1, 3) { 
+
+		@include headings(1, 3) {
 			@include set-font($alt-font-family, 600, normal, 3.3rem);
 			@include relative(bottom 1rem);
 			line-height: 4.9rem;
 			color: white;
+
 			@include media('<=md') {
 				@include rem(font-size, ms(7));
 				line-height: unset;
 			}
+
 			@include media('<=sm') {
 				@include rem(font-size, ms(5));
 				padding: 0;
@@ -44,22 +51,24 @@
 			@include set-font($base-font-family, normal, normal, $textBase);
 			line-height: 2.3rem;
 			color: white;
+
 			@include media('<=md') {
 				@include rem(font-size, ms(5));
 				line-height: unset;
-			} 
+			}
+
 			@include media('<=sm') {
 				@include rem(font-size, ms(3));
-			} 
+			}
 		}
 
 		a {
 			@include set-font($base-font-family, 800, normal, $textExtraLarge);
 			line-height: 2.3rem;
 			display: inline-block;
-			color: get-color(bg,10);
-			margin-bottom:4rem;
-			padding-top:$pt;
+			color: get-color(bg, 10);
+			margin-bottom: 4rem;
+			padding-top: $pt;
 		}
 	}
 }

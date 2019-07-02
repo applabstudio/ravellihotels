@@ -1,0 +1,72 @@
+/* -------------------------------------------------------------------------- */
+/*                            COMPONENT CARDS ROOM                            */
+/* -------------------------------------------------------------------------- */
+
+.cards-room {
+
+  // ANCHOR Optimize for mobile
+  @include media('<=md') {
+    padding: 1rem 0;
+  }
+
+  .uk-card {
+    height: 100%;
+    box-shadow: 0 5px 12px rgba(71, 62, 62, 0.7);
+    cursor: pointer;
+  }
+
+  .uk-card-default .uk-card-title {
+    color: white;
+    padding-bottom: $md;
+    @include set-font($alt-font-family, 800, normal, 3.2rem);
+  }
+
+  p {
+    @include set-font($base-font-family, normal, normal, ms(6));
+    @include media-font-size-small();
+    color: white;
+    margin-bottom: $mt;
+  }
+
+  img {
+    @include size(100%, auto);
+  }
+
+  .room-rating {
+    background: rgba(121, 110, 101, 0.5);
+    @include size(100%, 3.3rem);
+    @include absolute(bottom 0);
+
+    img {
+      @include size(9.01px, 9.03px);
+    }
+  }
+
+  .uk-card-body {
+    background: get-color(beige-dark, 0);
+
+    .info-room {
+      color: white;
+      @include set-font($base-font-family, normal, normal, $textMedium);
+
+      &__guests {
+        padding-right: 1rem;
+
+        span {
+          margin-right: 1rem;
+        }
+      }
+
+      &__m2 {
+        img {
+          @include size(2rem, 2rem);
+          margin-right: 1rem;
+        }
+      }
+    }
+
+    button {
+      @include size(100%, auto);
+    }
+  }
+}
