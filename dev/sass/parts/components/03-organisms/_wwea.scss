@@ -7,6 +7,11 @@
 	@include media('<=md') {
 		@include padding-component;
 	}
+
+	iframe {
+		@include size(100%, auto);
+	}
+
 	.heading-address {
 		.hotel-image {
 			img {
@@ -30,12 +35,14 @@
 			}
 		}
 	}
+
 	.how-to-reach-us {
 		padding-top:4rem;
 		@include headings-all() {
 			@include set-font2($alt-font-family, 600);
 			line-height: $lh-xxl;
 		}
+		
 		p {
 			@include set-font($base-font-family, normal, normal, $textExtra);
 			@include media-font-size-small();
