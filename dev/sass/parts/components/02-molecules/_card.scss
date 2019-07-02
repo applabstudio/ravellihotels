@@ -110,19 +110,22 @@
       @include absolute(top 0);
       @include size(100%, auto);
       background: rgba(34, 34, 34, 0.56);
-      h4 {
+
+      @include headings(3, 6) {
         letter-spacing: $ls-xs;
         text-transform: uppercase;
         @include set-font($base-font-family, 300, normal, 2.025rem);
         line-height: $lh-md;
         color: white;
       }
-      h2 {
-        white-space: nowrap;
+      
+      @include headings(1, 2) {
         @include set-font($base-font-family, 600, normal, 2.243rem);
+        white-space: nowrap;
         line-height: $lh-xxl;
         color: #FCFAF8;
       }
+
       p {
         @include set-font($base-font-family, normal, normal, $textBase);
         line-height: $lh-sl;

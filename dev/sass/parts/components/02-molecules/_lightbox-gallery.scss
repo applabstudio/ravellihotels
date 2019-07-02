@@ -15,7 +15,8 @@
 .uk-lightbox {
 	.uk-lightbox-items {
 		div, img {
-			@include size(44%, auto);
+			@include size(44%, auto);	
 		}
 	}	
+	@include x-rem(font-size, 1.8);
 }
