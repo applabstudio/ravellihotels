@@ -8,7 +8,7 @@ table.uk-table {
 		vertical-align: top;
 		color: black;
 		&:hover {
-			text-decoration: #796E65;
+			text-decoration: get-color(primary, 0);
 			text-decoration-line: underline;
 		}
 		span {

@@ -4,30 +4,37 @@
 
 form {
 	.grid {
-		padding:0.9rem 0;
+		padding: 0.9rem 0;
+
 		.uk-width-1-2\@m {
 			@include size(66.6%, auto);
+
 			@include media('<=lg') {
 				@include size(100%, auto);
 			}
 		}
+
 		.uk-inline {
 			@include size(100%, auto);
+
 			input {
-				margin:0;
-				margin-bottom:1rem;
+				margin: 0;
+				margin-bottom: 1rem;
 				background: none;
 				border: none;
 				@include size(100%, 3.7rem);
-				@include border('bottom', 1px, solid, get-color(bg,8));
+				@include border('bottom', 1px, solid, get-color(bg, 8));
 				@include set-font($title-font-family, 600, normal, $textBase);
+
 				&:focus {
 					background: none;
 				}
+
 				@include placeholders() {
-					color: get-color(bg,8);
+					color: get-color(bg, 8);
 				}
 			}
+
 			textarea {
 				border: none;
 				background: none;
@@ -39,32 +46,28 @@ form {
 				@include size(100%, auto);
 				@include border('bottom', 1px, solid, black);
 				@include set-font($base-font-family, 600, normal, $textLarge);
-				color: get-color(bg,8);
+				color: get-color(bg, 8);
 			}
-			.uk-form-icon-flip.uk-icon { 
+
+			.uk-form-icon-flip.uk-icon {
 				@include absolute(top -8rem left 0);
 			}
+
 			span {
 				color: get-color(primary, 0);
 			}
+
 			.privacy {
 				padding-top: 1rem;
 				@include flexbox();
+
 				input[type='checkbox'] {
 					@include size(1.9rem, 1.9rem);
 				}
+
 				label {
 					@include rem(font-size, $textSmall);
 				}
-			}
-	}
-		.uk-width-1-6\@m {
-			@include flexbox();
-			@include align-items(center);
-		}
-		[class*="uk-width"] {
-			@include media('<=lg') {
-				padding:0;
 			}
 		}
 	}

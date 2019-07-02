@@ -34,9 +34,6 @@
     background: rgba(121, 110, 101, 0.5);
     @include size(100%, 3.3rem);
     @include absolute(bottom 0);
-    @include flexbox();
-    @include align-items(center);
-    @include justify-content(center);
     img {
       @include size(9.01px, 9.03px);
     } 
@@ -46,19 +43,14 @@
     background: get-color(beige-dark, 0);
     .info-room {
       color: white;
-      @include flexbox();
       @include set-font($base-font-family, normal, normal, $textMedium);
       &__guests {
-        @include flexbox();
-        @include align-items(center);
         padding-right: 1rem;
         span {
           margin-right: 1rem;
         }
       }
       &__m2 {
-        @include flexbox();
-        @include align-items(center);
         img {
           @include size(2rem, 2rem);
           margin-right:1rem;
