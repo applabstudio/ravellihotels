@@ -29,8 +29,6 @@ const UIKit = function() {
 			document.querySelector('.confirm-info').classList.toggle('uk-padding');
 		}
 	}
-
-
 	  
 }
   
