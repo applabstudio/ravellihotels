@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://getuikit.com/docs/slideshow -->
+<html lang="en-gb" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Slideshow - UIkit</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://getuikit.com/images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="https://getuikit.com/images/apple-touch-icon.png">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Light-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="stylesheet" href="./Slideshow - UIkit_files/theme.css">
+        <script type="text/javascript" async="" src="./Slideshow - UIkit_files/analytics.js"></script><script src="./Slideshow - UIkit_files/clipboard.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/he.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/marked.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/vue.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/vue-router.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/uikit.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/uikit-icons.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/highlight.min.js" defer=""></script>
+        <script src="./Slideshow - UIkit_files/main.min.js" defer=""></script>
+    <script src="./Slideshow - UIkit_files/js" async=""></script></head>
+
+    <body style="">
+        <div><div uk-sticky="media: 960" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1665px;"><div class="uk-container uk-container-expand"><nav class="uk-navbar"><div class="uk-navbar-left"><a href="https://getuikit.com/" class="uk-navbar-item uk-logo"><img uk-svg="" src="./Slideshow - UIkit_files/uikit-logo.svg" class="uk-margin-small-right" hidden="true"><svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" class="uk-margin-small-right uk-svg" data-svg="../images/uikit-logo.svg">
+	<polygon fill="#fff" points="19.1,4.1 13.75,1 8.17,4.45 13.6,7.44 "></polygon>
+	<path fill="#fff" d="M21.67,5.43l-5.53,3.34l6.26,3.63v9.52l-8.44,4.76L5.6,21.93v-7.38L0,11.7v13.51l13.75,8.08L28,25.21V9.07 L21.67,5.43z"></path>
+</svg> UIkit
+                    </a></div> <div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m"><li><a href="https://getuikit.com/pro">Pro</a></li> <li class="uk-active"><a href="https://getuikit.com/docs/">Documentation</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li></ul> <div class="uk-navbar-item uk-visible@m"><a href="https://getuikit.com/download" class="uk-button uk-button-default tm-button-default uk-icon">Download <canvas uk-icon="icon: download" width="20" height="20" class="uk-icon" hidden="true"></canvas><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="download"><polyline fill="none" stroke="#000" points="14,10 9.5,14.5 5,10"></polyline><rect x="3" y="17" width="13" height="1"></rect><line fill="none" stroke="#000" x1="9.5" y1="13.91" x2="9.5" y2="3"></line></svg></a></div> <a uk-navbar-toggle-icon="" href="https://getuikit.com/docs/slideshow#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></a></div></nav></div></div><div class="uk-sticky-placeholder" style="height: 80px; margin: 0px;"></div> <div class="tm-sidebar-left uk-visible@m"><h3>Documentation</h3> <ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">Getting started</li> <li class=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li class=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li class=""><a href="https://getuikit.com/docs/less">Less</a></li><li class=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li class=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li class=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li class=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li class=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li class=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li class=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li class=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li class=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li class=""><a href="https://getuikit.com/docs/align">Align</a></li><li class=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li class=""><a href="https://getuikit.com/docs/article">Article</a></li><li class=""><a href="https://getuikit.com/docs/background">Background</a></li><li class=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li class=""><a href="https://getuikit.com/docs/base">Base</a></li><li class=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li class=""><a href="https://getuikit.com/docs/button">Button</a></li><li class=""><a href="https://getuikit.com/docs/card">Card</a></li><li class=""><a href="https://getuikit.com/docs/close">Close</a></li><li class=""><a href="https://getuikit.com/docs/column">Column</a></li><li class=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li class=""><a href="https://getuikit.com/docs/container">Container</a></li><li class=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li class=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li class=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li class=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li class=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li class=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li class=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li class=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li class=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li class=""><a href="https://getuikit.com/docs/form">Form</a></li><li class=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li class=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li class=""><a href="https://getuikit.com/docs/height">Height</a></li><li class=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li class=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li class=""><a href="https://getuikit.com/docs/image">Image</a></li><li class=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li class=""><a href="https://getuikit.com/docs/label">Label</a></li><li class=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li class=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li class=""><a href="https://getuikit.com/docs/link">Link</a></li><li class=""><a href="https://getuikit.com/docs/list">List</a></li><li class=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li class=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li class=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li class=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li class=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li class=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li class=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li class=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li class=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li class=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li class=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li class=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li class=""><a href="https://getuikit.com/docs/position">Position</a></li><li class=""><a href="https://getuikit.com/docs/print">Print</a></li><li class=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li class=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li class=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li class=""><a href="https://getuikit.com/docs/search">Search</a></li><li class=""><a href="https://getuikit.com/docs/section">Section</a></li><li class=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li class=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li class="router-link-exact-active uk-active"><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li class=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li class=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li class=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li class=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li class=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li class=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li class=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li class=""><a href="https://getuikit.com/docs/table">Table</a></li><li class=""><a href="https://getuikit.com/docs/text">Text</a></li><li class=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li class=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li class=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li class=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li class=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li class=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li class=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li class=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li class=""><a href="https://getuikit.com/docs/video">Video</a></li><li class=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li class=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div> <div class="tm-main uk-section uk-section-default"><div class="uk-container uk-container-small uk-position-relative"><div><!----> <div><h1 id="slideshow" class="uk-h1 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#slideshow">Slideshow</a></h1><p class="uk-text-lead">Create a responsive slideshow with images and videos.</p>
+
+<p>The Slideshow component is fully responsive and supports touch and swipe navigation as well as mouse drag for desktops. When swiping between slides, the animation literally sticks at your fingertips or mouse cursor. It even accelerates to keep up with your pace when you click through previous and next navigation. All animations are hardware accelerated for a smoother performance.</p>
+<h2 id="usage" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#usage">Usage</a></h2><p>To apply this component, add the <code>uk-slideshow</code> attribute to a container element and create a list of slides with the <code>.uk-slideshow-items</code> class.</p>
+<p>Add an image in the background of each slide using the <code>uk-cover</code> attribute from the <a href="https://getuikit.com/docs/cover">Cover component</a>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px);">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wn" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wn" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wn" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><p><span class="uk-label">Note</span> To lazy load images in the slides, take a look at the <a href="https://getuikit.com/docs/image#target">Image component</a>.</p>
+<hr class="uk-margin-large"><h2 id="animations" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#animations">Animations</a></h2><p>By default, the slideshow uses a <code>slide</code> animation. You can set the <code>animation</code> option to use a different animation. Possible values are as follows:</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Animation</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>slide</code></td>
+<td align="left">Slides slide in side by side.</td>
+</tr>
+<tr>
+<td align="left"><code>fade</code></td>
+<td align="left">Slides fade in.</td>
+</tr>
+<tr>
+<td align="left"><code>scale</code></td>
+<td align="left">Slides are scaled up and fade out.</td>
+</tr>
+<tr>
+<td align="left"><code>pull</code></td>
+<td align="left">Slides are pulled from the deck.</td>
+</tr>
+<tr>
+<td align="left"><code>push</code></td>
+<td align="left">Slides are pushed to the deck.</td>
+</tr>
+</tbody></table></div><div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: fade"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-child-width-1-2@m uk-grid" uk-grid="">
+    <div class="uk-first-column">
+
+        <div class="uk-h3">Slide</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="">
+
+            <ul class="uk-slideshow-items" style="min-height: 185.625px;">
+                <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px);">
+                    <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 220px; width: 330px;">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+        </div>
+
+    </div>
+    <div>
+
+        <div class="uk-h3">Fade</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: fade">
+
+            <ul class="uk-slideshow-items" style="min-height: 185.625px;">
+                <li tabindex="-1" class="uk-active uk-transition-active" style="z-index: -1;">
+                    <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 220px; width: 330px;">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+        </div>
+
+    </div>
+    <div class="uk-grid-margin uk-first-column">
+
+        <div class="uk-h3">Scale</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: scale">
+
+            <ul class="uk-slideshow-items" style="min-height: 185.625px;">
+                <li tabindex="-1" class="uk-active uk-transition-active" style="z-index: -1;">
+                    <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 220px; width: 330px;">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+        </div>
+
+    </div>
+    <div class="uk-grid-margin">
+
+        <div class="uk-h3">Pull</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: pull">
+
+            <ul class="uk-slideshow-items" style="min-height: 185.625px;">
+                <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: -1;">
+                    <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 220px; width: 330px;">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+        </div>
+
+    </div>
+    <div class="uk-grid-margin uk-first-column">
+
+        <div class="uk-h3">Push</div>
+
+        <div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: push">
+
+            <ul class="uk-slideshow-items" style="min-height: 185.625px;">
+                <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+                    <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 220px; width: 330px;">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+                <li tabindex="-1">
+                    <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+                </li>
+            </ul>
+
+            <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+            <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+        </div>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn392wo" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-child-width-1-2@m"</span> <span class="hljs-attr">uk-grid</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-h3"</span>&gt;</span>Slide<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-h3"</span>&gt;</span>Fade<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: fade"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-h3"</span>&gt;</span>Scale<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: scale"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-h3"</span>&gt;</span>Pull<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: pull"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-h3"</span>&gt;</span>Push<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wo" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wo" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="autoplay" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#autoplay">Autoplay</a></h2><p>To activate autoplay, just add the <code>autoplay: true</code> option to the attribute. You can also set the interval in milliseconds between switching slides using <code>autoplay-interval: 6000</code>. To pause autoplay when hovering the slideshow, use <code>pause-on-hover: true</code>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"autoplay: true"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><hr class="uk-margin-large"><h2 id="infinite-scrolling" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#infinite-scrolling">Infinite Scrolling</a></h2><p>By default, infinite scrolling is enabled. To disable this behavior, just add the <code>finite: true</code> option to the attribute.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"finite: true"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><hr class="uk-margin-large"><h2 id="ratio" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#ratio">Ratio</a></h2><p>The slideshow always takes up the full width of its parent container. The height adapts according to the defined ratio. To change the default ratio of 16:9, just add the <code>ratio</code> option to the attribute. It's recommended to use the same ratio as the background images. For example, just use their width and height, like <code>1600:1200</code>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"ratio: 7:3"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="ratio: 7:3; animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 300px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wp" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"ratio: 7:3; animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wp" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wp" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="min-max-height" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#min-max-height">Min/Max height</a></h2><p>By default, the slideshow height adopts to the defined ratio. A minimum or maximum height can be set using the <code>min-height</code> and <code>max-height</code> options.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"min-height: 300; max-height: 600"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="min-height: 300; max-height: 600; animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wq" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"min-height: 300; max-height: 600; animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wq" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wq" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="viewport-height" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#viewport-height">Viewport height</a></h2><p>Adding the <code>uk-height-viewport</code> attribute from the <a href="https://getuikit.com/docs/height#viewport-height">Height component</a> to the list of slideshow items will stretch the height to fill the whole viewport. You can set the <code>min-height</code> option to define a minimum height.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"ratio: false"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span> <span class="hljs-attr">uk-height-viewport</span>=<span class="hljs-string">"min-height: 300"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="ratio: false">
+
+    <ul class="uk-slideshow-items" uk-height-viewport="offset-top: true; offset-bottom: 30" style="min-height: calc(70vh);">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px);">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="width: 905px; height: 604px;">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wr" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"ratio: false"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span> <span class="hljs-attr">uk-height-viewport</span>=<span class="hljs-string">"offset-top: true; offset-bottom: 30"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wr" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wr" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><p><span class="uk-label">Note</span> This example is set to 70% of the viewport height.</p>
+<hr class="uk-margin-large"><h2 id="navigation" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#navigation">Navigation</a></h2><p>To navigate through your slides, just use the <code>uk-slideshow-item</code> attribute. To target the slides, set the attribute of every nav item to the index number of the respective slideshow item. The elements with the <code>uk-slideshow-item</code> attribute need to be inside the <code>uk-slideshow</code> container. Setting the attribute to <code>next</code> and <code>previous</code> will switch to the adjacent slides.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"0"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"1"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"2"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><p>The flexibility of the Slideshow component allows you to use any of the other UIkit components to navigate through items. For example the <a href="https://getuikit.com/docs/slidenav">Slidenav</a>, <a href="https://getuikit.com/docs/dotnav">Dotnav</a> and <a href="https://getuikit.com/docs/thumbnav">Thumbnav</a> components can be used to style the slideshow navigations.</p>
+<p>If there is no item specific content in the navigation items, you can also add the <code>.uk-slideshow-nav</code> class instead of adding navigation items manually. It will generate its items automatically using <code>&lt;li&gt;&lt;a href="#"&gt;&lt;/a&gt;&lt;/li&gt;</code> as markup. This is a useful shortcut when using the <a href="https://getuikit.com/docs/dotnav">Dotnav</a>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-nav uk-dotnav"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div uk-slideshow="animation: push" class="uk-slideshow">
+
+    <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
+
+        <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+            <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+                <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+            </li>
+            <li tabindex="-1">
+                <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            </li>
+            <li tabindex="-1">
+                <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+            </li>
+        </ul>
+
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+    </div>
+
+    <ul class="uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"><li uk-slideshow-item="0" class="uk-active"><a href="https://getuikit.com/docs/slideshow#"></a></li><li uk-slideshow-item="1"><a href="https://getuikit.com/docs/slideshow#"></a></li><li uk-slideshow-item="2"><a href="https://getuikit.com/docs/slideshow#"></a></li></ul>
+
+</div></li>
+                        <li><pre><code id="code-jxn392ws" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-nav uk-dotnav uk-flex-center uk-margin"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392ws" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392ws" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><p><span class="uk-label">Note</span> For better visibility of overlaying navigations, add the <code>.uk-light</code> or <code>.uk-dark</code> class from the <a href="https://getuikit.com/docs/inverse">Inverse component</a>.</p>
+<hr class="uk-margin-large"><h2 id="videos" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#videos">Videos</a></h2><p>The slideshow is not restricted to images. Other media, like videos, can be positioned in the background of each slide using the <code>uk-cover</code> attribute from the <a href="https://getuikit.com/docs/cover">Cover component</a>. Videos are muted, and play automatically. The video will pause whenever it's not visible, and resume once it becomes visible again.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span> <span class="hljs-attr">muted</span> <span class="hljs-attr">playsinline</span> <span class="hljs-attr">uk-cover</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">uk-cover</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+        </li>
+        <li tabindex="-1">
+            <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" autoplay="" loop="" muted="" playsinline="" uk-cover="" class="uk-cover"></video>
+        </li>
+        <li tabindex="-1">
+            <iframe src="./Slideshow - UIkit_files/c2pz2mlSfXA.html" width="1920" height="1080" frameborder="0" allowfullscreen="" uk-cover="" class="uk-cover"></iframe>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wt" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://yootheme.com/site/images/media/yootheme-pro.mp4"</span> <span class="hljs-attr">autoplay</span> <span class="hljs-attr">loop</span> <span class="hljs-attr">muted</span> <span class="hljs-attr">playsinline</span> <span class="hljs-attr">uk-cover</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube-nocookie.com/embed/c2pz2mlSfXA?autoplay=1&amp;amp;controls=0&amp;amp;showinfo=0&amp;amp;rel=0&amp;amp;loop=1&amp;amp;modestbranding=1&amp;amp;wmode=transparent&amp;amp;playsinline=1"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1920"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1080"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">allowfullscreen</span> <span class="hljs-attr">uk-cover</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wt" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wt" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="ken-burns-effect" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#ken-burns-effect">Ken Burns effect</a></h2><p>To add a simple Ken Burns effect, wrap the image with a <code>div</code> and add the <code>.uk-position-cover</code> and <code>.uk-animation-kenburns</code> classes. You can also apply the <code>.uk-animation-reverse</code> or one of the <code>.uk-transform-origin-*</code> classes from the <a href="https://getuikit.com/docs/utility#transform-origin">Utility component</a> to modify the effect.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left">
+                <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+            </div>
+        </li>
+        <li tabindex="-1">
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right">
+                <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            </div>
+        </li>
+        <li tabindex="-1">
+            <div class="uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-left">
+                <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wu" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-center-left"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-top-right"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover uk-animation-kenburns uk-animation-reverse uk-transform-origin-bottom-left"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wu" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wu" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="content-overlays" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#content-overlays">Content overlays</a></h2><p>Add content overlays using the <a href="https://getuikit.com/docs/position">Position component</a>. It allows you to place the content anywhere inside the slide.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-small"</span>&gt;</span>
+
+                <span class="hljs-comment">&lt;!-- The content goes here --&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><p><span class="uk-label">Note</span> To adapt your content for better visibility on each image, add the <code>.uk-light</code> or <code>.uk-dark</code> class from the <a href="https://getuikit.com/docs/inverse">Inverse component</a> or use the <a href="https://getuikit.com/docs/overlay">Overlay</a> to add any style to the overlay box.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-slideshow" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+            <div class="uk-position-center uk-position-small uk-text-center uk-light">
+                <h2 class="uk-margin-remove">Center</h2>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-position-bottom uk-position-medium uk-text-center uk-light">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center">
+                <h3 class="uk-margin-remove">Overlay Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small">
+                <h3 class="uk-margin-remove">Overlay Bottom Right</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+    </ul>
+
+    <div class="uk-light">
+        <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+        <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+    </div>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wv" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-small uk-text-center uk-light"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Center<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-bottom uk-position-medium uk-text-center uk-light"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-overlay uk-overlay-primary uk-position-bottom uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Overlay Bottom<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-overlay uk-overlay-default uk-position-bottom-right uk-position-small"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Overlay Bottom Right<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-light"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wv" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wv" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="content-parallax" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#content-parallax">Content parallax</a></h2><p>Add the <code>uk-slideshow-parallax</code> attribute to any element inside the slides to animate it together with the slideshow animation. Add an option with the desired animation values for each CSS property you want to animate. Define at least one start and end value. It can be done by passing two values separated by a comma.</p>
+<p>This functionality is inherited from the <a href="https://getuikit.com/docs/parallax">Parallax component</a>, and it allows to animate CSS properties depending on the scroll position of the slideshow animation. Take a look at the <a href="https://getuikit.com/docs/parallax#animated-properties">possible properties</a> that can be animated.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-small"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 100,-100"</span>&gt;</span>
+
+                    <span class="hljs-comment">&lt;!-- The content goes here --&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><p>In the example above, the content will start at <code>100</code> and animate half way to <code>0</code> while the slide moves in. When the slide starts again to move out, the content will continue to animate to <code>-100</code>. This works because the start and end values have the same distance. For different distances, three values are needed: <em>Start</em> (Slide animates in), <em>Middle</em> (Slide is centered), <em>End</em> (Slide animates out).</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 300,0,-100"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><p>The next example defines different in and out animations. The content slides in by moving from <code>100</code> to <code>0</code> and fades out from <code>1</code> to <code>0</code>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 100,0,0; opacity: 1,1,0"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+            <div class="uk-position-center uk-position-small uk-text-center">
+                <h2 uk-slideshow-parallax="x: 100,-100" style="transform: translateX(0px);">Heading</h2>
+                <p uk-slideshow-parallax="x: 200,-200" style="transform: translateX(0px);">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-position-center uk-position-small uk-text-center">
+                <h2 uk-slideshow-parallax="x: 100,-100">Heading</h2>
+                <p uk-slideshow-parallax="x: 200,-200">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-position-center uk-position-small uk-text-center">
+                <h2 uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0">Heading</h2>
+                <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0">Lorem ipsum dolor sit amet.</p>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392ww" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-small uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 100,-100"</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 200,-200"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-small uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 100,-100"</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 200,-200"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-small uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"y: -50,0,0; opacity: 1,1,0"</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"y: 50,0,0; opacity: 1,1,0"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392ww" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392ww" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h3 id="advanced-effects" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#advanced-effects">Advanced effects</a></h3><p>The parallax attribute can be used to add additional effects to the slideshow animations. In the following example the <code>push</code> animation is extended by dimming out and scaling down the image when it's sliding out.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1.2,1.2,1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"opacity: 0,0,0.2; backgroundColor: #000,#000"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: push">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px); z-index: 0;">
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1" style="transform: scale(1.2);">
+                <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000" style="background-color: rgb(0, 0, 0); opacity: 0;"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8" style="transform: scale(1);">
+                    <h2 uk-slideshow-parallax="x: 200,0,0" style="transform: translateX(0px);">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;" style="transform: translateX(0px);">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <div class="uk-position-cover" uk-slideshow-parallax="scale: 1.2,1.2,1">
+                <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+            </div>
+            <div class="uk-position-cover" uk-slideshow-parallax="opacity: 0,0,0.2; backgroundColor: #000,#000"></div>
+            <div class="uk-position-center uk-position-medium uk-text-center">
+                <div uk-slideshow-parallax="scale: 1,1,0.8">
+                    <h2 uk-slideshow-parallax="x: 200,0,0">Heading</h2>
+                    <p uk-slideshow-parallax="x: 400,0,0;">Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wx" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: push"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1.2,1.2,1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"opacity: 0,0,0.2; backgroundColor: #000,#000"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-medium uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1,1,0.8"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 200,0,0"</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 400,0,0;"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1.2,1.2,1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"opacity: 0,0,0.2; backgroundColor: #000,#000"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-medium uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1,1,0.8"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 200,0,0"</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 400,0,0;"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1.2,1.2,1"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-cover"</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"opacity: 0,0,0.2; backgroundColor: #000,#000"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center uk-position-medium uk-text-center"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"scale: 1,1,0.8"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 200,0,0"</span>&gt;</span>Heading<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-slideshow-parallax</span>=<span class="hljs-string">"x: 400,0,0;"</span>&gt;</span>Lorem ipsum dolor sit amet.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wx" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wx" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><h2 id="content-transitions" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#content-transitions">Content transitions</a></h2><p>Transition classes from the <a href="https://getuikit.com/docs/transition">Transition component</a> are triggered automatically inside slides. Contrary to the parallax effect, transitions are not attached to the slideshow animation and start playing independently after the slideshow animation.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-bottom uk-position-small"</span>&gt;</span>
+
+                <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-transition-slide-bottom"</span>&gt;</span>
+
+                    <span class="hljs-comment">&lt;!-- The content goes here --&gt;</span>
+
+                <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><p>Together with the <a href="https://getuikit.com/docs/overlay">Overlay component</a>, content transitions are used to build a classic caption for the slideshow.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/slideshow#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/slideshow#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="animation: fade">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="z-index: -1;">
+            <img src="./Slideshow - UIkit_files/photo.jpg" alt="" uk-cover="" class="uk-cover" style="height: 467px; width: 700px;">
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/dark.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li tabindex="-1">
+            <img src="./Slideshow - UIkit_files/light.jpg" alt="" uk-cover="" class="uk-cover">
+            <div class="uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium">
+                <h3 class="uk-margin-remove">Left</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/slideshow#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn392wy" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>=<span class="hljs-string">"animation: fade"</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Bottom<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-overlay uk-overlay-primary uk-position-right uk-text-center uk-transition-slide-right uk-width-medium"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h3</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Left<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-remove"</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn392wy" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn392wy" title="" aria-expanded="false"><img class="uk-icon" src="./Slideshow - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="component-options" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#component-options">Component options</a></h2><p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="https://getuikit.com/docs/javascript#component-configuration">Learn more</a></p>
+<h3 id="slideshow" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#slideshow">Slideshow</a></h3><div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Option</th>
+<th align="left">Value</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>animation</code></td>
+<td align="left">String</td>
+<td align="left"><code>slide</code></td>
+<td align="left">Slideshow animation mode: <code>slide</code>, <code>fade</code>, <code>scale</code>, <code>pull</code> or <code>push</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>autoplay</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>false</code></td>
+<td align="left">Slideshow autoplays.</td>
+</tr>
+<tr>
+<td align="left"><code>autoplay-interval</code></td>
+<td align="left">Number</td>
+<td align="left"><code>7000</code></td>
+<td align="left">The delay between switching slides in autoplay mode.</td>
+</tr>
+<tr>
+<td align="left"><code>draggable</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>true</code></td>
+<td align="left">Enable pointer dragging.</td>
+</tr>
+<tr>
+<td align="left"><code>easing</code></td>
+<td align="left">String</td>
+<td align="left"><code>ease</code></td>
+<td align="left">The animation easing (CSS timing functions or cubic-bezier).</td>
+</tr>
+<tr>
+<td align="left"><code>finite</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>false</code></td>
+<td align="left">Disable infinite sliding.</td>
+</tr>
+<tr>
+<td align="left"><code>pause-on-hover</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>true</code></td>
+<td align="left">Pause autoplay mode on hover.</td>
+</tr>
+<tr>
+<td align="left"><code>index</code></td>
+<td align="left">Number</td>
+<td align="left"><code>0</code></td>
+<td align="left">Slideshow item to show. 0 based index.</td>
+</tr>
+<tr>
+<td align="left"><code>velocity</code></td>
+<td align="left">Number</td>
+<td align="left"><code>1</code></td>
+<td align="left">The animation velocity (pixel/ms).</td>
+</tr>
+<tr>
+<td align="left"><code>ratio</code></td>
+<td align="left">Boolean, String</td>
+<td align="left"><code>16:9</code></td>
+<td align="left">The ratio. (<code>false</code> prevents height adjustment)</td>
+</tr>
+<tr>
+<td align="left"><code>min-height</code></td>
+<td align="left">Boolean, Number</td>
+<td align="left"><code>false</code></td>
+<td align="left">The minimum height.</td>
+</tr>
+<tr>
+<td align="left"><code>max-height</code></td>
+<td align="left">Boolean, Number</td>
+<td align="left"><code>false</code></td>
+<td align="left">The maximum height.</td>
+</tr>
+</tbody></table></div><hr class="uk-margin-large"><h2 id="javascript" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#javascript">JavaScript</a></h2><p>Learn more about <a href="https://getuikit.com/docs/javascript#programmatic-use">JavaScript components</a>.</p>
+<h3 id="initialization" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#initialization">Initialization</a></h3><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.slideshow(element, options);</code></pre>
+</div><h3 id="events" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#events">Events</a></h3><p>The following events will be triggered on elements with this component attached:</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>beforeitemshow</code></td>
+<td align="left">Fires before an item is shown.</td>
+</tr>
+<tr>
+<td align="left"><code>itemshow</code></td>
+<td align="left">Fires after an item is shown.</td>
+</tr>
+<tr>
+<td align="left"><code>itemshown</code></td>
+<td align="left">Fires after an item's show animation has completed.</td>
+</tr>
+<tr>
+<td align="left"><code>beforeitemhide</code></td>
+<td align="left">Fires before an item is hidden.</td>
+</tr>
+<tr>
+<td align="left"><code>itemhide</code></td>
+<td align="left">Fires after an item's hide animation has started.</td>
+</tr>
+<tr>
+<td align="left"><code>itemhidden</code></td>
+<td align="left">Fires after an item's hide animation has completed.</td>
+</tr>
+</tbody></table></div><h3 id="methods" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#methods">Methods</a></h3><p>The following methods are available for the component:</p>
+<h4 id="show" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#show">Show</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.slideshow(element).show(index);</code></pre>
+</div><p>Shows the slideshow item.</p>
+<h4 id="startautoplay" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#startautoplay">startAutoplay</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.slideshow(element).startAutoplay();</code></pre>
+</div><p>Starts the slideshow autoplay.</p>
+<h4 id="stopautoplay" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/slideshow#stopautoplay">stopAutoplay</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.slideshow(element).stopAutoplay();</code></pre>
+</div><p>Stops the slideshow autoplay.</p>
+</div></div> <div class="tm-sidebar-right uk-visible@l"><div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;"><ul uk-scrollspy-nav="closest: li; scroll: true; offset: 100" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon"><li class="uk-active"><a href="https://getuikit.com/docs/slideshow#usage">Usage</a></li><li><a href="https://getuikit.com/docs/slideshow#animations">Animations</a></li><li><a href="https://getuikit.com/docs/slideshow#autoplay">Autoplay</a></li><li><a href="https://getuikit.com/docs/slideshow#infinite-scrolling">Infinite Scrolling</a></li><li><a href="https://getuikit.com/docs/slideshow#ratio">Ratio</a></li><li><a href="https://getuikit.com/docs/slideshow#min-max-height">Min/Max height</a></li><li><a href="https://getuikit.com/docs/slideshow#viewport-height">Viewport height</a></li><li><a href="https://getuikit.com/docs/slideshow#navigation">Navigation</a></li><li><a href="https://getuikit.com/docs/slideshow#videos">Videos</a></li><li><a href="https://getuikit.com/docs/slideshow#ken-burns-effect">Ken Burns effect</a></li><li><a href="https://getuikit.com/docs/slideshow#content-overlays">Content overlays</a></li><li><a href="https://getuikit.com/docs/slideshow#content-parallax">Content parallax</a></li><li><a href="https://getuikit.com/docs/slideshow#content-transitions">Content transitions</a></li><li><a href="https://getuikit.com/docs/slideshow#component-options">Component options</a></li><li><a href="https://getuikit.com/docs/slideshow#javascript">JavaScript</a></li> <li class="uk-nav-divider"></li> <li><a href="https://getuikit.com/assets/uikit/tests/slideshow.html" target="_blank"><span uk-icon="icon: push" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="push"><polygon points="12.15,4 9.5,1.4 6.85,4 6.15,3.3 9.5,0 12.85,3.3"></polygon><line fill="none" stroke="#000" x1="9.5" y1="10" x2="9.5" y2="1"></line><polyline fill="none" stroke="#000" points="6 5.5 3.5 5.5 3.5 18.5 15.5 18.5 15.5 5.5 13 5.5"></polyline></svg></span> <span class="uk-text-middle">Open test</span></a></li> <li><a href="https://github.com/uikit/uikit/issues" target="_blank"><span uk-icon="icon: warning" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="warning"><circle cx="10" cy="14" r="1"></circle><circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle><path d="M10.97,7.72 C10.85,9.54 10.56,11.29 10.56,11.29 C10.51,11.87 10.27,12 9.99,12 C9.69,12 9.49,11.87 9.43,11.29 C9.43,11.29 9.16,9.54 9.03,7.72 C8.96,6.54 9.03,6 9.03,6 C9.03,5.45 9.46,5.02 9.99,5 C10.53,5.01 10.97,5.44 10.97,6 C10.97,6 11.04,6.54 10.97,7.72 L10.97,7.72 Z"></path></svg></span> <span class="uk-text-middle">Report issue</span></a></li> <li><a href="https://discordapp.com/invite/NEt4Pv7" target="_blank"><span uk-icon="icon: commenting" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="commenting"><polygon fill="none" stroke="#000" points="1.5,1.5 18.5,1.5 18.5,13.5 10.5,13.5 6.5,17.5 6.5,13.5 1.5,13.5"></polygon><circle cx="10" cy="8" r="1"></circle><circle cx="6" cy="8" r="1"></circle><circle cx="14" cy="8" r="1"></circle></svg></span> <span class="uk-text-middle">Get help</span></a></li> <li><a href="https://github.com/uikit/uikit-site/tree/develop/docs/pages/slideshow.md" target="_blank"><span uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="pencil"><path fill="none" stroke="#000" d="M17.25,6.01 L7.12,16.1 L3.82,17.2 L5.02,13.9 L15.12,3.88 C15.71,3.29 16.66,3.29 17.25,3.88 C17.83,4.47 17.83,5.42 17.25,6.01 L17.25,6.01 Z"></path><path fill="none" stroke="#000" d="M15.98,7.268 L13.851,5.148"></path></svg></span> <span class="uk-text-middle">Edit this page</span></a></li></ul></div><div class="uk-sticky-placeholder" style="height: 512px; margin: 0px;"></div></div></div></div> <div id="offcanvas" uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas"><div class="uk-offcanvas-bar"><div class="uk-panel"><ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">General</li> <li><a href="https://getuikit.com/index">Home</a></li> <li><a href="https://getuikit.com/pro">Pro</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li> <li><a href="https://getuikit.com/download">Download</a></li></ul> <ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Getting started</li> <li exact=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li exact=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li exact=""><a href="https://getuikit.com/docs/less">Less</a></li><li exact=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li exact=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li exact=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li exact=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li exact=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li exact=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li exact=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li exact=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li exact=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li exact=""><a href="https://getuikit.com/docs/align">Align</a></li><li exact=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li exact=""><a href="https://getuikit.com/docs/article">Article</a></li><li exact=""><a href="https://getuikit.com/docs/background">Background</a></li><li exact=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li exact=""><a href="https://getuikit.com/docs/base">Base</a></li><li exact=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li exact=""><a href="https://getuikit.com/docs/button">Button</a></li><li exact=""><a href="https://getuikit.com/docs/card">Card</a></li><li exact=""><a href="https://getuikit.com/docs/close">Close</a></li><li exact=""><a href="https://getuikit.com/docs/column">Column</a></li><li exact=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li exact=""><a href="https://getuikit.com/docs/container">Container</a></li><li exact=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li exact=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li exact=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li exact=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li exact=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li exact=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li exact=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li exact=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li exact=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li exact=""><a href="https://getuikit.com/docs/form">Form</a></li><li exact=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li exact=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li exact=""><a href="https://getuikit.com/docs/height">Height</a></li><li exact=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li exact=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li exact=""><a href="https://getuikit.com/docs/image">Image</a></li><li exact=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li exact=""><a href="https://getuikit.com/docs/label">Label</a></li><li exact=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li exact=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li exact=""><a href="https://getuikit.com/docs/link">Link</a></li><li exact=""><a href="https://getuikit.com/docs/list">List</a></li><li exact=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li exact=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li exact=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li exact=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li exact=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li exact=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li exact=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li exact=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li exact=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li exact=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li exact=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li exact=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li exact=""><a href="https://getuikit.com/docs/position">Position</a></li><li exact=""><a href="https://getuikit.com/docs/print">Print</a></li><li exact=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li exact=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li exact=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li exact=""><a href="https://getuikit.com/docs/search">Search</a></li><li exact=""><a href="https://getuikit.com/docs/section">Section</a></li><li exact=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li exact=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li exact=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li exact=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li exact=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li exact=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li exact=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li exact=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li exact=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li exact=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li exact=""><a href="https://getuikit.com/docs/table">Table</a></li><li exact=""><a href="https://getuikit.com/docs/text">Text</a></li><li exact=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li exact=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li exact=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li exact=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li exact=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li exact=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li exact=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li exact=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li exact=""><a href="https://getuikit.com/docs/video">Video</a></li><li exact=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li exact=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div></div></div></div>
+    
+
+
+<div class="uk-notification uk-notification-top-center" style="display: none;"></div></body></html>

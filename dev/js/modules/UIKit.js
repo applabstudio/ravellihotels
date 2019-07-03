@@ -12,6 +12,8 @@ const UIKit = function() {
 	// }
 
 	// Drupal Menu
+	/* If you want to add preprocess classes with hooks
+	$variables['content']['links']['#attributes']['class'][] = 'list-unstyled'; */
 	var everyChild = document.querySelectorAll("#drupal_menu li a");
 	for (var i = 0; i < everyChild.length; i++) {
 		everyChild[i].classList.add("uk-button-text");

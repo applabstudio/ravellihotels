@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://getuikit.com/docs/modal -->
+<html lang="en-gb" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Modal - UIkit</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://getuikit.com/images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="https://getuikit.com/images/apple-touch-icon.png">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Light-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="stylesheet" href="./Modal - UIkit_files/theme.css">
+        <script type="text/javascript" async="" src="./Modal - UIkit_files/analytics.js"></script><script src="./Modal - UIkit_files/clipboard.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/he.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/marked.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/vue.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/vue-router.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/uikit.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/uikit-icons.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/highlight.min.js" defer=""></script>
+        <script src="./Modal - UIkit_files/main.min.js" defer=""></script>
+    <script src="./Modal - UIkit_files/js" async=""></script></head>
+
+    <body>
+        <div><div uk-sticky="media: 960" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1665px;"><div class="uk-container uk-container-expand"><nav class="uk-navbar"><div class="uk-navbar-left"><a href="https://getuikit.com/" class="uk-navbar-item uk-logo"><img uk-svg="" src="./Modal - UIkit_files/uikit-logo.svg" class="uk-margin-small-right" hidden="true"><svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" class="uk-margin-small-right uk-svg" data-svg="../images/uikit-logo.svg">
+	<polygon fill="#fff" points="19.1,4.1 13.75,1 8.17,4.45 13.6,7.44 "></polygon>
+	<path fill="#fff" d="M21.67,5.43l-5.53,3.34l6.26,3.63v9.52l-8.44,4.76L5.6,21.93v-7.38L0,11.7v13.51l13.75,8.08L28,25.21V9.07 L21.67,5.43z"></path>
+</svg> UIkit
+                    </a></div> <div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m"><li><a href="https://getuikit.com/pro">Pro</a></li> <li class="uk-active"><a href="https://getuikit.com/docs/">Documentation</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li></ul> <div class="uk-navbar-item uk-visible@m"><a href="https://getuikit.com/download" class="uk-button uk-button-default tm-button-default uk-icon">Download <canvas uk-icon="icon: download" width="20" height="20" class="uk-icon" hidden="true"></canvas><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="download"><polyline fill="none" stroke="#000" points="14,10 9.5,14.5 5,10"></polyline><rect x="3" y="17" width="13" height="1"></rect><line fill="none" stroke="#000" x1="9.5" y1="13.91" x2="9.5" y2="3"></line></svg></a></div> <a uk-navbar-toggle-icon="" href="https://getuikit.com/docs/modal#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></a></div></nav></div></div><div class="uk-sticky-placeholder" style="height: 80px; margin: 0px;"></div> <div class="tm-sidebar-left uk-visible@m"><h3>Documentation</h3> <ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">Getting started</li> <li class=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li class=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li class=""><a href="https://getuikit.com/docs/less">Less</a></li><li class=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li class=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li class=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li class=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li class=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li class=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li class=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li class=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li class=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li class=""><a href="https://getuikit.com/docs/align">Align</a></li><li class=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li class=""><a href="https://getuikit.com/docs/article">Article</a></li><li class=""><a href="https://getuikit.com/docs/background">Background</a></li><li class=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li class=""><a href="https://getuikit.com/docs/base">Base</a></li><li class=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li class=""><a href="https://getuikit.com/docs/button">Button</a></li><li class=""><a href="https://getuikit.com/docs/card">Card</a></li><li class=""><a href="https://getuikit.com/docs/close">Close</a></li><li class=""><a href="https://getuikit.com/docs/column">Column</a></li><li class=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li class=""><a href="https://getuikit.com/docs/container">Container</a></li><li class=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li class=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li class=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li class=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li class=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li class=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li class=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li class=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li class=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li class=""><a href="https://getuikit.com/docs/form">Form</a></li><li class=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li class=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li class=""><a href="https://getuikit.com/docs/height">Height</a></li><li class=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li class=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li class=""><a href="https://getuikit.com/docs/image">Image</a></li><li class=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li class=""><a href="https://getuikit.com/docs/label">Label</a></li><li class=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li class=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li class=""><a href="https://getuikit.com/docs/link">Link</a></li><li class=""><a href="https://getuikit.com/docs/list">List</a></li><li class=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li class=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li class="router-link-exact-active uk-active"><a href="https://getuikit.com/docs/modal">Modal</a></li><li class=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li class=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li class=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li class=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li class=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li class=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li class=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li class=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li class=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li class=""><a href="https://getuikit.com/docs/position">Position</a></li><li class=""><a href="https://getuikit.com/docs/print">Print</a></li><li class=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li class=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li class=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li class=""><a href="https://getuikit.com/docs/search">Search</a></li><li class=""><a href="https://getuikit.com/docs/section">Section</a></li><li class=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li class=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li class=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li class=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li class=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li class=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li class=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li class=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li class=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li class=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li class=""><a href="https://getuikit.com/docs/table">Table</a></li><li class=""><a href="https://getuikit.com/docs/text">Text</a></li><li class=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li class=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li class=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li class=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li class=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li class=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li class=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li class=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li class=""><a href="https://getuikit.com/docs/video">Video</a></li><li class=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li class=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div> <div class="tm-main uk-section uk-section-default"><div class="uk-container uk-container-small uk-position-relative"><div><!----> <div><h1 id="modal" class="uk-h1 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#modal">Modal</a></h1><p class="uk-text-lead">Create modal dialogs with different styles and transitions.</p>
+
+<h2 id="usage" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#usage">Usage</a></h2><p>The Modal component consists of an overlay, a dialog and an optional close button. You can use any element to toggle a modal dialog. To enable the necessary JavaScript, add the <code>uk-toggle</code> attribute. An <code>&lt;a&gt;</code> element needs to be linked to the modal's id. If you are using another element, like a button, just add the <code>uk-toggle="target: #ID"</code> attribute to target the id of the modal container.</p>
+<p>Add the <code>uk-modal</code> attribute to a <code>&lt;div&gt;</code> element to create the modal container and an overlay that blanks out the page. It is important to add an <code>id</code> to indicate the element for toggling. Use the following classes to define the modal's sections.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Class</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>.uk-modal-dialog</code></td>
+<td align="left">Add this class to a child <code>&lt;div&gt;</code> element to create the dialog</td>
+</tr>
+<tr>
+<td align="left"><code>.uk-modal-body</code></td>
+<td align="left">Add this class to create padding between the modal and its content.</td>
+</tr>
+<tr>
+<td align="left"><code>.uk-modal-title</code></td>
+<td align="left">Add this class to a heading element to create the modal title.</td>
+</tr>
+<tr>
+<td align="left"><code>.uk-modal-close</code></td>
+<td align="left">Add this class to an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element to create a close button and enable its functionality.</td>
+</tr>
+</tbody></table></div><div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-comment">&lt;!-- This is a button toggling the modal --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #my-id"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is the modal --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-modal-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><!-- This is a button toggling the modal -->
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-example">Open</button>
+
+<!-- This is an anchor toggling the modal -->
+<a href="https://getuikit.com/docs/modal#modal-example" uk-toggle="">Open</a>
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog uk-modal-body">
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </p>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37czy" class="lang-html hljs xml"><span class="hljs-comment">&lt;!-- This is a button toggling the modal --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #modal-example"</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is an anchor toggling the modal --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-example"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is the modal --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-example"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-modal-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Headline<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-text-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-modal-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-primary"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37czy" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37czy" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="close-button" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#close-button">Close button</a></h2><p>To create a close button, enable its functionality and add proper styling and positioning, add the <code>.uk-modal-close-default</code> class to an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element. To place the close button outside the modal, add the <code>.uk-modal-close-outside</code> class.</p>
+<p>Add the <code>uk-close</code> attribute from the <a href="https://getuikit.com/docs/close">Close component</a>, to apply a close icon.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-outside"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><!-- This is a button toggling the modal with the default close button -->
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-close-default">Default</button>
+
+<!-- This is the modal with the default close button -->
+<div id="modal-close-default" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <h2 class="uk-modal-title">Default</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div>
+
+<!-- This is a button toggling the modal with the outside close button -->
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #modal-close-outside">Outside</button>
+
+<!-- This is the modal with the outside close button -->
+<div id="modal-close-outside" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <h2 class="uk-modal-title">Outside</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37czz" class="lang-html hljs xml"><span class="hljs-comment">&lt;!-- This is a button toggling the modal with the default close button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #modal-close-default"</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is the modal with the default close button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-close-default"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-modal-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Default<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is a button toggling the modal with the outside close button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #modal-close-outside"</span>&gt;</span>Outside<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-comment">&lt;!-- This is the modal with the outside close button --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-close-outside"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-modal-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-outside"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Outside<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37czz" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37czz" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="center-modal" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#center-modal">Center modal</a></h2><p>To vertically center the modal dialog, you can use the <code>.uk-margin-auto-vertical</code> class from the <a href="https://getuikit.com/docs/margin">Margin component</a>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-flex-top"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-margin-auto-vertical"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-center" uk-toggle="">Open</a>
+
+<div id="modal-center" class="uk-flex-top uk-modal" uk-modal="">
+    <div class="uk-modal-dialog uk-modal-body uk-margin-auto-vertical">
+
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d00" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-center"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-center"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-flex-top"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-modal-body uk-margin-auto-vertical"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d00" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d00" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><p><span class="uk-label">Note</span> <code>.uk-flex-top</code> on the modal container is needed to support IE 11.</p>
+<hr class="uk-margin-large"><h2 id="header-and-footer" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#header-and-footer">Header and footer</a></h2><p>To divide the modal into different content sections, use the following classes.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Class</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>.uk-modal-header</code></td>
+<td align="left">Add this class to a <code>&lt;div&gt;</code> element to create the modal header.</td>
+</tr>
+<tr>
+<td align="left"><code>.uk-modal-footer</code></td>
+<td align="left">Add this class to a <code>&lt;div&gt;</code> element to create the modal footer.</td>
+</tr>
+</tbody></table></div><div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-body"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-footer"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-sections" uk-toggle="">Open</a>
+
+<div id="modal-sections" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Modal Title</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </div>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d01" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-sections"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-sections"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Modal Title<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-body"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-footer uk-text-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-modal-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-primary"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d01" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d01" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="container-modifier" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#container-modifier">Container modifier</a></h2><p>Add the <code>.uk-modal-container</code> class to expand the modal dialog to the default <a href="https://getuikit.com/docs/container">Container</a> width.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-container"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-container" uk-toggle="">Open</a>
+
+<div id="modal-container" class="uk-modal-container uk-modal" uk-modal="">
+    <div class="uk-modal-dialog uk-modal-body">
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <h2 class="uk-modal-title">Headline</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d02" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-container"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-container"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-container"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-modal-body"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Headline<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d02" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d02" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="full-modifier" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#full-modifier">Full modifier</a></h2><p>To create a modal, that fills the entire page, add the <code>.uk-modal-full</code> class. It is also recommended to add the <code>.uk-modal-close-full</code> class to the close button, so that it adapts its styling.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-full"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-full uk-close-large"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><p>Using the <a href="https://getuikit.com/docs/grid">grid</a> and <a href="https://getuikit.com/docs/width">width</a> classes, you can create a nice, split fullscreen modal.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-full" uk-toggle="">Open</a>
+
+<div id="modal-full" class="uk-modal-full uk-modal" uk-modal="">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-full uk-close-large uk-icon uk-close" type="button" uk-close=""><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="close-large"><line fill="none" stroke="#000" stroke-width="1.4" x1="1" y1="1" x2="19" y2="19"></line><line fill="none" stroke="#000" stroke-width="1.4" x1="19" y1="1" x2="1" y2="19"></line></svg></button>
+        <div class="uk-grid-collapse uk-child-width-1-2@s uk-flex-middle uk-grid" uk-grid="">
+            <div class="uk-background-cover" style="background-image: url(&quot;images/photo.jpg&quot;); min-height: calc(100vh);" uk-height-viewport=""></div>
+            <div class="uk-padding-large">
+                <h1>Headline</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d03" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-full"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-full"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-full"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-full uk-close-large"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-grid-collapse uk-child-width-1-2@s uk-flex-middle"</span> <span class="hljs-attr">uk-grid</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-background-cover"</span> <span class="hljs-attr">style</span>=<span class="hljs-string">"background-image: url('images/photo.jpg');"</span> <span class="hljs-attr">uk-height-viewport</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-padding-large"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Headline<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d03" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d03" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="overflow" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#overflow">Overflow</a></h2><p>By default, the page will scroll with the modal, if its content exceeds the window height. To apply a scrollbar inside the modal, add the <code>uk-overflow-auto</code> attribute from the <a href="https://getuikit.com/docs/utility#overflow-auto">Utility component</a> to the modal body.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span> <span class="hljs-attr">uk-overflow-auto</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-overflow" uk-toggle="">Open</a>
+
+<div id="modal-overflow" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog">
+
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Headline</h2>
+        </div>
+
+        <div class="uk-modal-body uk-overflow-auto" uk-overflow-auto="" style="min-height: 150px; max-height: 150px;">
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+        </div>
+
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <button class="uk-button uk-button-primary" type="button">Save</button>
+        </div>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d04" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-overflow"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-overflow"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Headline<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-body"</span> <span class="hljs-attr">uk-overflow-auto</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-footer uk-text-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-modal-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-primary"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Save<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d04" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d04" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="media" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#media">Media</a></h2><p>If you want to display media, you should first check, if the <a href="https://getuikit.com/docs/lightbox">Lightbox component</a> doesn't already offer everything you need. However, you can also use the modal to have more control over the markup to wrap your media in.</p>
+<p><span class="uk-label">Note</span> Use the <code>uk-video</code> attribute from the <a href="https://getuikit.com/docs/video">Video component</a> to make sure videos are stopped when the modal is closed.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-width-auto"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-video</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"> <p uk-margin="">
+    <a class="uk-button uk-button-default uk-first-column" href="https://getuikit.com/docs/modal#modal-media-image" uk-toggle="">Image</a>
+    <a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-media-video" uk-toggle="">Video</a>
+    <a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-media-youtube" uk-toggle="">YouTube</a>
+    <a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-media-vimeo" uk-toggle="">Vimeo</a>
+</p>
+
+<div id="modal-media-image" class="uk-flex-top uk-modal" uk-modal="">
+    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+        <button class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <img src="./Modal - UIkit_files/photo.jpg" alt="">
+    </div>
+</div>
+
+<div id="modal-media-video" class="uk-flex-top uk-modal" uk-modal="">
+    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+        <button class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <video src="https://yootheme.com/site/images/media/yootheme-pro.mp4" controls="" playsinline="" uk-video=""></video>
+    </div>
+</div>
+
+<div id="modal-media-youtube" class="uk-flex-top uk-modal" uk-modal="">
+    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+        <button class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <iframe src="./Modal - UIkit_files/c2pz2mlSfXA.html" width="1920" height="1080" frameborder="0" uk-video=""></iframe>
+    </div>
+</div>
+
+<div id="modal-media-vimeo" class="uk-flex-top uk-modal" uk-modal="">
+    <div class="uk-modal-dialog uk-width-auto uk-margin-auto-vertical">
+        <button class="uk-modal-close-outside uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <iframe src="./Modal - UIkit_files/1084537.html" width="500" height="281" frameborder="0" uk-video=""></iframe>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d05" class="lang-html hljs xml"> <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-margin</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-media-image"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Image<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-media-video"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Video<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-media-youtube"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>YouTube<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-media-vimeo"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Vimeo<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-media-image"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-flex-top"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-width-auto uk-margin-auto-vertical"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-outside"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-media-video"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-flex-top"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-width-auto uk-margin-auto-vertical"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-outside"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">video</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://yootheme.com/site/images/media/yootheme-pro.mp4"</span> <span class="hljs-attr">controls</span> <span class="hljs-attr">playsinline</span> <span class="hljs-attr">uk-video</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">video</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-media-youtube"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-flex-top"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-width-auto uk-margin-auto-vertical"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-outside"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://www.youtube-nocookie.com/embed/c2pz2mlSfXA"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1920"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1080"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">uk-video</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-media-vimeo"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-flex-top"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog uk-width-auto uk-margin-auto-vertical"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-outside"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">iframe</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"https://player.vimeo.com/video/1084537"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"500"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"281"</span> <span class="hljs-attr">frameborder</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">uk-video</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">iframe</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d05" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d05" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="groups" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#groups">Groups</a></h2><p>You can group multiple modals by linking from one to the other and back. Use this to create multistep wizards inside your modals.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-group-1"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-group-2"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-group-2"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-group-1"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><p uk-margin="">
+    <a class="uk-button uk-button-default uk-first-column" href="https://getuikit.com/docs/modal#modal-group-1" uk-toggle="">Modal 1</a>
+    <a class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#modal-group-2" uk-toggle="">Modal 2</a>
+</p>
+
+<div id="modal-group-1" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Headline 1</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <a href="https://getuikit.com/docs/modal#modal-group-2" class="uk-button uk-button-primary" uk-toggle="">Next</a>
+        </div>
+    </div>
+</div>
+
+<div id="modal-group-2" uk-modal="" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <button class="uk-modal-close-default uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+        <div class="uk-modal-header">
+            <h2 class="uk-modal-title">Headline 2</h2>
+        </div>
+        <div class="uk-modal-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </div>
+        <div class="uk-modal-footer uk-text-right">
+            <button class="uk-button uk-button-default uk-modal-close" type="button">Cancel</button>
+            <a href="https://getuikit.com/docs/modal#modal-group-1" class="uk-button uk-button-primary" uk-toggle="">Previous</a>
+        </div>
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37d06" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-margin</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-group-1"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Modal 1<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-group-2"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Modal 2<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-group-1"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Headline 1<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-body"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-footer uk-text-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-modal-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-group-2"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-primary"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Next<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"modal-group-2"</span> <span class="hljs-attr">uk-modal</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-dialog"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-close-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-header"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-title"</span>&gt;</span>Headline 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-body"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-modal-footer uk-text-right"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-modal-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span>Cancel<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#modal-group-1"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-primary"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Previous<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d06" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d06" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="component-options" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#component-options">Component options</a></h2><p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="https://getuikit.com/docs/javascript#component-configuration">Learn more</a></p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Option</th>
+<th align="left">Value</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>esc-close</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>true</code></td>
+<td align="left">Close the modal when the <em>Esc</em> key is pressed.</td>
+</tr>
+<tr>
+<td align="left"><code>bg-close</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>true</code></td>
+<td align="left">Close the modal when the background is clicked.</td>
+</tr>
+<tr>
+<td align="left"><code>stack</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>false</code></td>
+<td align="left">Stack modals, when more than one is open. By default, the previous modal will be hidden.</td>
+</tr>
+<tr>
+<td align="left"><code>container</code></td>
+<td align="left">String</td>
+<td align="left"><code>true</code></td>
+<td align="left">Define a target container via a selector to specify where the modal should be appended in the DOM. Setting it to <code>false</code> will prevent this behavior.</td>
+</tr>
+<tr>
+<td align="left"><code>cls-page</code></td>
+<td align="left">String</td>
+<td align="left"><code>'uk-modal-page'</code></td>
+<td align="left">Class to add to <code>&lt;body&gt;</code> when modal is active</td>
+</tr>
+<tr>
+<td align="left"><code>cls-panel</code></td>
+<td align="left">String</td>
+<td align="left"><code>'uk-modal-dialog'</code></td>
+<td align="left">Class of the element to be considered the panel of the modal</td>
+</tr>
+<tr>
+<td align="left"><code>sel-close</code></td>
+<td align="left">String</td>
+<td align="left"><code>'.uk-modal-close,</code> <code>.uk-modal-close-default,</code> <code>.uk-modal-close-outside,</code> <code>.uk-modal-close-full'</code></td>
+<td align="left">CSS selector for all elements that should trigger the closing of the modal</td>
+</tr>
+</tbody></table></div><hr class="uk-margin-large"><h2 id="javascript" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#javascript">JavaScript</a></h2><p>Learn more about <a href="https://getuikit.com/docs/javascript#programmatic-use">JavaScript components</a>.</p>
+<h3 id="initialization" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#initialization">Initialization</a></h3><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.modal(element, options);</code></pre>
+</div><h3 id="events" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#events">Events</a></h3><p>The following events will be triggered on elements with this component attached:</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>beforeshow</code></td>
+<td align="left">Fires before an item is shown.</td>
+</tr>
+<tr>
+<td align="left"><code>show</code></td>
+<td align="left">Fires after an item is shown.</td>
+</tr>
+<tr>
+<td align="left"><code>shown</code></td>
+<td align="left">Fires after the item's show animation has completed.</td>
+</tr>
+<tr>
+<td align="left"><code>beforehide</code></td>
+<td align="left">Fires before an item is hidden.</td>
+</tr>
+<tr>
+<td align="left"><code>hide</code></td>
+<td align="left">Fires after an item's hide animation has started.</td>
+</tr>
+<tr>
+<td align="left"><code>hidden</code></td>
+<td align="left">Fires after an item is hidden.</td>
+</tr>
+</tbody></table></div><h3 id="methods" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#methods">Methods</a></h3><p>The following methods are available for the component:</p>
+<h4 id="show" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#show">Show</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.modal(element).show();</code></pre>
+</div><p>Shows the Modal.</p>
+<h4 id="hide" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#hide">Hide</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.modal(element).hide();</code></pre>
+</div><p>Hides the Modal.</p>
+<hr class="uk-margin-large"><h2 id="modal-dialogs" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/modal#modal-dialogs">Modal dialogs</a></h2><p>The component comes with a number of prepared modal dialogs that you can use for user interaction. You can call the dialog directly from JavaScript and use callback functions to process the user input.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Code</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>UIkit.modal.alert('UIkit alert!')</code></td>
+<td align="left">Show an alert box with one button.</td>
+</tr>
+<tr>
+<td align="left"><code>UIkit.modal.confirm('UIkit confirm!')</code></td>
+<td align="left">Show a confirm dialog with your message and two buttons.</td>
+</tr>
+<tr>
+<td align="left"><code>UIkit.modal.prompt('Name:', 'Your name')</code></td>
+<td align="left">Show a dialog asking for a text input.</td>
+</tr>
+<tr>
+<td align="left"><code>UIkit.modal.dialog('&lt;p&gt;UIkit dialog!&lt;/p&gt;');</code></td>
+<td align="left">Show dialog with any HTML content.</td>
+</tr>
+</tbody></table></div><p>To process the user input, the modal uses a promise based interface which provides a <code>then()</code> function to register your callback functions.</p>
+<div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.modal.confirm(<span class="hljs-string">'UIkit confirm!'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Confirmed.'</span>)
+}, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Rejected.'</span>)
+});</code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/modal#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/modal#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><p uk-margin="">
+
+    <a id="js-modal-dialog" class="uk-button uk-button-default uk-first-column" href="https://getuikit.com/docs/modal#">Dialog</a>
+
+    <a id="js-modal-alert" class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#">Alert</a>
+
+    <a id="js-modal-confirm" class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#">Confirm</a>
+
+    <a id="js-modal-prompt" class="uk-button uk-button-default" href="https://getuikit.com/docs/modal#">Prompt</a>
+
+    <script>
+
+       UIkit.util.on('#js-modal-dialog', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.dialog('<p class="uk-modal-body">UIkit dialog!</p>');
+       });
+
+       UIkit.util.on('#js-modal-alert', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.alert('UIkit alert!').then(function () {
+               console.log('Alert closed.')
+           });
+       });
+
+       UIkit.util.on('#js-modal-confirm', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.confirm('UIkit confirm!').then(function () {
+               console.log('Confirmed.')
+           }, function () {
+               console.log('Rejected.')
+           });
+       });
+
+       UIkit.util.on('#js-modal-prompt', 'click', function (e) {
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.prompt('Name:', 'Your name').then(function (name) {
+               console.log('Prompted:', name)
+           });
+       });
+
+    </script>
+
+</p></li>
+                        <li><pre><code id="code-jxn37d07" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">uk-margin</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-modal-dialog"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Dialog<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-modal-alert"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Alert<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-modal-confirm"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Confirm<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"js-modal-prompt"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Prompt<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">script</span>&gt;</span><span class="javascript">
+
+       UIkit.util.on(<span class="hljs-string">'#js-modal-dialog'</span>, <span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.dialog(<span class="hljs-string">'&lt;p class="uk-modal-body"&gt;UIkit dialog!&lt;/p&gt;'</span>);
+       });
+
+       UIkit.util.on(<span class="hljs-string">'#js-modal-alert'</span>, <span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.alert(<span class="hljs-string">'UIkit alert!'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+               <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Alert closed.'</span>)
+           });
+       });
+
+       UIkit.util.on(<span class="hljs-string">'#js-modal-confirm'</span>, <span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.confirm(<span class="hljs-string">'UIkit confirm!'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+               <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Confirmed.'</span>)
+           }, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{
+               <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Rejected.'</span>)
+           });
+       });
+
+       UIkit.util.on(<span class="hljs-string">'#js-modal-prompt'</span>, <span class="hljs-string">'click'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">e</span>) </span>{
+           e.preventDefault();
+           e.target.blur();
+           UIkit.modal.prompt(<span class="hljs-string">'Name:'</span>, <span class="hljs-string">'Your name'</span>).then(<span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params">name</span>) </span>{
+               <span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Prompted:'</span>, name)
+           });
+       });
+
+    </span><span class="hljs-tag">&lt;/<span class="hljs-name">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37d07" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37d07" title="" aria-expanded="false"><img class="uk-icon" src="./Modal - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div></div></div> <div class="tm-sidebar-right uk-visible@l"><div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;"><ul uk-scrollspy-nav="closest: li; scroll: true; offset: 100" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon"><li class="uk-active"><a href="https://getuikit.com/docs/modal#usage">Usage</a></li><li><a href="https://getuikit.com/docs/modal#close-button">Close button</a></li><li><a href="https://getuikit.com/docs/modal#center-modal">Center modal</a></li><li><a href="https://getuikit.com/docs/modal#header-and-footer">Header and footer</a></li><li><a href="https://getuikit.com/docs/modal#container-modifier">Container modifier</a></li><li><a href="https://getuikit.com/docs/modal#full-modifier">Full modifier</a></li><li><a href="https://getuikit.com/docs/modal#overflow">Overflow</a></li><li><a href="https://getuikit.com/docs/modal#media">Media</a></li><li><a href="https://getuikit.com/docs/modal#groups">Groups</a></li><li><a href="https://getuikit.com/docs/modal#component-options">Component options</a></li><li><a href="https://getuikit.com/docs/modal#javascript">JavaScript</a></li><li><a href="https://getuikit.com/docs/modal#modal-dialogs">Modal dialogs</a></li> <li class="uk-nav-divider"></li> <li><a href="https://getuikit.com/assets/uikit/tests/modal.html" target="_blank"><span uk-icon="icon: push" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="push"><polygon points="12.15,4 9.5,1.4 6.85,4 6.15,3.3 9.5,0 12.85,3.3"></polygon><line fill="none" stroke="#000" x1="9.5" y1="10" x2="9.5" y2="1"></line><polyline fill="none" stroke="#000" points="6 5.5 3.5 5.5 3.5 18.5 15.5 18.5 15.5 5.5 13 5.5"></polyline></svg></span> <span class="uk-text-middle">Open test</span></a></li> <li><a href="https://github.com/uikit/uikit/issues" target="_blank"><span uk-icon="icon: warning" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="warning"><circle cx="10" cy="14" r="1"></circle><circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle><path d="M10.97,7.72 C10.85,9.54 10.56,11.29 10.56,11.29 C10.51,11.87 10.27,12 9.99,12 C9.69,12 9.49,11.87 9.43,11.29 C9.43,11.29 9.16,9.54 9.03,7.72 C8.96,6.54 9.03,6 9.03,6 C9.03,5.45 9.46,5.02 9.99,5 C10.53,5.01 10.97,5.44 10.97,6 C10.97,6 11.04,6.54 10.97,7.72 L10.97,7.72 Z"></path></svg></span> <span class="uk-text-middle">Report issue</span></a></li> <li><a href="https://discordapp.com/invite/NEt4Pv7" target="_blank"><span uk-icon="icon: commenting" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="commenting"><polygon fill="none" stroke="#000" points="1.5,1.5 18.5,1.5 18.5,13.5 10.5,13.5 6.5,17.5 6.5,13.5 1.5,13.5"></polygon><circle cx="10" cy="8" r="1"></circle><circle cx="6" cy="8" r="1"></circle><circle cx="14" cy="8" r="1"></circle></svg></span> <span class="uk-text-middle">Get help</span></a></li> <li><a href="https://github.com/uikit/uikit-site/tree/develop/docs/pages/modal.md" target="_blank"><span uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="pencil"><path fill="none" stroke="#000" d="M17.25,6.01 L7.12,16.1 L3.82,17.2 L5.02,13.9 L15.12,3.88 C15.71,3.29 16.66,3.29 17.25,3.88 C17.83,4.47 17.83,5.42 17.25,6.01 L17.25,6.01 Z"></path><path fill="none" stroke="#000" d="M15.98,7.268 L13.851,5.148"></path></svg></span> <span class="uk-text-middle">Edit this page</span></a></li></ul></div><div class="uk-sticky-placeholder" style="height: 512px; margin: 0px;"></div></div></div></div> <div id="offcanvas" uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas"><div class="uk-offcanvas-bar"><div class="uk-panel"><ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">General</li> <li><a href="https://getuikit.com/index">Home</a></li> <li><a href="https://getuikit.com/pro">Pro</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li> <li><a href="https://getuikit.com/download">Download</a></li></ul> <ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Getting started</li> <li exact=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li exact=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li exact=""><a href="https://getuikit.com/docs/less">Less</a></li><li exact=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li exact=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li exact=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li exact=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li exact=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li exact=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li exact=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li exact=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li exact=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li exact=""><a href="https://getuikit.com/docs/align">Align</a></li><li exact=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li exact=""><a href="https://getuikit.com/docs/article">Article</a></li><li exact=""><a href="https://getuikit.com/docs/background">Background</a></li><li exact=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li exact=""><a href="https://getuikit.com/docs/base">Base</a></li><li exact=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li exact=""><a href="https://getuikit.com/docs/button">Button</a></li><li exact=""><a href="https://getuikit.com/docs/card">Card</a></li><li exact=""><a href="https://getuikit.com/docs/close">Close</a></li><li exact=""><a href="https://getuikit.com/docs/column">Column</a></li><li exact=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li exact=""><a href="https://getuikit.com/docs/container">Container</a></li><li exact=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li exact=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li exact=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li exact=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li exact=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li exact=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li exact=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li exact=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li exact=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li exact=""><a href="https://getuikit.com/docs/form">Form</a></li><li exact=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li exact=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li exact=""><a href="https://getuikit.com/docs/height">Height</a></li><li exact=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li exact=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li exact=""><a href="https://getuikit.com/docs/image">Image</a></li><li exact=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li exact=""><a href="https://getuikit.com/docs/label">Label</a></li><li exact=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li exact=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li exact=""><a href="https://getuikit.com/docs/link">Link</a></li><li exact=""><a href="https://getuikit.com/docs/list">List</a></li><li exact=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li exact=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li exact=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li exact=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li exact=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li exact=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li exact=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li exact=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li exact=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li exact=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li exact=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li exact=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li exact=""><a href="https://getuikit.com/docs/position">Position</a></li><li exact=""><a href="https://getuikit.com/docs/print">Print</a></li><li exact=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li exact=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li exact=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li exact=""><a href="https://getuikit.com/docs/search">Search</a></li><li exact=""><a href="https://getuikit.com/docs/section">Section</a></li><li exact=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li exact=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li exact=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li exact=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li exact=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li exact=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li exact=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li exact=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li exact=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li exact=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li exact=""><a href="https://getuikit.com/docs/table">Table</a></li><li exact=""><a href="https://getuikit.com/docs/text">Text</a></li><li exact=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li exact=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li exact=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li exact=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li exact=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li exact=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li exact=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li exact=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li exact=""><a href="https://getuikit.com/docs/video">Video</a></li><li exact=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li exact=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div></div></div></div>
+    
+
+
+</body></html>

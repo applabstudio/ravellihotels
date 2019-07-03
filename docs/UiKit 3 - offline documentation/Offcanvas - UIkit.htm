@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://getuikit.com/docs/offcanvas -->
+<html lang="en-gb" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Offcanvas - UIkit</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://getuikit.com/images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="https://getuikit.com/images/apple-touch-icon.png">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Light-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="stylesheet" href="./Offcanvas - UIkit_files/theme.css">
+        <script type="text/javascript" async="" src="./Offcanvas - UIkit_files/analytics.js"></script><script src="./Offcanvas - UIkit_files/clipboard.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/he.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/marked.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/vue.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/vue-router.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/uikit.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/uikit-icons.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/highlight.min.js" defer=""></script>
+        <script src="./Offcanvas - UIkit_files/main.min.js" defer=""></script>
+    <script src="./Offcanvas - UIkit_files/js" async=""></script></head>
+
+    <body>
+        <div><div uk-sticky="media: 960" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1665px;"><div class="uk-container uk-container-expand"><nav class="uk-navbar"><div class="uk-navbar-left"><a href="https://getuikit.com/" class="uk-navbar-item uk-logo"><img uk-svg="" src="./Offcanvas - UIkit_files/uikit-logo.svg" class="uk-margin-small-right" hidden="true"><svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" class="uk-margin-small-right uk-svg" data-svg="../images/uikit-logo.svg">
+	<polygon fill="#fff" points="19.1,4.1 13.75,1 8.17,4.45 13.6,7.44 "></polygon>
+	<path fill="#fff" d="M21.67,5.43l-5.53,3.34l6.26,3.63v9.52l-8.44,4.76L5.6,21.93v-7.38L0,11.7v13.51l13.75,8.08L28,25.21V9.07 L21.67,5.43z"></path>
+</svg> UIkit
+                    </a></div> <div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m"><li><a href="https://getuikit.com/pro">Pro</a></li> <li class="uk-active"><a href="https://getuikit.com/docs/">Documentation</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li></ul> <div class="uk-navbar-item uk-visible@m"><a href="https://getuikit.com/download" class="uk-button uk-button-default tm-button-default uk-icon">Download <canvas uk-icon="icon: download" width="20" height="20" class="uk-icon" hidden="true"></canvas><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="download"><polyline fill="none" stroke="#000" points="14,10 9.5,14.5 5,10"></polyline><rect x="3" y="17" width="13" height="1"></rect><line fill="none" stroke="#000" x1="9.5" y1="13.91" x2="9.5" y2="3"></line></svg></a></div> <a uk-navbar-toggle-icon="" href="https://getuikit.com/docs/offcanvas#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></a></div></nav></div></div><div class="uk-sticky-placeholder" style="height: 80px; margin: 0px;"></div> <div class="tm-sidebar-left uk-visible@m"><h3>Documentation</h3> <ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">Getting started</li> <li class=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li class=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li class=""><a href="https://getuikit.com/docs/less">Less</a></li><li class=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li class=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li class=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li class=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li class=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li class=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li class=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li class=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li class=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li class=""><a href="https://getuikit.com/docs/align">Align</a></li><li class=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li class=""><a href="https://getuikit.com/docs/article">Article</a></li><li class=""><a href="https://getuikit.com/docs/background">Background</a></li><li class=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li class=""><a href="https://getuikit.com/docs/base">Base</a></li><li class=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li class=""><a href="https://getuikit.com/docs/button">Button</a></li><li class=""><a href="https://getuikit.com/docs/card">Card</a></li><li class=""><a href="https://getuikit.com/docs/close">Close</a></li><li class=""><a href="https://getuikit.com/docs/column">Column</a></li><li class=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li class=""><a href="https://getuikit.com/docs/container">Container</a></li><li class=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li class=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li class=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li class=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li class=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li class=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li class=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li class=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li class=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li class=""><a href="https://getuikit.com/docs/form">Form</a></li><li class=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li class=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li class=""><a href="https://getuikit.com/docs/height">Height</a></li><li class=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li class=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li class=""><a href="https://getuikit.com/docs/image">Image</a></li><li class=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li class=""><a href="https://getuikit.com/docs/label">Label</a></li><li class=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li class=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li class=""><a href="https://getuikit.com/docs/link">Link</a></li><li class=""><a href="https://getuikit.com/docs/list">List</a></li><li class=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li class=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li class=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li class=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li class=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li class=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li class="router-link-exact-active uk-active"><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li class=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li class=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li class=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li class=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li class=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li class=""><a href="https://getuikit.com/docs/position">Position</a></li><li class=""><a href="https://getuikit.com/docs/print">Print</a></li><li class=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li class=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li class=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li class=""><a href="https://getuikit.com/docs/search">Search</a></li><li class=""><a href="https://getuikit.com/docs/section">Section</a></li><li class=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li class=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li class=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li class=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li class=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li class=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li class=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li class=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li class=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li class=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li class=""><a href="https://getuikit.com/docs/table">Table</a></li><li class=""><a href="https://getuikit.com/docs/text">Text</a></li><li class=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li class=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li class=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li class=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li class=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li class=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li class=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li class=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li class=""><a href="https://getuikit.com/docs/video">Video</a></li><li class=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li class=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div> <div class="tm-main uk-section uk-section-default"><div class="uk-container uk-container-small uk-position-relative"><div><!----> <div><h1 id="off-canvas" class="uk-h1 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#off-canvas">Off-canvas</a></h1><p class="uk-text-lead">Create an off-canvas sidebar that slides in and out of the page, which is perfect for creating mobile navigations.</p>
+
+<h2 id="usage" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#usage">Usage</a></h2><p>To apply this component, add the <code>uk-offcanvas</code> attribute to a parent <code>&lt;div&gt;</code> element and use the following classes.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Class</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>.uk-offcanvas-bar</code></td>
+<td align="left">Add this class to a child <code>&lt;div&gt;</code> element.</td>
+</tr>
+<tr>
+<td align="left"><code>.uk-offcanvas-close</code></td>
+<td align="left">Add this class and the <code>uk-close</code> attribute to an <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> element to create a close button and enable its functionality.</td>
+</tr>
+</tbody></table></div><p>You can use any element to toggle an off-canvas sidebar. To enable the necessary JavaScript, add the <code>uk-toggle</code> attribute. An <code>&lt;a&gt;</code> element needs to be linked to the id of the off-canvas container. If you are using another element, like a button, just add the <code>uk-toggle="target: #ID"</code> attribute to target the id of the off-canvas container.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- This is a button toggling the off-canvas --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #my-id"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- This is an anchor toggling the off-canvas --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#my-id"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+    <span class="hljs-comment">&lt;!-- This is the off-canvas --&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-offcanvas</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+            <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-usage">Open</button>
+
+<a href="https://getuikit.com/docs/offcanvas#offcanvas-usage" uk-toggle="">Open</a>
+
+<div id="offcanvas-usage" uk-offcanvas="" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37u66" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-usage"</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#offcanvas-usage"</span> <span class="hljs-attr">uk-toggle</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-usage"</span> <span class="hljs-attr">uk-offcanvas</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37u66" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37u66" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h3 id="overlay" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#overlay">Overlay</a></h3><p>To add an overlay, blanking out the page, add the <code>overlay: true</code> parameter to the <code>uk-offcanvas</code> attribute.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"overlay: true"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-overlay">Open</button>
+
+<div id="offcanvas-overlay" uk-offcanvas="overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37u67" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-overlay"</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-overlay"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37u67" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37u67" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="flip-modifier" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#flip-modifier">Flip modifier</a></h2><p>Add the <code>flip: true</code> parameter to the <code>uk-offcanvas</code> attribute to adjust its alignment, so that it slides in from the right.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"flip: true"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-flip">Open</button>
+
+<div id="offcanvas-flip" uk-offcanvas="flip: true; overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37u68" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-flip"</span>&gt;</span>Open<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-flip"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"flip: true; overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37u68" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37u68" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="animation-modes" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#animation-modes">Animation modes</a></h2><p>By default, the off-canvas slides in. But you can actually choose between different animation modes for the off-canvas' entrance. Just add one of the following attributes.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Parameter</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>mode: slide</code></td>
+<td align="left">The off-canvas slides out and overlays the content. This is the default mode.</td>
+</tr>
+<tr>
+<td align="left"><code>mode: push</code></td>
+<td align="left">The off-canvas slides out and pushes the site.</td>
+</tr>
+<tr>
+<td align="left"><code>mode: reveal</code></td>
+<td align="left">The off-canvas slides out and reveals its content while pushing the site.</td>
+</tr>
+<tr>
+<td align="left"><code>mode: none</code></td>
+<td align="left">The off-canvas appears and overlays the content without an animation.</td>
+</tr>
+</tbody></table></div><div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"mode: push"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-slide">Slide</button>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-push">Push</button>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-reveal">Reveal</button>
+
+<button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-none">None</button>
+
+<div id="offcanvas-slide" uk-offcanvas="overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-push" uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-reveal" uk-offcanvas="mode: reveal; overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div>
+
+<div id="offcanvas-none" uk-offcanvas="mode: none; overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <button class="uk-offcanvas-close uk-icon uk-close" type="button" uk-close=""><svg width="14" height="14" viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon"><line fill="none" stroke="#000" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line><line fill="none" stroke="#000" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line></svg></button>
+
+        <h3>Title</h3>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37u69" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-slide"</span>&gt;</span>Slide<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-push"</span>&gt;</span>Push<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-reveal"</span>&gt;</span>Reveal<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-none"</span>&gt;</span>None<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-slide"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-push"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"mode: push; overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-reveal"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"mode: reveal; overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-none"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"mode: none; overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-close"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-close</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>Title<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37u69" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37u69" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="nav-in-off-canvas" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#nav-in-off-canvas">Nav in Off-canvas</a></h2><p>You can use the <a href="https://getuikit.com/docs/nav">Nav component</a> inside an off-canvas to create a mobile navigation.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"my-id"</span> <span class="hljs-attr">uk-offcanvas</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav uk-nav-default"</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/offcanvas#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><button class="uk-button uk-button-default uk-margin-small-right" type="button" uk-toggle="target: #offcanvas-nav-primary">Primary Nav</button>
+
+<button class="uk-button uk-button-default" type="button" uk-toggle="target: #offcanvas-nav">Default Nav</button>
+
+<div id="offcanvas-nav-primary" uk-offcanvas="overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar uk-flex uk-flex-column">
+
+        <ul class="uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical">
+            <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#">Active</a></li>
+            <li class="uk-parent">
+                <a href="https://getuikit.com/docs/offcanvas#">Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="https://getuikit.com/docs/offcanvas#">Sub item</a></li>
+                    <li><a href="https://getuikit.com/docs/offcanvas#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-nav-header">Header</li>
+            <li><a href="https://getuikit.com/docs/offcanvas#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: table"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="table"><rect x="1" y="3" width="18" height="1"></rect><rect x="1" y="7" width="18" height="1"></rect><rect x="1" y="11" width="18" height="1"></rect><rect x="1" y="15" width="18" height="1"></rect></svg></span> Item</a></li>
+            <li><a href="https://getuikit.com/docs/offcanvas#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: thumbnails"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="thumbnails"><rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect><rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect><rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect><rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect></svg></span> Item</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="https://getuikit.com/docs/offcanvas#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: trash"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="trash"><polyline fill="none" stroke="#000" points="6.5 3 6.5 1.5 13.5 1.5 13.5 3"></polyline><polyline fill="none" stroke="#000" points="4.5 4 4.5 18.5 15.5 18.5 15.5 4"></polyline><rect x="8" y="7" width="1" height="9"></rect><rect x="11" y="7" width="1" height="9"></rect><rect x="2" y="3" width="16" height="1"></rect></svg></span> Item</a></li>
+        </ul>
+
+    </div>
+</div>
+
+<div id="offcanvas-nav" uk-offcanvas="overlay: true" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+
+        <ul class="uk-nav uk-nav-default">
+            <li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#">Active</a></li>
+            <li class="uk-parent">
+                <a href="https://getuikit.com/docs/offcanvas#">Parent</a>
+                <ul class="uk-nav-sub">
+                    <li><a href="https://getuikit.com/docs/offcanvas#">Sub item</a></li>
+                    <li><a href="https://getuikit.com/docs/offcanvas#">Sub item</a></li>
+                </ul>
+            </li>
+            <li class="uk-nav-header">Header</li>
+            <li><a href="https://getuikit.com/docs/offcanvas#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: table"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="table"><rect x="1" y="3" width="18" height="1"></rect><rect x="1" y="7" width="18" height="1"></rect><rect x="1" y="11" width="18" height="1"></rect><rect x="1" y="15" width="18" height="1"></rect></svg></span> Item</a></li>
+            <li><a href="https://getuikit.com/docs/offcanvas#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: thumbnails"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="thumbnails"><rect fill="none" stroke="#000" x="3.5" y="3.5" width="5" height="5"></rect><rect fill="none" stroke="#000" x="11.5" y="3.5" width="5" height="5"></rect><rect fill="none" stroke="#000" x="11.5" y="11.5" width="5" height="5"></rect><rect fill="none" stroke="#000" x="3.5" y="11.5" width="5" height="5"></rect></svg></span> Item</a></li>
+            <li class="uk-nav-divider"></li>
+            <li><a href="https://getuikit.com/docs/offcanvas#"><span class="uk-margin-small-right uk-icon" uk-icon="icon: trash"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="trash"><polyline fill="none" stroke="#000" points="6.5 3 6.5 1.5 13.5 1.5 13.5 3"></polyline><polyline fill="none" stroke="#000" points="4.5 4 4.5 18.5 15.5 18.5 15.5 4"></polyline><rect x="8" y="7" width="1" height="9"></rect><rect x="11" y="7" width="1" height="9"></rect><rect x="2" y="3" width="16" height="1"></rect></svg></span> Item</a></li>
+        </ul>
+
+    </div>
+</div></li>
+                        <li><pre><code id="code-jxn37u6a" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default uk-margin-small-right"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-nav-primary"</span>&gt;</span>Primary Nav<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-button uk-button-default"</span> <span class="hljs-attr">type</span>=<span class="hljs-string">"button"</span> <span class="hljs-attr">uk-toggle</span>=<span class="hljs-string">"target: #offcanvas-nav"</span>&gt;</span>Default Nav<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-nav-primary"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar uk-flex uk-flex-column"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav uk-nav-primary uk-nav-center uk-margin-auto-vertical"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-parent"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Parent<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav-sub"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Sub item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Sub item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav-header"</span>&gt;</span>Header<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-right"</span> <span class="hljs-attr">uk-icon</span>=<span class="hljs-string">"icon: table"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-right"</span> <span class="hljs-attr">uk-icon</span>=<span class="hljs-string">"icon: thumbnails"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-right"</span> <span class="hljs-attr">uk-icon</span>=<span class="hljs-string">"icon: trash"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"offcanvas-nav"</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"overlay: true"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-offcanvas-bar"</span>&gt;</span>
+
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav uk-nav-default"</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-active"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Active<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-parent"</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Parent<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav-sub"</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Sub item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Sub item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav-header"</span>&gt;</span>Header<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-right"</span> <span class="hljs-attr">uk-icon</span>=<span class="hljs-string">"icon: table"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-right"</span> <span class="hljs-attr">uk-icon</span>=<span class="hljs-string">"icon: thumbnails"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-nav-divider"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-right"</span> <span class="hljs-attr">uk-icon</span>=<span class="hljs-string">"icon: trash"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span> Item<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn37u6a" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn37u6a" title="" aria-expanded="false"><img class="uk-icon" src="./Offcanvas - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="component-options" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#component-options">Component options</a></h2><p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="https://getuikit.com/docs/javascript#component-configuration">Learn more</a></p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Option</th>
+<th align="left">Value</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>mode</code></td>
+<td align="left">String</td>
+<td align="left"><code>slide</code></td>
+<td align="left">Off-canvas animation mode: <code>slide</code>, <code>reveal</code>, <code>push</code> or <code>none</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>flip</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>false</code></td>
+<td align="left">Flip off-canvas to the right side.</td>
+</tr>
+<tr>
+<td align="left"><code>overlay</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>false</code></td>
+<td align="left">Display the off-canvas together with an overlay.</td>
+</tr>
+<tr>
+<td align="left"><code>esc-close</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>true</code></td>
+<td align="left">Close the off-canvas when the <em>Esc</em> key is pressed.</td>
+</tr>
+<tr>
+<td align="left"><code>bg-close</code></td>
+<td align="left">Boolean</td>
+<td align="left"><code>true</code></td>
+<td align="left">Close the off-canvas when the background is clicked.</td>
+</tr>
+<tr>
+<td align="left"><code>container</code></td>
+<td align="left">String</td>
+<td align="left"><code>true</code></td>
+<td align="left">Define a target container via a selector to specify where the off-canvas should be appended in the DOM. Setting it to <code>false</code> will prevent this behavior.</td>
+</tr>
+</tbody></table></div><p><code>mode</code> is the <em>Primary</em> option and its key may be omitted, if it's the only option in the attribute value.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">uk-offcanvas</span>=<span class="hljs-string">"push"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span></code></pre>
+</div><hr class="uk-margin-large"><h2 id="javascript" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#javascript">JavaScript</a></h2><p>Learn more about <a href="https://getuikit.com/docs/javascript#programmatic-use">JavaScript components</a>.</p>
+<h3 id="initialization" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#initialization">Initialization</a></h3><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.offcanvas(element, options);</code></pre>
+</div><h3 id="events" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#events">Events</a></h3><p>The following events will be triggered on elements with this component attached:</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Name</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>beforeshow</code></td>
+<td align="left">Fires before an item is shown.</td>
+</tr>
+<tr>
+<td align="left"><code>show</code></td>
+<td align="left">Fires after an item is shown.</td>
+</tr>
+<tr>
+<td align="left"><code>shown</code></td>
+<td align="left">Fires after the item's show animation has completed.</td>
+</tr>
+<tr>
+<td align="left"><code>beforehide</code></td>
+<td align="left">Fires before an item is hidden.</td>
+</tr>
+<tr>
+<td align="left"><code>hide</code></td>
+<td align="left">Fires after an item's hide animation has started.</td>
+</tr>
+<tr>
+<td align="left"><code>hidden</code></td>
+<td align="left">Fires after an item is hidden.</td>
+</tr>
+</tbody></table></div><h3 id="methods" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#methods">Methods</a></h3><p>The following methods are available for the component:</p>
+<h4 id="show" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#show">Show</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.offcanvas(element).show();</code></pre>
+</div><p>Shows the Offcanvas.</p>
+<h4 id="hide" class="uk-h5 tm-heading-fragment"><a href="https://getuikit.com/docs/offcanvas#hide">Hide</a></h4><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.offcanvas(element).hide();</code></pre>
+</div><p>Hides the Offcanvas.</p>
+</div></div> <div class="tm-sidebar-right uk-visible@l"><div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;"><ul uk-scrollspy-nav="closest: li; scroll: true; offset: 100" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon"><li class="uk-active"><a href="https://getuikit.com/docs/offcanvas#usage">Usage</a></li><li><a href="https://getuikit.com/docs/offcanvas#flip-modifier">Flip modifier</a></li><li><a href="https://getuikit.com/docs/offcanvas#animation-modes">Animation modes</a></li><li><a href="https://getuikit.com/docs/offcanvas#nav-in-off-canvas">Nav in Off-canvas</a></li><li><a href="https://getuikit.com/docs/offcanvas#component-options">Component options</a></li><li><a href="https://getuikit.com/docs/offcanvas#javascript">JavaScript</a></li> <li class="uk-nav-divider"></li> <li><a href="https://getuikit.com/assets/uikit/tests/offcanvas.html" target="_blank"><span uk-icon="icon: push" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="push"><polygon points="12.15,4 9.5,1.4 6.85,4 6.15,3.3 9.5,0 12.85,3.3"></polygon><line fill="none" stroke="#000" x1="9.5" y1="10" x2="9.5" y2="1"></line><polyline fill="none" stroke="#000" points="6 5.5 3.5 5.5 3.5 18.5 15.5 18.5 15.5 5.5 13 5.5"></polyline></svg></span> <span class="uk-text-middle">Open test</span></a></li> <li><a href="https://github.com/uikit/uikit/issues" target="_blank"><span uk-icon="icon: warning" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="warning"><circle cx="10" cy="14" r="1"></circle><circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle><path d="M10.97,7.72 C10.85,9.54 10.56,11.29 10.56,11.29 C10.51,11.87 10.27,12 9.99,12 C9.69,12 9.49,11.87 9.43,11.29 C9.43,11.29 9.16,9.54 9.03,7.72 C8.96,6.54 9.03,6 9.03,6 C9.03,5.45 9.46,5.02 9.99,5 C10.53,5.01 10.97,5.44 10.97,6 C10.97,6 11.04,6.54 10.97,7.72 L10.97,7.72 Z"></path></svg></span> <span class="uk-text-middle">Report issue</span></a></li> <li><a href="https://discordapp.com/invite/NEt4Pv7" target="_blank"><span uk-icon="icon: commenting" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="commenting"><polygon fill="none" stroke="#000" points="1.5,1.5 18.5,1.5 18.5,13.5 10.5,13.5 6.5,17.5 6.5,13.5 1.5,13.5"></polygon><circle cx="10" cy="8" r="1"></circle><circle cx="6" cy="8" r="1"></circle><circle cx="14" cy="8" r="1"></circle></svg></span> <span class="uk-text-middle">Get help</span></a></li> <li><a href="https://github.com/uikit/uikit-site/tree/develop/docs/pages/offcanvas.md" target="_blank"><span uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="pencil"><path fill="none" stroke="#000" d="M17.25,6.01 L7.12,16.1 L3.82,17.2 L5.02,13.9 L15.12,3.88 C15.71,3.29 16.66,3.29 17.25,3.88 C17.83,4.47 17.83,5.42 17.25,6.01 L17.25,6.01 Z"></path><path fill="none" stroke="#000" d="M15.98,7.268 L13.851,5.148"></path></svg></span> <span class="uk-text-middle">Edit this page</span></a></li></ul></div><div class="uk-sticky-placeholder" style="height: 512px; margin: 0px;"></div></div></div></div> <div id="offcanvas" uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas"><div class="uk-offcanvas-bar"><div class="uk-panel"><ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">General</li> <li><a href="https://getuikit.com/index">Home</a></li> <li><a href="https://getuikit.com/pro">Pro</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li> <li><a href="https://getuikit.com/download">Download</a></li></ul> <ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Getting started</li> <li exact=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li exact=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li exact=""><a href="https://getuikit.com/docs/less">Less</a></li><li exact=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li exact=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li exact=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li exact=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li exact=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li exact=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li exact=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li exact=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li exact=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li exact=""><a href="https://getuikit.com/docs/align">Align</a></li><li exact=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li exact=""><a href="https://getuikit.com/docs/article">Article</a></li><li exact=""><a href="https://getuikit.com/docs/background">Background</a></li><li exact=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li exact=""><a href="https://getuikit.com/docs/base">Base</a></li><li exact=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li exact=""><a href="https://getuikit.com/docs/button">Button</a></li><li exact=""><a href="https://getuikit.com/docs/card">Card</a></li><li exact=""><a href="https://getuikit.com/docs/close">Close</a></li><li exact=""><a href="https://getuikit.com/docs/column">Column</a></li><li exact=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li exact=""><a href="https://getuikit.com/docs/container">Container</a></li><li exact=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li exact=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li exact=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li exact=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li exact=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li exact=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li exact=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li exact=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li exact=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li exact=""><a href="https://getuikit.com/docs/form">Form</a></li><li exact=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li exact=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li exact=""><a href="https://getuikit.com/docs/height">Height</a></li><li exact=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li exact=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li exact=""><a href="https://getuikit.com/docs/image">Image</a></li><li exact=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li exact=""><a href="https://getuikit.com/docs/label">Label</a></li><li exact=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li exact=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li exact=""><a href="https://getuikit.com/docs/link">Link</a></li><li exact=""><a href="https://getuikit.com/docs/list">List</a></li><li exact=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li exact=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li exact=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li exact=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li exact=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li exact=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li exact=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li exact=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li exact=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li exact=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li exact=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li exact=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li exact=""><a href="https://getuikit.com/docs/position">Position</a></li><li exact=""><a href="https://getuikit.com/docs/print">Print</a></li><li exact=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li exact=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li exact=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li exact=""><a href="https://getuikit.com/docs/search">Search</a></li><li exact=""><a href="https://getuikit.com/docs/section">Section</a></li><li exact=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li exact=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li exact=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li exact=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li exact=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li exact=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li exact=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li exact=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li exact=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li exact=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li exact=""><a href="https://getuikit.com/docs/table">Table</a></li><li exact=""><a href="https://getuikit.com/docs/text">Text</a></li><li exact=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li exact=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li exact=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li exact=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li exact=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li exact=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li exact=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li exact=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li exact=""><a href="https://getuikit.com/docs/video">Video</a></li><li exact=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li exact=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div></div></div></div>
+    
+
+
+<div class="uk-notification uk-notification-top-center" style="display: none;"></div></body></html>

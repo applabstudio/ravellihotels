@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)https://getuikit.com/docs/image -->
+<html lang="en-gb" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Image - UIkit</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://getuikit.com/images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="https://getuikit.com/images/apple-touch-icon.png">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Light-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="stylesheet" href="./Image - UIkit_files/theme.css">
+        <script type="text/javascript" async="" src="./Image - UIkit_files/analytics.js"></script><script src="./Image - UIkit_files/clipboard.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/he.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/marked.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/vue.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/vue-router.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/uikit.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/uikit-icons.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/highlight.min.js" defer=""></script>
+        <script src="./Image - UIkit_files/main.min.js" defer=""></script>
+    <script src="./Image - UIkit_files/js" async=""></script></head>
+
+    <body>
+        <div><div uk-sticky="media: 960" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1665px;"><div class="uk-container uk-container-expand"><nav class="uk-navbar"><div class="uk-navbar-left"><a href="https://getuikit.com/" class="uk-navbar-item uk-logo"><img uk-svg="" src="./Image - UIkit_files/uikit-logo.svg" class="uk-margin-small-right" hidden="true"><svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" class="uk-margin-small-right uk-svg" data-svg="../images/uikit-logo.svg">
+	<polygon fill="#fff" points="19.1,4.1 13.75,1 8.17,4.45 13.6,7.44 "></polygon>
+	<path fill="#fff" d="M21.67,5.43l-5.53,3.34l6.26,3.63v9.52l-8.44,4.76L5.6,21.93v-7.38L0,11.7v13.51l13.75,8.08L28,25.21V9.07 L21.67,5.43z"></path>
+</svg> UIkit
+                    </a></div> <div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m"><li><a href="https://getuikit.com/pro">Pro</a></li> <li class="uk-active"><a href="https://getuikit.com/docs/">Documentation</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li></ul> <div class="uk-navbar-item uk-visible@m"><a href="https://getuikit.com/download" class="uk-button uk-button-default tm-button-default uk-icon">Download <canvas uk-icon="icon: download" width="20" height="20" class="uk-icon" hidden="true"></canvas><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="download"><polyline fill="none" stroke="#000" points="14,10 9.5,14.5 5,10"></polyline><rect x="3" y="17" width="13" height="1"></rect><line fill="none" stroke="#000" x1="9.5" y1="13.91" x2="9.5" y2="3"></line></svg></a></div> <a uk-navbar-toggle-icon="" href="https://getuikit.com/docs/image#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></a></div></nav></div></div><div class="uk-sticky-placeholder" style="height: 80px; margin: 0px;"></div> <div class="tm-sidebar-left uk-visible@m"><h3>Documentation</h3> <ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">Getting started</li> <li class=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li class=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li class=""><a href="https://getuikit.com/docs/less">Less</a></li><li class=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li class=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li class=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li class=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li class=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li class=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li class=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li class=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li class=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li class=""><a href="https://getuikit.com/docs/align">Align</a></li><li class=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li class=""><a href="https://getuikit.com/docs/article">Article</a></li><li class=""><a href="https://getuikit.com/docs/background">Background</a></li><li class=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li class=""><a href="https://getuikit.com/docs/base">Base</a></li><li class=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li class=""><a href="https://getuikit.com/docs/button">Button</a></li><li class=""><a href="https://getuikit.com/docs/card">Card</a></li><li class=""><a href="https://getuikit.com/docs/close">Close</a></li><li class=""><a href="https://getuikit.com/docs/column">Column</a></li><li class=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li class=""><a href="https://getuikit.com/docs/container">Container</a></li><li class=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li class=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li class=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li class=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li class=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li class=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li class=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li class=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li class=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li class=""><a href="https://getuikit.com/docs/form">Form</a></li><li class=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li class=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li class=""><a href="https://getuikit.com/docs/height">Height</a></li><li class=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li class=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li class="router-link-exact-active uk-active"><a href="https://getuikit.com/docs/image">Image</a></li><li class=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li class=""><a href="https://getuikit.com/docs/label">Label</a></li><li class=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li class=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li class=""><a href="https://getuikit.com/docs/link">Link</a></li><li class=""><a href="https://getuikit.com/docs/list">List</a></li><li class=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li class=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li class=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li class=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li class=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li class=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li class=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li class=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li class=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li class=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li class=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li class=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li class=""><a href="https://getuikit.com/docs/position">Position</a></li><li class=""><a href="https://getuikit.com/docs/print">Print</a></li><li class=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li class=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li class=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li class=""><a href="https://getuikit.com/docs/search">Search</a></li><li class=""><a href="https://getuikit.com/docs/section">Section</a></li><li class=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li class=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li class=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li class=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li class=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li class=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li class=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li class=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li class=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li class=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li class=""><a href="https://getuikit.com/docs/table">Table</a></li><li class=""><a href="https://getuikit.com/docs/text">Text</a></li><li class=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li class=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li class=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li class=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li class=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li class=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li class=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li class=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li class=""><a href="https://getuikit.com/docs/video">Video</a></li><li class=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li class=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div> <div class="tm-main uk-section uk-section-default"><div class="uk-container uk-container-small uk-position-relative"><div><!----> <div><h1 id="image" class="uk-h1 tm-heading-fragment"><a href="https://getuikit.com/docs/image#image">Image</a></h1><p class="uk-text-lead">Speed up page loading times and decrease traffic by only loading images as they enter the viewport.</p>
+
+<p>The Image component improves page speed significantly by following these methods:</p>
+<ul class="uk-list uk-list-bullet"><li>Only images which are initially in the viewport are loaded.</li>
+<li>Other images are lazy loaded as they enter the viewport when scrolling.</li>
+<li>An empty placeholder image is generated instantly to prevent content jumping while images are being loaded or not yet in the viewport.</li>
+<li>Optionally, the placeholder image can have any kind of background or preload animation.</li>
+</ul><p>The Image components supports the <code>img</code> element and the CSS <code>background-image</code> property. The <code>srcset</code> attribute for images is supported as well creating the optimal images for different device widths and high resolution (retina) displays. The Image component even makes it possible to use <code>srcset</code> for the CSS <code>background-image</code> property.</p>
+<hr class="uk-margin-large"><h2 id="usage" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#usage">Usage</a></h2><p>To apply this component, add the <code>uk-img</code> attribute to an <code>&lt;img&gt;</code> element and add the <code>data-</code> prefix to the <code>src</code> attribute so that it reads <code>data-src</code>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>&gt;</span></code></pre>
+</div><p>The <code>width</code> and <code>height</code> attributes are required so an empty placeholder can be generated in the exact same size as the image. Alternatively, use <code>data-width</code> and <code>data-height</code> if you don't want to set the explicit attributes.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/image#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/image#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><img data-src="images/light.jpg" width="1800" height="1200" alt="" uk-img="" src="./Image - UIkit_files/light.jpg"></li>
+                        <li><pre><code id="code-jxn36m0d" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn36m0d" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn36m0d" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><h3 id="inline-svg" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/image#inline-svg">Inline SVG</a></h3><p>To lazy load SVG images which are injected as inline SVG using the <a href="https://getuikit.com/docs/svg">SVG component</a>, make sure to apply the <code>data-src</code> option in the component attribute and not as data attribute.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"data-src:"</span> <span class="hljs-attr">uk-svg</span>&gt;</span></code></pre>
+</div><hr class="uk-margin-large"><h2 id="srcset" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#srcset">Srcset</a></h2><p>To use the <code>srcset</code> attribute, just prefix it as <code>data-srcset</code>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-srcset</span>=<span class="hljs-string">""</span> <span class="hljs-attr">sizes</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/image#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/image#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><img data-src="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80" data-srcset="https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
+                  https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=1300&amp;h=866&amp;q=80 1300w" sizes="(min-width: 650px) 650px, 100vw" width="650" height="433" alt="" uk-img="" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;650&quot; height=&quot;433&quot;&gt;&lt;/svg&gt;">
+</li>
+                        <li><pre><code id="code-jxn36m0e" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80"</span>
+     <span class="hljs-attr">data-srcset</span>=<span class="hljs-string">"https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
+                  https://images.unsplash.com/photo-1522201949034-507737bce479?fit=crop&amp;w=1300&amp;h=866&amp;q=80 1300w"</span>
+     <span class="hljs-attr">sizes</span>=<span class="hljs-string">"(min-width: 650px) 650px, 100vw"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"650"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"433"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>&gt;</span>
+</code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn36m0e" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn36m0e" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="background-image" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#background-image">Background image</a></h2><p>To use this component with the CSS <code>background-image</code> property, add it to a <code>&lt;div&gt;</code> or any other element.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/image#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/image#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="images/photo.jpg" uk-img="">
+  <h1>Background Image</h1>
+</div></li>
+                        <li><pre><code id="code-jxn36m0f" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">uk-img</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Background Image<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn36m0f" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn36m0f" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h3 id="background-image-with-srcset" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/image#background-image-with-srcset">Background image with Srcset</a></h3><p>The Image component allows you to use <code>srcset</code> for background images. Just add the <code>data-srcset</code> attribute. If you need the <code>sizes</code> attribute, prefix it as <code>data-sizes</code>.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-srcset</span>=<span class="hljs-string">""</span> <span class="hljs-attr">data-sizes</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>&gt;</span>...<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/image#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/image#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light" data-src="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80" data-srcset="https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
+                  https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=1300&amp;h=866&amp;q=80 1300w" data-sizes="(min-width: 650px) 650px, 100vw" uk-img="">
+    <h1>Background Image</h1>
+</div></li>
+                        <li><pre><code id="code-jxn36m0g" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-height-medium uk-flex uk-flex-center uk-flex-middle uk-background-cover uk-light"</span>
+     <span class="hljs-attr">data-src</span>=<span class="hljs-string">"https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80"</span>
+     <span class="hljs-attr">data-srcset</span>=<span class="hljs-string">"https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=650&amp;h=433&amp;q=80 650w,
+                  https://images.unsplash.com/photo-1490822180406-880c226c150b?fit=crop&amp;w=1300&amp;h=866&amp;q=80 1300w"</span>
+     <span class="hljs-attr">data-sizes</span>=<span class="hljs-string">"(min-width: 650px) 650px, 100vw"</span> <span class="hljs-attr">uk-img</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>Background Image<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn36m0g" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn36m0g" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="target" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#target">Target</a></h2><p>Usually, the image starts loading when it enters the viewport. To start loading images based on the viewport visibility of another element, use the <code>target</code> option. This is very useful to lazy load images in the <a href="https://getuikit.com/docs/slideshow">Slideshow</a> and <a href="https://getuikit.com/docs/slider">Slider</a> components.</p>
+<div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: .my-class"</span>&gt;</span></code></pre>
+</div><p>The following example loads all images in the slides as soon as the slideshow enters the viewport. It uses <code>!.uk-slideshow-items</code> as a target selector. The <code>!</code> looks up the DOM to find the next parent element with the <code>.uk-slideshow-items</code> class.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/image#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/image#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px);">
+            <img data-src="images/photo.jpg" width="1800" height="1200" alt="" uk-cover="" uk-img="target: !.uk-slideshow-items" class="uk-cover" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1800&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;" style="height: 467px; width: 700px;">
+        </li>
+        <li tabindex="-1">
+            <img data-src="images/dark.jpg" width="1800" height="1200" alt="" uk-cover="" uk-img="target: !.uk-slideshow-items" class="uk-cover" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1800&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;">
+        </li>
+        <li tabindex="-1">
+            <img data-src="images/light.jpg" width="1800" height="1200" alt="" uk-cover="" uk-img="target: !.uk-slideshow-items" class="uk-cover" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1800&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;">
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/image#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/image#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn36m0h" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !.uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !.uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !.uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn36m0h" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn36m0h" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h3 id="load-previous-and-next" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/image#load-previous-and-next">Load previous and next</a></h3><p>It's also possible to load only the image of the active slide and lazy load the images of the other slides. Just target the previous and next slides for each image by using the <code>target: !* -*, !* +*</code> option. There are two exceptions where you have to select the first and the last slides.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Selector</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>!* -*</code></td>
+<td align="left">Looks for the direct parent (<code>!*</code>) and selects the preceding element (<code>-*</code>).</td>
+</tr>
+<tr>
+<td align="left"><code>!* +*</code></td>
+<td align="left">Looks for the direct parent (<code>!*</code>) and selects the succeeding element (<code>+*</code>).</td>
+</tr>
+<tr>
+<td align="left"><code>!.uk-slideshow-items &gt; :last-child</code></td>
+<td align="left">Looks for the next parent element with the <code>.uk-slideshow-item</code> class and selects the last child.</td>
+</tr>
+<tr>
+<td align="left"><code>!.uk-slideshow-items &gt; :first-child</code></td>
+<td align="left">Looks for the next parent element with the <code>.uk-slideshow-item</code> class and selects the first child.</td>
+</tr>
+</tbody></table></div><div class="uk-margin-medium"><pre><code class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !ul &gt; :last-child, !* +*"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !* -*, !* +*"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !* -*, !* +*"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">""</span> <span class="hljs-attr">width</span>=<span class="hljs-string">""</span> <span class="hljs-attr">height</span>=<span class="hljs-string">""</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !* -*, !ul &gt; :first-child"</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre>
+</div><div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="https://getuikit.com/docs/image#" aria-expanded="true">Preview</a></li>
+                        <li><a href="https://getuikit.com/docs/image#" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-position-relative uk-visible-toggle uk-light uk-slideshow" tabindex="-1" uk-slideshow="">
+
+    <ul class="uk-slideshow-items" style="min-height: 393.75px;">
+        <li tabindex="-1" class="uk-active uk-transition-active" style="transform: translate3d(0px, 0px, 0px);">
+            <img data-src="images/photo.jpg" width="1800" height="1200" alt="" uk-cover="" uk-img="target: !ul &gt; :last-child, !* +*" class="uk-cover" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1800&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;" style="height: 467px; width: 700px;">
+        </li>
+        <li tabindex="-1">
+            <img data-src="images/dark.jpg" width="1800" height="1200" alt="" uk-cover="" uk-img="target: !* -*, !* +*" class="uk-cover" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1800&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;">
+        </li>
+        <li tabindex="-1">
+            <img data-src="images/light.jpg" width="1800" height="1200" alt="" uk-cover="" uk-img="target: !* -*, !ul &gt; :first-child" class="uk-cover" src="data:image/svg+xml;utf8,&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; width=&quot;1800&quot; height=&quot;1200&quot;&gt;&lt;/svg&gt;">
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover uk-icon uk-slidenav-previous uk-slidenav" href="https://getuikit.com/docs/image#" uk-slidenav-previous="" uk-slideshow-item="previous"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-previous"><polyline fill="none" stroke="#000" stroke-width="1.4" points="12.775,1 1.225,12 12.775,23 "></polyline></svg></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover uk-icon uk-slidenav-next uk-slidenav" href="https://getuikit.com/docs/image#" uk-slidenav-next="" uk-slideshow-item="next"><svg width="14px" height="24px" viewBox="0 0 14 24" xmlns="http://www.w3.org/2000/svg" data-svg="slidenav-next"><polyline fill="none" stroke="#000" stroke-width="1.4" points="1.225,23 12.775,12 1.225,1 "></polyline></svg></a>
+
+</div></li>
+                        <li><pre><code id="code-jxn36m0i" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-relative uk-visible-toggle uk-light"</span> <span class="hljs-attr">tabindex</span>=<span class="hljs-string">"-1"</span> <span class="hljs-attr">uk-slideshow</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">ul</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-slideshow-items"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !ul &gt; :last-child, !* +*"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/dark.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !* -*, !* +*"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">data-src</span>=<span class="hljs-string">"images/light.jpg"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"1800"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"1200"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">""</span> <span class="hljs-attr">uk-cover</span> <span class="hljs-attr">uk-img</span>=<span class="hljs-string">"target: !* -*, !ul &gt; :first-child"</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-left uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-previous</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"previous"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-position-center-right uk-position-small uk-hidden-hover"</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span> <span class="hljs-attr">uk-slidenav-next</span> <span class="hljs-attr">uk-slideshow-item</span>=<span class="hljs-string">"next"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span>
+
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn36m0i" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn36m0i" title="" aria-expanded="false"><img class="uk-icon" src="./Image - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="custom-placeholder" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#custom-placeholder">Custom placeholder</a></h2><p>By default, the placeholder image is transparent. Use the <code>img[data-src][src*='data:image']</code> selector to add a custom background or preload animation.</p>
+<div class="uk-margin-medium"><pre><code class="lang-css hljs"><span class="hljs-selector-tag">img</span><span class="hljs-selector-attr">[data-src]</span><span class="hljs-selector-attr">[src*='data:image']</span> { <span class="hljs-attribute">background</span>: <span class="hljs-built_in">rgba</span>(0,0,0,0.1); }</code></pre>
+</div><hr class="uk-margin-large"><h2 id="component-options" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#component-options">Component options</a></h2><p>Any of these options can be applied to the component attribute. Separate multiple options with a semicolon. <a href="https://getuikit.com/docs/javascript#component-configuration">Learn more</a></p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Option</th>
+<th align="left">Value</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>dataSrc</code></td>
+<td align="left">String</td>
+<td align="left">''</td>
+<td align="left">The image's <code>src</code> attribute.</td>
+</tr>
+<tr>
+<td align="left"><code>dataSrcset</code></td>
+<td align="left">String</td>
+<td align="left">false</td>
+<td align="left">The image's <code>srcset</code> attribute.</td>
+</tr>
+<tr>
+<td align="left"><code>sizes</code></td>
+<td align="left">String</td>
+<td align="left">false</td>
+<td align="left">The image's <code>sizes</code> attribute.</td>
+</tr>
+<tr>
+<td align="left"><code>width</code></td>
+<td align="left">String</td>
+<td align="left">false</td>
+<td align="left">The image's <code>width</code> attribute. It will be used to determine the placeholder's width and the position of the image in the document.</td>
+</tr>
+<tr>
+<td align="left"><code>height</code></td>
+<td align="left">String</td>
+<td align="left">false</td>
+<td align="left">The image's <code>height</code> attribute. It will be used to determine the placeholder's height and the position of the image in the document.</td>
+</tr>
+<tr>
+<td align="left"><code>offsetTop</code></td>
+<td align="left">String</td>
+<td align="left">'50vh'</td>
+<td align="left">The offset increases the viewport's bounding box vertically before computing an intersection with the image.</td>
+</tr>
+<tr>
+<td align="left"><code>offsetLeft</code></td>
+<td align="left">String</td>
+<td align="left">0</td>
+<td align="left">The offset increases the viewport's bounding box horizontally before computing an intersection with the image.</td>
+</tr>
+<tr>
+<td align="left"><code>target</code></td>
+<td align="left">String</td>
+<td align="left">false</td>
+<td align="left">A list of targets who's bounding boxes will be used to compute an intersection with the image. Defaults to the image itself.</td>
+</tr>
+</tbody></table></div><hr class="uk-margin-large"><h2 id="javascript" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/image#javascript">JavaScript</a></h2><p>Learn more about <a href="https://getuikit.com/docs/javascript#programmatic-use">JavaScript components</a>.</p>
+<h3 id="initialization" class="uk-h4 tm-heading-fragment"><a href="https://getuikit.com/docs/image#initialization">Initialization</a></h3><div class="uk-margin-medium"><pre><code class="lang-js hljs javascript">UIkit.img(element, options);</code></pre>
+</div></div></div> <div class="tm-sidebar-right uk-visible@l"><div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;"><ul uk-scrollspy-nav="closest: li; scroll: true; offset: 100" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon"><li class="uk-active"><a href="https://getuikit.com/docs/image#usage">Usage</a></li><li><a href="https://getuikit.com/docs/image#srcset">Srcset</a></li><li><a href="https://getuikit.com/docs/image#background-image">Background image</a></li><li><a href="https://getuikit.com/docs/image#target">Target</a></li><li><a href="https://getuikit.com/docs/image#custom-placeholder">Custom placeholder</a></li><li><a href="https://getuikit.com/docs/image#component-options">Component options</a></li><li><a href="https://getuikit.com/docs/image#javascript">JavaScript</a></li> <li class="uk-nav-divider"></li> <li><a href="https://getuikit.com/assets/uikit/tests/image.html" target="_blank"><span uk-icon="icon: push" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="push"><polygon points="12.15,4 9.5,1.4 6.85,4 6.15,3.3 9.5,0 12.85,3.3"></polygon><line fill="none" stroke="#000" x1="9.5" y1="10" x2="9.5" y2="1"></line><polyline fill="none" stroke="#000" points="6 5.5 3.5 5.5 3.5 18.5 15.5 18.5 15.5 5.5 13 5.5"></polyline></svg></span> <span class="uk-text-middle">Open test</span></a></li> <li><a href="https://github.com/uikit/uikit/issues" target="_blank"><span uk-icon="icon: warning" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="warning"><circle cx="10" cy="14" r="1"></circle><circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle><path d="M10.97,7.72 C10.85,9.54 10.56,11.29 10.56,11.29 C10.51,11.87 10.27,12 9.99,12 C9.69,12 9.49,11.87 9.43,11.29 C9.43,11.29 9.16,9.54 9.03,7.72 C8.96,6.54 9.03,6 9.03,6 C9.03,5.45 9.46,5.02 9.99,5 C10.53,5.01 10.97,5.44 10.97,6 C10.97,6 11.04,6.54 10.97,7.72 L10.97,7.72 Z"></path></svg></span> <span class="uk-text-middle">Report issue</span></a></li> <li><a href="https://discordapp.com/invite/NEt4Pv7" target="_blank"><span uk-icon="icon: commenting" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="commenting"><polygon fill="none" stroke="#000" points="1.5,1.5 18.5,1.5 18.5,13.5 10.5,13.5 6.5,17.5 6.5,13.5 1.5,13.5"></polygon><circle cx="10" cy="8" r="1"></circle><circle cx="6" cy="8" r="1"></circle><circle cx="14" cy="8" r="1"></circle></svg></span> <span class="uk-text-middle">Get help</span></a></li> <li><a href="https://github.com/uikit/uikit-site/tree/develop/docs/pages/image.md" target="_blank"><span uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="pencil"><path fill="none" stroke="#000" d="M17.25,6.01 L7.12,16.1 L3.82,17.2 L5.02,13.9 L15.12,3.88 C15.71,3.29 16.66,3.29 17.25,3.88 C17.83,4.47 17.83,5.42 17.25,6.01 L17.25,6.01 Z"></path><path fill="none" stroke="#000" d="M15.98,7.268 L13.851,5.148"></path></svg></span> <span class="uk-text-middle">Edit this page</span></a></li></ul></div><div class="uk-sticky-placeholder" style="height: 419px; margin: 0px;"></div></div></div></div> <div id="offcanvas" uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas"><div class="uk-offcanvas-bar"><div class="uk-panel"><ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">General</li> <li><a href="https://getuikit.com/index">Home</a></li> <li><a href="https://getuikit.com/pro">Pro</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li> <li><a href="https://getuikit.com/download">Download</a></li></ul> <ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Getting started</li> <li exact=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li exact=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li exact=""><a href="https://getuikit.com/docs/less">Less</a></li><li exact=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li exact=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li exact=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li exact=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li exact=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li exact=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li exact=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li exact=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li exact=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li exact=""><a href="https://getuikit.com/docs/align">Align</a></li><li exact=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li exact=""><a href="https://getuikit.com/docs/article">Article</a></li><li exact=""><a href="https://getuikit.com/docs/background">Background</a></li><li exact=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li exact=""><a href="https://getuikit.com/docs/base">Base</a></li><li exact=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li exact=""><a href="https://getuikit.com/docs/button">Button</a></li><li exact=""><a href="https://getuikit.com/docs/card">Card</a></li><li exact=""><a href="https://getuikit.com/docs/close">Close</a></li><li exact=""><a href="https://getuikit.com/docs/column">Column</a></li><li exact=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li exact=""><a href="https://getuikit.com/docs/container">Container</a></li><li exact=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li exact=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li exact=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li exact=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li exact=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li exact=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li exact=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li exact=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li exact=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li exact=""><a href="https://getuikit.com/docs/form">Form</a></li><li exact=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li exact=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li exact=""><a href="https://getuikit.com/docs/height">Height</a></li><li exact=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li exact=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li exact=""><a href="https://getuikit.com/docs/image">Image</a></li><li exact=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li exact=""><a href="https://getuikit.com/docs/label">Label</a></li><li exact=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li exact=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li exact=""><a href="https://getuikit.com/docs/link">Link</a></li><li exact=""><a href="https://getuikit.com/docs/list">List</a></li><li exact=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li exact=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li exact=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li exact=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li exact=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li exact=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li exact=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li exact=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li exact=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li exact=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li exact=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li exact=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li exact=""><a href="https://getuikit.com/docs/position">Position</a></li><li exact=""><a href="https://getuikit.com/docs/print">Print</a></li><li exact=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li exact=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li exact=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li exact=""><a href="https://getuikit.com/docs/search">Search</a></li><li exact=""><a href="https://getuikit.com/docs/section">Section</a></li><li exact=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li exact=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li exact=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li exact=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li exact=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li exact=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li exact=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li exact=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li exact=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li exact=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li exact=""><a href="https://getuikit.com/docs/table">Table</a></li><li exact=""><a href="https://getuikit.com/docs/text">Text</a></li><li exact=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li exact=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li exact=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li exact=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li exact=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li exact=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li exact=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li exact=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li exact=""><a href="https://getuikit.com/docs/video">Video</a></li><li exact=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li exact=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div></div></div></div>
+    
+
+
+</body></html>

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<!-- saved from url=(0030)https://getuikit.com/docs/base -->
+<html lang="en-gb" dir="ltr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Base - UIkit</title>
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="shortcut icon" href="https://getuikit.com/images/favicon.png">
+        <link rel="apple-touch-icon-precomposed" href="https://getuikit.com/images/apple-touch-icon.png">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Reg-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="preload" href="https://getuikit.com/fonts/ProximaNova-Light-webfont.woff2" as="font" type="font/woff2" crossorigin="">
+        <link rel="stylesheet" href="./Base - UIkit_files/theme.css">
+        <script type="text/javascript" async="" src="./Base - UIkit_files/analytics.js"></script><script src="./Base - UIkit_files/clipboard.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/he.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/marked.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/vue.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/vue-router.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/uikit.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/uikit-icons.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/highlight.min.js" defer=""></script>
+        <script src="./Base - UIkit_files/main.min.js" defer=""></script>
+    <script src="./Base - UIkit_files/js" async=""></script></head>
+
+    <body>
+        <div><div uk-sticky="media: 960" class="uk-navbar-container tm-navbar-container uk-sticky uk-sticky-fixed" style="position: fixed; top: 0px; width: 1665px;"><div class="uk-container uk-container-expand"><nav class="uk-navbar"><div class="uk-navbar-left"><a href="https://getuikit.com/" class="uk-navbar-item uk-logo"><img uk-svg="" src="./Base - UIkit_files/uikit-logo.svg" class="uk-margin-small-right" hidden="true"><svg width="28" height="34" viewBox="0 0 28 34" xmlns="http://www.w3.org/2000/svg" class="uk-margin-small-right uk-svg" data-svg="../images/uikit-logo.svg">
+	<polygon fill="#fff" points="19.1,4.1 13.75,1 8.17,4.45 13.6,7.44 "></polygon>
+	<path fill="#fff" d="M21.67,5.43l-5.53,3.34l6.26,3.63v9.52l-8.44,4.76L5.6,21.93v-7.38L0,11.7v13.51l13.75,8.08L28,25.21V9.07 L21.67,5.43z"></path>
+</svg> UIkit
+                    </a></div> <div class="uk-navbar-right"><ul class="uk-navbar-nav uk-visible@m"><li><a href="https://getuikit.com/pro">Pro</a></li> <li class="uk-active"><a href="https://getuikit.com/docs/">Documentation</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li></ul> <div class="uk-navbar-item uk-visible@m"><a href="https://getuikit.com/download" class="uk-button uk-button-default tm-button-default uk-icon">Download <canvas uk-icon="icon: download" width="20" height="20" class="uk-icon" hidden="true"></canvas><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="download"><polyline fill="none" stroke="#000" points="14,10 9.5,14.5 5,10"></polyline><rect x="3" y="17" width="13" height="1"></rect><line fill="none" stroke="#000" x1="9.5" y1="13.91" x2="9.5" y2="3"></line></svg></a></div> <a uk-navbar-toggle-icon="" href="https://getuikit.com/docs/base#offcanvas" uk-toggle="" class="uk-navbar-toggle uk-hidden@m uk-icon uk-navbar-toggle-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="navbar-toggle-icon"><rect y="9" width="20" height="2"></rect><rect y="3" width="20" height="2"></rect><rect y="15" width="20" height="2"></rect></svg></a></div></nav></div></div><div class="uk-sticky-placeholder" style="height: 80px; margin: 0px;"></div> <div class="tm-sidebar-left uk-visible@m"><h3>Documentation</h3> <ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">Getting started</li> <li class=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li class=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li class=""><a href="https://getuikit.com/docs/less">Less</a></li><li class=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li class=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li class=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li class=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li class=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li class=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li class=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li class=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li class=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li class=""><a href="https://getuikit.com/docs/align">Align</a></li><li class=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li class=""><a href="https://getuikit.com/docs/article">Article</a></li><li class=""><a href="https://getuikit.com/docs/background">Background</a></li><li class=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li class="router-link-exact-active uk-active"><a href="https://getuikit.com/docs/base">Base</a></li><li class=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li class=""><a href="https://getuikit.com/docs/button">Button</a></li><li class=""><a href="https://getuikit.com/docs/card">Card</a></li><li class=""><a href="https://getuikit.com/docs/close">Close</a></li><li class=""><a href="https://getuikit.com/docs/column">Column</a></li><li class=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li class=""><a href="https://getuikit.com/docs/container">Container</a></li><li class=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li class=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li class=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li class=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li class=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li class=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li class=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li class=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li class=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li class=""><a href="https://getuikit.com/docs/form">Form</a></li><li class=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li class=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li class=""><a href="https://getuikit.com/docs/height">Height</a></li><li class=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li class=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li class=""><a href="https://getuikit.com/docs/image">Image</a></li><li class=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li class=""><a href="https://getuikit.com/docs/label">Label</a></li><li class=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li class=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li class=""><a href="https://getuikit.com/docs/link">Link</a></li><li class=""><a href="https://getuikit.com/docs/list">List</a></li><li class=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li class=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li class=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li class=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li class=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li class=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li class=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li class=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li class=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li class=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li class=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li class=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li class=""><a href="https://getuikit.com/docs/position">Position</a></li><li class=""><a href="https://getuikit.com/docs/print">Print</a></li><li class=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li class=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li class=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li class=""><a href="https://getuikit.com/docs/search">Search</a></li><li class=""><a href="https://getuikit.com/docs/section">Section</a></li><li class=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li class=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li class=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li class=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li class=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li class=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li class=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li class=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li class=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li class=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li class=""><a href="https://getuikit.com/docs/table">Table</a></li><li class=""><a href="https://getuikit.com/docs/text">Text</a></li><li class=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li class=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li class=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li class=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li class=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li class=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li class=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li class=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li class=""><a href="https://getuikit.com/docs/video">Video</a></li><li class=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li class=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div> <div class="tm-main uk-section uk-section-default"><div class="uk-container uk-container-small uk-position-relative"><div><!----> <div><h1 id="base" class="uk-h1 tm-heading-fragment"><a href="https://getuikit.com/docs/base#base">Base</a></h1><p class="uk-text-lead">This component provides the default style for all HTML elements.</p>
+
+<h2 id="normalize-css" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#normalize-css">Normalize.css</a></h2><p>The Base component utilizes styling of the famous <a href="http://necolas.github.io/normalize.css/">Normalize.css</a> to render elements consistently across all browsers and applies its default styling like colors, margins, font-sizes and more.</p>
+<p><span class="uk-label">Note</span> <a href="https://getuikit.com/docs/form">Form</a>, <a href="https://getuikit.com/docs/button">Button</a> and <a href="https://getuikit.com/docs/table">Table</a> elements are not normalized or styled by default. This happens in their specific component class. UIkit tries to apply as little styling as possible to plain HTML elements in order to remain robust and conflict free with 3rd party CSS.</p>
+<hr class="uk-margin-large"><h2 id="links" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#links">Links</a></h2><p>Turn text into hypertext using the <code>&lt;a&gt;</code> element. You can also add the <code>.uk-link</code> class to a <code>&lt;span&gt;</code> or similar element to apply the default link styling. For additional styling options, take a look at the <a href="https://getuikit.com/docs/link">Link component</a>.</p>
+<hr class="uk-margin-large"><h2 id="text-level-semantics" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#text-level-semantics">Text-level semantics</a></h2><p>The following list gives you a short overview of the most commonly used text-level semantics and how to utilize them.</p>
+<div class="uk-overflow-auto"><table class="uk-table uk-table-divider"><thead><tr>
+<th align="left">Element</th>
+<th align="left">Description</th>
+</tr>
+</thead><tbody><tr>
+<td align="left"><code>&lt;abbr&gt;</code></td>
+<td align="left">Define an abbreviation using the <abbr title="Title Text">abbr element with a title</abbr>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;b&gt;</code></td>
+<td align="left">Create bold text with the <b>b element</b>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;cite&gt;</code></td>
+<td align="left">Define the title of a work with the <cite>cite element</cite>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;code&gt;</code></td>
+<td align="left">Define inline code snippets using the <code>code element</code>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;del&gt;</code></td>
+<td align="left">Mark document changes as deleted text using the <del>del element</del>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;dfn&gt;</code></td>
+<td align="left">Create a definition term using the <dfn title="Defines a definition term">dfn element with a title</dfn>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;em&gt;</code></td>
+<td align="left">Emphasize text using the <em>em element</em>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;i&gt;</code></td>
+<td align="left">Set off part of a text by using the <i>i element</i>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;ins&gt;</code></td>
+<td align="left">Mark document changes as inserted text using the <ins>ins element</ins>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;kbd&gt;</code></td>
+<td align="left">Use a <kbd>keybord input element</kbd> to display input in the browser's default monospace font.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;mark&gt;</code></td>
+<td align="left">Highlight text with no semantic meaning using the <mark>mark element</mark>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;q&gt;</code></td>
+<td align="left">Define inline quotations using a <q>q element <q>inside</q> a q element</q>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;s&gt;</code></td>
+<td align="left">Define text with a strikethrough using the <s>s element</s>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;samp&gt;</code></td>
+<td align="left">Define sample output with a <samp>samp element</samp>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;small&gt;</code></td>
+<td align="left">De-emphasize text for small print using the <small>small element</small>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;span&gt;</code></td>
+<td align="left">Define an inline-container using the <span>span element</span>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;strong&gt;</code></td>
+<td align="left">Imply extra importance using the <strong>strong element</strong>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;sub&gt;</code></td>
+<td align="left">Define subscript text using the <sub>sub element.</sub>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;sup&gt;</code></td>
+<td align="left">Define superscript text using the <sup>sup element.</sup></td>
+</tr>
+<tr>
+<td align="left"><code>&lt;u&gt;</code></td>
+<td align="left">Define underlined text using the <u>u element</u>.</td>
+</tr>
+<tr>
+<td align="left"><code>&lt;var&gt;</code></td>
+<td align="left">Define a variable using the <var>var element</var>.</td>
+</tr>
+</tbody></table></div><hr class="uk-margin-large"><h2 id="embedded-content" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#embedded-content">Embedded content</a></h2><p>Images and other elements like <code>&lt;audio&gt;</code>, <code>&lt;canvas&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;svg&gt;</code> and <code>&lt;video&gt;</code> are responsive by default in UIkit. If the layout is narrowed, they adjust their size and keep their proportions. To prevent this behavior, add the <code>.uk-preserve-width</code> class from the <a href="https://getuikit.com/docs/utility">Utility component</a> to the element or any container.</p>
+<p>Resize the browser window to see the responsive behavior of the image.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><div class="uk-width-large">
+    <img src="./Base - UIkit_files/photo.jpg" alt="Image">
+</div></li>
+                        <li><pre><code id="code-jxn340he" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-width-large"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">img</span> <span class="hljs-attr">src</span>=<span class="hljs-string">"images/photo.jpg"</span> <span class="hljs-attr">alt</span>=<span class="hljs-string">"Image"</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340he" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340he" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="paragraphs" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#paragraphs">Paragraphs</a></h2><p>Create a paragraph by using the <code>&lt;p&gt;</code> element.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></li>
+                        <li><pre><code id="code-jxn340hf" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hf" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hf" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="headings" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#headings">Headings</a></h2><p>Use the <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code> elements to define your headings.</p>
+<p>Add the <code>.uk-h1</code>, <code>.uk-h2</code>, <code>.uk-h3</code>, <code>.uk-h4</code>, <code>.uk-h5</code> or <code>.uk-h6</code> class to alter the size of your headings, for example have a h1 look like a h3. For additional styling options, take a look at the <a href="https://getuikit.com/docs/heading">Heading component</a>.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><h1>h1 Heading 1</h1>
+<h2>h2 Heading 2</h2>
+<h3>h3 Heading 3</h3>
+<h4>h4 Heading 4</h4>
+<h5>h5 Heading 5</h5>
+<h6>h6 Heading 6</h6></li>
+                        <li><pre><code id="code-jxn340hg" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">h1</span>&gt;</span>h1 Heading 1<span class="hljs-tag">&lt;/<span class="hljs-name">h1</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h2</span>&gt;</span>h2 Heading 2<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h3</span>&gt;</span>h3 Heading 3<span class="hljs-tag">&lt;/<span class="hljs-name">h3</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h4</span>&gt;</span>h4 Heading 4<span class="hljs-tag">&lt;/<span class="hljs-name">h4</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h5</span>&gt;</span>h5 Heading 5<span class="hljs-tag">&lt;/<span class="hljs-name">h5</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">h6</span>&gt;</span>h6 Heading 6<span class="hljs-tag">&lt;/<span class="hljs-name">h6</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hg" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hg" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="lists" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#lists">Lists</a></h2><p>Create an unordered list using the <code>&lt;ul&gt;</code> element and the <code>&lt;ol&gt;</code> element for ordered lists. The <code>&lt;li&gt;</code> element defines the list item. For additional styling options, take a look at the <a href="https://getuikit.com/docs/list">List component</a>.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><ul>
+    <li>Item 1</li>
+    <li>Item 2
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2
+                <ul>
+                    <li>Item 1</li>
+                    <li>Item 2</li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>Item 3</li>
+    <li>Item 4</li>
+</ul></li>
+                        <li><pre><code id="code-jxn340hh" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 2
+        <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+            <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 2
+                <span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 1<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 2<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+                <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+            <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 3<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span>Item 4<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hh" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hh" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="description-list" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#description-list">Description list</a></h2><p>Create a description list using the <code>&lt;dl&gt;</code> element. Use <code>&lt;dt&gt;</code> to define the term and <code>&lt;dd&gt;</code> for the description. For additional styling options, take a look at the <a href="https://getuikit.com/docs/description-list">Description List component</a>.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><dl>
+    <dt>Description lists</dt>
+    <dd>A description list defines terms and their corresponding descriptions.</dd>
+    <dt>This is a term</dt>
+    <dd>This is a description.</dd>
+    <dt>This is a term</dt>
+    <dd>This is a description.</dd>
+</dl></li>
+                        <li><pre><code id="code-jxn340hi" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Description lists<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>A description list defines terms and their corresponding descriptions.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>This is a term<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>This is a description.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>This is a term<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">dd</span>&gt;</span>This is a description.<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">dl</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hi" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hi" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="horizontal-rule" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#horizontal-rule">Horizontal rule</a></h2><p>Create a horizontal rule by using the <code>&lt;hr&gt;</code> element. For additional styling options, take a look at the <a href="https://getuikit.com/docs/divider">Divider component</a>.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active">
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+<hr>
+
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+</li>
+                        <li><pre><code id="code-jxn340hj" class="lang-html hljs xml">
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">hr</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+</code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hj" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hj" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="blockquote" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#blockquote">Blockquote</a></h2><p>To quote multiple lines of content from another source within your document, use the <code>&lt;blockquote&gt;</code> element.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><blockquote cite="./Base - UIkit_files/base">
+    <p class="uk-margin-small-bottom">The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.</p>
+    <footer>Someone famous in <cite><a href="./Base - UIkit_files/base">Source Title</a></cite></footer>
+</blockquote></li>
+                        <li><pre><code id="code-jxn340hk" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">blockquote</span> <span class="hljs-attr">cite</span>=<span class="hljs-string">"#"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"uk-margin-small-bottom"</span>&gt;</span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-name">footer</span>&gt;</span>Someone famous in <span class="hljs-tag">&lt;<span class="hljs-name">cite</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">"#"</span>&gt;</span>Source Title<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">cite</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">blockquote</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hk" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hk" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div><hr class="uk-margin-large"><h2 id="preformatted-text" class="uk-h3 tm-heading-fragment"><a href="https://getuikit.com/docs/base#preformatted-text">Preformatted text</a></h2><p>For multiple lines of code, use the <code>&lt;pre&gt;</code> element. It creates a new text block that preserves spaces, tabs and line breaks. Nest a <code>&lt;code&gt;</code> element inside to define the code block.</p>
+<p><span class="uk-label">Note</span> Be sure to escape any angle brackets to make sure enclosed code is not interpreted as markup.</p>
+<div class="uk-position-relative uk-margin-medium">
+
+                    <ul uk-tab="swiping: false" class="uk-tab">
+                        <li class="uk-active"><a href="./Base - UIkit_files/base" aria-expanded="true">Preview</a></li>
+                        <li><a href="./Base - UIkit_files/base" aria-expanded="false">Markup</a></li>
+                    </ul>
+
+                    <ul class="uk-switcher uk-margin">
+                        <li class="uk-active"><pre><code class="hljs xml">// Code example
+<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"myid"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"myclass"</span> <span class="hljs-attr">hidden</span>&gt;</span>
+    Lorem ipsum <span class="hljs-tag">&lt;<span class="hljs-name">strong</span>&gt;</span>dolor<span class="hljs-tag">&lt;/<span class="hljs-name">strong</span>&gt;</span> sit amet, consectetur adipiscing elit.
+<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></code></pre></li>
+                        <li><pre><code id="code-jxn340hl" class="lang-html hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">pre</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">code</span>&gt;</span>// Code example
+&amp;lt;div id="myid" class="myclass" hidden&amp;gt;
+    Lorem ipsum &amp;lt;strong&amp;gt;dolor&amp;lt;/strong&amp;gt; sit amet, consectetur adipiscing elit.
+&amp;lt;/div&amp;gt;<span class="hljs-tag">&lt;/<span class="hljs-name">code</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">pre</span>&gt;</span></code></pre></li>
+                    </ul>
+
+                    <div class="uk-position-top-right uk-margin-small-top">
+                        <ul class="uk-iconnav">
+                            <li><a class="js-copy" uk-tooltip="Copy to Clipboard" rel="#code-jxn340hl" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-clipboard.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-clipboard.svg">
+	<line fill="none" stroke="#000" x1="5.5" y1="9.5" x2="15" y2="9.5"></line>
+	<line fill="none" stroke="#000" x1="5" y1="1.5" x2="9" y2="1.5"></line>
+	<polyline fill="none" stroke="#000" stroke-width="1.03" points="8.5,6.5 5.5,9.5 8.5,12.5"></polyline>
+	<polyline fill="none" stroke="#000" points="12.5,7 12.5,2.5 9.5,2.5 9.5,3.5 4.5,3.5 4.5,2.5 1.5,2.5 1.5,15.5 12.5,15.5 12.5,12"></polyline>
+</svg></a></li>
+                            <li><a class="js-codepen" uk-tooltip="Edit on Codepen" rel="#code-jxn340hl" title="" aria-expanded="false"><img class="uk-icon" src="./Base - UIkit_files/icon-flask.svg" uk-svg="" hidden="true"><svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" class="uk-icon uk-svg" data-svg="../images/icon-flask.svg">
+	<line fill="none" stroke="#000" x1="5" y1="7.5" x2="12" y2="7.5"></line>
+	<line fill="none" stroke="#000" x1="4" y1="1.5" x2="13" y2="1.5"></line>
+	<path fill="none" stroke="#000" d="M5.078,1.5l1.433,1.868C6.952,3.93,6.948,4.839,6.646,5.48L2.147,12 c-0.418,0.962,0.028,2.5,1.353,2.5h10c1.328,0,1.777-1.538,1.359-2.5L10.4,5.479c-0.303-0.641-0.31-1.55,0.136-2.112L11.922,1.5"></path>
+	<circle fill="#000" cx="10.5" cy="9.5" r="0.5"></circle>
+	<circle fill="#000" cx="11.5" cy="11.5" r="0.5"></circle>
+	<circle fill="#000" cx="8.5" cy="11.5" r="0.5"></circle>
+</svg></a></li>
+                        </ul>
+                    </div>
+                </div></div></div> <div class="tm-sidebar-right uk-visible@l"><div uk-sticky="offset: 160" class="uk-sticky uk-active uk-sticky-fixed" style="position: fixed; top: 160px; width: 200px;"><ul uk-scrollspy-nav="closest: li; scroll: true; offset: 100" class="uk-nav uk-nav-default tm-nav uk-nav-parent-icon"><li class="uk-active"><a href="https://getuikit.com/docs/base#normalize-css">Normalize.css</a></li><li><a href="https://getuikit.com/docs/base#links">Links</a></li><li><a href="https://getuikit.com/docs/base#text-level-semantics">Text-level semantics</a></li><li><a href="https://getuikit.com/docs/base#embedded-content">Embedded content</a></li><li><a href="https://getuikit.com/docs/base#paragraphs">Paragraphs</a></li><li><a href="https://getuikit.com/docs/base#headings">Headings</a></li><li><a href="https://getuikit.com/docs/base#lists">Lists</a></li><li><a href="https://getuikit.com/docs/base#description-list">Description list</a></li><li><a href="https://getuikit.com/docs/base#horizontal-rule">Horizontal rule</a></li><li><a href="https://getuikit.com/docs/base#blockquote">Blockquote</a></li><li><a href="https://getuikit.com/docs/base#preformatted-text">Preformatted text</a></li> <li class="uk-nav-divider"></li> <li><a href="https://getuikit.com/assets/uikit/tests/base.html" target="_blank"><span uk-icon="icon: push" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="push"><polygon points="12.15,4 9.5,1.4 6.85,4 6.15,3.3 9.5,0 12.85,3.3"></polygon><line fill="none" stroke="#000" x1="9.5" y1="10" x2="9.5" y2="1"></line><polyline fill="none" stroke="#000" points="6 5.5 3.5 5.5 3.5 18.5 15.5 18.5 15.5 5.5 13 5.5"></polyline></svg></span> <span class="uk-text-middle">Open test</span></a></li> <li><a href="https://github.com/uikit/uikit/issues" target="_blank"><span uk-icon="icon: warning" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="warning"><circle cx="10" cy="14" r="1"></circle><circle fill="none" stroke="#000" stroke-width="1.1" cx="10" cy="10" r="9"></circle><path d="M10.97,7.72 C10.85,9.54 10.56,11.29 10.56,11.29 C10.51,11.87 10.27,12 9.99,12 C9.69,12 9.49,11.87 9.43,11.29 C9.43,11.29 9.16,9.54 9.03,7.72 C8.96,6.54 9.03,6 9.03,6 C9.03,5.45 9.46,5.02 9.99,5 C10.53,5.01 10.97,5.44 10.97,6 C10.97,6 11.04,6.54 10.97,7.72 L10.97,7.72 Z"></path></svg></span> <span class="uk-text-middle">Report issue</span></a></li> <li><a href="https://discordapp.com/invite/NEt4Pv7" target="_blank"><span uk-icon="icon: commenting" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="commenting"><polygon fill="none" stroke="#000" points="1.5,1.5 18.5,1.5 18.5,13.5 10.5,13.5 6.5,17.5 6.5,13.5 1.5,13.5"></polygon><circle cx="10" cy="8" r="1"></circle><circle cx="6" cy="8" r="1"></circle><circle cx="14" cy="8" r="1"></circle></svg></span> <span class="uk-text-middle">Get help</span></a></li> <li><a href="https://github.com/uikit/uikit-site/tree/develop/docs/pages/base.md" target="_blank"><span uk-icon="icon: pencil" class="uk-margin-small-right uk-icon"><svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-svg="pencil"><path fill="none" stroke="#000" d="M17.25,6.01 L7.12,16.1 L3.82,17.2 L5.02,13.9 L15.12,3.88 C15.71,3.29 16.66,3.29 17.25,3.88 C17.83,4.47 17.83,5.42 17.25,6.01 L17.25,6.01 Z"></path><path fill="none" stroke="#000" d="M15.98,7.268 L13.851,5.148"></path></svg></span> <span class="uk-text-middle">Edit this page</span></a></li></ul></div><div class="uk-sticky-placeholder" style="height: 326px; margin: 0px;"></div></div></div></div> <div id="offcanvas" uk-offcanvas="mode: push; overlay: true" class="uk-offcanvas"><div class="uk-offcanvas-bar"><div class="uk-panel"><ul class="uk-nav uk-nav-default tm-nav"><li class="uk-nav-header">General</li> <li><a href="https://getuikit.com/index">Home</a></li> <li><a href="https://getuikit.com/pro">Pro</a></li> <li><a href="https://getuikit.com/changelog">Changelog</a></li> <li><a href="https://getuikit.com/download">Download</a></li></ul> <ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Getting started</li> <li exact=""><a href="https://getuikit.com/docs/introduction">Introduction</a></li><li exact=""><a href="https://getuikit.com/docs/installation">Installation</a></li><li exact=""><a href="https://getuikit.com/docs/less">Less</a></li><li exact=""><a href="https://getuikit.com/docs/sass">Sass</a></li><li exact=""><a href="https://getuikit.com/docs/javascript">JavaScript</a></li><li exact=""><a href="https://getuikit.com/docs/webpack">Webpack</a></li><li exact=""><a href="https://getuikit.com/docs/custom-icons">Custom icons</a></li><li exact=""><a href="https://getuikit.com/docs/avoiding-conflicts">Avoiding conflicts</a></li><li exact=""><a href="https://getuikit.com/docs/rtl">RTL support</a></li><li exact=""><a href="https://getuikit.com/docs/migration">Migration</a></li></ul><ul class="uk-nav uk-nav-default tm-nav uk-margin-top"><li class="uk-nav-header">Components</li> <li exact=""><a href="https://getuikit.com/docs/accordion">Accordion</a></li><li exact=""><a href="https://getuikit.com/docs/alert">Alert</a></li><li exact=""><a href="https://getuikit.com/docs/align">Align</a></li><li exact=""><a href="https://getuikit.com/docs/animation">Animation</a></li><li exact=""><a href="https://getuikit.com/docs/article">Article</a></li><li exact=""><a href="https://getuikit.com/docs/background">Background</a></li><li exact=""><a href="https://getuikit.com/docs/badge">Badge</a></li><li exact=""><a href="https://getuikit.com/docs/base">Base</a></li><li exact=""><a href="https://getuikit.com/docs/breadcrumb">Breadcrumb</a></li><li exact=""><a href="https://getuikit.com/docs/button">Button</a></li><li exact=""><a href="https://getuikit.com/docs/card">Card</a></li><li exact=""><a href="https://getuikit.com/docs/close">Close</a></li><li exact=""><a href="https://getuikit.com/docs/column">Column</a></li><li exact=""><a href="https://getuikit.com/docs/comment">Comment</a></li><li exact=""><a href="https://getuikit.com/docs/container">Container</a></li><li exact=""><a href="https://getuikit.com/docs/countdown">Countdown</a></li><li exact=""><a href="https://getuikit.com/docs/cover">Cover</a></li><li exact=""><a href="https://getuikit.com/docs/description-list">Description List</a></li><li exact=""><a href="https://getuikit.com/docs/divider">Divider</a></li><li exact=""><a href="https://getuikit.com/docs/dotnav">Dotnav</a></li><li exact=""><a href="https://getuikit.com/docs/drop">Drop</a></li><li exact=""><a href="https://getuikit.com/docs/dropdown">Dropdown</a></li><li exact=""><a href="https://getuikit.com/docs/filter">Filter</a></li><li exact=""><a href="https://getuikit.com/docs/flex">Flex</a></li><li exact=""><a href="https://getuikit.com/docs/form">Form</a></li><li exact=""><a href="https://getuikit.com/docs/grid">Grid</a></li><li exact=""><a href="https://getuikit.com/docs/heading">Heading</a></li><li exact=""><a href="https://getuikit.com/docs/height">Height</a></li><li exact=""><a href="https://getuikit.com/docs/icon">Icon</a></li><li exact=""><a href="https://getuikit.com/docs/iconnav">Iconnav</a></li><li exact=""><a href="https://getuikit.com/docs/image">Image</a></li><li exact=""><a href="https://getuikit.com/docs/inverse">Inverse</a></li><li exact=""><a href="https://getuikit.com/docs/label">Label</a></li><li exact=""><a href="https://getuikit.com/docs/leader">Leader</a></li><li exact=""><a href="https://getuikit.com/docs/lightbox">Lightbox</a></li><li exact=""><a href="https://getuikit.com/docs/link">Link</a></li><li exact=""><a href="https://getuikit.com/docs/list">List</a></li><li exact=""><a href="https://getuikit.com/docs/margin">Margin</a></li><li exact=""><a href="https://getuikit.com/docs/marker">Marker</a></li><li exact=""><a href="https://getuikit.com/docs/modal">Modal</a></li><li exact=""><a href="https://getuikit.com/docs/nav">Nav</a></li><li exact=""><a href="https://getuikit.com/docs/navbar">Navbar</a></li><li exact=""><a href="https://getuikit.com/docs/notification">Notification</a></li><li exact=""><a href="https://getuikit.com/docs/offcanvas">Off-canvas</a></li><li exact=""><a href="https://getuikit.com/docs/overlay">Overlay</a></li><li exact=""><a href="https://getuikit.com/docs/padding">Padding</a></li><li exact=""><a href="https://getuikit.com/docs/pagination">Pagination</a></li><li exact=""><a href="https://getuikit.com/docs/parallax">Parallax</a></li><li exact=""><a href="https://getuikit.com/docs/placeholder">Placeholder</a></li><li exact=""><a href="https://getuikit.com/docs/position">Position</a></li><li exact=""><a href="https://getuikit.com/docs/print">Print</a></li><li exact=""><a href="https://getuikit.com/docs/progress">Progress</a></li><li exact=""><a href="https://getuikit.com/docs/scroll">Scroll</a></li><li exact=""><a href="https://getuikit.com/docs/scrollspy">Scrollspy</a></li><li exact=""><a href="https://getuikit.com/docs/search">Search</a></li><li exact=""><a href="https://getuikit.com/docs/section">Section</a></li><li exact=""><a href="https://getuikit.com/docs/slidenav">Slidenav</a></li><li exact=""><a href="https://getuikit.com/docs/slider">Slider</a></li><li exact=""><a href="https://getuikit.com/docs/slideshow">Slideshow</a></li><li exact=""><a href="https://getuikit.com/docs/sortable">Sortable</a></li><li exact=""><a href="https://getuikit.com/docs/spinner">Spinner</a></li><li exact=""><a href="https://getuikit.com/docs/sticky">Sticky</a></li><li exact=""><a href="https://getuikit.com/docs/subnav">Subnav</a></li><li exact=""><a href="https://getuikit.com/docs/svg">SVG</a></li><li exact=""><a href="https://getuikit.com/docs/switcher">Switcher</a></li><li exact=""><a href="https://getuikit.com/docs/tab">Tab</a></li><li exact=""><a href="https://getuikit.com/docs/table">Table</a></li><li exact=""><a href="https://getuikit.com/docs/text">Text</a></li><li exact=""><a href="https://getuikit.com/docs/thumbnav">Thumbnav</a></li><li exact=""><a href="https://getuikit.com/docs/tile">Tile</a></li><li exact=""><a href="https://getuikit.com/docs/toggle">Toggle</a></li><li exact=""><a href="https://getuikit.com/docs/tooltip">Tooltip</a></li><li exact=""><a href="https://getuikit.com/docs/totop">Totop</a></li><li exact=""><a href="https://getuikit.com/docs/transition">Transition</a></li><li exact=""><a href="https://getuikit.com/docs/upload">Upload</a></li><li exact=""><a href="https://getuikit.com/docs/utility">Utility</a></li><li exact=""><a href="https://getuikit.com/docs/video">Video</a></li><li exact=""><a href="https://getuikit.com/docs/visibility">Visibility</a></li><li exact=""><a href="https://getuikit.com/docs/width">Width</a></li></ul></div></div></div></div>
+    
+
+
+</body></html>
