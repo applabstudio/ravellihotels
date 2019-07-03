@@ -39,6 +39,7 @@ $textBig: 2.6rem;
 $textGiant: 2.8rem;
 
 // Line Height
+// fallback for old browser => $lh-base: (1 * 10) + px; 
 $lh-base: 1rem;
 $lh-xs: 1.8rem;
 $lh-s: 2rem;

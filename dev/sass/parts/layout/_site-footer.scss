@@ -73,6 +73,10 @@
           transition: $tt;
           opacity: 1;
         }
+        
+        @include media('<=lg') {
+          opacity: 1;
+        }
       }
     }
   }
@@ -91,9 +95,9 @@
   }
 
   .footer-credits {
-    padding: 1.6rem;
     @include size(100%, auto);
-
+    padding: 1.6rem;
+    
     hr {
       margin-bottom: $mb;
     }
