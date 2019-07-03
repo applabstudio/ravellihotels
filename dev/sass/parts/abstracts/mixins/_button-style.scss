@@ -1,0 +1,23 @@
+/* -------------------------------------------------------------------------- */
+/*                         REUSABLE MIXINS BUTTON STYLE                       */
+/* -------------------------------------------------------------------------- */
+
+@mixin button-style($c, $c-hover, $bg, $bg-hover, $border, $border-hover) {
+	color: $c;
+	background: $bg;
+	border-color: $border;
+  
+	svg {
+	  fill: $c;
+	}
+  
+	@include on-event() {
+	  color: $c-hover;
+	  background: $bg-hover;
+	  border-color: $border-hover;
+  
+	  svg {
+		fill: $c-hover;
+	  }
+	};
+}

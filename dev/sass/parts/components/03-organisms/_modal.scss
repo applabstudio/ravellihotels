@@ -10,16 +10,15 @@ $fs: (xs: ms(5),
 
 .modal-primary-menu {
   &__container {
+    
     .modal-dialog {
       height: 100vh;
       overflow: hidden;
       background: rgba(80, 77, 71, 0.95);
 
       .uk-modal-close-full {
-        @include flexbox();
-        @include justify-content(flex-start);
         @include size(100%, auto);
-        padding: 2.8rem 2.6rem 0rem 1.6rem;
+        padding: 3rem 2.6rem 0rem 1.6rem;
         background: none;
         color: white;
       }
@@ -27,26 +26,18 @@ $fs: (xs: ms(5),
       span {
         color: white;
         text-transform: uppercase;
-        @include absolute(top 2.7rem left 5.59rem);
+        @include absolute(top 3rem left 5rem);
         @include x-rem(font-size, 1.25);
       }
 
       .container-menu-wrapper {
-        @include flexbox();
-        @include justify-content(center);
-        @include align-items(center);
-        @include flex-direction(column);
         min-height: 100%;
 
         &__body {
-          @include flexbox();
-          @include justify-content(center);
-          @include align-items(center);
-          @include flex-direction(column);
           min-height: 100%;
           text-align: center;
-
           // STUB overflow: auto; // NOTE for console developer
+         
           menu,
           ul {
             @extend %listreset;
@@ -78,8 +69,6 @@ $fs: (xs: ms(5),
 
         &__footer {
           .menu-social {
-            @include flexbox();
-            @include justify-content(center);
             padding-top: $pt;
 
             ul {
@@ -106,8 +95,6 @@ $fs: (xs: ms(5),
           }
 
           .site-search {
-            @include flexbox();
-            @include justify-content(center);
             padding: $pt;
 
             button {

@@ -11,6 +11,12 @@ const UIKit = function() {
 	// 	inputs.forEach((e, i=0) => e.className = `mdc-text-field__input`);
 	// }
 
+	// Drupal Menu
+	var everyChild = document.querySelectorAll("#drupal_menu li a");
+	for (var i = 0; i < everyChild.length; i++) {
+		everyChild[i].classList.add("uk-button-text");
+	}
+
 	// Uk Animation kenburns background image animation
 	if(document.querySelectorAll("#bg-section").length > 0) {
 		document.getElementById('bg-section').getElementsByTagName('img')[0].className += "uk-animation-reverse uk-transform-origin-top-right";

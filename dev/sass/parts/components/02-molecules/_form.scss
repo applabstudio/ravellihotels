@@ -32,7 +32,7 @@ form {
 				border: none;
 				@include size(100%, 3.7rem);
 				@include border('bottom', 1px, solid, get-color(bg, 8));
-				@include set-font($title-font-family, 600, normal, $textBase);
+				@include set-font($alt-font-family, 600, normal, $textBase);
 
 				&:focus {
 					background: none;
