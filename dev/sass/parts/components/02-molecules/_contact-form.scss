@@ -37,10 +37,10 @@
 			}
 		}
 
+		// NOTE Override Material-Design Textfields
 		.input-container {
 			@include size(96.55%, auto);
 
-			// NOTE Override Material-Design Textfields
 			.mdc-floating-label {
 				@include rem(font-size, $fsPrimary);
 				padding: 1rem;
