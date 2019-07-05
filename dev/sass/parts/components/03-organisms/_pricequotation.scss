@@ -18,13 +18,7 @@ $ico-dim: rem(32px);
 			@include set-font($base-font-family, normal, normal, ms(4));
 			color: get-color(primary, 1);
 		}
-
-		.seperator-pricequotation {
-			.uk-divider-small {
-				margin: 0 1rem;
-			}
-		}
-
+		
 		.input-container {
 			@include size(100%, auto);
 
@@ -37,12 +31,13 @@ $ico-dim: rem(32px);
 			}
 
 			.mdc-floating-label {
-				@include rem(font-size, $textBase);
+				@include rem(font-size, $textMedium);
+				padding-top:0.7rem;
 			}
 
 			.mdc-text-field__input {
 				@include rem(font-size, $textBase);
-				padding: $pt 5.8rem;
+				padding: 2.1rem 5rem;
 			}
 			
 			input[type='date'] {
